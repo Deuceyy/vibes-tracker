@@ -50,6 +50,19 @@ export default function DeckView() {
     navigate(`/builder/${newId}`);
   };
 
+  const exportDeckCode = () => {
+    const counts = {};
+    deck.cards.forEach(({ cardId, quantity }) => {
+      counts[cardId] = quantity;
+    });
+    const deckCode = JSON.stringify({
+      deckName: deck.name,
+      counts
+    });
+    navigator.clipboard.writeText(deckCode);
+    alert('Deck code copied to clipboard!');
+  };
+
   const handleUpvote = async () => {
     await toggleUpvote(deckId);
     setDeck(await getDeck(deckId));
@@ -88,6 +101,7 @@ export default function DeckView() {
             >
               ▲ {deck.upvotes || 0}
             </button>
+            <button onClick={exportDeckCode}>Export Code</button>
             {isOwner && (
               <button onClick={() => navigate(`/builder/${deckId}`)}>Edit</button>
             )}

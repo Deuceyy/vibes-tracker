@@ -25,6 +25,26 @@ export default function DeckBuilder() {
   const [typeFilter, setTypeFilter] = useState('All');
   const [selectedCard, setSelectedCard] = useState(null);
   const [saving, setSaving] = useState(false);
+  const [showImportModal, setShowImportModal] = useState(false);
+  const [importCode, setImportCode] = useState('');
+
+  const handleImportCode = () => {
+    try {
+      const data = JSON.parse(importCode);
+      if (data.deckName) setDeckName(data.deckName);
+      if (data.counts) {
+        const cards = Object.entries(data.counts).map(([cardId, quantity]) => ({
+          cardId,
+          quantity
+        }));
+        setDeckCards(cards);
+      }
+      setShowImportModal(false);
+      setImportCode('');
+    } catch (err) {
+      alert('Invalid deck code');
+    }
+  };
 
   // Load existing deck if editing
   useEffect(() => {
@@ -170,14 +190,19 @@ export default function DeckBuilder() {
               onChange={(e) => setDeckDescription(e.target.value)}
               className="deck-desc-input"
             />
-            <label className="public-toggle">
-              <input
-                type="checkbox"
-                checked={isPublic}
-                onChange={(e) => setIsPublic(e.target.checked)}
-              />
-              Public deck
-            </label>
+            <div className="deck-meta-row">
+              <label className="public-toggle">
+                <input
+                  type="checkbox"
+                  checked={isPublic}
+                  onChange={(e) => setIsPublic(e.target.checked)}
+                />
+                Public deck
+              </label>
+              <button className="import-code-btn" onClick={() => setShowImportModal(true)}>
+                Import Code
+              </button>
+            </div>
           </div>
 
           <div className={`deck-count ${validation.valid ? 'valid' : 'invalid'}`}>
@@ -215,6 +240,31 @@ export default function DeckBuilder() {
 
       {selectedCard && (
         <CardModal card={selectedCard} onClose={() => setSelectedCard(null)} viewOnly />
+      )}
+
+      {showImportModal && (
+        <div className="modal-overlay active" onClick={(e) => {
+          if (e.target.classList.contains('modal-overlay')) setShowImportModal(false);
+        }}>
+          <div className="modal import-modal">
+            <div className="modal-header">
+              <h2 className="modal-title">Import Deck Code</h2>
+              <button className="modal-close" onClick={() => setShowImportModal(false)}>&times;</button>
+            </div>
+            <div className="modal-body">
+              <textarea
+                placeholder='Paste deck code here...'
+                value={importCode}
+                onChange={(e) => setImportCode(e.target.value)}
+                className="import-textarea"
+              />
+              <div className="import-actions">
+                <button onClick={handleImportCode} className="save-deck-btn">Import</button>
+                <button onClick={() => setShowImportModal(false)} className="cancel-btn">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
