@@ -81,7 +81,7 @@ export default function CollectionPage() {
     cards.sort((a, b) => {
       switch (field) {
         case 'name': return mult * a.name.localeCompare(b.name);
-        case 'id': return mult * a.id.localeCompare(b.id);
+        case 'id': return mult * ((a.setNumber ?? 999) - (b.setNumber ?? 999));
         case 'owned': return mult * (getTotalOwned(a.id) - getTotalOwned(b.id));
         case 'cost': return mult * ((a.cost?.amount ?? 999) - (b.cost?.amount ?? 999));
         case 'vibe': return mult * ((a.vibe ?? 999) - (b.vibe ?? 999));
