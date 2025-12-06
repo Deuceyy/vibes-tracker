@@ -12,6 +12,7 @@ export default function CollectionPage() {
     isOwnCollection,
     getCardVariants,
     adjustVariant,
+    setVariantCount,
     getTotalOwned,
     hasPlayset,
     hasMasterSet,
@@ -80,6 +81,7 @@ export default function CollectionPage() {
     cards.sort((a, b) => {
       switch (field) {
         case 'name': return mult * a.name.localeCompare(b.name);
+        case 'id': return mult * a.id.localeCompare(b.id);
         case 'owned': return mult * (getTotalOwned(a.id) - getTotalOwned(b.id));
         case 'cost': return mult * ((a.cost?.amount ?? 999) - (b.cost?.amount ?? 999));
         case 'vibe': return mult * ((a.vibe ?? 999) - (b.vibe ?? 999));
@@ -94,11 +96,15 @@ export default function CollectionPage() {
   const colorProgress = useMemo(() => {
     const colors = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Colorless'];
     return colors.map(color => {
-      const colorCards = cardData.filter(c => c.color === color);
+      const colorCards = cardData.filter(c => {
+        if (c.color !== color) return false;
+        if (filters.set !== 'All' && c.set !== filters.set) return false;
+        return true;
+      });
       const ownedCount = colorCards.filter(c => getTotalOwned(c.id) > 0).length;
       return { color, owned: ownedCount, total: colorCards.length };
     });
-  }, [getTotalOwned]);
+  }, [getTotalOwned, filters.set]);
 
   if (loading) {
     return <div className="loading">Loading collection...</div>;
@@ -189,6 +195,8 @@ export default function CollectionPage() {
               <select className="search-input" value={filters.sort} onChange={(e) => updateFilter('sort', e.target.value)}>
                 <option value="name-asc">Name (A-Z)</option>
                 <option value="name-desc">Name (Z-A)</option>
+                <option value="id-asc">Set # (1-99)</option>
+                <option value="id-desc">Set # (99-1)</option>
                 <option value="owned-desc">Most Owned</option>
                 <option value="owned-asc">Least Owned</option>
                 <option value="cost-asc">Cost (Low-High)</option>
@@ -296,7 +304,15 @@ export default function CollectionPage() {
                             <span className={`variant-label ${v}`}>{VARIANT_LABELS[v]}</span>
                             <div className="variant-counter">
                               <button className="variant-btn" onClick={() => adjustVariant(card.id, v, -1)}>−</button>
-                              <span className={`variant-count ${variants[v] > 0 ? 'has-cards' : ''}`}>{variants[v]}</span>
+                              <input
+                                type="number"
+                                className={`variant-input ${variants[v] > 0 ? 'has-cards' : ''}`}
+                                value={variants[v]}
+                                min="0"
+                                max="99"
+                                onChange={(e) => setVariantCount(card.id, v, parseInt(e.target.value) || 0)}
+                                onClick={(e) => e.target.select()}
+                              />
                               <button className="variant-btn" onClick={() => adjustVariant(card.id, v, 1)}>+</button>
                             </div>
                           </div>

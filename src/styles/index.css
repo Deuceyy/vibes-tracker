@@ -547,15 +547,32 @@ body {
   border-color: var(--accent);
 }
 
-.variant-count {
-  width: 24px;
+.variant-input {
+  width: 36px;
   text-align: center;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 2px;
+  -moz-appearance: textfield;
 }
 
-.variant-count.has-cards {
+.variant-input::-webkit-outer-spin-button,
+.variant-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.variant-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+.variant-input.has-cards {
   color: var(--accent);
 }
 
