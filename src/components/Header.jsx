@@ -71,7 +71,7 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
         </Link>
 
         <nav className="header-nav">
-          <Link to="/" className="nav-link">Collection</Link>
+          <Link to="/collection" className="nav-link">Collection</Link>
           <Link to="/decks" className="nav-link">Decks</Link>
         </nav>
 

@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './hooks/useAuth.jsx';
+import LandingPage from './components/LandingPage.jsx';
 import CollectionPage from './components/CollectionPage.jsx';
 import ProfilePage from './components/ProfilePage.jsx';
 import DecksPage from './components/DecksPage.jsx';
@@ -10,7 +11,8 @@ export default function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/" element={<CollectionPage />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/collection" element={<CollectionPage />} />
         <Route path="/u/:username" element={<ProfilePage />} />
         <Route path="/decks" element={<DecksPage />} />
         <Route path="/builder" element={<DeckBuilder />} />
