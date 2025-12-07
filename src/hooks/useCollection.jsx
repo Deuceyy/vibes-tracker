@@ -61,22 +61,67 @@ export function useCollection(userId = null) {
   }, [collection]);
 
   const setVariantCount = useCallback((cardId, variant, count) => {
-    const newCollection = { ...collection };
-    if (!newCollection[cardId]) {
-      newCollection[cardId] = { normal: 0, foil: 0, arctic: 0, sketch: 0 };
-    }
-    newCollection[cardId][variant] = Math.max(0, Math.min(count, 99));
-    const variants = newCollection[cardId];
-    if (variants.normal === 0 && variants.foil === 0 && variants.arctic === 0 && variants.sketch === 0) {
-      delete newCollection[cardId];
-    }
-    saveCollection(newCollection);
-  }, [collection, saveCollection]);
+    const update = (prevCollection) => {
+      const newCollection = { ...prevCollection };
+      if (!newCollection[cardId]) {
+        newCollection[cardId] = { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+      }
+      newCollection[cardId] = { ...newCollection[cardId] };
+      newCollection[cardId][variant] = Math.max(0, Math.min(count, 99));
+      const variants = newCollection[cardId];
+      if (variants.normal === 0 && variants.foil === 0 && variants.arctic === 0 && variants.sketch === 0) {
+        delete newCollection[cardId];
+      }
+      return newCollection;
+    };
+    
+    setCollection(prev => {
+      const newCollection = update(prev);
+      // Save to Firebase/localStorage
+      if (user && isOwnCollection) {
+        const collectionRef = doc(db, 'collections', user.uid);
+        setDoc(collectionRef, { 
+          cards: newCollection,
+          updatedAt: new Date().toISOString()
+        }, { merge: true });
+      } else if (!user) {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newCollection));
+      }
+      return newCollection;
+    });
+  }, [user, isOwnCollection]);
 
   const adjustVariant = useCallback((cardId, variant, delta) => {
-    const current = getCardVariants(cardId)[variant];
-    setVariantCount(cardId, variant, current + delta);
-  }, [getCardVariants, setVariantCount]);
+    setCollection(prev => {
+      const current = prev[cardId]?.[variant] || 0;
+      const newCount = Math.max(0, Math.min(current + delta, 99));
+      
+      const newCollection = { ...prev };
+      if (!newCollection[cardId]) {
+        newCollection[cardId] = { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+      }
+      newCollection[cardId] = { ...newCollection[cardId] };
+      newCollection[cardId][variant] = newCount;
+      
+      const variants = newCollection[cardId];
+      if (variants.normal === 0 && variants.foil === 0 && variants.arctic === 0 && variants.sketch === 0) {
+        delete newCollection[cardId];
+      }
+      
+      // Save to Firebase/localStorage
+      if (user && isOwnCollection) {
+        const collectionRef = doc(db, 'collections', user.uid);
+        setDoc(collectionRef, { 
+          cards: newCollection,
+          updatedAt: new Date().toISOString()
+        }, { merge: true });
+      } else if (!user) {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newCollection));
+      }
+      
+      return newCollection;
+    });
+  }, [user, isOwnCollection]);
 
   const getTotalOwned = useCallback((cardId) => {
     const v = getCardVariants(cardId);

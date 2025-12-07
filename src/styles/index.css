@@ -451,9 +451,9 @@ body {
 }
 
 .rarity-badge.Common { background: #9ca3af; }
-.rarity-badge.Uncommon { background: #22c55e; }
-.rarity-badge.Rare { background: #3b82f6; }
-.rarity-badge.Mythic { background: #f59e0b; }
+.rarity-badge.Uncommon { background: #4b5563; }
+.rarity-badge.Rare { background: #f59e0b; }
+.rarity-badge.Epic { background: #a855f7; }
 
 .color-stripe {
   position: absolute;

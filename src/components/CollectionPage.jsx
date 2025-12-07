@@ -3,7 +3,7 @@ import { useCollection, cardData, VARIANTS } from '../hooks/useCollection';
 import Header from './Header';
 import CardModal from './CardModal';
 
-const RARITY_ORDER = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Mythic': 4 };
+const RARITY_ORDER = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Epic': 4 };
 const VARIANT_LABELS = { normal: 'N', foil: 'F', arctic: 'A', sketch: 'S' };
 
 export default function CollectionPage() {
@@ -150,7 +150,7 @@ export default function CollectionPage() {
                 <option value="Common">Common</option>
                 <option value="Uncommon">Uncommon</option>
                 <option value="Rare">Rare</option>
-                <option value="Mythic">Mythic</option>
+                <option value="Epic">Epic</option>
               </select>
             </div>
             <div className="filter-group small">
@@ -203,8 +203,8 @@ export default function CollectionPage() {
                 <option value="cost-desc">Cost (High-Low)</option>
                 <option value="vibe-asc">Vibe (Low-High)</option>
                 <option value="vibe-desc">Vibe (High-Low)</option>
-                <option value="rarity-asc">Rarity (C→M)</option>
-                <option value="rarity-desc">Rarity (M→C)</option>
+                <option value="rarity-asc">Rarity (C→E)</option>
+                <option value="rarity-desc">Rarity (E→C)</option>
               </select>
             </div>
             <div className="filter-group" style={{ flex: 'none' }}>
