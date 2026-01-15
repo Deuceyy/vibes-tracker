@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks, validateDeck } from '../hooks/useDecks';
 import { useCollection, cardData } from '../hooks/useCollection';
+import { usePrices } from '../hooks/usePrices';
 import Header from './Header';
 import CardModal from './CardModal';
 
@@ -15,6 +16,7 @@ export default function DeckBuilder() {
   const { user } = useAuth();
   const { saveDeck, getDeck } = useDecks();
   const { collection } = useCollection();
+  const { getPrice, formatPrice } = usePrices();
   
   const [deckName, setDeckName] = useState('');
   const [deckDescription, setDeckDescription] = useState('');
@@ -70,6 +72,21 @@ export default function DeckBuilder() {
   }, [search, colorFilter, typeFilter]);
 
   const validation = useMemo(() => validateDeck(deckCards), [deckCards]);
+
+  // Calculate deck cost (normal prices)
+  const deckCost = useMemo(() => {
+    let total = 0;
+    let missing = 0;
+    deckCards.forEach(({ cardId, quantity }) => {
+      const price = getPrice(cardId, 'normal');
+      if (price !== null) {
+        total += price * quantity;
+      } else {
+        missing += quantity;
+      }
+    });
+    return { total, missing };
+  }, [deckCards, getPrice]);
 
   const getCardQuantity = (cardId) => {
     const entry = deckCards.find(c => c.cardId === cardId);
@@ -208,6 +225,16 @@ export default function DeckBuilder() {
           <div className={`deck-count ${validation.valid ? 'valid' : 'invalid'}`}>
             {validation.totalCards}/52 cards
           </div>
+          
+          {/* Deck Cost */}
+          {deckCards.length > 0 && (
+            <div className="deck-cost">
+              <span className="deck-cost-label">💰 Deck Cost:</span>
+              <span className="deck-cost-amount">{formatPrice(deckCost.total)}</span>
+              {deckCost.missing > 0 && <span className="deck-cost-missing">({deckCost.missing} unpriced)</span>}
+            </div>
+          )}
+
           {validation.errors.length > 0 && (
             <div className="deck-errors">
               {validation.errors.map((err, i) => <div key={i}>{err}</div>)}

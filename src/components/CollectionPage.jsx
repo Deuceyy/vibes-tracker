@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useCollection, cardData, VARIANTS } from '../hooks/useCollection';
+import { usePrices } from '../hooks/usePrices';
 import Header from './Header';
 import CardModal from './CardModal';
 
@@ -23,6 +24,13 @@ export default function CollectionPage() {
     resetCollection
   } = useCollection();
 
+  const { 
+    getPrice, 
+    formatPrice, 
+    loading: pricesLoading,
+    lastUpdated 
+  } = usePrices();
+
   const [filters, setFilters] = useState({
     search: '',
     color: 'All',
@@ -39,6 +47,42 @@ export default function CollectionPage() {
   const updateFilter = (key, value) => {
     setFilters(prev => ({ ...prev, [key]: value }));
   };
+
+  // Calculate collection value by iterating through all cards
+  const collectionValue = useMemo(() => {
+    if (pricesLoading) return null;
+    
+    let total = 0;
+    let breakdown = { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+    let cardCount = 0;
+    let pricedCount = 0;
+    
+    cardData.forEach(card => {
+      const variants = getCardVariants(card.id);
+      
+      ['normal', 'foil', 'arctic', 'sketch'].forEach(variant => {
+        const count = variants[variant] || 0;
+        if (count > 0) {
+          cardCount += count;
+          const price = getPrice(card.id, variant);
+          if (price !== null) {
+            const value = price * count;
+            total += value;
+            breakdown[variant] += value;
+            pricedCount += count;
+          }
+        }
+      });
+    });
+    
+    return { 
+      total, 
+      breakdown, 
+      cardCount,
+      pricedCount,
+      missingPrices: cardCount - pricedCount
+    };
+  }, [pricesLoading, getCardVariants, getPrice]);
 
   const filteredCards = useMemo(() => {
     let cards = cardData.filter(card => {
@@ -128,6 +172,56 @@ export default function CollectionPage() {
       />
       
       <div className="container">
+        {/* Collection Value Display */}
+        {isOwnCollection && collectionValue && collectionValue.total > 0 && (
+          <section className="collection-value">
+            <div className="collection-value-header">
+              <h3>💰 Collection Value</h3>
+              {lastUpdated && (
+                <span className="price-updated">
+                  SCG prices from {lastUpdated.toLocaleDateString()}
+                </span>
+              )}
+            </div>
+            <div className="collection-value-total">
+              <span className="label">Total Value:</span>
+              <span className="amount">{formatPrice(collectionValue.total)}</span>
+            </div>
+            <div className="collection-value-breakdown">
+              {collectionValue.breakdown.normal > 0 && (
+                <div className="breakdown-item">
+                  <span>Normal:</span>
+                  <span>{formatPrice(collectionValue.breakdown.normal)}</span>
+                </div>
+              )}
+              {collectionValue.breakdown.foil > 0 && (
+                <div className="breakdown-item">
+                  <span>Foil:</span>
+                  <span>{formatPrice(collectionValue.breakdown.foil)}</span>
+                </div>
+              )}
+              {collectionValue.breakdown.arctic > 0 && (
+                <div className="breakdown-item">
+                  <span>Arctic:</span>
+                  <span>{formatPrice(collectionValue.breakdown.arctic)}</span>
+                </div>
+              )}
+              {collectionValue.breakdown.sketch > 0 && (
+                <div className="breakdown-item">
+                  <span>Sketch:</span>
+                  <span>{formatPrice(collectionValue.breakdown.sketch)}</span>
+                </div>
+              )}
+            </div>
+            <div className="collection-value-stats">
+              <span>{collectionValue.pricedCount} of {collectionValue.cardCount} cards priced</span>
+              {collectionValue.missingPrices > 0 && (
+                <span className="missing"> ({collectionValue.missingPrices} missing prices)</span>
+              )}
+            </div>
+          </section>
+        )}
+
         <section className="filters-section">
           <div className="filters-row">
             <div className="filter-group" style={{ flex: 2, minWidth: '200px' }}>
@@ -272,6 +366,7 @@ export default function CollectionPage() {
               const total = getTotalOwned(card.id);
               const isPlaysetComplete = hasPlayset(card.id);
               const isMasterComplete = hasMasterSet(card.id);
+              const normalPrice = getPrice(card.id, 'normal');
 
               let statusClass = '';
               if (isMasterComplete) statusClass = 'master-complete';
@@ -296,6 +391,9 @@ export default function CollectionPage() {
                     </div>
                     <div className={`rarity-badge ${card.rarity}`} />
                     <div className={`color-stripe ${card.color}`} />
+                    {normalPrice && (
+                      <div className="card-price-badge">{formatPrice(normalPrice)}</div>
+                    )}
                   </div>
                   <div className="card-info">
                     <div className="card-name" title={card.name}>{card.name}</div>

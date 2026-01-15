@@ -1,11 +1,15 @@
 import { VARIANTS } from '../hooks/useCollection';
+import { usePrices } from '../hooks/usePrices';
 
 const VARIANT_LABELS = { normal: 'Normal', foil: 'Foil', arctic: 'Arctic', sketch: 'Sketch' };
 
 export default function CardModal({ card, variants, onClose, onAdjustVariant }) {
+  const { getCardPrices, formatPrice } = usePrices();
+  
   if (!card) return null;
 
   const cardText = card.cardText?.replace(/\|/g, '<br>').replace(/_([A-Z])_/g, '[$1]') || 'No card text';
+  const prices = getCardPrices(card.id);
 
   return (
     <div className="modal-overlay active" onClick={(e) => {
@@ -33,8 +37,39 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant }) 
               {card.cost && <p><strong>Cost:</strong> {card.cost.amount} Fish</p>}
               {card.vibe !== null && <p><strong>Vibe:</strong> {card.vibe}</p>}
               <p><strong>Rarity:</strong> {card.rarity}</p>
-              <p><strong>Set:</strong> {card.set === 'Eth' ? 'Enter the Huddle' : 'Legend of the Lils'}</p>
+              <p><strong>Set:</strong> {card.set === 'Eth' ? 'Enter the Huddle' : 'Legend of the Lils'} #{card.setNumber || '?'}</p>
               <div className="card-text-box" dangerouslySetInnerHTML={{ __html: cardText }} />
+              
+              {/* SCG Prices */}
+              {prices && (
+                <div className="card-prices">
+                  <h4>💰 SCG Prices</h4>
+                  {prices.normal?.price && (
+                    <div className="price-row">
+                      <span className="variant-name">Normal:</span>
+                      <span className="variant-price">{formatPrice(prices.normal.price)}</span>
+                    </div>
+                  )}
+                  {prices.foil?.price && (
+                    <div className="price-row">
+                      <span className="variant-name">Foil:</span>
+                      <span className="variant-price">{formatPrice(prices.foil.price)}</span>
+                    </div>
+                  )}
+                  {prices.arctic?.price && (
+                    <div className="price-row">
+                      <span className="variant-name">Arctic:</span>
+                      <span className="variant-price">{formatPrice(prices.arctic.price)}</span>
+                    </div>
+                  )}
+                  {prices.sketch?.price && (
+                    <div className="price-row">
+                      <span className="variant-name">Sketch:</span>
+                      <span className="variant-price">{formatPrice(prices.sketch.price)}</span>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 

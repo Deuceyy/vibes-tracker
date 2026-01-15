@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
 import { cardData } from '../hooks/useCollection';
+import { usePrices } from '../hooks/usePrices';
 import Header from './Header';
 import CardModal from './CardModal';
 
@@ -11,6 +12,7 @@ export default function DeckView() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDeck, toggleUpvote, saveDeck } = useDecks();
+  const { getPrice, formatPrice } = usePrices();
   
   const [deck, setDeck] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -35,6 +37,22 @@ export default function DeckView() {
     });
     return grouped;
   }, [deck]);
+
+  // Calculate deck cost
+  const deckCost = useMemo(() => {
+    if (!deck?.cards) return { total: 0, missing: 0 };
+    let total = 0;
+    let missing = 0;
+    deck.cards.forEach(({ cardId, quantity }) => {
+      const price = getPrice(cardId, 'normal');
+      if (price !== null) {
+        total += price * quantity;
+      } else {
+        missing += quantity;
+      }
+    });
+    return { total, missing };
+  }, [deck, getPrice]);
 
   const handleCopy = async () => {
     if (!user) {
@@ -85,6 +103,10 @@ export default function DeckView() {
             <div className="deck-view-meta">
               <span>by <Link to={`/u/${deck.username}`}>{deck.username}</Link></span>
               <span>{totalCards} cards</span>
+              <span className="deck-cost-display">
+                💰 {formatPrice(deckCost.total)}
+                {deckCost.missing > 0 && <small> ({deckCost.missing} unpriced)</small>}
+              </span>
               <span className="deck-colors">
                 {deck.colors?.map(c => (
                   <span key={c} className={`color-badge color-${c.toLowerCase()}`}>{c}</span>

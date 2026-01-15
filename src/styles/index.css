@@ -1861,3 +1861,392 @@ body {
     text-align: center;
   }
 }
+
+/* ============================================
+   PRICE DISPLAY STYLES
+   Add these to your src/styles/index.css
+   ============================================ */
+
+/* Collection Value Box */
+.collection-value {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid #0f3460;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.collection-value-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.collection-value-header h3 {
+  margin: 0;
+  color: #e94560;
+  font-size: 1.1rem;
+}
+
+.price-updated {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.collection-value-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #0f3460;
+}
+
+.collection-value-total .label {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.collection-value-total .amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.collection-value-breakdown {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 12px 0;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.breakdown-item span:last-child {
+  color: #4ade80;
+}
+
+.collection-value-stats {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.collection-value-stats .missing {
+  color: #f59e0b;
+  margin-left: 4px;
+}
+
+.collection-value.loading {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+}
+
+/* Individual Card Price */
+.card-price {
+  font-size: 0.8rem;
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.card-price .variant {
+  color: #888;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+/* Card Price Details (for modal) */
+.card-prices {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.card-prices h4 {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  color: #e94560;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 0.85rem;
+}
+
+.variant-name {
+  color: #888;
+}
+
+.variant-price {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+/* Price on card grid items */
+.card-price-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #4ade80;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.card-item .card-price {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+}
+
+/* Deck cost display */
+.deck-cost {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.deck-cost-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.deck-cost-amount {
+  color: #4ade80;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.deck-cost-missing {
+  color: #f59e0b;
+  font-size: 0.75rem;
+}
+
+.deck-cost-display {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.deck-cost-display small {
+  color: #f59e0b;
+  font-weight: 400;
+}
+
+/* ============================================
+   PRICE LIST BUILDER
+   ============================================ */
+
+.price-list-builder {
+  padding: 20px;
+  max-width: 900px;
+}
+
+.price-list-builder h1 {
+  margin: 0 0 8px;
+}
+
+.price-list-builder .subtitle {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.list-search-section {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #1a1a2e;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.search-result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #0f3460;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.result-name {
+  font-weight: 500;
+}
+
+.result-variants {
+  display: flex;
+  gap: 6px;
+}
+
+.variant-add-btn {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+}
+
+.variant-add-btn.normal { background: #4a5568; }
+.variant-add-btn.foil { background: #6366f1; }
+.variant-add-btn.arctic { background: #06b6d4; }
+.variant-add-btn.sketch { background: #f59e0b; }
+
+.variant-add-btn:hover {
+  filter: brightness(1.2);
+}
+
+.price-list {
+  background: #1a1a2e;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.empty-list {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 60px 80px 80px 40px;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #0f3460;
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 600;
+}
+
+.list-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 60px 80px 80px 40px;
+  gap: 10px;
+  padding: 10px 16px;
+  align-items: center;
+  border-bottom: 1px solid #0f3460;
+}
+
+.list-row:last-child {
+  border-bottom: none;
+}
+
+.list-card-name {
+  font-weight: 500;
+}
+
+.list-variant {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.list-variant.normal { background: #4a5568; }
+.list-variant.foil { background: #6366f1; }
+.list-variant.arctic { background: #06b6d4; }
+.list-variant.sketch { background: #f59e0b; }
+
+.list-qty-input {
+  width: 50px;
+  padding: 4px;
+  text-align: center;
+  background: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.list-price, .list-subtotal {
+  color: #4ade80;
+  font-weight: 500;
+}
+
+.list-remove {
+  background: none;
+  border: none;
+  color: #e94560;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.list-total {
+  margin-top: 16px;
+  padding: 16px;
+  background: #1a1a2e;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 1rem;
+}
+
+.total-row.grand-total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #4ade80;
+  border-top: 1px solid #0f3460;
+  margin-top: 8px;
+  padding-top: 12px;
+}
+
+.total-missing {
+  color: #f59e0b;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+.clear-list-btn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background: #e94560;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.clear-list-btn:hover {
+  background: #d63050;
+}
