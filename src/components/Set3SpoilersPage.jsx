@@ -1,67 +1,27 @@
+import { useState } from 'react';
 import Header from './Header.jsx';
+import spoilerData from '../data/set3Spoilers.json';
 
-const spoilerCards = [
-  {
-    name: 'Victorious Penguin',
-    image: '/set3-spoilers/victorious-penguin.png',
-    color: 'Green',
-    type: 'Character - Penguin',
-    cost: 4,
-    vibe: 4,
-    collectorNumber: '3172 / 79/195',
-    effect: 'At the end of Action Time, if you have the Baron, put a vibe counter on each Character in your huddle.'
-  },
-  {
-    name: 'Vibe Scan',
-    image: '/set3-spoilers/vibe-scan.png',
-    color: 'Red',
-    type: 'Action',
-    cost: 1,
-    collectorNumber: 'Birb - 23/195',
-    effect: 'Choose a Character with vibe 2 or less and ice it.'
-  },
-  {
-    name: 'True Form',
-    image: '/set3-spoilers/true-form.png',
-    color: 'Yellow',
-    type: 'Action',
-    cost: 2,
-    collectorNumber: 'Birb, Moonbird 1899 - 59/195',
-    effect: "Choose a Character and ice it. At the start of the next Cycle, return it from ice to its owner's huddle."
-  },
-  {
-    name: 'Prized Birb',
-    image: '/set3-spoilers/prized-birb.png',
-    color: 'Purple',
-    type: 'Character - Birb',
-    cost: 3,
-    vibe: 2,
-    collectorNumber: 'Moonbird 9142 - 138/195',
-    effect: 'When this Character is iced, the player that iced it draws a card.'
-  },
-  {
-    name: 'Pengu',
-    image: '/set3-spoilers/pengu.png',
-    color: 'Blue',
-    type: 'Character - Penguin',
-    cost: 3,
-    vibe: 2,
-    collectorNumber: 'Pengu - 104/195',
-    effect: 'Playable during Action Time as if it were an Action.'
-  },
-  {
-    name: 'Birb',
-    image: '/set3-spoilers/birb.png',
-    color: 'Red',
-    type: 'Character - Birb',
-    cost: 2,
-    vibe: 1,
-    collectorNumber: 'Birb - 3/195',
-    effect: 'When this Character enters the huddle, reveal the top two cards of your deck. Pick up to one Action card with Fudge cost 2 or less and draw it. Put the rest on the bottom of your deck.'
-  }
-];
+const totalSetCards = 195;
+const allColors = Array.from(new Set(spoilerData.cards.map((card) => card.color))).sort();
+const allTypes = Array.from(new Set(spoilerData.cards.map((card) => getCardType(card.type)))).sort();
+const revealedPercentage = Math.round((spoilerData.cards.length / totalSetCards) * 100);
+
+function getCardType(type) {
+  return type.startsWith('Action') ? 'Action' : 'Character';
+}
 
 export default function Set3SpoilersPage() {
+  const [activeType, setActiveType] = useState('All');
+  const [activeColor, setActiveColor] = useState('All');
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const filteredCards = spoilerData.cards.filter((card) => {
+    const matchesType = activeType === 'All' || getCardType(card.type) === activeType;
+    const matchesColor = activeColor === 'All' || card.color === activeColor;
+    return matchesType && matchesColor;
+  });
+
   return (
     <>
       <Header isOwnCollection={false} />
@@ -76,19 +36,76 @@ export default function Set3SpoilersPage() {
           </div>
           <div className="set3-hero-meta">
             <div className="set3-meta-card">
-              <span className="set3-meta-label">Spoilers Live</span>
-              <strong>6 cards</strong>
+              <span className="set3-meta-label">Known Set 3 Cards</span>
+              <strong>{spoilerData.cards.length} / {totalSetCards}</strong>
+              <div className="set3-progress">
+                <div
+                  className="set3-progress-fill"
+                  style={{ width: `${revealedPercentage}%` }}
+                />
+              </div>
+              <span className="set3-progress-label">{revealedPercentage}% revealed</span>
             </div>
             <div className="set3-meta-card">
               <span className="set3-meta-label">Colors Shown</span>
-              <strong>5 colors</strong>
+              <strong>{spoilerData.colorCount} colors</strong>
             </div>
           </div>
         </section>
 
+        <section className="set3-toolbar" aria-label="Spoiler filters">
+          <div className="set3-filter-group">
+            <span className="set3-filter-label">Type</span>
+            <div className="set3-filter-chips">
+              {['All', ...allTypes].map((type) => (
+                <button
+                  key={type}
+                  type="button"
+                  className={`set3-filter-chip ${activeType === type ? 'active' : ''}`}
+                  onClick={() => setActiveType(type)}
+                >
+                  {type}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="set3-filter-group">
+            <span className="set3-filter-label">Color</span>
+            <div className="set3-filter-chips">
+              {['All', ...allColors].map((color) => (
+                <button
+                  key={color}
+                  type="button"
+                  className={`set3-filter-chip ${activeColor === color ? 'active' : ''}`}
+                  onClick={() => setActiveColor(color)}
+                >
+                  {color}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="set3-results-count">
+            Showing <strong>{filteredCards.length}</strong> of <strong>{spoilerData.cards.length}</strong>
+          </div>
+        </section>
+
         <section className="set3-grid" aria-label="Set 3 spoiler cards">
-          {spoilerCards.map((card) => (
-            <article key={card.name} className="spoiler-card">
+          {filteredCards.map((card) => (
+            <article
+              key={card.name}
+              className="spoiler-card"
+              onClick={() => setSelectedCard(card)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  setSelectedCard(card);
+                }
+              }}
+            >
               <div className="spoiler-card-image-wrap">
                 <img src={card.image} alt={card.name} className="spoiler-card-image" />
               </div>
@@ -104,7 +121,7 @@ export default function Set3SpoilersPage() {
                 <div className="spoiler-stats">
                   <div>
                     <span className="spoiler-stat-label">Cost</span>
-                    <strong>{card.cost}</strong>
+                    <strong>{card.cost ?? '-'}</strong>
                   </div>
                   <div>
                     <span className="spoiler-stat-label">Vibe</span>
@@ -116,6 +133,56 @@ export default function Set3SpoilersPage() {
             </article>
           ))}
         </section>
+
+        {filteredCards.length === 0 && (
+          <div className="set3-empty-state">
+            No spoilers match those filters yet.
+          </div>
+        )}
+
+        {selectedCard && (
+          <div
+            className="modal-overlay active"
+            onClick={(event) => {
+              if (event.target.classList.contains('modal-overlay')) {
+                setSelectedCard(null);
+              }
+            }}
+          >
+            <div className="modal spoiler-modal">
+              <div className="modal-header">
+                <h2 className="modal-title">{selectedCard.name}</h2>
+                <button className="modal-close" onClick={() => setSelectedCard(null)}>&times;</button>
+              </div>
+              <div className="modal-body">
+                <div className="modal-card-content">
+                  <div className="modal-card-image">
+                    <img src={selectedCard.image} alt={selectedCard.name} />
+                  </div>
+                  <div className="modal-card-details">
+                    <p><strong>Type:</strong> {selectedCard.type}</p>
+                    <p><strong>Color:</strong> {selectedCard.color}</p>
+                    <p><strong>Cost:</strong> {selectedCard.cost ?? '-'}</p>
+                    <p><strong>Vibe:</strong> {selectedCard.vibe ?? '-'}</p>
+                    {selectedCard.rarity && <p><strong>Rarity:</strong> {selectedCard.rarity}</p>}
+                    {selectedCard.collectorNumber && (
+                      <p><strong>Set Number:</strong> #{selectedCard.collectorNumber}</p>
+                    )}
+                    {selectedCard.featuringPudgy && (
+                      <p><strong>Featuring:</strong> {selectedCard.featuringPudgy}</p>
+                    )}
+                    {selectedCard.illustrator && (
+                      <p><strong>Illustrator:</strong> {selectedCard.illustrator}</p>
+                    )}
+                    <div className="card-text-box">
+                      {selectedCard.effect || 'No rules text yet.'}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </>
   );

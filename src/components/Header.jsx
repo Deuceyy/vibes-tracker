@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 
-export default function Header({ stats, onExport, onImport, onReset, isOwnCollection = true }) {
+export default function Header({ stats, onExport, onImport, onReset, isOwnCollection = false }) {
   const { user, userProfile, loading, signInWithGoogle, signOut, updateUsername } = useAuth();
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [editingUsername, setEditingUsername] = useState(false);

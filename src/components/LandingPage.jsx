@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
+import SiteDisclaimer from './SiteDisclaimer';
 
 export default function LandingPage() {
   const { user, signInWithGoogle } = useAuth();
@@ -145,6 +146,7 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
+      <SiteDisclaimer />
     </div>
   );
 }
