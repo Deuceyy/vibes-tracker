@@ -18,6 +18,7 @@ export default function LandingPage() {
         <nav className="landing-nav">
           <Link to="/collection">Collection</Link>
           <Link to="/decks">Decks</Link>
+          <Link to="/set3-spoilers">Set 3 Spoilers</Link>
           {user ? (
             <Link to="/collection" className="nav-cta">My Collection</Link>
           ) : (
@@ -136,6 +137,7 @@ export default function LandingPage() {
           <div className="footer-links">
             <Link to="/collection">Collection</Link>
             <Link to="/decks">Decks</Link>
+            <Link to="/set3-spoilers">Set 3 Spoilers</Link>
             <Link to="/builder">Deck Builder</Link>
           </div>
           <div className="footer-credit">

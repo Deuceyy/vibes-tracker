@@ -2250,3 +2250,280 @@ body {
 .clear-list-btn:hover {
   background: #d63050;
 }
+
+/* Add these to your index.css */
+
+/* Missing price highlight */
+.card-item.missing-price {
+  outline: 3px solid #ff6b6b;
+  outline-offset: -3px;
+}
+
+/* Filter toggle checkbox */
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #666;
+  user-select: none;
+}
+
+.filter-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #ff6b6b;
+}
+
+/* Set 3 Spoilers */
+.set3-spoilers-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.set3-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: end;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.18), transparent 28%),
+    linear-gradient(135deg, rgba(18, 18, 26, 0.98), rgba(26, 26, 37, 0.94));
+}
+
+.set3-hero-copy {
+  max-width: 760px;
+}
+
+.set3-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.18);
+  color: #c7d2fe;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.set3-hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.02;
+  margin-bottom: 0.9rem;
+}
+
+.set3-hero p {
+  max-width: 58ch;
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.set3-hero-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 0.9rem;
+  min-width: min(100%, 320px);
+}
+
+.set3-meta-card {
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.set3-meta-card strong {
+  display: block;
+  font-size: 1.35rem;
+}
+
+.set3-meta-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.set3-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.spoiler-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(26, 26, 37, 0.98), rgba(18, 18, 26, 0.98));
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+.spoiler-card-image-wrap {
+  padding: 1rem 1rem 0;
+}
+
+.spoiler-card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.spoiler-card-body {
+  padding: 1.1rem 1.1rem 1.25rem;
+}
+
+.spoiler-card-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.spoiler-color {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.spoiler-color-red {
+  background: rgba(239, 68, 68, 0.16);
+  color: #fca5a5;
+}
+
+.spoiler-color-yellow {
+  background: rgba(234, 179, 8, 0.16);
+  color: #fde68a;
+}
+
+.spoiler-color-green {
+  background: rgba(34, 197, 94, 0.16);
+  color: #86efac;
+}
+
+.spoiler-color-blue {
+  background: rgba(59, 130, 246, 0.16);
+  color: #93c5fd;
+}
+
+.spoiler-color-purple {
+  background: rgba(168, 85, 247, 0.16);
+  color: #d8b4fe;
+}
+
+.spoiler-collector {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.spoiler-card-body h2 {
+  font-size: 1.45rem;
+  margin-bottom: 0.35rem;
+}
+
+.spoiler-type {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.spoiler-stats {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.spoiler-stats > div {
+  min-width: 88px;
+  padding: 0.75rem 0.85rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.spoiler-stat-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.spoiler-effect {
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .set3-spoilers-page {
+    padding: 1rem;
+  }
+
+  .set3-hero {
+    padding: 1.5rem;
+  }
+
+  .set3-hero,
+  .set3-hero-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .set3-hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .set3-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filter-toggle:hover {
+  color: #333;
+}
+
+/* Missing price highlight */
+.card-item.missing-price {
+  outline: 3px solid #ff6b6b;
+  outline-offset: -3px;
+}
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.filter-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #ff6b6b;
+}

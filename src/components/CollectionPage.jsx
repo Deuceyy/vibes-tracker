@@ -43,6 +43,7 @@ export default function CollectionPage() {
   });
 
   const [selectedCard, setSelectedCard] = useState(null);
+  const [highlightMissingPrices, setHighlightMissingPrices] = useState(false);
 
   const updateFilter = (key, value) => {
     setFilters(prev => ({ ...prev, [key]: value }));
@@ -83,6 +84,12 @@ export default function CollectionPage() {
       missingPrices: cardCount - pricedCount
     };
   }, [pricesLoading, getCardVariants, getPrice]);
+
+  // Count cards with missing prices (for the toggle label)
+  const missingPriceCount = useMemo(() => {
+    if (pricesLoading) return 0;
+    return cardData.filter(card => getPrice(card.id, 'normal') === null).length;
+  }, [pricesLoading, getPrice]);
 
   const filteredCards = useMemo(() => {
     let cards = cardData.filter(card => {
@@ -188,43 +195,26 @@ export default function CollectionPage() {
               <span className="amount">{formatPrice(collectionValue.total)}</span>
             </div>
             <div className="collection-value-breakdown">
-              {collectionValue.breakdown.normal > 0 && (
-                <div className="breakdown-item">
-                  <span>Normal:</span>
-                  <span>{formatPrice(collectionValue.breakdown.normal)}</span>
-                </div>
-              )}
-              {collectionValue.breakdown.foil > 0 && (
-                <div className="breakdown-item">
-                  <span>Foil:</span>
-                  <span>{formatPrice(collectionValue.breakdown.foil)}</span>
-                </div>
-              )}
-              {collectionValue.breakdown.arctic > 0 && (
-                <div className="breakdown-item">
-                  <span>Arctic:</span>
-                  <span>{formatPrice(collectionValue.breakdown.arctic)}</span>
-                </div>
-              )}
-              {collectionValue.breakdown.sketch > 0 && (
-                <div className="breakdown-item">
-                  <span>Sketch:</span>
-                  <span>{formatPrice(collectionValue.breakdown.sketch)}</span>
-                </div>
+              {Object.entries(collectionValue.breakdown).map(([variant, value]) => 
+                value > 0 && (
+                  <div key={variant} className="breakdown-item">
+                    <span className={`variant-label ${variant}`}>{VARIANT_LABELS[variant]}</span>
+                    <span>{formatPrice(value)}</span>
+                  </div>
+                )
               )}
             </div>
-            <div className="collection-value-stats">
-              <span>{collectionValue.pricedCount} of {collectionValue.cardCount} cards priced</span>
-              {collectionValue.missingPrices > 0 && (
-                <span className="missing"> ({collectionValue.missingPrices} missing prices)</span>
-              )}
-            </div>
+            {collectionValue.missingPrices > 0 && (
+              <div className="missing-prices-note">
+                ⚠️ {collectionValue.missingPrices} card{collectionValue.missingPrices !== 1 ? 's' : ''} missing price data
+              </div>
+            )}
           </section>
         )}
 
         <section className="filters-section">
           <div className="filters-row">
-            <div className="filter-group" style={{ flex: 2, minWidth: '200px' }}>
+            <div className="filter-group">
               <label className="filter-label">Search</label>
               <input
                 type="text"
@@ -240,8 +230,8 @@ export default function CollectionPage() {
                 <option value="All">All Types</option>
                 <option value="Penguin">Penguin</option>
                 <option value="Action">Action</option>
-                <option value="Relic">Relic</option>
-                <option value="Rod">Rod</option>
+                <option value="Item">Item</option>
+                <option value="Stadium">Stadium</option>
               </select>
             </div>
             <div className="filter-group small">
@@ -331,6 +321,20 @@ export default function CollectionPage() {
               </div>
             </div>
           </div>
+
+          {/* Missing Prices Toggle */}
+          {missingPriceCount > 0 && (
+            <div className="filters-row">
+              <label className="filter-toggle">
+                <input
+                  type="checkbox"
+                  checked={highlightMissingPrices}
+                  onChange={(e) => setHighlightMissingPrices(e.target.checked)}
+                />
+                <span>Highlight Missing Prices ({missingPriceCount} cards)</span>
+              </label>
+            </div>
+          )}
         </section>
 
         <section className="progress-section">
@@ -367,14 +371,17 @@ export default function CollectionPage() {
               const isPlaysetComplete = hasPlayset(card.id);
               const isMasterComplete = hasMasterSet(card.id);
               const normalPrice = getPrice(card.id, 'normal');
+              const hasMissingPrice = normalPrice === null;
 
               let statusClass = '';
               if (isMasterComplete) statusClass = 'master-complete';
               else if (isPlaysetComplete) statusClass = 'playset-complete';
               else if (total > 0) statusClass = 'owned';
 
+              const missingPriceClass = highlightMissingPrices && hasMissingPrice ? 'missing-price' : '';
+
               return (
-                <div key={card.id} className={`card-item ${statusClass}`}>
+                <div key={card.id} className={`card-item ${statusClass} ${missingPriceClass}`}>
                   <div className="card-image-container" onClick={() => setSelectedCard(card)}>
                     <img 
                       className="card-image"

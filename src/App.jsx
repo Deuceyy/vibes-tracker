@@ -8,6 +8,7 @@ import DecksPage from './components/DecksPage.jsx';
 import DeckBuilder from './components/DeckBuilder.jsx';
 import DeckView from './components/DeckView.jsx';
 import PriceListBuilder from './components/PriceListBuilder.jsx';
+import Set3SpoilersPage from './components/Set3SpoilersPage.jsx';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/builder/:deckId" element={<DeckBuilder />} />
           <Route path="/deck/:deckId" element={<DeckView />} />
           <Route path="/prices" element={<PriceListBuilder />} />
+          <Route path="/set3-spoilers" element={<Set3SpoilersPage />} />
         </Routes>
       </PricesProvider>
     </AuthProvider>
