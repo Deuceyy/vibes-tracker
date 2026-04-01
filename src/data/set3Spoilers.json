@@ -1,6 +1,9 @@
 {
-  "generatedAt": "2026-04-01T18:08:00.159Z",
+  "generatedAt": "2026-04-01T20:46:09.513Z",
   "colorCount": 6,
+  "skippedCards": [
+    "Birb Who's 100 Feet Tall"
+  ],
   "cards": [
     {
       "name": "Birb",
