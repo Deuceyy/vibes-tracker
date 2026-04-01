@@ -20,7 +20,7 @@ function normalizeWhitespace(value) {
 function normalizeKey(value) {
   return normalizeWhitespace(value)
     .toLowerCase()
-    .replace(/_/g, ' ')
+    .replace(/['’_]/g, '')
     .replace(/[^\w\s-]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
