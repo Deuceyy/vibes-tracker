@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-01T17:15:09.286Z",
-  "colorCount": 5,
+  "generatedAt": "2026-04-01T18:08:00.159Z",
+  "colorCount": 6,
   "cards": [
     {
       "name": "Birb",
@@ -91,6 +91,21 @@
       "image": "/set3-spoilers/prized-birb.png",
       "imageFileName": "prized birb.png",
       "imageFileId": "1bXsu4OX9GA-qGzqjTESh_KeTmipVoWaK"
+    },
+    {
+      "name": "The Peng",
+      "color": "Colorless",
+      "type": "Relic - Location",
+      "cost": 6,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Lil 18814",
+      "collectorNumber": "193",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "Whenever a Character has any number of vibe counters put on it during Action Time, flop it. Whenever another Location enters play, ice this Relic.",
+      "image": "/set3-spoilers/the-peng.png",
+      "imageFileName": "the peng.png",
+      "imageFileId": "11f17Qt5Hh1I-d_xOuGusxUJS1hudgHjr"
     }
   ]
 }
