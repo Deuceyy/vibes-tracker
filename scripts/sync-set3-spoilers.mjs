@@ -20,6 +20,7 @@ function normalizeWhitespace(value) {
 function normalizeKey(value) {
   return normalizeWhitespace(value)
     .toLowerCase()
+    .replace(/_/g, ' ')
     .replace(/[^\w\s-]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
@@ -190,16 +191,19 @@ async function main() {
     driveFiles.map((file) => [file.normalizedName, file])
   );
 
-  const cards = rows.map((row) => {
+  const missingImages = [];
+
+  const cards = rows.flatMap((row) => {
     const name = normalizeWhitespace(row.Name ?? '');
     const matchedFile = driveFilesByName.get(normalizeKey(`${name}.png`));
     if (!matchedFile) {
-      throw new Error(`No base PNG found in Drive for "${name}"`);
+      missingImages.push(name);
+      return [];
     }
 
     const outputFileName = `${slugify(name)}.png`;
 
-    return {
+    return [{
       name,
       color: normalizeWhitespace(row.Color ?? ''),
       type: row.Attribute
@@ -216,7 +220,7 @@ async function main() {
       imageFileName: matchedFile.fileName,
       imageFileId: matchedFile.fileId,
       outputFileName
-    };
+    }];
   });
 
   const keepFileNames = new Set(cards.map((card) => card.outputFileName));
@@ -230,6 +234,7 @@ async function main() {
   const output = {
     generatedAt: new Date().toISOString(),
     colorCount,
+    skippedCards: missingImages,
     cards: cards
       .map(({ outputFileName, ...card }) => card)
       .sort((left, right) => {
@@ -240,6 +245,9 @@ async function main() {
   };
 
   await fs.writeFile(dataFile, `${JSON.stringify(output, null, 2)}\n`);
+  if (missingImages.length > 0) {
+    console.warn(`Skipped ${missingImages.length} card(s) with no base PNG in Drive: ${missingImages.join(', ')}`);
+  }
   console.log(`Synced ${output.cards.length} Set 3 spoiler cards.`);
 }
 
