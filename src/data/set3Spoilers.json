@@ -1,9 +1,7 @@
 {
-  "generatedAt": "2026-04-01T20:46:09.513Z",
+  "generatedAt": "2026-04-01T20:53:39.284Z",
   "colorCount": 6,
-  "skippedCards": [
-    "Birb Who's 100 Feet Tall"
-  ],
+  "skippedCards": [],
   "cards": [
     {
       "name": "Birb",
@@ -79,6 +77,21 @@
       "image": "/set3-spoilers/pengu.png",
       "imageFileName": "pengu.png",
       "imageFileId": "1ZL_o-53YTXASUrTcm9DsjD1avggLMusd"
+    },
+    {
+      "name": "Birb Who's 100 Feet Tall",
+      "color": "Blue",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 6,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 2090",
+      "collectorNumber": "107",
+      "illustrator": "Jungle",
+      "effect": "",
+      "image": "/set3-spoilers/birb-who-s-100-feet-tall.png",
+      "imageFileName": "birb who_s 100 feet tall.png",
+      "imageFileId": "1AzYbLDYC-CXWlG3fdHQST2LdwWguxZNQ"
     },
     {
       "name": "Prized Birb",
