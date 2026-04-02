@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T18:05:38.595Z",
+  "generatedAt": "2026-04-02T19:18:57.011Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -47,6 +47,21 @@
       "image": "/set3-spoilers/true-form.png",
       "imageFileName": "true form.png",
       "imageFileId": "1YlNU_b73WNX23lqdAPtwA6SU934MOfFN"
+    },
+    {
+      "name": "Lil Helium",
+      "color": "Green",
+      "type": "Character - Lil Penguin",
+      "cost": 3,
+      "vibe": 3,
+      "rarity": "Common",
+      "featuringPudgy": "Lil 14647",
+      "collectorNumber": "73",
+      "illustrator": "blue boo",
+      "effect": "When this Character enters the huddle, choose another Character and put 2 vibe counters on it.",
+      "image": "/set3-spoilers/lil-helium.png",
+      "imageFileName": "lil helium.png",
+      "imageFileId": "11HjXgDn5BkBudoEbIStGTdjbJuq45FqN"
     },
     {
       "name": "Victorious Penguin",
