@@ -1,9 +1,7 @@
 {
-  "generatedAt": "2026-04-07T23:02:05.816Z",
+  "generatedAt": "2026-04-07T23:57:11.021Z",
   "colorCount": 6,
-  "skippedCards": [
-    "Reflective Penguin"
-  ],
+  "skippedCards": [],
   "cards": [
     {
       "name": "Birb",
@@ -49,6 +47,21 @@
       "image": "/set3-spoilers/true-form.png",
       "imageFileName": "true form.png",
       "imageFileId": "1YlNU_b73WNX23lqdAPtwA6SU934MOfFN"
+    },
+    {
+      "name": "Reflective Penguin",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 2,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 8108",
+      "collectorNumber": "66",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "As long as you have the Baron, this Character can produce _G__G_.",
+      "image": "/set3-spoilers/reflective-penguin.png",
+      "imageFileName": "reflective penguin.png",
+      "imageFileId": "1mY8wHNxALSLbmNz5cG1cP2qpTkO06Lak"
     },
     {
       "name": "Lil Helium",
