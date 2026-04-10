@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T23:56:38.171Z",
+  "generatedAt": "2026-04-10T03:45:13.946Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -17,6 +17,21 @@
       "image": "/set3-spoilers/birb.png",
       "imageFileName": "birb.png",
       "imageFileId": "1_1GeKNMqn85X0fu8DeQe7stKlEhkr4gc"
+    },
+    {
+      "name": "Birbman",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 5,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 555",
+      "collectorNumber": "13",
+      "illustrator": "bluugu - Lucius",
+      "effect": "Whenever this Character wins Vibe Check, draw a card, then ice a card from your hand.",
+      "image": "/set3-spoilers/birbman.png",
+      "imageFileName": "birbman.png",
+      "imageFileId": "17f2M_rKxUUE0IB_v8kXDR6wR1mhTL4mB"
     },
     {
       "name": "Vibe Scan",
