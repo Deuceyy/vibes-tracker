@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:35:09.585Z",
+  "generatedAt": "2026-04-13T19:44:57.363Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -47,6 +47,21 @@
       "image": "/set3-spoilers/vibe-scan.png",
       "imageFileName": "vibe scan.png",
       "imageFileId": "1l8bMa1q49d5m4Me0aPaxaqr0VYw5Cdcu"
+    },
+    {
+      "name": "Striker Birb",
+      "color": "Yellow",
+      "type": "Character - Silly Birb",
+      "cost": 4,
+      "vibe": 1,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Moonbird 5059",
+      "collectorNumber": "44",
+      "illustrator": "Stoopid Penguin",
+      "effect": "When this Character enters the huddle, choose a non-Silly Character in your huddle and ice it. At the start of the next Cycle, return it from ice to its owner's huddle.",
+      "image": "/set3-spoilers/striker-birb.png",
+      "imageFileName": "striker birb.png",
+      "imageFileId": "1qdLpBDAkMYB1Y8F_jYhQDgU69pgk9rwY"
     },
     {
       "name": "True Form",
