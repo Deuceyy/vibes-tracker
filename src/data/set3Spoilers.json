@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T14:17:25.896Z",
+  "generatedAt": "2026-04-20T15:49:59.140Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -47,6 +47,21 @@
       "image": "/set3-spoilers/vibe-scan.png",
       "imageFileName": "vibe scan.png",
       "imageFileId": "1l8bMa1q49d5m4Me0aPaxaqr0VYw5Cdcu"
+    },
+    {
+      "name": "Scholar Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 3549",
+      "collectorNumber": "41",
+      "illustrator": "bluugu - Lucius",
+      "effect": "When this Character is iced, choose a Character and put 3 vibe counters on it.",
+      "image": "/set3-spoilers/scholar-birb.png",
+      "imageFileName": "scholar birb.png",
+      "imageFileId": "1OI-Tau4DRLEBygnR7RuSV8fFK0vHIBiC"
     },
     {
       "name": "Striker Birb",
