@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { signInWithPopup, signOut as firebaseSignOut, onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc, setDoc, collection, query, where, getDocs } from 'firebase/firestore';
 import { auth, googleProvider, db } from '../firebase';
@@ -24,6 +24,7 @@ export function AuthProvider({ children }) {
             username,
             displayName: user.displayName,
             photoURL: user.photoURL,
+            sellerAccessStatus: 'none',
             createdAt: new Date().toISOString()
           };
           await setDoc(profileRef, newProfile);
@@ -53,6 +54,13 @@ export function AuthProvider({ children }) {
     }
   };
 
+  const updateUserProfile = useCallback(async (patch) => {
+    if (!user) return;
+    const profileRef = doc(db, 'users', user.uid);
+    await setDoc(profileRef, patch, { merge: true });
+    setUserProfile((prev) => ({ ...(prev || {}), ...patch }));
+  }, [user]);
+
   const updateUsername = async (newUsername) => {
     if (!user) return;
     const clean = newUsername.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -67,13 +75,11 @@ export function AuthProvider({ children }) {
       alert('Username already taken');
       return;
     }
-    const profileRef = doc(db, 'users', user.uid);
-    await setDoc(profileRef, { username: clean }, { merge: true });
-    setUserProfile(prev => ({ ...prev, username: clean }));
+    await updateUserProfile({ username: clean });
   };
 
   return (
-    <AuthContext.Provider value={{ user, userProfile, loading, signInWithGoogle, signOut, updateUsername }}>
+    <AuthContext.Provider value={{ user, userProfile, loading, signInWithGoogle, signOut, updateUsername, updateUserProfile }}>
       {children}
     </AuthContext.Provider>
   );

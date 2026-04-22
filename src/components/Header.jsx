@@ -1,15 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+import { getSellerAccessStatus, useAdminAlerts } from '../hooks/useMarketplace';
 
 export default function Header({ stats, onExport, onImport, onReset, isOwnCollection = false }) {
   const { user, userProfile, loading, signInWithGoogle, signOut, updateUsername } = useAuth();
+  const isAdmin = Boolean(userProfile?.isAdmin || userProfile?.role === 'admin');
+  const sellerAccessStatus = getSellerAccessStatus(userProfile || {});
+  const { totalPending } = useAdminAlerts(Boolean(user && isAdmin));
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [editingUsername, setEditingUsername] = useState(false);
   const [newUsername, setNewUsername] = useState('');
 
-  const handleUsernameSubmit = async (e) => {
-    e.preventDefault();
+  const handleUsernameSubmit = async (event) => {
+    event.preventDefault();
     if (newUsername.trim()) {
       await updateUsername(newUsername.trim());
       setEditingUsername(false);
@@ -20,20 +24,19 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = '.json';
-    input.onchange = (e) => {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          try {
-            const data = JSON.parse(event.target.result);
-            onImport?.(data);
-          } catch (err) {
-            alert('Error importing collection');
-          }
-        };
-        reader.readAsText(file);
-      }
+    input.onchange = (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (loadEvent) => {
+        try {
+          const data = JSON.parse(loadEvent.target.result);
+          onImport?.(data);
+        } catch (error) {
+          alert('Error importing collection');
+        }
+      };
+      reader.readAsText(file);
     };
     input.click();
   };
@@ -43,27 +46,26 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
     const data = onExport();
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `vibes-collection-${new Date().toISOString().split('T')[0]}.json`;
-    a.click();
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = `vibes-collection-${new Date().toISOString().split('T')[0]}.json`;
+    anchor.click();
     URL.revokeObjectURL(url);
   };
 
   const shareUrl = userProfile ? `${window.location.origin}/u/${userProfile.username}` : null;
 
   const copyShareLink = () => {
-    if (shareUrl) {
-      navigator.clipboard.writeText(shareUrl);
-      alert('Profile link copied!');
-    }
+    if (!shareUrl) return;
+    navigator.clipboard.writeText(shareUrl);
+    alert('Profile link copied.');
   };
 
   return (
     <header className="header">
       <div className="header-content">
         <Link to="/" className="logo">
-          <span className="logo-icon">🐧</span>
+          <span className="logo-icon" aria-hidden="true">🐧</span>
           <div>
             <div className="logo-text">VibesTracker</div>
             <div className="logo-subtitle">Pudgy Penguins TCG</div>
@@ -73,6 +75,7 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
         <nav className="header-nav">
           <Link to="/collection" className="nav-link">Collection</Link>
           <Link to="/decks" className="nav-link">Decks</Link>
+          <Link to="/marketplace" className="nav-link">Marketplace</Link>
           <Link to="/set3-spoilers" className="nav-link">Set 3 Spoilers</Link>
         </nav>
 
@@ -98,13 +101,25 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
         )}
 
         <div className="header-actions">
+          {isAdmin && (
+            <Link to="/admin?tab=requests" className="admin-alert-link">
+              Admin
+              {totalPending > 0 && <span className="admin-alert-badge">{totalPending}</span>}
+            </Link>
+          )}
+
           {isOwnCollection && (
             <div className="action-buttons">
               <button className="action-btn secondary" onClick={handleExportClick}>Export</button>
               <button className="action-btn secondary" onClick={handleImportClick}>Import</button>
-              <button className="action-btn secondary" onClick={() => {
-                if (confirm('Reset your entire collection?')) onReset?.();
-              }}>Reset</button>
+              <button
+                className="action-btn secondary"
+                onClick={() => {
+                  if (confirm('Reset your entire collection?')) onReset?.();
+                }}
+              >
+                Reset
+              </button>
             </div>
           )}
 
@@ -112,13 +127,10 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
             <div className="auth-loading">...</div>
           ) : user ? (
             <div className="user-menu-container">
-              <button 
-                className="user-avatar-btn"
-                onClick={() => setShowUserMenu(!showUserMenu)}
-              >
+              <button className="user-avatar-btn" onClick={() => setShowUserMenu((prev) => !prev)}>
                 <img src={user.photoURL} alt="" className="user-avatar" />
               </button>
-              
+
               {showUserMenu && (
                 <div className="user-menu">
                   <div className="user-menu-header">
@@ -130,35 +142,47 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
                           <input
                             type="text"
                             value={newUsername}
-                            onChange={(e) => setNewUsername(e.target.value)}
+                            onChange={(event) => setNewUsername(event.target.value)}
                             placeholder="username"
                             className="username-input"
                             autoFocus
                           />
-                          <button type="submit" className="username-save">✓</button>
+                          <button type="submit" className="username-save">Save</button>
                         </form>
                       ) : (
-                        <div 
+                        <div
                           className="user-username"
                           onClick={() => {
                             setNewUsername(userProfile?.username || '');
                             setEditingUsername(true);
                           }}
                         >
-                          @{userProfile?.username} ✏️
+                          @{userProfile?.username} edit
                         </div>
                       )}
                     </div>
                   </div>
-                  
+
+                  <Link className="menu-item" to={sellerAccessStatus === 'approved' ? '/marketplace/my-listings' : '/settings/seller'} onClick={() => setShowUserMenu(false)}>
+                    {sellerAccessStatus === 'approved' ? 'Manage Listings' : 'Apply to Sell'}
+                  </Link>
+
+                  <Link className="menu-item" to="/messages" onClick={() => setShowUserMenu(false)}>
+                    Messages
+                  </Link>
+
+                  <Link className="menu-item" to="/settings/seller" onClick={() => setShowUserMenu(false)}>
+                    Seller Profile
+                  </Link>
+
                   {shareUrl && (
                     <button className="menu-item" onClick={copyShareLink}>
-                      📋 Copy Profile Link
+                      Copy Profile Link
                     </button>
                   )}
-                  
+
                   <button className="menu-item" onClick={signOut}>
-                    🚪 Sign Out
+                    Sign Out
                   </button>
                 </div>
               )}

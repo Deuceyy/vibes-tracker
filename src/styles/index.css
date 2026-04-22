@@ -106,6 +106,32 @@ body {
   gap: 1rem;
 }
 
+.admin-alert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-weight: 700;
+}
+
+.admin-alert-badge {
+  min-width: 1.35rem;
+  height: 1.35rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
 .action-buttons {
   display: flex;
   gap: 0.5rem;
@@ -2838,6 +2864,605 @@ body {
   height: 16px;
   cursor: pointer;
   accent-color: #ff6b6b;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.marketplace-page-header p,
+.page-header p,
+.muted-copy {
+  color: var(--text-secondary);
+}
+
+.panel {
+  background: rgba(9, 18, 36, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 1.25rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+.section-header.compact,
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.marketplace-notice {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  background: rgba(14, 116, 144, 0.12);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.marketplace-notice.compact {
+  padding: 0.85rem 1rem;
+}
+
+.seller-settings-grid,
+.card-detail-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.seller-settings-form,
+.card-detail-panel {
+  min-height: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.textarea-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-status,
+.success-text {
+  color: #86efac;
+}
+
+.error-text {
+  color: #fca5a5;
+}
+
+.seller-trust-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.seller-trust-header,
+.profile-heading-row,
+.thread-listing-summary,
+.listing-card-top,
+.inbox-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.trust-pill,
+.verified-badge,
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.trust-pill.verified,
+.verified-badge {
+  background: rgba(74, 222, 128, 0.16);
+  color: #86efac;
+}
+
+.status-pill.active {
+  background: rgba(56, 189, 248, 0.16);
+  color: #7dd3fc;
+}
+
+.status-pill.approved {
+  background: rgba(74, 222, 128, 0.16);
+  color: #86efac;
+}
+
+.status-pill.pending {
+  background: rgba(251, 191, 36, 0.18);
+  color: #fde68a;
+}
+
+.status-pill.rejected {
+  background: rgba(248, 113, 113, 0.16);
+  color: #fca5a5;
+}
+
+.status-pill.sold {
+  background: rgba(248, 113, 113, 0.16);
+  color: #fca5a5;
+}
+
+.status-pill.inactive {
+  background: rgba(148, 163, 184, 0.18);
+  color: #cbd5e1;
+}
+
+.status-pill.none {
+  background: rgba(148, 163, 184, 0.18);
+  color: #cbd5e1;
+}
+
+.trust-meter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.trust-meter-bar {
+  flex: 1;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.trust-meter-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #38bdf8, #34d399);
+}
+
+.seller-trust-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.6rem;
+  color: var(--text-secondary);
+}
+
+.listing-stack,
+.inbox-list,
+.admin-conversation-table {
+  display: grid;
+  gap: 1rem;
+}
+
+.listing-card,
+.inbox-row,
+.admin-conversation-row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.inbox-row,
+.admin-conversation-row {
+  grid-template-columns: 1fr auto;
+  text-decoration: none;
+  color: inherit;
+}
+
+.inbox-row.unread {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.16);
+}
+
+.listing-card-media {
+  display: flex;
+  align-items: center;
+}
+
+.listing-card-image,
+.card-detail-image {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+.listing-card-fallback {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.listing-card-content,
+.card-detail-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listing-card-title,
+.thread-listing-title {
+  color: var(--text-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.listing-card-meta,
+.listing-card-details,
+.seller-profile-meta,
+.detail-breadcrumbs,
+.dashboard-summary,
+.admin-conversation-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.listing-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fde68a;
+}
+
+.listing-price-group {
+  text-align: right;
+}
+
+.listing-shipping,
+.listing-total {
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  margin-top: 0.15rem;
+}
+
+.listing-total {
+  color: #c7f9cc;
+}
+
+.listing-seller-line {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.listing-seller-link,
+.text-link,
+.link-chip {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+.seller-rating-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(250, 204, 21, 0.14);
+  color: #fde68a;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.listing-notes,
+.thread-preview,
+.profile-bio {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.listing-card-footer,
+.listing-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.card-detail-panel {
+  grid-template-columns: minmax(0, 280px) 1fr;
+  display: grid;
+  gap: 1rem;
+}
+
+.card-detail-visual {
+  max-width: 320px;
+}
+
+.detail-breadcrumbs a,
+.detail-breadcrumbs span {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.thread-listing-summary {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.thread-listing-eyebrow {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.message-thread-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.message-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.message-bubble.mine {
+  margin-left: auto;
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.2);
+}
+
+.message-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.message-bubble p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.message-composer,
+.inbox-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-thread-note {
+  color: var(--text-secondary);
+  padding-top: 0.5rem;
+}
+
+.admin-panel,
+.admin-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.admin-tab {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.admin-tab.active {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.28), rgba(34, 197, 94, 0.18));
+  border-color: rgba(125, 211, 252, 0.38);
+}
+
+.admin-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.admin-stat-card,
+.admin-user-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.admin-helper {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.admin-user-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-user-top,
+.admin-simple-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.admin-simple-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.admin-simple-row {
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-simple-row.linked {
+  text-decoration: none;
+  color: inherit;
+}
+
+.action-btn.danger {
+  border-color: rgba(248, 113, 113, 0.35);
+  color: #fecaca;
+}
+
+.profile-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile-hero-main {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.profile-avatar.hero {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.profile-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.link-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.link-chip {
+  display: inline-flex;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.modal-card-links {
+  margin: 0.75rem 0;
+}
+
+.marketplace-preview {
+  margin-top: 1rem;
+}
+
+.modal-marketplace-preview-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.modal-marketplace-preview-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-marketplace-preview-price {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: var(--text-secondary);
+}
+
+.admin-conversation-stats {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .seller-settings-grid,
+  .card-detail-grid,
+  .card-detail-panel,
+  .profile-hero,
+  .page-header {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .profile-hero-main {
+    flex-direction: column;
+  }
+
+  .listing-card,
+  .inbox-row,
+  .admin-conversation-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Set 3 Spoilers */
