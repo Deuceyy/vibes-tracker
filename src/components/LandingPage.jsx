@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
-import { useConversations } from '../hooks/useMarketplace';
+import { useConversations, useSellerReviews } from '../hooks/useMarketplace';
 import SiteDisclaimer from './SiteDisclaimer';
 
 export default function LandingPage() {
-  const { user, signInWithGoogle } = useAuth();
+  const { user, userProfile, signInWithGoogle } = useAuth();
   const { publicDecks } = useDecks();
   const { conversations } = useConversations({ userId: user?.uid, enabled: Boolean(user) });
+  const { reviews } = useSellerReviews(user?.uid, Boolean(user));
 
   const topDecks = publicDecks.slice(0, 4);
   const unreadMessages = conversations.filter((conversation) => (conversation.unreadBy || []).includes(user?.uid)).length;
+  const unreadReviews = reviews.filter((review) => (review.createdAt || '') > (userProfile?.sellerReviewLastSeenAt || '')).length;
+  const totalNotifications = unreadMessages + unreadReviews;
 
   return (
     <div className="landing">
@@ -30,9 +33,9 @@ export default function LandingPage() {
                 Messages
                 {unreadMessages > 0 && <span className="admin-alert-badge">{unreadMessages}</span>}
               </Link>
-              <Link to="/messages" className="landing-user-link" aria-label="Open messages">
+              <Link to="/settings/seller" className="landing-user-link" aria-label="Open seller profile">
                 <img src={user.photoURL} alt="" className="landing-user-avatar" />
-                {unreadMessages > 0 && <span className="avatar-badge">{unreadMessages}</span>}
+                {totalNotifications > 0 && <span className="avatar-badge">{totalNotifications}</span>}
               </Link>
               <Link to="/marketplace/my-listings" className="nav-cta">My Listings</Link>
             </>

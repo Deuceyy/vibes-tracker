@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import { getSellerAccessStatus, useAdminAlerts, useConversations } from '../hooks/useMarketplace';
+import { getSellerAccessStatus, useAdminAlerts, useConversations, useSellerReviews } from '../hooks/useMarketplace';
 
 export default function Header({ stats, onExport, onImport, onReset, isOwnCollection = false }) {
   const { user, userProfile, loading, signInWithGoogle, signOut, updateUsername } = useAuth();
@@ -9,10 +9,13 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
   const sellerAccessStatus = getSellerAccessStatus(userProfile || {});
   const { totalPending } = useAdminAlerts(Boolean(user && isAdmin));
   const { conversations } = useConversations({ userId: user?.uid, enabled: Boolean(user) });
+  const { reviews } = useSellerReviews(user?.uid, Boolean(user));
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [editingUsername, setEditingUsername] = useState(false);
   const [newUsername, setNewUsername] = useState('');
   const unreadMessages = conversations.filter((conversation) => (conversation.unreadBy || []).includes(user?.uid)).length;
+  const unreadReviews = reviews.filter((review) => (review.createdAt || '') > (userProfile?.sellerReviewLastSeenAt || '')).length;
+  const totalNotifications = unreadMessages + unreadReviews;
 
   const handleUsernameSubmit = async (event) => {
     event.preventDefault();
@@ -138,7 +141,7 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
             <div className="user-menu-container">
               <button className="user-avatar-btn" onClick={() => setShowUserMenu((prev) => !prev)}>
                 <img src={user.photoURL} alt="" className="user-avatar" />
-                {unreadMessages > 0 && <span className="avatar-badge">{unreadMessages}</span>}
+                {totalNotifications > 0 && <span className="avatar-badge">{totalNotifications}</span>}
               </button>
 
               {showUserMenu && (
@@ -184,6 +187,7 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
 
                   <Link className="menu-item" to="/settings/seller" onClick={() => setShowUserMenu(false)}>
                     Seller Profile
+                    {unreadReviews > 0 && <span className="menu-item-badge">{unreadReviews}</span>}
                   </Link>
 
                   {shareUrl && (

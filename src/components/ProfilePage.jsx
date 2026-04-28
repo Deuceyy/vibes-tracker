@@ -4,7 +4,7 @@ import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useCollection, cardData } from '../hooks/useCollection';
 import { useAuth } from '../hooks/useAuth';
-import { getSellerAccessStatus, useConversations, useListings, useMarketplace, useSellerReviews } from '../hooks/useMarketplace';
+import { canUserReviewSeller, getSellerAccessStatus, useListings, useMarketplace, useSellerReviews } from '../hooks/useMarketplace';
 import CardModal from './CardModal';
 import Header from './Header';
 import { ListingCard, MarketplaceNotice, SellerTrustCard } from './MarketplaceCommon';
@@ -21,7 +21,7 @@ export default function ProfilePage() {
   const { listings, loading: listingsLoading } = useListings({ sellerUserId: userId || 'pending' });
   const { reviews, loading: reviewsLoading } = useSellerReviews(userId, Boolean(userId));
   const { conversations } = useConversations({ userId: user?.uid, enabled: Boolean(user?.uid) });
-  const { submitSellerReview } = useMarketplace();
+  const { submitSellerReview, submitReviewReport, markSellerReviewsSeen } = useMarketplace();
 
   useEffect(() => {
     async function findUser() {
@@ -70,6 +70,12 @@ export default function ProfilePage() {
   const [reviewForm, setReviewForm] = useState({ rating: 5, comment: '' });
   const [reviewMessage, setReviewMessage] = useState('');
   const [reviewError, setReviewError] = useState('');
+  const [reportingReviewId, setReportingReviewId] = useState(null);
+  const [reportReason, setReportReason] = useState('');
+  const [reportMessage, setReportMessage] = useState('');
+  const [reportError, setReportError] = useState('');
+  const [canLeaveReview, setCanLeaveReview] = useState(false);
+  const [reviewEligibilityLoading, setReviewEligibilityLoading] = useState(true);
   const isOwnProfile = Boolean(user && user.uid === userId);
   const sellerProfile = userProfile?.sellerProfile || {};
   const sellerAccessStatus = getSellerAccessStatus(userProfile || {});
@@ -77,13 +83,39 @@ export default function ProfilePage() {
     () => listings.filter((listing) => listing.status === 'active').sort((left, right) => (left.price ?? 0) - (right.price ?? 0)),
     [listings]
   );
-  const canLeaveReview = Boolean(
-    user &&
-    userId &&
-    user.uid !== userId &&
-    conversations.some((conversation) => conversation.sellerUserId === userId || conversation.buyerUserId === userId)
-  );
   const existingReview = reviews.find((review) => review.reviewerUserId === user?.uid);
+
+  useEffect(() => {
+    let mounted = true;
+
+    async function checkReviewEligibility() {
+      if (!user || !userId || user.uid === userId) {
+        if (mounted) {
+          setCanLeaveReview(false);
+          setReviewEligibilityLoading(false);
+        }
+        return;
+      }
+
+      setReviewEligibilityLoading(true);
+      const eligible = await canUserReviewSeller(user.uid, userId);
+      if (mounted) {
+        setCanLeaveReview(eligible);
+        setReviewEligibilityLoading(false);
+      }
+    }
+
+    checkReviewEligibility();
+    return () => {
+      mounted = false;
+    };
+  }, [user, userId]);
+
+  useEffect(() => {
+    if (isOwnProfile && reviews.length > 0) {
+      markSellerReviewsSeen();
+    }
+  }, [isOwnProfile, markSellerReviewsSeen, reviews.length]);
 
   const filteredCards = useMemo(() => {
     const cards = cardData.filter((card) => {
@@ -156,6 +188,19 @@ export default function ProfilePage() {
       setReviewForm((prev) => ({ ...prev, comment: '' }));
     } catch (error) {
       setReviewError(error.message || 'Unable to submit review.');
+    }
+  };
+
+  const handleReviewReport = async (review) => {
+    setReportError('');
+    setReportMessage('');
+    try {
+      await submitReviewReport({ review, reason: reportReason });
+      setReportMessage('Review report sent to admins.');
+      setReportReason('');
+      setReportingReviewId(null);
+    } catch (error) {
+      setReportError(error.message || 'Unable to report review.');
     }
   };
 
@@ -278,8 +323,12 @@ export default function ProfilePage() {
             </form>
           )}
 
-          {!canLeaveReview && !isOwnProfile && (
-            <p className="muted-copy">Reviews unlock after you have at least one buyer-seller conversation with this seller.</p>
+          {!canLeaveReview && !isOwnProfile && !reviewEligibilityLoading && (
+            <p className="muted-copy">Reviews unlock after you complete a sold marketplace deal with this seller.</p>
+          )}
+
+          {isOwnProfile && (
+            <p className="muted-copy">If a review looks false or abusive, you can report it for admin review.</p>
           )}
 
           {reviews.length === 0 ? (
@@ -299,10 +348,45 @@ export default function ProfilePage() {
                     </div>
                   </div>
                   {review.comment && <p className="listing-notes">{review.comment}</p>}
+                  {isOwnProfile && (
+                    <div className="listing-card-actions">
+                      {reportingReviewId === review.id ? (
+                        <>
+                          <textarea
+                            className="search-input textarea-input"
+                            rows="3"
+                            value={reportReason}
+                            onChange={(event) => setReportReason(event.target.value)}
+                            placeholder="Tell admins why this review should be reviewed or removed."
+                          />
+                          <button className="action-btn secondary" onClick={() => handleReviewReport(review)}>
+                            Send report
+                          </button>
+                          <button className="action-btn secondary" onClick={() => {
+                            setReportingReviewId(null);
+                            setReportReason('');
+                            setReportError('');
+                          }}>
+                            Cancel
+                          </button>
+                        </>
+                      ) : (
+                        <button className="action-btn secondary" onClick={() => {
+                          setReportingReviewId(review.id);
+                          setReportMessage('');
+                          setReportError('');
+                        }}>
+                          Report review
+                        </button>
+                      )}
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
           )}
+          {reportMessage && <p className="success-text">{reportMessage}</p>}
+          {reportError && <p className="error-text">{reportError}</p>}
         </section>
 
         <section className="panel">

@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCollection, cardData, VARIANTS } from '../hooks/useCollection';
 import { usePrices } from '../hooks/usePrices';
+import { useMarketplace } from '../hooks/useMarketplace';
 import Header from './Header';
 import CardModal from './CardModal';
 
@@ -9,6 +11,7 @@ const SET_ORDER = { 'Eth': 1, 'Lotl': 2 };
 const VARIANT_LABELS = { normal: 'N', foil: 'F', arctic: 'A', sketch: 'S' };
 
 export default function CollectionPage() {
+  const navigate = useNavigate();
   const {
     loading,
     isOwnCollection,
@@ -23,6 +26,7 @@ export default function CollectionPage() {
     exportCollection,
     resetCollection
   } = useCollection();
+  const { sellerCanList } = useMarketplace();
 
   const { 
     getPrice, 
@@ -44,6 +48,11 @@ export default function CollectionPage() {
 
   const [selectedCard, setSelectedCard] = useState(null);
   const [highlightMissingPrices, setHighlightMissingPrices] = useState(false);
+
+  const handleListFromCollection = (cardId, variant) => {
+    navigate(`/marketplace/my-listings?cardId=${encodeURIComponent(cardId)}&variant=${encodeURIComponent(variant)}`);
+    setSelectedCard(null);
+  };
 
   const updateFilter = (key, value) => {
     setFilters(prev => ({ ...prev, [key]: value }));
@@ -447,6 +456,7 @@ export default function CollectionPage() {
           variants={getCardVariants(selectedCard.id)}
           onClose={() => setSelectedCard(null)}
           onAdjustVariant={isOwnCollection ? adjustVariant : null}
+          onListVariant={isOwnCollection && sellerCanList ? handleListFromCollection : null}
         />
       )}
     </>

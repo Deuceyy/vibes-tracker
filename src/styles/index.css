@@ -740,23 +740,29 @@ body {
 }
 
 .modal-variant-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem;
-  background: var(--bg-card);
-  border-radius: 8px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    background: var(--bg-card);
+    border-radius: 8px;
+  }
 
 .modal-variant-label {
   font-weight: 600;
 }
 
 .modal-variant-counter {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+.modal-list-btn {
+    margin-left: auto;
+  }
 
 .modal-variant-btn {
   width: 28px;

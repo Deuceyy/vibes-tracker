@@ -6,7 +6,7 @@ import { formatPrice, formatShippingPrice } from './MarketplaceCommon';
 
 const VARIANT_LABELS = { normal: 'Normal', foil: 'Foil', arctic: 'Arctic', sketch: 'Sketch' };
 
-export default function CardModal({ card, variants, onClose, onAdjustVariant }) {
+export default function CardModal({ card, variants, onClose, onAdjustVariant, onListVariant }) {
   const { getCardPrices } = usePrices();
   const { listings, loading: listingsLoading } = useListings({ status: 'active', cardId: card?.id });
 
@@ -21,9 +21,12 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant }) 
   const previewListings = activeListings.slice(0, 3);
 
   return (
-    <div className="modal-overlay active" onClick={(event) => {
-      if (event.target.classList.contains('modal-overlay')) onClose();
-    }}>
+    <div
+      className="modal-overlay active"
+      onClick={(event) => {
+        if (event.target.classList.contains('modal-overlay')) onClose();
+      }}
+    >
       <div className="modal">
         <div className="modal-header">
           <h2 className="modal-title">{card.name}</h2>
@@ -135,10 +138,15 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant }) 
                   <div key={variant} className="modal-variant-row">
                     <span className={`modal-variant-label variant-label ${variant}`}>{VARIANT_LABELS[variant]}</span>
                     <div className="modal-variant-counter">
-                      <button className="modal-variant-btn" onClick={() => onAdjustVariant(card.id, variant, -1)}>−</button>
+                      <button className="modal-variant-btn" onClick={() => onAdjustVariant(card.id, variant, -1)}>-</button>
                       <span className={`modal-variant-count ${variants[variant] > 0 ? 'has-cards' : ''}`}>{variants[variant]}</span>
                       <button className="modal-variant-btn" onClick={() => onAdjustVariant(card.id, variant, 1)}>+</button>
                     </div>
+                    {onListVariant && variants[variant] > 0 && (
+                      <button className="action-btn secondary modal-list-btn" onClick={() => onListVariant(card.id, variant)}>
+                        List this {VARIANT_LABELS[variant].toLowerCase()}
+                      </button>
+                    )}
                   </div>
                 ))}
               </div>

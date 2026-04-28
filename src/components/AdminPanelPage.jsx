@@ -9,6 +9,7 @@ import {
   useAdminAlerts,
   useAdminCollections,
   useAdminDecks,
+  useAdminReviewReports,
   useAdminVerificationRequests,
   useAdminReviews,
   useAdminUsers,
@@ -54,6 +55,7 @@ export default function AdminPanelPage({ initialTab = 'overview' }) {
     adminSetSellerVerified,
     adminSetUserAdmin,
     adminToggleDeckVisibility,
+    adminUpdateReviewReport,
     adminUpdateListingStatus,
     adminUpdateVerificationRequest
   } = useMarketplace();
@@ -69,7 +71,8 @@ export default function AdminPanelPage({ initialTab = 'overview' }) {
   const { decks, loading: decksLoading } = useAdminDecks(Boolean(user && isAdmin));
   const { requests, loading: requestsLoading } = useAdminVerificationRequests(Boolean(user && isAdmin));
   const { reviews, loading: reviewsLoading } = useAdminReviews(Boolean(user && isAdmin));
-  const { pendingVerificationRequests } = useAdminAlerts(Boolean(user && isAdmin));
+  const { reports: reviewReports, loading: reviewReportsLoading } = useAdminReviewReports(Boolean(user && isAdmin));
+  const { pendingVerificationRequests, pendingReports } = useAdminAlerts(Boolean(user && isAdmin));
   const { listings, loading: listingsLoading } = useListings({});
   const { conversations, loading: conversationsLoading } = useConversations({ scope: 'admin', enabled: Boolean(user && isAdmin) });
 
@@ -170,6 +173,9 @@ export default function AdminPanelPage({ initialTab = 'overview' }) {
             </TabButton>
             <TabButton active={tab === 'users'} onClick={() => switchTab('users')}>Users</TabButton>
             <TabButton active={tab === 'reviews'} onClick={() => switchTab('reviews')}>Reviews</TabButton>
+            <TabButton active={tab === 'review-reports'} onClick={() => switchTab('review-reports')}>
+              Review Reports{pendingReports > 0 ? ` (${pendingReports})` : ''}
+            </TabButton>
             <TabButton active={tab === 'listings'} onClick={() => switchTab('listings')}>Listings</TabButton>
             <TabButton active={tab === 'conversations'} onClick={() => switchTab('conversations')}>Conversations</TabButton>
             <TabButton active={tab === 'decks'} onClick={() => switchTab('decks')}>Decks</TabButton>
@@ -425,6 +431,74 @@ export default function AdminPanelPage({ initialTab = 'overview' }) {
                             onClick={() => {
                               if (confirm('Delete this review?')) {
                                 runAdminAction(() => adminDeleteReview(review.id), 'Review deleted.');
+                              }
+                            }}
+                          >
+                            Delete review
+                          </button>
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+
+          {tab === 'review-reports' && (
+            <div className="admin-section">
+              {reviewReportsLoading ? (
+                <div className="loading">Loading review reports...</div>
+              ) : reviewReports.length === 0 ? (
+                <div className="empty-state compact">
+                  <h3>No review reports yet</h3>
+                  <p>Reported reviews will appear here for admin review.</p>
+                </div>
+              ) : (
+                <div className="admin-user-grid">
+                  {reviewReports.map((report) => {
+                    const seller = userById.get(report.sellerUserId);
+                    const reviewer = userById.get(report.reviewerUserId);
+                    return (
+                      <article key={report.id} className="admin-user-card">
+                        <div className="admin-user-top">
+                          <div>
+                            <strong>{seller?.sellerProfile?.displayName || seller?.displayName || seller?.username || report.sellerUserId}</strong>
+                            <div className="listing-card-meta">
+                              <span>Seller: @{seller?.username || 'unknown'}</span>
+                              <span>Reviewer: {reviewer?.username ? `@${reviewer.username}` : report.reviewerUserId}</span>
+                              <span>{report.reviewRating}/5</span>
+                            </div>
+                          </div>
+                          <span className={`status-pill ${report.status}`}>{report.status}</span>
+                        </div>
+
+                        {report.reviewComment && <p className="listing-notes">Review: {report.reviewComment}</p>}
+                        <p className="listing-notes">Report reason: {report.reason}</p>
+
+                        <div className="listing-card-actions">
+                          <button
+                            className="action-btn secondary"
+                            onClick={() => runAdminAction(() => adminUpdateReviewReport(report.id, 'resolved'), 'Review report resolved.')}
+                            disabled={report.status === 'resolved'}
+                          >
+                            Mark resolved
+                          </button>
+                          <button
+                            className="action-btn secondary"
+                            onClick={() => runAdminAction(() => adminUpdateReviewReport(report.id, 'dismissed'), 'Review report dismissed.')}
+                            disabled={report.status === 'dismissed'}
+                          >
+                            Dismiss
+                          </button>
+                          <button
+                            className="action-btn secondary danger"
+                            onClick={() => {
+                              if (confirm('Delete the underlying review?')) {
+                                runAdminAction(async () => {
+                                  await adminDeleteReview(report.reviewId);
+                                  await adminUpdateReviewReport(report.id, 'resolved');
+                                }, 'Reported review deleted.');
                               }
                             }}
                           >

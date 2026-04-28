@@ -23,6 +23,7 @@ export const LISTING_VARIANTS = ['normal', 'foil', 'arctic', 'sketch'];
 export const LISTING_LANGUAGES = ['English', 'Japanese', 'Other'];
 export const VERIFICATION_REQUEST_STATUSES = ['pending', 'approved', 'rejected'];
 export const SELLER_ACCESS_STATUSES = ['none', 'pending', 'approved', 'rejected'];
+export const REVIEW_REPORT_STATUSES = ['pending', 'resolved', 'dismissed'];
 
 const cardMap = new Map(cardData.map((card) => [card.id, card]));
 
@@ -61,6 +62,34 @@ export function getSellerAccessStatus(profile = {}, verificationRequest = null) 
 
 export function canUserSell(profile = {}, verificationRequest = null) {
   return getSellerAccessStatus(profile, verificationRequest) === 'approved';
+}
+
+export async function canUserReviewSeller(buyerUserId, sellerUserId) {
+  if (!buyerUserId || !sellerUserId || buyerUserId === sellerUserId) return false;
+
+  const conversationsQuery = query(
+    collection(db, 'conversations'),
+    where('participantIds', 'array-contains', buyerUserId)
+  );
+  const snapshot = await getDocs(conversationsQuery);
+  const matchingConversations = snapshot.docs
+    .map((entry) => entry.data())
+    .filter((conversation) => (
+      conversation.buyerUserId === buyerUserId &&
+      conversation.sellerUserId === sellerUserId &&
+      conversation.listingId
+    ));
+
+  if (matchingConversations.length === 0) return false;
+
+  for (const conversation of matchingConversations) {
+    const listingSnap = await getDoc(doc(db, 'listings', conversation.listingId));
+    if (listingSnap.exists() && listingSnap.data().status === 'sold') {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 function createSellerSnapshot(uid, profile = {}) {
@@ -326,6 +355,38 @@ export function useAdminReviews(enabled = true) {
   return { reviews: rows, loading };
 }
 
+export function useReviewReports(options = {}) {
+  const { sellerUserId, enabled = true } = options;
+  const [reports, setReports] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!enabled || !sellerUserId) {
+      setReports([]);
+      setLoading(false);
+      return undefined;
+    }
+
+    const reportsQuery = query(collection(db, 'reviewReports'), where('sellerUserId', '==', sellerUserId));
+    const unsubscribe = onSnapshot(reportsQuery, (snapshot) => {
+      const rows = snapshot.docs
+        .map((entry) => ({ id: entry.id, ...entry.data() }))
+        .sort((left, right) => sortByDateDesc(left, right, 'createdAt'));
+      setReports(rows);
+      setLoading(false);
+    }, () => setLoading(false));
+
+    return () => unsubscribe();
+  }, [enabled, sellerUserId]);
+
+  return { reports, loading };
+}
+
+export function useAdminReviewReports(enabled = true) {
+  const { rows, loading } = useAdminCollection('reviewReports', { enabled, sortField: 'updatedAt' });
+  return { reports: rows, loading };
+}
+
 export function useVerificationRequest(userId, enabled = true) {
   const [request, setRequest] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -356,13 +417,15 @@ export function useAdminVerificationRequests(enabled = true) {
 
 export function useAdminAlerts(enabled = true) {
   const { requests, loading } = useAdminVerificationRequests(enabled);
+  const { reports, loading: reportsLoading } = useAdminReviewReports(enabled);
   const pendingVerificationRequests = requests.filter((request) => request.status === 'pending').length;
+  const pendingReports = reports.filter((report) => report.status === 'pending').length;
 
   return {
     pendingVerificationRequests,
-    pendingReports: 0,
-    totalPending: pendingVerificationRequests,
-    loading
+    pendingReports,
+    totalPending: pendingVerificationRequests + pendingReports,
+    loading: loading || reportsLoading
   };
 }
 
@@ -669,6 +732,10 @@ export function useMarketplace() {
     if (!sellerUserId || sellerUserId === user.uid) {
       throw new Error('You cannot review yourself.');
     }
+    const reviewAllowed = await canUserReviewSeller(user.uid, sellerUserId);
+    if (!reviewAllowed) {
+      throw new Error('Reviews unlock after you complete a sold marketplace deal with this seller.');
+    }
     const numericRating = Number(rating);
     if (numericRating < 1 || numericRating > 5) {
       throw new Error('Rating must be between 1 and 5.');
@@ -690,6 +757,38 @@ export function useMarketplace() {
 
     await setDoc(doc(db, 'sellerReviews', reviewId), reviewPayload, { merge: true });
     await recalculateSellerStats(sellerUserId);
+  }, [user, userProfile]);
+
+  const markSellerReviewsSeen = useCallback(async () => {
+    if (!user) return;
+    const timestamp = nowIso();
+    await updateUserProfile({
+      sellerReviewLastSeenAt: timestamp,
+      updatedAt: timestamp
+    });
+  }, [updateUserProfile, user]);
+
+  const submitReviewReport = useCallback(async ({ review, reason }) => {
+    if (!user) throw new Error('Sign in required.');
+    if (!review?.id) throw new Error('Review not found.');
+    if (!reason?.trim()) throw new Error('Please add a short reason for the report.');
+
+    const timestamp = nowIso();
+    const reportId = `${review.id}_${user.uid}`;
+    await setDoc(doc(db, 'reviewReports', reportId), {
+      reviewId: review.id,
+      sellerUserId: review.sellerUserId,
+      reviewerUserId: review.reviewerUserId,
+      reporterUserId: user.uid,
+      reporterUsername: userProfile?.username || '',
+      reporterDisplayName: userProfile?.sellerProfile?.displayName || userProfile?.displayName || user.displayName || 'Seller',
+      reviewComment: review.comment || '',
+      reviewRating: Number(review.rating || 0),
+      reason: reason.trim(),
+      status: 'pending',
+      createdAt: timestamp,
+      updatedAt: timestamp
+    }, { merge: true });
   }, [user, userProfile]);
 
   const adminSetUserAdmin = useCallback(async (targetUserId, nextValue) => {
@@ -851,6 +950,19 @@ export function useMarketplace() {
     await recalculateSellerStats(sellerUserId);
   }, [isAdmin]);
 
+  const adminUpdateReviewReport = useCallback(async (reportId, status) => {
+    if (!isAdmin) throw new Error('Admin access required.');
+    if (!REVIEW_REPORT_STATUSES.includes(status)) {
+      throw new Error('Invalid report status.');
+    }
+    await setDoc(doc(db, 'reviewReports', reportId), {
+      status,
+      reviewedBy: user?.uid || '',
+      reviewedAt: nowIso(),
+      updatedAt: nowIso()
+    }, { merge: true });
+  }, [isAdmin, user]);
+
   const adminDeleteDemoReviews = useCallback(async (targetUserId) => {
     if (!isAdmin) throw new Error('Admin access required.');
     const reviewsQuery = query(collection(db, 'sellerReviews'), where('sellerUserId', '==', targetUserId));
@@ -874,6 +986,8 @@ export function useMarketplace() {
     markConversationRead,
     submitVerificationRequest,
     submitSellerReview,
+    markSellerReviewsSeen,
+    submitReviewReport,
     adminSetUserAdmin,
     adminSetSellerVerified,
     adminUpdateListingStatus,
@@ -881,6 +995,7 @@ export function useMarketplace() {
     adminToggleDeckVisibility,
     adminDeleteDeck,
     adminUpdateVerificationRequest,
+    adminUpdateReviewReport,
     adminSeedDemoReviews,
     adminDeleteReview,
     adminDeleteDemoReviews

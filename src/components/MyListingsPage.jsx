@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, Navigate, useSearchParams } from 'react-router-dom';
 import Header from './Header';
 import { ListingCard, MarketplaceNotice } from './MarketplaceCommon';
 import {
@@ -13,7 +13,7 @@ import {
   useVerificationRequest
 } from '../hooks/useMarketplace';
 import { useAuth } from '../hooks/useAuth';
-import { cardData } from '../hooks/useCollection';
+import { cardData, useCollection } from '../hooks/useCollection';
 
 const blankForm = {
   cardId: '',
@@ -28,10 +28,12 @@ const blankForm = {
 };
 
 export default function MyListingsPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const { user, userProfile, loading } = useAuth();
   const { listings, loading: listingsLoading } = useListings({ sellerUserId: user?.uid });
   const { saveListing, updateListingStatus, busy, sellerCanList } = useMarketplace();
   const { request: verificationRequest } = useVerificationRequest(user?.uid, Boolean(user));
+  const { getCardVariants } = useCollection(user?.uid);
   const [form, setForm] = useState(blankForm);
   const [editingId, setEditingId] = useState(null);
   const [message, setMessage] = useState('');
@@ -39,6 +41,29 @@ export default function MyListingsPage() {
 
   const activeCount = useMemo(() => listings.filter((listing) => listing.status === 'active').length, [listings]);
   const sellerAccessStatus = getSellerAccessStatus(userProfile || {}, verificationRequest);
+
+  useEffect(() => {
+    if (!sellerCanList) return;
+    if (editingId) return;
+
+    const cardId = searchParams.get('cardId');
+    const variant = searchParams.get('variant');
+    if (!cardId || !variant) return;
+    if (!cardData.some((card) => card.id === cardId)) return;
+    if (!LISTING_VARIANTS.includes(variant)) return;
+
+    const ownedVariants = getCardVariants(cardId);
+    const ownedCount = Number(ownedVariants?.[variant] || 0);
+
+    setForm((prev) => ({
+      ...prev,
+      cardId,
+      variant,
+      quantity: ownedCount > 0 ? String(ownedCount) : prev.quantity
+    }));
+
+    setSearchParams({}, { replace: true });
+  }, [editingId, getCardVariants, searchParams, sellerCanList, setSearchParams]);
 
   if (!loading && !user) {
     return <Navigate to="/" replace />;
