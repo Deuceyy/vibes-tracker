@@ -551,13 +551,20 @@ export function useMarketplace() {
     try {
       const existingQuery = query(
         collection(db, 'conversations'),
-        where('listingId', '==', listing.id),
-        where('buyerUserId', '==', user.uid),
-        where('sellerUserId', '==', listing.sellerUserId)
+        where('participantIds', 'array-contains', user.uid)
       );
       const existing = await getDocs(existingQuery);
-      if (!existing.empty) {
-        return existing.docs[0].id;
+      const matchingConversation = existing.docs.find((entry) => {
+        const conversation = entry.data();
+        return (
+          conversation.listingId === listing.id &&
+          conversation.buyerUserId === user.uid &&
+          conversation.sellerUserId === listing.sellerUserId
+        );
+      });
+
+      if (matchingConversation) {
+        return matchingConversation.id;
       }
 
       const sellerDoc = await getDoc(doc(db, 'users', listing.sellerUserId));
