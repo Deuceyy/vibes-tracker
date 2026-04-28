@@ -388,6 +388,7 @@ export default function CollectionPage() {
               else if (total > 0) statusClass = 'owned';
 
               const missingPriceClass = highlightMissingPrices && hasMissingPrice ? 'missing-price' : '';
+              const listableVariants = VARIANTS.filter((variant) => Number(variants[variant] || 0) > 0);
 
               return (
                 <div key={card.id} className={`card-item ${statusClass} ${missingPriceClass}`}>
@@ -409,6 +410,23 @@ export default function CollectionPage() {
                     <div className={`color-stripe ${card.color}`} />
                     {normalPrice && (
                       <div className="card-price-badge">{formatPrice(normalPrice)}</div>
+                    )}
+                    {isOwnCollection && sellerCanList && listableVariants.length > 0 && (
+                      <div className="card-list-overlay" onClick={(event) => event.stopPropagation()}>
+                        <span className="card-list-overlay-label">List</span>
+                        <div className="card-list-overlay-actions">
+                          {listableVariants.map((variant) => (
+                            <button
+                              key={variant}
+                              className={`card-list-chip ${variant}`}
+                              onClick={() => handleListFromCollection(card.id, variant)}
+                              title={`List this ${variant}`}
+                            >
+                              {VARIANT_LABELS[variant]}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
                     )}
                   </div>
                   <div className="card-info">

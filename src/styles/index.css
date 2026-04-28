@@ -481,6 +481,54 @@ body {
   cursor: pointer;
 }
 
+.card-list-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 0.65rem 0.55rem 0.55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  background: linear-gradient(180deg, transparent, rgba(8, 10, 20, 0.92) 42%, rgba(8, 10, 20, 0.98));
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.16s ease, transform 0.16s ease;
+}
+
+.card-item:hover .card-list-overlay,
+.card-item:focus-within .card-list-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-list-overlay-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.card-list-overlay-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.card-list-chip {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border-radius: 999px;
+  padding: 0.28rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card-list-chip:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
 .card-image {
   width: 100%;
   height: 100%;
