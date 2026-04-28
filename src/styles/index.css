@@ -3052,6 +3052,11 @@ body {
   color: #cbd5e1;
 }
 
+.status-pill.unread {
+  background: rgba(167, 139, 250, 0.18);
+  color: #c4b5fd;
+}
+
 .trust-meter {
   display: flex;
   align-items: center;
@@ -3109,6 +3114,13 @@ body {
 .inbox-row.unread {
   border-color: rgba(56, 189, 248, 0.5);
   box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.16);
+}
+
+.inbox-row-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 .listing-card-media {

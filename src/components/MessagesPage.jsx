@@ -44,9 +44,12 @@ export default function MessagesPage() {
                     <div>
                       <div className="inbox-row-top">
                         <strong>{conversation.listingSnapshot?.cardName || 'Listing conversation'}</strong>
-                        <span className={`status-pill ${conversation.intentType === 'commit' ? 'pending' : 'active'}`}>
-                          {conversation.intentType === 'commit' ? 'Commit to buy' : 'Contact seller'}
-                        </span>
+                        <div className="inbox-row-badges">
+                          <span className={`status-pill ${conversation.intentType === 'commit' ? 'pending' : 'active'}`}>
+                            {conversation.intentType === 'commit' ? 'Commit to buy' : 'Contact seller'}
+                          </span>
+                          {unread && <span className="status-pill unread">Unread</span>}
+                        </div>
                       </div>
                       <div className="listing-card-meta">
                         <span>{otherProfile.displayName || otherProfile.username || 'Marketplace user'}</span>
