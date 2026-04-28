@@ -3,12 +3,13 @@ import { Link, Navigate } from 'react-router-dom';
 import Header from './Header';
 import { MarketplaceNotice, SellerTrustCard } from './MarketplaceCommon';
 import { useAuth } from '../hooks/useAuth';
-import { getSellerAccessStatus, useMarketplace, useVerificationRequest } from '../hooks/useMarketplace';
+import { getSellerAccessStatus, useMarketplace, useSellerReviews, useVerificationRequest } from '../hooks/useMarketplace';
 
 export default function SellerProfileSettingsPage() {
   const { user, userProfile, loading } = useAuth();
-  const { saveSellerProfile, submitVerificationRequest, busy, sellerCanList } = useMarketplace();
+  const { saveSellerProfile, submitVerificationRequest, busy, sellerCanList, markSellerReviewsSeen } = useMarketplace();
   const { request: verificationRequest } = useVerificationRequest(user?.uid, Boolean(user));
+  const { reviews } = useSellerReviews(user?.uid, Boolean(user));
   const sellerAccessStatus = getSellerAccessStatus(userProfile || {}, verificationRequest);
 
   const initialForm = useMemo(() => {
@@ -33,6 +34,12 @@ export default function SellerProfileSettingsPage() {
   useEffect(() => {
     setForm(initialForm);
   }, [initialForm]);
+
+  useEffect(() => {
+    if (user && reviews.length > 0) {
+      markSellerReviewsSeen();
+    }
+  }, [markSellerReviewsSeen, reviews.length, user]);
 
   if (!loading && !user) {
     return <Navigate to="/" replace />;

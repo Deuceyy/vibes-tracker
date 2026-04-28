@@ -20,7 +20,6 @@ export default function ProfilePage() {
   const [loadingProfile, setLoadingProfile] = useState(true);
   const { listings, loading: listingsLoading } = useListings({ sellerUserId: userId || 'pending' });
   const { reviews, loading: reviewsLoading } = useSellerReviews(userId, Boolean(userId));
-  const { conversations } = useConversations({ userId: user?.uid, enabled: Boolean(user?.uid) });
   const { submitSellerReview, submitReviewReport, markSellerReviewsSeen } = useMarketplace();
 
   useEffect(() => {
