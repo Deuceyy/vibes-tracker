@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import { getSellerAccessStatus, useAdminAlerts } from '../hooks/useMarketplace';
+import { getSellerAccessStatus, useAdminAlerts, useConversations } from '../hooks/useMarketplace';
 
 export default function Header({ stats, onExport, onImport, onReset, isOwnCollection = false }) {
   const { user, userProfile, loading, signInWithGoogle, signOut, updateUsername } = useAuth();
   const isAdmin = Boolean(userProfile?.isAdmin || userProfile?.role === 'admin');
   const sellerAccessStatus = getSellerAccessStatus(userProfile || {});
   const { totalPending } = useAdminAlerts(Boolean(user && isAdmin));
+  const { conversations } = useConversations({ userId: user?.uid, enabled: Boolean(user) });
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [editingUsername, setEditingUsername] = useState(false);
   const [newUsername, setNewUsername] = useState('');
+  const unreadMessages = conversations.filter((conversation) => (conversation.unreadBy || []).includes(user?.uid)).length;
 
   const handleUsernameSubmit = async (event) => {
     event.preventDefault();
@@ -169,6 +171,7 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
 
                   <Link className="menu-item" to="/messages" onClick={() => setShowUserMenu(false)}>
                     Messages
+                    {unreadMessages > 0 && <span className="menu-item-badge">{unreadMessages}</span>}
                   </Link>
 
                   <Link className="menu-item" to="/settings/seller" onClick={() => setShowUserMenu(false)}>
