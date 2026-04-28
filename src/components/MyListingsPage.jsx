@@ -14,6 +14,7 @@ import {
 } from '../hooks/useMarketplace';
 import { useAuth } from '../hooks/useAuth';
 import { cardData, useCollection } from '../hooks/useCollection';
+import { getAvailableVariants } from '../utils/cardVariants';
 
 const blankForm = {
   cardId: '',
@@ -41,6 +42,13 @@ export default function MyListingsPage() {
 
   const activeCount = useMemo(() => listings.filter((listing) => listing.status === 'active').length, [listings]);
   const sellerAccessStatus = getSellerAccessStatus(userProfile || {}, verificationRequest);
+  const availableListingVariants = useMemo(() => {
+    if (!form.cardId) {
+      return LISTING_VARIANTS;
+    }
+
+    return getAvailableVariants(form.cardId);
+  }, [form.cardId]);
 
   useEffect(() => {
     if (!sellerCanList) return;
@@ -50,7 +58,7 @@ export default function MyListingsPage() {
     const variant = searchParams.get('variant');
     if (!cardId || !variant) return;
     if (!cardData.some((card) => card.id === cardId)) return;
-    if (!LISTING_VARIANTS.includes(variant)) return;
+    if (!getAvailableVariants(cardId).includes(variant)) return;
 
     const ownedVariants = getCardVariants(cardId);
     const ownedCount = Number(ownedVariants?.[variant] || 0);
@@ -64,6 +72,16 @@ export default function MyListingsPage() {
 
     setSearchParams({}, { replace: true });
   }, [editingId, getCardVariants, searchParams, sellerCanList, setSearchParams]);
+
+  useEffect(() => {
+    if (!form.cardId) return;
+    if (availableListingVariants.includes(form.variant)) return;
+
+    setForm((prev) => ({
+      ...prev,
+      variant: availableListingVariants[0] || 'normal'
+    }));
+  }, [availableListingVariants, form.cardId, form.variant]);
 
   if (!loading && !user) {
     return <Navigate to="/" replace />;
@@ -251,7 +269,7 @@ export default function MyListingsPage() {
                 <label className="form-group">
                   <span>Variant</span>
                   <select className="search-input" value={form.variant} onChange={(event) => setForm((prev) => ({ ...prev, variant: event.target.value }))}>
-                    {LISTING_VARIANTS.map((variant) => (
+                    {availableListingVariants.map((variant) => (
                       <option key={variant} value={variant}>{variant}</option>
                     ))}
                   </select>
@@ -331,8 +349,9 @@ export default function MyListingsPage() {
             <ul className="seller-trust-list">
               <li><strong>Active:</strong> visible in browse and on the card page.</li>
               <li><strong>Pending:</strong> temporarily held while you work with a buyer.</li>
-              <li><strong>Sold:</strong> kept for your records but hidden from discovery.</li>
+              <li><strong>Sold:</strong> kept for your records, hidden from discovery, and counted as a confirmed comp using the current listing price.</li>
               <li><strong>Inactive:</strong> hidden without marking the card sold.</li>
+              <li><strong>Comp tip:</strong> if the final agreed sale price changed, edit the listing price before marking it sold.</li>
               <li><strong>Shipping:</strong> shown separately so buyers see expected shipped cost before they commit.</li>
             </ul>
           </div>

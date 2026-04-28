@@ -1,5 +1,6 @@
 import { usePrices } from '../hooks/usePrices';
 import { useCollection } from '../hooks/useCollection';
+import { getAvailableVariants, VARIANT_LABELS } from '../utils/cardVariants';
 
 /**
  * Displays the total value of the user's collection
@@ -98,7 +99,7 @@ export function CardPriceDetails({ cardId }) {
     return <div className="card-prices">No price data available</div>;
   }
   
-  const variants = ['normal', 'foil', 'arctic', 'sketch'];
+  const variants = getAvailableVariants(cardId);
   const availableVariants = variants.filter(v => prices[v]?.price);
   
   if (availableVariants.length === 0) {
@@ -107,11 +108,16 @@ export function CardPriceDetails({ cardId }) {
   
   return (
     <div className="card-prices">
-      <h4>SCG Prices</h4>
+      <h4>Reference Prices</h4>
       {availableVariants.map(variant => (
         <div key={variant} className="price-row">
-          <span className="variant-name">{variant.charAt(0).toUpperCase() + variant.slice(1)}:</span>
-          <span className="variant-price">{formatPrice(prices[variant].price)}</span>
+          <span className="variant-name">{VARIANT_LABELS[variant]}:</span>
+          <span className="variant-price">
+            {formatPrice(prices[variant].price)}
+            {prices[variant].source === 'market'
+              ? ` · Market (${prices[variant].compCount} sales)`
+              : ' · Reference'}
+          </span>
         </div>
       ))}
     </div>

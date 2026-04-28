@@ -1,0 +1,5678 @@
+{
+  "_metadata": {
+    "source": "spreadsheet",
+    "lastUpdated": "2026-04-28T18:35:03.016047",
+    "totalCards": 351
+  },
+  "cards": {
+    "ContemplationPenguin": {
+      "name": "Contemplation Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BambooPenguin": {
+      "name": "Bamboo Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CarnivalPenguin": {
+      "name": "Carnival Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ChefPenguin": {
+      "name": "Chef Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ChubWhoLivesforAction": {
+      "name": "Chub, Who Lives for Action",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ChubopolisUnleashed": {
+      "name": "Chubopolis Unleashed",
+      "set": "Eth",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 100.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "InsomniacPenguin": {
+      "name": "Insomniac Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "JugglingPenguin": {
+      "name": "Juggling Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "KeyturningPenguin": {
+      "name": "Keyturning Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "MukbangPenguin": {
+      "name": "Mukbang Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PeaceOutPenguin": {
+      "name": "Peace Out Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PopcornPenguin": {
+      "name": "Popcorn Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 60.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RedMegaPenguin": {
+      "name": "Red Mega Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 300.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RedWizardPenguin": {
+      "name": "Red Wizard Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RibbonDancingPenguin": {
+      "name": "Ribbon-Dancing Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RiskTakingPenguin": {
+      "name": "Risk-Taking Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RunItBackPenguin": {
+      "name": "Run-It-Back Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ScreamingPenguin": {
+      "name": "Screaming Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SerenePenguin": {
+      "name": "Serene Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "StrikingSwordsmanPenguin": {
+      "name": "Striking Swordsman Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ADropinAttention": {
+      "name": "A Drop in Attention",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "AgainAgain": {
+      "name": "Again, Again",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BearishSentiment": {
+      "name": "Bearish Sentiment",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BestSeatsintheHouse": {
+      "name": "Best Seats in the House",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GrowTogether": {
+      "name": "Grow Together",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HaveanEncore": {
+      "name": "Have an Encore",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HeadsIWinTailsYouLose": {
+      "name": "Heads I Win, Tails You Lose",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HittheHighNote": {
+      "name": "Hit the High Note",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "NotaRodAnymore": {
+      "name": "Not a Rod Anymore!",
+      "set": "Eth",
+      "normal": {
+        "price": 7.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 40.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PutonaShow": {
+      "name": "Put on a Show",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "StandintheRain": {
+      "name": "Stand in the Rain",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SunburnaPenguin": {
+      "name": "Sunburn a Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TrustFall": {
+      "name": "Trust Fall",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "UseWhoopeeCushion": {
+      "name": "Use Whoopee Cushion",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "DashingSwordsmanPenguin": {
+      "name": "Dashing Swordsman Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "DaydreamingPenguin": {
+      "name": "Daydreaming Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ExtrovertPenguin": {
+      "name": "Extrovert Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FlyingPenguin": {
+      "name": "Flying Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HyperPenguin": {
+      "name": "Hyper Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "JubilantPenguin": {
+      "name": "Jubilant Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LuckyPenguin": {
+      "name": "Lucky Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "MysteriousPenguin": {
+      "name": "Mysterious Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "NapengulonLegendaryHost": {
+      "name": "Napengulon, Legendary Host",
+      "set": "Eth",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 100.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PaperPenguin": {
+      "name": "Paper Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinoftheFallingLeaves": {
+      "name": "Penguin of the Falling Leaves",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinThatDoesntMindGoodbyes": {
+      "name": "Penguin That Doesn't Mind Goodbyes",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoMightBringaPlusOne": {
+      "name": "Penguin Who Might Bring a Plus One",
+      "set": "Eth",
+      "normal": {
+        "price": 2.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoSpillstheTea": {
+      "name": "Penguin Who Spills the Tea",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoZooms": {
+      "name": "Penguin Who Zooms",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhosLatetotheParty": {
+      "name": "Penguin Who's Late to the Party",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ShockingPenguin": {
+      "name": "Shocking Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PotStirringPenguin": {
+      "name": "Pot-Stirring Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RockPenguin": {
+      "name": "Rock Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ScissorsPenguin": {
+      "name": "Scissors Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Shapenguzad": {
+      "name": "Shapenguzad",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PleepemWhoStandsAlone": {
+      "name": "Pleepem, Who Stands Alone",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ShyPenguin": {
+      "name": "Shy Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "YellowMegaPenguin": {
+      "name": "Yellow Mega Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 50.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "YellowWizardPenguin": {
+      "name": "Yellow Wizard Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BuddyUp": {
+      "name": "Buddy Up",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ChecktheYellowPages": {
+      "name": "Check the Yellow Pages",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PutYourFlippersintheAir": {
+      "name": "Put Your Flippers in the Air",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "JointheTrend": {
+      "name": "Join the Trend",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "NotYourKeys": {
+      "name": "Not Your Keys",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PrepareforaWildNight": {
+      "name": "Prepare for a Wild Night",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TheyreTwins": {
+      "name": "They're Twins",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WhataTwist": {
+      "name": "What a Twist!",
+      "set": "Eth",
+      "normal": {
+        "price": 30.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 100.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "YumYum": {
+      "name": "Yum Yum",
+      "set": "Eth",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 60.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BalancedPenguin": {
+      "name": "Balanced Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BlossomingPenguin": {
+      "name": "Blossoming Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CuriousPenguin": {
+      "name": "Curious Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FlowerArrangingPenguin": {
+      "name": "Flower-Arranging Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GreenMegaPenguin": {
+      "name": "Green Mega Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 80.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 350.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GreenWizardPenguin": {
+      "name": "Green Wizard Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "KaratePenguin": {
+      "name": "Karate Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PeppyPenguin": {
+      "name": "Peppy Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "OrnateSwordsmanPenguin": {
+      "name": "Ornate Swordsman Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguininColor": {
+      "name": "Penguin in Color",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoIstheGarden": {
+      "name": "Penguin Who Is the Garden",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoseGardenGrows": {
+      "name": "Penguin Whose Garden Grows",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWithGreatMystique": {
+      "name": "Penguin With Great Mystique",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "KoiPenguin": {
+      "name": "Koi Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PointsrichPenguin": {
+      "name": "Pointsrich Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SirVibesalot": {
+      "name": "Sir Vibesalot",
+      "set": "Eth",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 100.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RomulusWhoRoams": {
+      "name": "Romulus Who Roams",
+      "set": "Eth",
+      "normal": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SketchingPenguin": {
+      "name": "Sketching Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SlidingPenguin": {
+      "name": "Sliding Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "StargazingPenguin": {
+      "name": "Stargazing Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SuccessPenguin": {
+      "name": "Success Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WindowWashingPenguin": {
+      "name": "Window-Washing Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ChiselfromStone": {
+      "name": "Chisel from Stone",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CleanUpGood": {
+      "name": "Clean Up Good",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "EscapeinTime": {
+      "name": "Escape in Time",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "EverybodyStayClam": {
+      "name": "Everybody Stay Clam",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GotEm": {
+      "name": "Got 'Em!",
+      "set": "Eth",
+      "normal": {
+        "price": 30.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 100.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LostintheSauce": {
+      "name": "Lost in the Sauce",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RaidtheSnacks": {
+      "name": "Raid the Snacks",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LucaSavesthePenguins": {
+      "name": "Luca Saves the Penguins",
+      "set": "Eth",
+      "normal": {
+        "price": 50.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 500.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SendOff": {
+      "name": "Send Off",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TooCoolforSchool": {
+      "name": "Too Cool for School",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WalktheRunway": {
+      "name": "Walk the Runway",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "YouDroppedThis": {
+      "name": "You Dropped This",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BashfulSwordsmanPenguin": {
+      "name": "Bashful Swordsman Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 50.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BlueMegaPenguin": {
+      "name": "Blue Mega Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 50.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BlueWizardPenguin": {
+      "name": "Blue Wizard Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BottlePenguin": {
+      "name": "Bottle Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CannonballPenguin": {
+      "name": "Cannonball Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "AmazingPenguin": {
+      "name": "Amazing Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ThawingPenguin": {
+      "name": "Thawing Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "DragonriderPenguin": {
+      "name": "Dragonrider Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FactFindingPenguin": {
+      "name": "Fact-Finding Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FrostythePenguin": {
+      "name": "Frosty the Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "JealousPenguin": {
+      "name": "Jealous Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "MissChiefKeeperofKeys": {
+      "name": "Miss Chief, Keeper of Keys",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "MissPlaceForgetterofThings": {
+      "name": "Miss Place, Forgetter of Things",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PainterPenguin": {
+      "name": "Painter Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinCaughtinFishingLine": {
+      "name": "Penguin Caught in Fishing Line",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoExplorestheReef": {
+      "name": "Penguin Who Explores the Reef",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhosOK": {
+      "name": "Penguin Who's OK",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWithHoops": {
+      "name": "Penguin With Hoops",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PortholePenguin": {
+      "name": "Porthole Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RadChillWhosSuperCool": {
+      "name": "Rad Chill, Who's Super Cool",
+      "set": "Eth",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 100.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SneakyPenguin": {
+      "name": "Sneaky Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TidalPenguin": {
+      "name": "Tidal Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WaterfallPenguin": {
+      "name": "Waterfall Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BedtimeStory": {
+      "name": "Bedtime Story",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BridgeWithLayerZero": {
+      "name": "Bridge With Layer Zero",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CoolStoryBro": {
+      "name": "Cool Story Bro!",
+      "set": "Eth",
+      "normal": {
+        "price": 2.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "DontTrustVerify": {
+      "name": "Don't Trust, Verify",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "IngeniousIdea": {
+      "name": "Ingenious Idea",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "KeepDigging": {
+      "name": "Keep Digging",
+      "set": "Eth",
+      "normal": {
+        "price": 2.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "QuestionableMethods": {
+      "name": "Questionable Methods",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SendItTooHard": {
+      "name": "Send It Too Hard",
+      "set": "Eth",
+      "normal": {
+        "price": 2.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SpringaLeak": {
+      "name": "Spring a Leak",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ThreeWisePenguins": {
+      "name": "Three Wise Penguins",
+      "set": "Eth",
+      "normal": {
+        "price": 2.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "UnlikelyFriends": {
+      "name": "Unlikely Friends",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "AbsentMindedPenguin": {
+      "name": "Absent-Minded Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "AbstractPenguin": {
+      "name": "Abstract Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "AmbitiousPenguin": {
+      "name": "Ambitious Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "AscendingPenguin": {
+      "name": "Ascending Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BizmoPhDCandidate": {
+      "name": "Bizmo, PhD Candidate",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BrainyPenguin": {
+      "name": "Brainy Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 25.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BubblestheGreatandPowerful": {
+      "name": "Bubbles, the Great and Powerful",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BunkusWhoIstheStars": {
+      "name": "Bunkus, Who Is the Stars",
+      "set": "Eth",
+      "normal": {
+        "price": 125.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 500.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CharmingSwordsmanPenguin": {
+      "name": "Charming Swordsman Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CookingPenguin": {
+      "name": "Cooking Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "DemolitionPenguin": {
+      "name": "Demolition Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GalaxyPenguin": {
+      "name": "Galaxy Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GardenkeeperPenguin": {
+      "name": "Gardenkeeper Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWithaFlag": {
+      "name": "Penguin With a Flag",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "MoonlitPenguin": {
+      "name": "Moonlit Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoBreakstheFourthWall": {
+      "name": "Penguin Who Breaks the Fourth Wall",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoCarriestheBerg": {
+      "name": "Penguin Who Carries the Berg",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoRunstheLift": {
+      "name": "Penguin Who Runs the Lift",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ProsperousPenguin": {
+      "name": "Prosperous Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PurpleMegaPenguin": {
+      "name": "Purple Mega Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 50.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PurpleWizardPenguin": {
+      "name": "Purple Wizard Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SpaceCadetPenguin": {
+      "name": "Space Cadet Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "UnmaskedPenguin": {
+      "name": "Unmasked Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "AdventureSquad": {
+      "name": "Adventure Squad",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 7.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ChangePerspective": {
+      "name": "Change Perspective",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ChaseYourDreams": {
+      "name": "Chase Your Dreams",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GatherTogether": {
+      "name": "Gather Together",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HaveaPhilosophicalDebate": {
+      "name": "Have a Philosophical Debate",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "OneWithHistory": {
+      "name": "One With History",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "OverwhelmWithKnowledge": {
+      "name": "Overwhelm With Knowledge",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SickPull": {
+      "name": "Sick Pull!",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SpringBreak": {
+      "name": "Spring Break",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "StudyAllNight": {
+      "name": "Study All Night",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Wut": {
+      "name": "Wut?",
+      "set": "Eth",
+      "normal": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 25.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "AhaPenguin": {
+      "name": "Aha Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BoatTyingPenguin": {
+      "name": "Boat-Tying Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HungryPenguin": {
+      "name": "Hungry Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "InquisitivePenguin": {
+      "name": "Inquisitive Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "IntrovertPenguin": {
+      "name": "Introvert Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PrimoWizardPenguin": {
+      "name": "Primo Wizard Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWithaRodofHisOwn": {
+      "name": "Penguin With a Rod of His Own",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TeleporterPenguin": {
+      "name": "Teleporter Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SkydivingPenguin": {
+      "name": "Skydiving Penguin",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SupportiveFriend": {
+      "name": "Supportive Friend",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ChaliceofEverflowingPudge": {
+      "name": "Chalice of Everflowing Pudge",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CookiesofTruth": {
+      "name": "Cookies of Truth",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "DummyThiccDiscoBall": {
+      "name": "Dummy Thicc Disco Ball",
+      "set": "Eth",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 100.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "InspiringStory": {
+      "name": "Inspiring Story",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LayerTwoTechnology": {
+      "name": "Layer Two Technology",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "OrbofHopium": {
+      "name": "Orb of Hopium",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SilentSnowGlobe": {
+      "name": "Silent Snow Globe",
+      "set": "Eth",
+      "normal": {
+        "price": 4.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 25.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TheEndoftheRainbow": {
+      "name": "The End of the Rainbow",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TooMuchCaffeine": {
+      "name": "Too Much Caffeine",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WizardCap": {
+      "name": "Wizard Cap",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BounceHouseRod": {
+      "name": "Bounce House Rod",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CalligraphyRod": {
+      "name": "Calligraphy Rod",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FreezingRod": {
+      "name": "Freezing Rod",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HotRod": {
+      "name": "Hot Rod",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PudgyManRod": {
+      "name": "Pudgy Man Rod",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RodofCamaraderie": {
+      "name": "Rod of Camaraderie",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "UmbrellaRod": {
+      "name": "Umbrella Rod",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RodofCheesySlices": {
+      "name": "Rod of Cheesy Slices",
+      "set": "Eth",
+      "normal": {
+        "price": 2.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TrampolineRod": {
+      "name": "Trampoline Rod",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RodofCharmingMelodies": {
+      "name": "Rod of Charming Melodies",
+      "set": "Eth",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilShaker": {
+      "name": "Lil Shaker",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilBamboo": {
+      "name": "Lil Bamboo",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWhoBreaksFree": {
+      "name": "Lil Who Breaks Free",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilDaydreamer": {
+      "name": "Lil Daydreamer",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TheLordOfLightning": {
+      "name": "The Lord of Lightning",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilSinger": {
+      "name": "Lil Singer",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SquibblestoneTheWise": {
+      "name": "Squibblestone the Wise",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilComic": {
+      "name": "Lil Comic",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoShakes": {
+      "name": "Penguin Who Shakes",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilIntrovert": {
+      "name": "Lil Introvert",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SimonSmasher": {
+      "name": "Simon Smasher",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilJuggler": {
+      "name": "Lil Juggler",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilZoomer": {
+      "name": "Lil Zoomer",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilInsomniac": {
+      "name": "Lil Insomniac",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PackAttack": {
+      "name": "Pack Attack",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TossUp": {
+      "name": "Toss Up",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HoneyIShrunkThePengs": {
+      "name": "Honey, I Shrunk the Pengs",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "RideTheTrain": {
+      "name": "Ride the Train",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "EnterTheBounceHouseDimension": {
+      "name": "Enter the Bounce House Dimension",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BandTogether": {
+      "name": "Band Together",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GoodnightPengs": {
+      "name": "Goodnight, Pengs",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CrossTheRiver": {
+      "name": "Cross the River",
+      "set": "Lotl",
+      "normal": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Sheeeesh": {
+      "name": "Sheeeesh!",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HeresPengy": {
+      "name": "Here's Pengy",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilPaper": {
+      "name": "Lil Paper",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilRock": {
+      "name": "Lil Rock",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilScissors": {
+      "name": "Lil Scissors",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWithLilMystique": {
+      "name": "Penguin With Lil Mystique",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PoppinPete": {
+      "name": "Poppin' Pete",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilLifeguard": {
+      "name": "Lil Lifeguard",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilStargazer": {
+      "name": "Lil Stargazer",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilExtrovert": {
+      "name": "Lil Extrovert",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FrosterousTheGreat": {
+      "name": "Frosterous the Great",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilRaker": {
+      "name": "Lil Raker",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWindowWasher": {
+      "name": "Lil Window Washer",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoRakes": {
+      "name": "Penguin Who Rakes",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TheChampionOfClouds": {
+      "name": "The Champion of Clouds",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "JosephinePartyQueen": {
+      "name": "Josephine, Party Queen",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SirWaddlesworth": {
+      "name": "Sir Waddlesworth",
+      "set": "Lotl",
+      "normal": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FlopDropAndRoll": {
+      "name": "Flop, Drop, and Roll",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SeeTheBerg": {
+      "name": "See the Berg",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BeMerryAndGo": {
+      "name": "Be Merry and Go",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Frolic": {
+      "name": "Frolic",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "IntoTheNight": {
+      "name": "Into the Night",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "DoALilMath": {
+      "name": "Do a Lil Math",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Jeepers": {
+      "name": "Jeepers!",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Wen": {
+      "name": "Wen?",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWhoBlooms": {
+      "name": "Lil Who Blooms",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilBaker": {
+      "name": "Lil Baker",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilSkydiver": {
+      "name": "Lil Skydiver",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoBakes": {
+      "name": "Penguin Who Bakes",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TubbinsTheBold": {
+      "name": "Tubbins the Bold",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilPainter": {
+      "name": "Lil Painter",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SamanthaFeathersPopIdol": {
+      "name": "Samantha Feathers, Pop Idol",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilChef": {
+      "name": "Lil Chef",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TheSaviorOfSkies": {
+      "name": "The Savior of Skies",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWhoCantStopEating": {
+      "name": "Lil Who Can't Stop Eating",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SonOfLil": {
+      "name": "Son of Lil",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "DimaTheDestroyer": {
+      "name": "Dima the Destroyer",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilLodger": {
+      "name": "Lil Lodger",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "MissTweeny": {
+      "name": "Miss Tweeny",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "SirVibesalil": {
+      "name": "Sir Vibesalil",
+      "set": "Lotl",
+      "normal": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FishingTrip": {
+      "name": "Fishing Trip",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "MysteryOfTheEverlastingFish": {
+      "name": "Mystery of the Everlasting Fish",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "OverwhelmWithFish": {
+      "name": "Overwhelm With Fish",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BeALilEvil": {
+      "name": "Be a Lil Evil",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BeWeirdAndSilly": {
+      "name": "Be Weird and Silly",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CaptureTheMoment": {
+      "name": "Capture the Moment",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LookInside": {
+      "name": "Look Inside",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "NoWay": {
+      "name": "No Way!",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilGardenkeeper": {
+      "name": "Lil Gardenkeeper",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilFrosty": {
+      "name": "Lil Frosty",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWhoHoops": {
+      "name": "Lil Who Hoops",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilContemplator": {
+      "name": "Lil Contemplator",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilMilkmaid": {
+      "name": "Lil Milkmaid",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWaker": {
+      "name": "Lil Waker",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TinaWhoTears": {
+      "name": "Tina Who Tears",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TheHeraldOfHorizons": {
+      "name": "The Herald of Horizons",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilJelly": {
+      "name": "Lil Jelly",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BlizzbyTheSwift": {
+      "name": "Blizzby the Swift",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoWakes": {
+      "name": "Penguin Who Wakes",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilMocker": {
+      "name": "liL mOCkeR",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Marilyl": {
+      "name": "Marilyl",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BinkusWhoEatsTheStars": {
+      "name": "Binkus, Who Eats the Stars",
+      "set": "Lotl",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 100.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 500.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilDragonrider": {
+      "name": "Lil Dragonrider",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "IsThisARod": {
+      "name": "Is This a Rod",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "AnOfferYouCantRefuse": {
+      "name": "An Offer You Can't Refuse",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "OooShiny": {
+      "name": "Ooo, Shiny",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TieGame": {
+      "name": "Tie Game",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WinTheRace": {
+      "name": "Win the Race",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GoWithTheFlow": {
+      "name": "Go With the Flow",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TurnToRod": {
+      "name": "Turn to Rod",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FourOfAKind": {
+      "name": "Four of a Kind",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ForceOfLil": {
+      "name": "Force of Lil",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Inconceivable": {
+      "name": "Inconceivable!",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilMoonlight": {
+      "name": "Lil Moonlight",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilQuaker": {
+      "name": "Lil Quaker",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoQuakes": {
+      "name": "Penguin Who Quakes",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilLucky": {
+      "name": "Lil Lucky",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilSoloAdventurer": {
+      "name": "Lil Solo Adventurer",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilSpaceCadet": {
+      "name": "Lil Space Cadet",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilSurprised": {
+      "name": "Lil Surprised",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BeckyBreaker": {
+      "name": "Becky Breaker",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PebblingtonTheBrave": {
+      "name": "Pebblington the Brave",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilDetective": {
+      "name": "Lil Detective",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilLookout": {
+      "name": "Lil Lookout",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "TheWardenOfWind": {
+      "name": "The Warden of Wind",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BeBigAndGoofy": {
+      "name": "Be Big and Goofy",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWhoSlides": {
+      "name": "Lil Who Slides",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWhosDownBad": {
+      "name": "Lil Who's Down Bad",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilDrippy": {
+      "name": "Lil Drippy",
+      "set": "Lotl",
+      "normal": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PetitePourer": {
+      "name": "Petite Pourer",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWhoScoops": {
+      "name": "Lil Who Scoops",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PhoneHome": {
+      "name": "Phone Home",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ThrowSomeSnow": {
+      "name": "Throw Some Snow",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Distract": {
+      "name": "Distract",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "CheekySidequest": {
+      "name": "Cheeky Sidequest",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Pudgticate": {
+      "name": "Pudgticate",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "NotToday": {
+      "name": "Not Today!",
+      "set": "Lotl",
+      "normal": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WizardOfFeathers": {
+      "name": "Wizard of Feathers",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WizardOfDreams": {
+      "name": "Wizard of Dreams",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WizardOfTheVoid": {
+      "name": "Wizard of the Void",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WizardOfTheDeep": {
+      "name": "Wizard of the Deep",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "WizardOfBalloons": {
+      "name": "Wizard of Balloons",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "BuildABurrito": {
+      "name": "Build a Burrito",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LayerALasagna": {
+      "name": "Layer a Lasagna",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FlipAFlapjack": {
+      "name": "Flip a Flapjack",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "MeltAMarshmallow": {
+      "name": "Melt a Marshmallow",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "DunkADonut": {
+      "name": "Dunk a Donut",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilWithBalloon": {
+      "name": "Lil With Balloon",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilBellyacher": {
+      "name": "Lil Bellyacher",
+      "set": "Lotl",
+      "normal": {
+        "price": 12.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 25.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 125.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PenguinWhoseBellyAches": {
+      "name": "Penguin Whose Belly Aches",
+      "set": "Lotl",
+      "normal": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "OperaHouse": {
+      "name": "Opera House",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "MountFuji": {
+      "name": "Mount Fuji",
+      "set": "Lotl",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 40.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 125.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "HalfPastChill": {
+      "name": "Half Past Chill",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GlowAndBehold": {
+      "name": "Glow and Behold",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "FeatherForecast": {
+      "name": "Feather Forecast",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "StatueOfLiberty": {
+      "name": "Statue of Liberty",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "PotionCommotion": {
+      "name": "Potion Commotion",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GlassAct": {
+      "name": "Glass Act",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "EasterIsland": {
+      "name": "Easter Island",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LeaningTower": {
+      "name": "Leaning Tower",
+      "set": "Lotl",
+      "normal": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 25.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "EiffelTower": {
+      "name": "Eiffel Tower",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Pongo": {
+      "name": "Pongo",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Sphinx": {
+      "name": "Sphinx",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "GreatWall": {
+      "name": "Great Wall",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 15.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Colosseum": {
+      "name": "Colosseum",
+      "set": "Lotl",
+      "normal": {
+        "price": 25.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 100.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 500.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "Arches": {
+      "name": "Arches",
+      "set": "Lotl",
+      "normal": {
+        "price": 5.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 150.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "ParasolRod": {
+      "name": "Parasol Rod",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "NyanCat": {
+      "name": "Nyan Cat",
+      "set": "Lotl",
+      "normal": {
+        "price": 20.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 50.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 200.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    },
+    "LilLeafrider": {
+      "name": "Lil Leafrider",
+      "set": "Lotl",
+      "normal": {
+        "price": 1.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "foil": {
+        "price": 3.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      },
+      "arctic": {
+        "price": 10.0,
+        "updated": "2026-04-28T18:35:03.016047",
+        "source": "spreadsheet"
+      }
+    }
+  }
+}

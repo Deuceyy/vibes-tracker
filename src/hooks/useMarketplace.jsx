@@ -16,6 +16,7 @@ import {
 import { db } from '../firebase';
 import { useAuth } from './useAuth';
 import { cardData } from './useCollection';
+import { isVariantAvailable } from '../utils/cardVariants';
 
 export const LISTING_STATUSES = ['active', 'pending', 'sold', 'inactive'];
 export const LISTING_CONDITIONS = ['Mint', 'Near Mint', 'Light Play', 'Moderate Play', 'Heavy Play', 'Damaged'];
@@ -159,6 +160,12 @@ function buildListingRecord(listing, user, userProfile) {
     language: listing.language || 'English',
     variant: listing.variant || 'normal',
     status: listing.status || 'active',
+    finalSalePrice: listing.finalSalePrice != null && listing.finalSalePrice !== ''
+      ? Number(listing.finalSalePrice)
+      : null,
+    soldAt: listing.soldAt || null,
+    salePriceConfirmedAt: listing.salePriceConfirmedAt || null,
+    salePriceConfirmedBy: listing.salePriceConfirmedBy || '',
     updatedAt: timestamp,
     ...(listing.createdAt ? {} : { createdAt: timestamp })
   };
@@ -568,6 +575,9 @@ export function useMarketplace() {
     if (!cardMap.has(listingRecord.cardId)) {
       throw new Error('Card not found.');
     }
+    if (!isVariantAvailable(listingRecord.cardId, listingRecord.variant)) {
+      throw new Error('That variant is not available for this card.');
+    }
 
     setBusy(true);
     try {
@@ -601,7 +611,21 @@ export function useMarketplace() {
     if (!listingSnap.exists() || listingSnap.data().sellerUserId !== user.uid) {
       throw new Error('You can only update your own listings.');
     }
-    await updateDoc(listingRef, { status, updatedAt: nowIso() });
+    const listing = listingSnap.data();
+    const timestamp = nowIso();
+    const updates = {
+      status,
+      updatedAt: timestamp
+    };
+
+    if (status === 'sold') {
+      updates.soldAt = timestamp;
+      updates.finalSalePrice = Number(listing.price || 0);
+      updates.salePriceConfirmedAt = timestamp;
+      updates.salePriceConfirmedBy = user.uid;
+    }
+
+    await updateDoc(listingRef, updates);
   }, [isAdmin, sellerCanList, user]);
 
   const createOrOpenConversation = useCallback(async ({ listing, intentType = 'contact' }) => {
@@ -798,7 +822,7 @@ export function useMarketplace() {
       role: nextValue ? 'admin' : 'user',
       updatedAt: nowIso()
     }, { merge: true });
-  }, [isAdmin]);
+  }, [isAdmin, user]);
 
   const adminSetSellerVerified = useCallback(async (targetUserId, verified) => {
     if (!isAdmin) throw new Error('Admin access required.');
@@ -825,10 +849,26 @@ export function useMarketplace() {
     if (!LISTING_STATUSES.includes(status)) {
       throw new Error('Invalid listing status.');
     }
-    await updateDoc(doc(db, 'listings', listingId), {
+    const listingRef = doc(db, 'listings', listingId);
+    const listingSnap = await getDoc(listingRef);
+    if (!listingSnap.exists()) {
+      throw new Error('Listing not found.');
+    }
+    const listing = listingSnap.data();
+    const timestamp = nowIso();
+    const updates = {
       status,
-      updatedAt: nowIso()
-    });
+      updatedAt: timestamp
+    };
+
+    if (status === 'sold') {
+      updates.soldAt = timestamp;
+      updates.finalSalePrice = Number(listing.price || 0);
+      updates.salePriceConfirmedAt = timestamp;
+      updates.salePriceConfirmedBy = user?.uid || '';
+    }
+
+    await updateDoc(listingRef, updates);
   }, [isAdmin]);
 
   const adminDeleteListing = useCallback(async (listingId) => {

@@ -1,21 +1,21 @@
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useCollection, cardData, VARIANTS } from '../hooks/useCollection';
+import { useCollection, cardData } from '../hooks/useCollection';
 import { usePrices } from '../hooks/usePrices';
 import { useMarketplace } from '../hooks/useMarketplace';
 import Header from './Header';
 import CardModal from './CardModal';
+import { getAvailableVariants, isVariantAvailable, VARIANT_SHORT_LABELS } from '../utils/cardVariants';
 
 const RARITY_ORDER = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Epic': 4 };
 const SET_ORDER = { 'Eth': 1, 'Lotl': 2 };
-const VARIANT_LABELS = { normal: 'N', foil: 'F', arctic: 'A', sketch: 'S' };
-
 export default function CollectionPage() {
   const navigate = useNavigate();
   const {
     loading,
     isOwnCollection,
     getCardVariants,
+    getAvailableVariants: getCollectionAvailableVariants,
     adjustVariant,
     setVariantCount,
     getTotalOwned,
@@ -70,7 +70,7 @@ export default function CollectionPage() {
     cardData.forEach(card => {
       const variants = getCardVariants(card.id);
       
-      ['normal', 'foil', 'arctic', 'sketch'].forEach(variant => {
+      getAvailableVariants(card.id).forEach(variant => {
         const count = variants[variant] || 0;
         if (count > 0) {
           cardCount += count;
@@ -125,11 +125,11 @@ export default function CollectionPage() {
       switch (filters.variant) {
         case 'normal': if (variants.normal === 0) return false; break;
         case 'foil': if (variants.foil === 0) return false; break;
-        case 'arctic': if (variants.arctic === 0) return false; break;
+        case 'arctic': if (!isVariantAvailable(card.id, 'arctic') || variants.arctic === 0) return false; break;
         case 'sketch': if (variants.sketch === 0) return false; break;
         case 'missing-normal': if (variants.normal > 0) return false; break;
         case 'missing-foil': if (variants.foil > 0) return false; break;
-        case 'missing-arctic': if (variants.arctic > 0) return false; break;
+        case 'missing-arctic': if (!isVariantAvailable(card.id, 'arctic') || variants.arctic > 0) return false; break;
         case 'missing-sketch': if (variants.sketch > 0) return false; break;
       }
 
@@ -195,7 +195,7 @@ export default function CollectionPage() {
               <h3>💰 Collection Value</h3>
               {lastUpdated && (
                 <span className="price-updated">
-                  SCG prices from {lastUpdated.toLocaleDateString()}
+                  Prices updated {lastUpdated.toLocaleDateString()}
                 </span>
               )}
             </div>
@@ -207,7 +207,7 @@ export default function CollectionPage() {
               {Object.entries(collectionValue.breakdown).map(([variant, value]) => 
                 value > 0 && (
                   <div key={variant} className="breakdown-item">
-                    <span className={`variant-label ${variant}`}>{VARIANT_LABELS[variant]}</span>
+                    <span className={`variant-label ${variant}`}>{VARIANT_SHORT_LABELS[variant]}</span>
                     <span>{formatPrice(value)}</span>
                   </div>
                 )
@@ -388,7 +388,8 @@ export default function CollectionPage() {
               else if (total > 0) statusClass = 'owned';
 
               const missingPriceClass = highlightMissingPrices && hasMissingPrice ? 'missing-price' : '';
-              const listableVariants = VARIANTS.filter((variant) => Number(variants[variant] || 0) > 0);
+              const cardVariants = getCollectionAvailableVariants(card.id);
+              const listableVariants = cardVariants.filter((variant) => Number(variants[variant] || 0) > 0);
 
               return (
                 <div key={card.id} className={`card-item ${statusClass} ${missingPriceClass}`}>
@@ -422,7 +423,7 @@ export default function CollectionPage() {
                               onClick={() => handleListFromCollection(card.id, variant)}
                               title={`List this ${variant}`}
                             >
-                              {VARIANT_LABELS[variant]}
+                              {VARIANT_SHORT_LABELS[variant]}
                             </button>
                           ))}
                         </div>
@@ -440,9 +441,9 @@ export default function CollectionPage() {
                     </div>
                     {isOwnCollection && (
                       <div className="variant-controls">
-                        {VARIANTS.map(v => (
+                        {cardVariants.map(v => (
                           <div key={v} className="variant-row">
-                            <span className={`variant-label ${v}`}>{VARIANT_LABELS[v]}</span>
+                            <span className={`variant-label ${v}`}>{VARIANT_SHORT_LABELS[v]}</span>
                             <div className="variant-counter">
                               <button className="variant-btn" onClick={() => adjustVariant(card.id, v, -1)}>−</button>
                               <input

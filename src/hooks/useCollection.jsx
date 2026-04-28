@@ -3,8 +3,15 @@ import { doc, setDoc, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useAuth } from './useAuth';
 import cardData from '../cardData.json';
+import {
+  ALL_VARIANTS,
+  getAvailableVariants as getAvailableCardVariants,
+  getEmptyVariantCounts,
+  isVariantAvailable,
+  sanitizeVariantCounts
+} from '../utils/cardVariants';
 
-const VARIANTS = ['normal', 'foil', 'arctic', 'sketch'];
+const VARIANTS = ALL_VARIANTS;
 const LOCAL_STORAGE_KEY = 'vibes_collection_local';
 
 export function useCollection(userId = null) {
@@ -57,16 +64,22 @@ export function useCollection(userId = null) {
   }, [user, isOwnCollection]);
 
   const getCardVariants = useCallback((cardId) => {
-    return collection[cardId] || { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+    return sanitizeVariantCounts(cardId, collection[cardId] || getEmptyVariantCounts());
   }, [collection]);
 
+  const getAvailableVariants = useCallback((cardId) => {
+    return getAvailableCardVariants(cardId);
+  }, []);
+
   const setVariantCount = useCallback((cardId, variant, count) => {
+    if (!isVariantAvailable(cardId, variant)) return;
+
     const update = (prevCollection) => {
       const newCollection = { ...prevCollection };
       if (!newCollection[cardId]) {
-        newCollection[cardId] = { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+        newCollection[cardId] = getEmptyVariantCounts();
       }
-      newCollection[cardId] = { ...newCollection[cardId] };
+      newCollection[cardId] = sanitizeVariantCounts(cardId, newCollection[cardId]);
       newCollection[cardId][variant] = Math.max(0, Math.min(count, 99));
       const variants = newCollection[cardId];
       if (variants.normal === 0 && variants.foil === 0 && variants.arctic === 0 && variants.sketch === 0) {
@@ -92,15 +105,17 @@ export function useCollection(userId = null) {
   }, [user, isOwnCollection]);
 
   const adjustVariant = useCallback((cardId, variant, delta) => {
+    if (!isVariantAvailable(cardId, variant)) return;
+
     setCollection(prev => {
       const current = prev[cardId]?.[variant] || 0;
       const newCount = Math.max(0, Math.min(current + delta, 99));
       
       const newCollection = { ...prev };
       if (!newCollection[cardId]) {
-        newCollection[cardId] = { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+        newCollection[cardId] = getEmptyVariantCounts();
       }
-      newCollection[cardId] = { ...newCollection[cardId] };
+      newCollection[cardId] = sanitizeVariantCounts(cardId, newCollection[cardId]);
       newCollection[cardId][variant] = newCount;
       
       const variants = newCollection[cardId];
@@ -135,7 +150,7 @@ export function useCollection(userId = null) {
 
   const hasMasterSet = useCallback((cardId) => {
     const v = getCardVariants(cardId);
-    return v.normal >= 1 && v.foil >= 1 && v.arctic >= 1 && v.sketch >= 1;
+    return getAvailableCardVariants(cardId).every((variant) => Number(v[variant] || 0) >= 1);
   }, [getCardVariants]);
 
   const stats = {
@@ -175,6 +190,7 @@ export function useCollection(userId = null) {
     loading,
     isOwnCollection,
     getCardVariants,
+    getAvailableVariants,
     setVariantCount,
     adjustVariant,
     getTotalOwned,

@@ -2,9 +2,7 @@ import { useState, useMemo } from 'react';
 import { cardData } from '../hooks/useCollection';
 import { usePrices } from '../hooks/usePrices';
 import Header from './Header';
-
-const VARIANTS = ['normal', 'foil', 'arctic', 'sketch'];
-const VARIANT_LABELS = { normal: 'Normal', foil: 'Foil', arctic: 'Arctic', sketch: 'Sketch' };
+import { getAvailableVariants, VARIANT_LABELS } from '../utils/cardVariants';
 
 export default function PriceListBuilder() {
   const { getPrice, getCardPrices, formatPrice } = usePrices();
@@ -83,11 +81,12 @@ export default function PriceListBuilder() {
             <div className="search-results">
               {filteredCards.map(card => {
                 const prices = getCardPrices(card.id);
+                const variants = getAvailableVariants(card.id);
                 return (
                   <div key={card.id} className="search-result-item">
                     <span className="result-name">{card.name}</span>
                     <div className="result-variants">
-                      {VARIANTS.map(v => {
+                      {variants.map(v => {
                         const price = prices?.[v]?.price;
                         if (!price) return null;
                         return (

@@ -3,8 +3,7 @@ import { VARIANTS } from '../hooks/useCollection';
 import { usePrices } from '../hooks/usePrices';
 import { useListings } from '../hooks/useMarketplace';
 import { formatPrice, formatShippingPrice } from './MarketplaceCommon';
-
-const VARIANT_LABELS = { normal: 'Normal', foil: 'Foil', arctic: 'Arctic', sketch: 'Sketch' };
+import { getAvailableVariants, VARIANT_LABELS } from '../utils/cardVariants';
 
 export default function CardModal({ card, variants, onClose, onAdjustVariant, onListVariant }) {
   const { getCardPrices } = usePrices();
@@ -19,6 +18,7 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant, on
     .sort((left, right) => (left.price ?? 0) - (right.price ?? 0));
   const totalForSale = activeListings.reduce((sum, listing) => sum + Number(listing.quantity || 0), 0);
   const previewListings = activeListings.slice(0, 3);
+  const availableVariants = getAvailableVariants(card);
 
   return (
     <div
@@ -59,31 +59,18 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant, on
 
               {prices && (
                 <div className="card-prices">
-                  <h4>SCG Prices</h4>
-                  {prices.normal?.price && (
-                    <div className="price-row">
-                      <span className="variant-name">Normal:</span>
-                      <span className="variant-price">{formatPrice(prices.normal.price)}</span>
+                  <h4>Card Prices</h4>
+                  {availableVariants.filter((variant) => prices[variant]?.price).map((variant) => (
+                    <div key={variant} className="price-row">
+                      <span className="variant-name">{VARIANT_LABELS[variant]}:</span>
+                      <span className="variant-price">
+                        {formatPrice(prices[variant].price)}
+                        {prices[variant].source === 'market'
+                          ? ` · Market (${prices[variant].compCount} sales)`
+                          : ' · Reference'}
+                      </span>
                     </div>
-                  )}
-                  {prices.foil?.price && (
-                    <div className="price-row">
-                      <span className="variant-name">Foil:</span>
-                      <span className="variant-price">{formatPrice(prices.foil.price)}</span>
-                    </div>
-                  )}
-                  {prices.arctic?.price && (
-                    <div className="price-row">
-                      <span className="variant-name">Arctic:</span>
-                      <span className="variant-price">{formatPrice(prices.arctic.price)}</span>
-                    </div>
-                  )}
-                  {prices.sketch?.price && (
-                    <div className="price-row">
-                      <span className="variant-name">Sketch:</span>
-                      <span className="variant-price">{formatPrice(prices.sketch.price)}</span>
-                    </div>
-                  )}
+                  ))}
                 </div>
               )}
 
@@ -134,7 +121,7 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant, on
             <div className="modal-variants">
               <h4>Your Collection</h4>
               <div className="modal-variant-grid">
-                {VARIANTS.map((variant) => (
+                {VARIANTS.filter((variant) => availableVariants.includes(variant)).map((variant) => (
                   <div key={variant} className="modal-variant-row">
                     <span className={`modal-variant-label variant-label ${variant}`}>{VARIANT_LABELS[variant]}</span>
                     <div className="modal-variant-counter">
