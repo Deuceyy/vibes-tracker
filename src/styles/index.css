@@ -2023,6 +2023,27 @@ body {
   color: white;
 }
 
+.landing-nav-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.landing-user-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 .nav-cta {
   background: var(--accent);
   color: white !important;

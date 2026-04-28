@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
+import { useConversations } from '../hooks/useMarketplace';
 import SiteDisclaimer from './SiteDisclaimer';
 
 export default function LandingPage() {
   const { user, signInWithGoogle } = useAuth();
   const { publicDecks } = useDecks();
+  const { conversations } = useConversations({ userId: user?.uid, enabled: Boolean(user) });
 
   const topDecks = publicDecks.slice(0, 4);
+  const unreadMessages = conversations.filter((conversation) => (conversation.unreadBy || []).includes(user?.uid)).length;
 
   return (
     <div className="landing">
@@ -22,7 +25,17 @@ export default function LandingPage() {
           <Link to="/marketplace">Marketplace</Link>
           <Link to="/set3-spoilers">Set 3 Spoilers</Link>
           {user ? (
-            <Link to="/marketplace/my-listings" className="nav-cta">My Listings</Link>
+            <>
+              <Link to="/messages" className="landing-nav-alert">
+                Messages
+                {unreadMessages > 0 && <span className="admin-alert-badge">{unreadMessages}</span>}
+              </Link>
+              <Link to="/messages" className="landing-user-link" aria-label="Open messages">
+                <img src={user.photoURL} alt="" className="landing-user-avatar" />
+                {unreadMessages > 0 && <span className="avatar-badge">{unreadMessages}</span>}
+              </Link>
+              <Link to="/marketplace/my-listings" className="nav-cta">My Listings</Link>
+            </>
           ) : (
             <button onClick={signInWithGoogle} className="nav-cta">Sign In</button>
           )}
