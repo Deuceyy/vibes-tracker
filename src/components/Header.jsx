@@ -110,6 +110,13 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
             </Link>
           )}
 
+          {user && (
+            <Link to="/messages" className="admin-alert-link">
+              Messages
+              {unreadMessages > 0 && <span className="admin-alert-badge">{unreadMessages}</span>}
+            </Link>
+          )}
+
           {isOwnCollection && (
             <div className="action-buttons">
               <button className="action-btn secondary" onClick={handleExportClick}>Export</button>
@@ -131,6 +138,7 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
             <div className="user-menu-container">
               <button className="user-avatar-btn" onClick={() => setShowUserMenu((prev) => !prev)}>
                 <img src={user.photoURL} alt="" className="user-avatar" />
+                {unreadMessages > 0 && <span className="avatar-badge">{unreadMessages}</span>}
               </button>
 
               {showUserMenu && (
