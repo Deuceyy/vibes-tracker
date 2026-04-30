@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-30T00:11:46.531Z",
+  "generatedAt": "2026-04-30T04:08:28.713Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -94,6 +94,21 @@
       "imageFileId": "1YlNU_b73WNX23lqdAPtwA6SU934MOfFN"
     },
     {
+      "name": "Step by Step",
+      "color": "Yellow",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Birb, Moonbird 2931, Moonbird 3871",
+      "collectorNumber": "62",
+      "illustrator": "chlorophilly",
+      "effect": "Choose a Character. If it has vibe counters on it, ice it. Otherwise, flop it.",
+      "image": "/set3-spoilers/step-by-step.png",
+      "imageFileName": "step by step.png",
+      "imageFileId": "1jY1eF2rYk9ulM4Wcow-PROuXvcB7nxip"
+    },
+    {
       "name": "Reflective Penguin",
       "color": "Green",
       "type": "Character - Penguin",
@@ -182,6 +197,21 @@
       "image": "/set3-spoilers/prized-birb.png",
       "imageFileName": "prized birb.png",
       "imageFileId": "1bXsu4OX9GA-qGzqjTESh_KeTmipVoWaK"
+    },
+    {
+      "name": "Stonebreaker Wizbirb",
+      "color": "Colorless",
+      "type": "Character - Wizard Birb",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 9991",
+      "collectorNumber": "161",
+      "illustrator": "chlorophilly",
+      "effect": "_G_ or _R_.",
+      "image": "/set3-spoilers/stonebreaker-wizbirb.png",
+      "imageFileName": "stonebreaker wizbirb.png",
+      "imageFileId": "1bypajo_gcofixAeTFPg0_4rsBLa1yTJq"
     },
     {
       "name": "The Peng",
