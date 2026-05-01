@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-01T17:18:40.753Z",
+  "generatedAt": "2026-05-01T18:38:07.498Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -34,6 +34,21 @@
       "imageFileId": "17f2M_rKxUUE0IB_v8kXDR6wR1mhTL4mB"
     },
     {
+      "name": "The Birb of Music",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 6,
+      "vibe": 4,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Moonbird 9052",
+      "collectorNumber": "18",
+      "illustrator": "aokiss",
+      "effect": "_R__R__R_",
+      "image": "/set3-spoilers/the-birb-of-music.png",
+      "imageFileName": "the birb of music.png",
+      "imageFileId": "19t9pvH7HtxaLtW0fnQvjXU0H8twuLE2Q"
+    },
+    {
       "name": "Vibe Scan",
       "color": "Red",
       "type": "Action",
@@ -47,6 +62,21 @@
       "image": "/set3-spoilers/vibe-scan.png",
       "imageFileName": "vibe scan.png",
       "imageFileId": "1l8bMa1q49d5m4Me0aPaxaqr0VYw5Cdcu"
+    },
+    {
+      "name": "Study All Day",
+      "color": "Red",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb, Moonbird 7791",
+      "collectorNumber": "26",
+      "illustrator": "aokiss",
+      "effect": "Draw two cards, then ice a card from your hand.",
+      "image": "/set3-spoilers/study-all-day.png",
+      "imageFileName": "study all day.png",
+      "imageFileId": "1XSIsaJxLqrK8npIN4uLuZZclnw-3c4m9"
     },
     {
       "name": "Scholar Birb",
@@ -182,6 +212,21 @@
       "image": "/set3-spoilers/birb-who-s-100-feet-tall.png",
       "imageFileName": "birb who_s 100 feet tall.png",
       "imageFileId": "1AzYbLDYC-CXWlG3fdHQST2LdwWguxZNQ"
+    },
+    {
+      "name": "Lil Forgotten",
+      "color": "Purple",
+      "type": "Character - Lil Penguin",
+      "cost": 2,
+      "vibe": 3,
+      "rarity": "Common",
+      "featuringPudgy": "Lil 15733",
+      "collectorNumber": "132",
+      "illustrator": "aokiss",
+      "effect": "When this Character is iced, each player puts the top card of their deck face-down as a Rod.",
+      "image": "/set3-spoilers/lil-forgotten.png",
+      "imageFileName": "lil forgotten.png",
+      "imageFileId": "1GkgjSPl7x9jc9_LPKgv8PlQdOMpnqQL4"
     },
     {
       "name": "Prized Birb",
