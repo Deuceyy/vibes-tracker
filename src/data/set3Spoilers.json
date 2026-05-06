@@ -1,9 +1,7 @@
 {
-  "generatedAt": "2026-05-06T22:11:43.223Z",
+  "generatedAt": "2026-05-06T23:10:46.539Z",
   "colorCount": 6,
-  "skippedCards": [
-    "Jaskel, Imaginator"
-  ],
+  "skippedCards": [],
   "cards": [
     {
       "name": "Birb",
@@ -184,6 +182,21 @@
       "image": "/set3-spoilers/victorious-penguin.png",
       "imageFileName": "victorious penguin.png",
       "imageFileId": "10v2_AcBKBFnEeHO2uYkhKJ-ByXcuYbyV"
+    },
+    {
+      "name": "Jaskel, Imaginator",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 8,
+      "vibe": 8,
+      "rarity": "Mythic",
+      "featuringPudgy": "Pudgy 3634",
+      "collectorNumber": "84",
+      "illustrator": "Zaid",
+      "effect": "This Character can only [ACT] if you have 8 or more vibe counters on Characters in your huddle. [ACT] _F_: Choose a Character and put 8 vibe counters on it.",
+      "image": "/set3-spoilers/jaskel-imaginator.png",
+      "imageFileName": "jaskel, imaginator.png",
+      "imageFileId": "1LO2AUyRoszcO0k3BQNU17Zvl0PLfqcJg"
     },
     {
       "name": "Pengu",
