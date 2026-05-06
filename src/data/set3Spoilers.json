@@ -1,7 +1,9 @@
 {
-  "generatedAt": "2026-05-06T20:53:40.178Z",
+  "generatedAt": "2026-05-06T22:11:43.223Z",
   "colorCount": 6,
-  "skippedCards": [],
+  "skippedCards": [
+    "Jaskel, Imaginator"
+  ],
   "cards": [
     {
       "name": "Birb",
