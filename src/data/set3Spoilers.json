@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T00:10:44.479Z",
+  "generatedAt": "2026-05-06T04:10:27.531Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -257,6 +257,21 @@
       "image": "/set3-spoilers/stonebreaker-wizbirb.png",
       "imageFileName": "stonebreaker wizbirb.png",
       "imageFileId": "1bypajo_gcofixAeTFPg0_4rsBLa1yTJq"
+    },
+    {
+      "name": "Nightveil Wizbirb",
+      "color": "Colorless",
+      "type": "Character - Wizard Birb",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 7209",
+      "collectorNumber": "165",
+      "illustrator": "chlorophilly",
+      "effect": "_B_ or _G_.",
+      "image": "/set3-spoilers/nightveil-wizbirb.png",
+      "imageFileName": "nightveil wizbirb.png",
+      "imageFileId": "19xqL0OOkJEinauLIhiVftH1NH5Nj4AW0"
     },
     {
       "name": "The Peng",
