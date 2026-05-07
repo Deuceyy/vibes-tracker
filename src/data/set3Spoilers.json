@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T00:09:20.036Z",
+  "generatedAt": "2026-05-07T04:09:58.601Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -229,6 +229,21 @@
       "imageFileId": "1AzYbLDYC-CXWlG3fdHQST2LdwWguxZNQ"
     },
     {
+      "name": "Lil Balanced",
+      "color": "Purple",
+      "type": "Character - Lil Penguin",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Lil 11734",
+      "collectorNumber": "131",
+      "illustrator": "chlorophilly",
+      "effect": "When this Character is iced, each player draws a card.",
+      "image": "/set3-spoilers/lil-balanced.png",
+      "imageFileName": "lil balanced.png",
+      "imageFileId": "1xslgPTd9RhVyUG9M8NASZwbq6FEyomjy"
+    },
+    {
       "name": "Lil Forgotten",
       "color": "Purple",
       "type": "Character - Lil Penguin",
@@ -257,6 +272,36 @@
       "image": "/set3-spoilers/prized-birb.png",
       "imageFileName": "prized birb.png",
       "imageFileId": "1bXsu4OX9GA-qGzqjTESh_KeTmipVoWaK"
+    },
+    {
+      "name": "Quantum Birb",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 6,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 527",
+      "collectorNumber": "140",
+      "illustrator": "chlorophilly",
+      "effect": "",
+      "image": "/set3-spoilers/quantum-birb.png",
+      "imageFileName": "quantum birb.png",
+      "imageFileId": "1ATkZmeTI27wmtb1AirvOxiv2AgSsiLtW"
+    },
+    {
+      "name": "Luckmaking Birb",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 6,
+      "vibe": 4,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 7045",
+      "collectorNumber": "146",
+      "illustrator": "bluugu - Lucius",
+      "effect": "[ACT] _F_: Choose a Character in your huddle and ice it. Pick a Character card in your ice with the same Fish cost as, but different name than, the iced Character. Put it into your huddle.",
+      "image": "/set3-spoilers/luckmaking-birb.png",
+      "imageFileName": "luckmaking birb.png",
+      "imageFileId": "1ZqpJe9v8I2uY3QouJnHn-jffkFB7dNem"
     },
     {
       "name": "Stonebreaker Wizbirb",
