@@ -1,7 +1,9 @@
 {
-  "generatedAt": "2026-05-08T16:48:09.262Z",
+  "generatedAt": "2026-05-08T18:49:00.232Z",
   "colorCount": 6,
-  "skippedCards": [],
+  "skippedCards": [
+    "Lumin Who Sees All"
+  ],
   "cards": [
     {
       "name": "Birb",
