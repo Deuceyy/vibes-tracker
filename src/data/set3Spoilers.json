@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T14:20:24.824Z",
+  "generatedAt": "2026-05-08T16:48:09.262Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -17,6 +17,21 @@
       "image": "/set3-spoilers/birb.png",
       "imageFileName": "birb.png",
       "imageFileId": "1_1GeKNMqn85X0fu8DeQe7stKlEhkr4gc"
+    },
+    {
+      "name": "Bachelor Birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 4,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 7016",
+      "collectorNumber": "11",
+      "illustrator": "chlorophilly",
+      "effect": "When this Character enters the huddle, draw a card, then ice a card from your hand.",
+      "image": "/set3-spoilers/bachelor-birb.png",
+      "imageFileName": "bachelor birb.png",
+      "imageFileId": "199bsOKo7QIaCdX2DlIWbXrkG4UzH6YtP"
     },
     {
       "name": "Birbman",
@@ -169,6 +184,21 @@
       "imageFileId": "11HjXgDn5BkBudoEbIStGTdjbJuq45FqN"
     },
     {
+      "name": "Lil Persuader",
+      "color": "Green",
+      "type": "Character - Lil Penguin",
+      "cost": 3,
+      "vibe": 7,
+      "rarity": "Common",
+      "featuringPudgy": "Lil 16636",
+      "collectorNumber": "75",
+      "illustrator": "Stoopid Penguin",
+      "effect": "At the end of Action Time, if you don't have the Baron, ice this Character.",
+      "image": "/set3-spoilers/lil-persuader.png",
+      "imageFileName": "lil persuader.png",
+      "imageFileId": "1nne2X1ziE-9QilaLXbf5GNNFDu2GN46o"
+    },
+    {
       "name": "Victorious Penguin",
       "color": "Green",
       "type": "Character - Penguin",
@@ -197,6 +227,21 @@
       "image": "/set3-spoilers/jaskel-imaginator.png",
       "imageFileName": "jaskel, imaginator.png",
       "imageFileId": "1LO2AUyRoszcO0k3BQNU17Zvl0PLfqcJg"
+    },
+    {
+      "name": "Squad Strike",
+      "color": "Green",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu, Pudgy 5206, Pudgy 5505, Pudgy 7449",
+      "collectorNumber": "95",
+      "illustrator": "Aephai",
+      "effect": "Choose a Character. If it's Green, put 6 vibe counters on it. Otherwise, ice it.",
+      "image": "/set3-spoilers/squad-strike.png",
+      "imageFileName": "squad strike.png",
+      "imageFileId": "1bhmLi9MoVvX7mUEGA3507g6JorxTuwy9"
     },
     {
       "name": "Pengu",
@@ -304,6 +349,21 @@
       "imageFileId": "1ZqpJe9v8I2uY3QouJnHn-jffkFB7dNem"
     },
     {
+      "name": "Set Sail",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Pengu, Pudgy 4849, Lil 4231, Lil 21012, Lil 8264, Lil 10992, Lil 12001",
+      "collectorNumber": "160",
+      "illustrator": "Aephai",
+      "effect": "Each player gives their huddle to the player on their right.",
+      "image": "/set3-spoilers/set-sail.png",
+      "imageFileName": "set sail.png",
+      "imageFileId": "1KKe_AevXruPJ0Mtyyd_6KJsgHGRrDXZ9"
+    },
+    {
       "name": "Stonebreaker Wizbirb",
       "color": "Colorless",
       "type": "Character - Wizard Birb",
@@ -332,6 +392,21 @@
       "image": "/set3-spoilers/nightveil-wizbirb.png",
       "imageFileName": "nightveil wizbirb.png",
       "imageFileId": "19xqL0OOkJEinauLIhiVftH1NH5Nj4AW0"
+    },
+    {
+      "name": "Art Museum",
+      "color": "Colorless",
+      "type": "Relic - Location",
+      "cost": 4,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Lil 98",
+      "collectorNumber": "191",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "Whenever any number Characters are iced, their controller gets that many Fishsicles. Whenever another Location enters play, ice this Relic.",
+      "image": "/set3-spoilers/art-museum.png",
+      "imageFileName": "art museum.png",
+      "imageFileId": "17laP3AZy2K5qwQoWXoyhaJBzvgi9YK-c"
     },
     {
       "name": "The Peng",
