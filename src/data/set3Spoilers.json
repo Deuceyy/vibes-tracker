@@ -1,15 +1,7 @@
 {
-  "generatedAt": "2026-05-14T19:09:33.071Z",
+  "generatedAt": "2026-05-14T19:23:42.740Z",
   "colorCount": 6,
-  "skippedCards": [
-    "Lumin Who Sees All",
-    "Baker Birb",
-    "Realist Penguin",
-    "Fisherman Penguin",
-    "Myra of the Mist",
-    "Orrin, Forest Guardian",
-    "Hypnotized Penguin"
-  ],
+  "skippedCards": [],
   "cards": [
     {
       "name": "Birb",
@@ -22,9 +14,9 @@
       "collectorNumber": "3",
       "illustrator": "Clare Altman & CAH",
       "effect": "When this Character enters the huddle, reveal the top two cards of your deck. Pick up to one Action card with Pudge cost 2 or less and draw it. Put the cards you didn't draw on the bottom of your deck.",
-      "image": "/set3-spoilers/birb.png",
-      "imageFileName": "birb.png",
-      "imageFileId": "1_1GeKNMqn85X0fu8DeQe7stKlEhkr4gc"
+      "image": "/set3-spoilers/birb.webp",
+      "imageFileName": "birb.webp",
+      "imageFileId": "17r6XL6flLmGMbWB2ujaemgblor3aE20w"
     },
     {
       "name": "Bachelor Birb",
@@ -37,9 +29,9 @@
       "collectorNumber": "11",
       "illustrator": "chlorophilly",
       "effect": "When this Character enters the huddle, draw a card, then ice a card from your hand.",
-      "image": "/set3-spoilers/bachelor-birb.png",
-      "imageFileName": "bachelor birb.png",
-      "imageFileId": "199bsOKo7QIaCdX2DlIWbXrkG4UzH6YtP"
+      "image": "/set3-spoilers/bachelor-birb.webp",
+      "imageFileName": "bachelor birb.webp",
+      "imageFileId": "1-R0DH2KgUgfWfNTCSzaxUAF76Km7npuM"
     },
     {
       "name": "Birbman",
@@ -52,9 +44,24 @@
       "collectorNumber": "13",
       "illustrator": "bluugu - Lucius",
       "effect": "Whenever this Character wins Vibe Check, draw a card, then ice a card from your hand.",
-      "image": "/set3-spoilers/birbman.png",
-      "imageFileName": "birbman.png",
-      "imageFileId": "17f2M_rKxUUE0IB_v8kXDR6wR1mhTL4mB"
+      "image": "/set3-spoilers/birbman.webp",
+      "imageFileName": "birbman.webp",
+      "imageFileId": "1hr0O1uBQTkadzsC94l4kOIXQKuTrnQVA"
+    },
+    {
+      "name": "Orrin, Forest Guardian",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 5,
+      "vibe": 2,
+      "rarity": "Mythic",
+      "featuringPudgy": "Moonbird 9981",
+      "collectorNumber": "17",
+      "illustrator": "Groowut",
+      "effect": "Whenever this Character produces Pudge, you may pick a Character card in your ice and put it under this Character. [ACT] _F_: Pick a card under this Character and put it into your hand.",
+      "image": "/set3-spoilers/orrin-forest-guardian.webp",
+      "imageFileName": "orrin, forest guardian.webp",
+      "imageFileId": "1U0gqhg_ddmXrG5MwZa5XQFcW73H0ntOq"
     },
     {
       "name": "The Birb of Music",
@@ -67,9 +74,9 @@
       "collectorNumber": "18",
       "illustrator": "aokiss",
       "effect": "_R__R__R_",
-      "image": "/set3-spoilers/the-birb-of-music.png",
-      "imageFileName": "the birb of music.png",
-      "imageFileId": "19t9pvH7HtxaLtW0fnQvjXU0H8twuLE2Q"
+      "image": "/set3-spoilers/the-birb-of-music.webp",
+      "imageFileName": "the birb of music.webp",
+      "imageFileId": "16smAc7fu6S0lOOdbj4RIkqCIPZS97vCy"
     },
     {
       "name": "Vibe Scan",
@@ -82,9 +89,9 @@
       "collectorNumber": "23",
       "illustrator": "Jungle",
       "effect": "Choose a Character with vibe 2 or less and ice it.",
-      "image": "/set3-spoilers/vibe-scan.png",
-      "imageFileName": "vibe scan.png",
-      "imageFileId": "1l8bMa1q49d5m4Me0aPaxaqr0VYw5Cdcu"
+      "image": "/set3-spoilers/vibe-scan.webp",
+      "imageFileName": "vibe scan.webp",
+      "imageFileId": "1DkCeJNViQf4N_Akt6JVvqdsl0KyDmOcs"
     },
     {
       "name": "Study All Day",
@@ -97,9 +104,9 @@
       "collectorNumber": "26",
       "illustrator": "aokiss",
       "effect": "Draw two cards, then ice a card from your hand.",
-      "image": "/set3-spoilers/study-all-day.png",
-      "imageFileName": "study all day.png",
-      "imageFileId": "1XSIsaJxLqrK8npIN4uLuZZclnw-3c4m9"
+      "image": "/set3-spoilers/study-all-day.webp",
+      "imageFileName": "study all day.webp",
+      "imageFileId": "13VAPnTfe15JZgozXgCWytKM5RqkDhq_t"
     },
     {
       "name": "Scholar Birb",
@@ -112,9 +119,9 @@
       "collectorNumber": "41",
       "illustrator": "bluugu - Lucius",
       "effect": "When this Character is iced, choose a Character and put 3 vibe counters on it.",
-      "image": "/set3-spoilers/scholar-birb.png",
-      "imageFileName": "scholar birb.png",
-      "imageFileId": "1OI-Tau4DRLEBygnR7RuSV8fFK0vHIBiC"
+      "image": "/set3-spoilers/scholar-birb.webp",
+      "imageFileName": "scholar birb.webp",
+      "imageFileId": "1UsGY5WESYqgcgsLXcdiRJhUG2gUxr7qI"
     },
     {
       "name": "Striker Birb",
@@ -127,9 +134,24 @@
       "collectorNumber": "44",
       "illustrator": "Stoopid Penguin",
       "effect": "When this Character enters the huddle, choose a non-Silly Character in your huddle and ice it. At the start of the next Cycle, return it from ice to its owner's huddle.",
-      "image": "/set3-spoilers/striker-birb.png",
-      "imageFileName": "striker birb.png",
-      "imageFileId": "1qdLpBDAkMYB1Y8F_jYhQDgU69pgk9rwY"
+      "image": "/set3-spoilers/striker-birb.webp",
+      "imageFileName": "striker birb.webp",
+      "imageFileId": "1Ulb8DKlMW6S9jnvQm8bM5mju0SprVk3B"
+    },
+    {
+      "name": "Lumin Who Sees All",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 10,
+      "vibe": 12,
+      "rarity": "Mythic",
+      "featuringPudgy": "Moonbird 7004",
+      "collectorNumber": "52",
+      "illustrator": "ALIENQUEEN",
+      "effect": "This Character costs one less _T_ to play for each Character in your huddle.",
+      "image": "/set3-spoilers/lumin-who-sees-all.webp",
+      "imageFileName": "lumin who sees all.webp",
+      "imageFileId": "1FC4mqbLAw3WXZqYgrsxNVgT6QHvqGS-R"
     },
     {
       "name": "True Form",
@@ -142,9 +164,9 @@
       "collectorNumber": "59",
       "illustrator": "Clare Altman & CAH",
       "effect": "Choose a Character and ice it. At the start of the next Cycle, return it from ice to its owner's huddle.",
-      "image": "/set3-spoilers/true-form.png",
-      "imageFileName": "true form.png",
-      "imageFileId": "1YlNU_b73WNX23lqdAPtwA6SU934MOfFN"
+      "image": "/set3-spoilers/true-form.webp",
+      "imageFileName": "true form.webp",
+      "imageFileId": "1v-XmCYt9SKp3bY0RvP--Wru07ySa8AZ_"
     },
     {
       "name": "Step by Step",
@@ -157,9 +179,9 @@
       "collectorNumber": "62",
       "illustrator": "chlorophilly",
       "effect": "Choose a Character. If it has vibe counters on it, ice it. Otherwise, flop it.",
-      "image": "/set3-spoilers/step-by-step.png",
-      "imageFileName": "step by step.png",
-      "imageFileId": "1jY1eF2rYk9ulM4Wcow-PROuXvcB7nxip"
+      "image": "/set3-spoilers/step-by-step.webp",
+      "imageFileName": "step by step.webp",
+      "imageFileId": "1HmZIdxdvFF1kcHfHVymVDXEH1rXFIi-m"
     },
     {
       "name": "Reflective Penguin",
@@ -172,9 +194,24 @@
       "collectorNumber": "66",
       "illustrator": "Clare Altman & CAH",
       "effect": "As long as you have the Baron, this Character can produce _G__G_.",
-      "image": "/set3-spoilers/reflective-penguin.png",
-      "imageFileName": "reflective penguin.png",
-      "imageFileId": "1mY8wHNxALSLbmNz5cG1cP2qpTkO06Lak"
+      "image": "/set3-spoilers/reflective-penguin.webp",
+      "imageFileName": "reflective penguin.webp",
+      "imageFileId": "1dhAOgtjJrAXDLTBqTtrWd0ESeMylguiB"
+    },
+    {
+      "name": "Realist Penguin",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 3,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 5373",
+      "collectorNumber": "71",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "[ACT] _F_, remove a vibe counter from this Character: Choose a Character and boost its vibe by 3 for the rest of this Cycle.",
+      "image": "/set3-spoilers/realist-penguin.webp",
+      "imageFileName": "realist penguin.webp",
+      "imageFileId": "1XY5_AsaT-D5BsXWAHS8-mhS6Diiy8t4D"
     },
     {
       "name": "Lil Helium",
@@ -187,9 +224,24 @@
       "collectorNumber": "73",
       "illustrator": "blue boo",
       "effect": "When this Character enters the huddle, choose another Character and put 2 vibe counters on it.",
-      "image": "/set3-spoilers/lil-helium.png",
-      "imageFileName": "lil helium.png",
-      "imageFileId": "11HjXgDn5BkBudoEbIStGTdjbJuq45FqN"
+      "image": "/set3-spoilers/lil-helium.webp",
+      "imageFileName": "lil helium.webp",
+      "imageFileId": "1thuUxnZOJnvreTzIAp8hn68FIcZJmvPz"
+    },
+    {
+      "name": "Baker Birb",
+      "color": "Green",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 6,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 2543",
+      "collectorNumber": "74",
+      "illustrator": "aokiss",
+      "effect": "",
+      "image": "/set3-spoilers/baker-birb.webp",
+      "imageFileName": "baker birb.webp",
+      "imageFileId": "1PfTTkoGYmwa251MB7upNwKIP8b_G0bmc"
     },
     {
       "name": "Lil Persuader",
@@ -202,9 +254,9 @@
       "collectorNumber": "75",
       "illustrator": "Stoopid Penguin",
       "effect": "At the end of Action Time, if you don't have the Baron, ice this Character.",
-      "image": "/set3-spoilers/lil-persuader.png",
-      "imageFileName": "lil persuader.png",
-      "imageFileId": "1nne2X1ziE-9QilaLXbf5GNNFDu2GN46o"
+      "image": "/set3-spoilers/lil-persuader.webp",
+      "imageFileName": "lil persuader.webp",
+      "imageFileId": "1Xec5JF8U0dm0hS23HraC2rt791ohuEzk"
     },
     {
       "name": "Victorious Penguin",
@@ -217,9 +269,24 @@
       "collectorNumber": "79",
       "illustrator": "Jungle",
       "effect": "At the end of Action Time, if you have the Baron, put a vibe counter on each Character in your huddle.",
-      "image": "/set3-spoilers/victorious-penguin.png",
-      "imageFileName": "victorious penguin.png",
-      "imageFileId": "10v2_AcBKBFnEeHO2uYkhKJ-ByXcuYbyV"
+      "image": "/set3-spoilers/victorious-penguin.webp",
+      "imageFileName": "victorious penguin.webp",
+      "imageFileId": "1JKFWNFOyDEF2Di1sChqJYzJH9KDNG-YZ"
+    },
+    {
+      "name": "Hypnotized Penguin",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 4,
+      "vibe": 6,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 963",
+      "collectorNumber": "80",
+      "illustrator": "bluugu - Lucius",
+      "effect": "Whenever this Character wins Vibe Check, choose a Character. It joins your huddle. Ice this Character.",
+      "image": "/set3-spoilers/hypnotized-penguin.webp",
+      "imageFileName": "hypnotized penguin.webp",
+      "imageFileId": "1LVDFNLoDWercFOdWZTKlLnvJVypQcx5J"
     },
     {
       "name": "Jaskel, Imaginator",
@@ -232,9 +299,9 @@
       "collectorNumber": "84",
       "illustrator": "Zaid",
       "effect": "This Character can only [ACT] if you have 8 or more vibe counters on Characters in your huddle. [ACT] _F_: Choose a Character and put 8 vibe counters on it.",
-      "image": "/set3-spoilers/jaskel-imaginator.png",
-      "imageFileName": "jaskel, imaginator.png",
-      "imageFileId": "1LO2AUyRoszcO0k3BQNU17Zvl0PLfqcJg"
+      "image": "/set3-spoilers/jaskel-imaginator.webp",
+      "imageFileName": "jaskel, imaginator.webp",
+      "imageFileId": "1VAu8EXZ8Whq-SXRqcduohYHQbpmYKGHx"
     },
     {
       "name": "Squad Strike",
@@ -247,9 +314,9 @@
       "collectorNumber": "95",
       "illustrator": "Aephai",
       "effect": "Choose a Character. If it's Green, put 6 vibe counters on it. Otherwise, ice it.",
-      "image": "/set3-spoilers/squad-strike.png",
-      "imageFileName": "squad strike.png",
-      "imageFileId": "1bhmLi9MoVvX7mUEGA3507g6JorxTuwy9"
+      "image": "/set3-spoilers/squad-strike.webp",
+      "imageFileName": "squad strike.webp",
+      "imageFileId": "1ZVSMT-uBi01xf5ypSnWz05_zrQRDz9a5"
     },
     {
       "name": "Pengu",
@@ -262,9 +329,9 @@
       "collectorNumber": "104",
       "illustrator": "Clare Altman & CAH",
       "effect": "Playable during Action Time as if it were an Action.",
-      "image": "/set3-spoilers/pengu.png",
-      "imageFileName": "pengu.png",
-      "imageFileId": "1ZL_o-53YTXASUrTcm9DsjD1avggLMusd"
+      "image": "/set3-spoilers/pengu.webp",
+      "imageFileName": "pengu.webp",
+      "imageFileId": "1wdGvKUfnoLRJkFVIgS4_hQMtiKIQkg87"
     },
     {
       "name": "Birb Who's 100 Feet Tall",
@@ -292,9 +359,9 @@
       "collectorNumber": "131",
       "illustrator": "chlorophilly",
       "effect": "When this Character is iced, each player draws a card.",
-      "image": "/set3-spoilers/lil-balanced.png",
-      "imageFileName": "lil balanced.png",
-      "imageFileId": "1xslgPTd9RhVyUG9M8NASZwbq6FEyomjy"
+      "image": "/set3-spoilers/lil-balanced.webp",
+      "imageFileName": "lil balanced.webp",
+      "imageFileId": "15b4nzz6A0-XpjLLGIWsvvBDuOET540rc"
     },
     {
       "name": "Lil Forgotten",
@@ -307,9 +374,9 @@
       "collectorNumber": "132",
       "illustrator": "aokiss",
       "effect": "When this Character is iced, each player puts the top card of their deck face-down as a Rod.",
-      "image": "/set3-spoilers/lil-forgotten.png",
-      "imageFileName": "lil forgotten.png",
-      "imageFileId": "1GkgjSPl7x9jc9_LPKgv8PlQdOMpnqQL4"
+      "image": "/set3-spoilers/lil-forgotten.webp",
+      "imageFileName": "lil forgotten.webp",
+      "imageFileId": "17OfPMw35HtZd_BzkluATCV3bB_4pbJQ-"
     },
     {
       "name": "Prized Birb",
@@ -322,9 +389,9 @@
       "collectorNumber": "138",
       "illustrator": "blue boo",
       "effect": "When this Character is iced, the player that iced it draws a card.",
-      "image": "/set3-spoilers/prized-birb.png",
-      "imageFileName": "prized birb.png",
-      "imageFileId": "1bXsu4OX9GA-qGzqjTESh_KeTmipVoWaK"
+      "image": "/set3-spoilers/prized-birb.webp",
+      "imageFileName": "prized birb.webp",
+      "imageFileId": "1lSa7kw96b_UWfrsZBqKhqaH9X8edoRW0"
     },
     {
       "name": "Quantum Birb",
@@ -337,9 +404,9 @@
       "collectorNumber": "140",
       "illustrator": "chlorophilly",
       "effect": "",
-      "image": "/set3-spoilers/quantum-birb.png",
-      "imageFileName": "quantum birb.png",
-      "imageFileId": "1ATkZmeTI27wmtb1AirvOxiv2AgSsiLtW"
+      "image": "/set3-spoilers/quantum-birb.webp",
+      "imageFileName": "quantum birb.webp",
+      "imageFileId": "1pOKoYUMfzMv5pOWIVDOi0Pmb_hTO5xRP"
     },
     {
       "name": "Luckmaking Birb",
@@ -352,9 +419,39 @@
       "collectorNumber": "146",
       "illustrator": "bluugu - Lucius",
       "effect": "[ACT] _F_: Choose a Character in your huddle and ice it. Pick a Character card in your ice with the same Fish cost as, but different name than, the iced Character. Put it into your huddle.",
-      "image": "/set3-spoilers/luckmaking-birb.png",
-      "imageFileName": "luckmaking birb.png",
-      "imageFileId": "1ZqpJe9v8I2uY3QouJnHn-jffkFB7dNem"
+      "image": "/set3-spoilers/luckmaking-birb.webp",
+      "imageFileName": "luckmaking birb.webp",
+      "imageFileId": "1JioPaLTpMj6AyuxXy71K8RBOZkRep7cm"
+    },
+    {
+      "name": "Fisherman Penguin",
+      "color": "Purple",
+      "type": "Character - Penguin",
+      "cost": 6,
+      "vibe": 6,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 3745",
+      "collectorNumber": "147",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Whenever any number of Characters in your huddle are iced, boost this Character's vibe by 2 for the rest of this Cycle.",
+      "image": "/set3-spoilers/fisherman-penguin.webp",
+      "imageFileName": "fisherman penguin.webp",
+      "imageFileId": "1Fo6d3a5Htz7SfLO8FMVcql4PyUsNzQPQ"
+    },
+    {
+      "name": "Myra of the Mist",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 10,
+      "vibe": 0,
+      "rarity": "Mythic",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "148",
+      "illustrator": "Jisu",
+      "effect": "When this Character enters the huddle, each player returns all Characters with vibe 2 or less from their ice to their huddle.",
+      "image": "/set3-spoilers/myra-of-the-mist.webp",
+      "imageFileName": "myra of the mist.webp",
+      "imageFileId": "1zKxOGLYvJLFSfbgv2tPocFN4ht1MtjaO"
     },
     {
       "name": "Set Sail",
@@ -367,9 +464,9 @@
       "collectorNumber": "160",
       "illustrator": "Aephai",
       "effect": "Each player gives their huddle to the player on their right.",
-      "image": "/set3-spoilers/set-sail.png",
-      "imageFileName": "set sail.png",
-      "imageFileId": "1KKe_AevXruPJ0Mtyyd_6KJsgHGRrDXZ9"
+      "image": "/set3-spoilers/set-sail.webp",
+      "imageFileName": "set sail.webp",
+      "imageFileId": "1eQBMbhKx6qdN3PbHtmSEm9bnynwB3OUa"
     },
     {
       "name": "Stonebreaker Wizbirb",
@@ -382,9 +479,9 @@
       "collectorNumber": "161",
       "illustrator": "chlorophilly",
       "effect": "_G_ or _R_.",
-      "image": "/set3-spoilers/stonebreaker-wizbirb.png",
-      "imageFileName": "stonebreaker wizbirb.png",
-      "imageFileId": "1bypajo_gcofixAeTFPg0_4rsBLa1yTJq"
+      "image": "/set3-spoilers/stonebreaker-wizbirb.webp",
+      "imageFileName": "stonebreaker wizbirb.webp",
+      "imageFileId": "17taLA3dyxnFXSxqZ1ds9JcGTid35AJwf"
     },
     {
       "name": "Nightveil Wizbirb",
@@ -397,9 +494,9 @@
       "collectorNumber": "165",
       "illustrator": "chlorophilly",
       "effect": "_B_ or _G_.",
-      "image": "/set3-spoilers/nightveil-wizbirb.png",
-      "imageFileName": "nightveil wizbirb.png",
-      "imageFileId": "19xqL0OOkJEinauLIhiVftH1NH5Nj4AW0"
+      "image": "/set3-spoilers/nightveil-wizbirb.webp",
+      "imageFileName": "nightveil wizbirb.webp",
+      "imageFileId": "1QvOz4Old9KzZUXq2QSv7g9lOgQMwO_Q6"
     },
     {
       "name": "Art Museum",
@@ -412,9 +509,9 @@
       "collectorNumber": "191",
       "illustrator": "Clare Altman & CAH",
       "effect": "Whenever any number Characters are iced, their controller gets that many Fishsicles. Whenever another Location enters play, ice this Relic.",
-      "image": "/set3-spoilers/art-museum.png",
-      "imageFileName": "art museum.png",
-      "imageFileId": "17laP3AZy2K5qwQoWXoyhaJBzvgi9YK-c"
+      "image": "/set3-spoilers/art-museum.webp",
+      "imageFileName": "art museum.webp",
+      "imageFileId": "113fKNAJ_BM2Ir8hRfaFEnXBzLpJX5Pw_"
     },
     {
       "name": "The Peng",
@@ -427,9 +524,9 @@
       "collectorNumber": "193",
       "illustrator": "Clare Altman & CAH",
       "effect": "Whenever a Character has any number of vibe counters put on it during Action Time, flop it. Whenever another Location enters play, ice this Relic.",
-      "image": "/set3-spoilers/the-peng.png",
-      "imageFileName": "the peng.png",
-      "imageFileId": "11f17Qt5Hh1I-d_xOuGusxUJS1hudgHjr"
+      "image": "/set3-spoilers/the-peng.webp",
+      "imageFileName": "the peng.webp",
+      "imageFileId": "1Aic5IWl8hU6ocZwdSu5lg624PSLk_Axk"
     }
   ]
 }
