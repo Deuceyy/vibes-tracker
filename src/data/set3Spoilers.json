@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T21:40:01.088Z",
+  "generatedAt": "2026-05-14T23:15:35.467Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -497,6 +497,21 @@
       "image": "/set3-spoilers/nightveil-wizbirb.webp",
       "imageFileName": "nightveil wizbirb.webp",
       "imageFileId": "1QvOz4Old9KzZUXq2QSv7g9lOgQMwO_Q6"
+    },
+    {
+      "name": "Big Ben",
+      "color": "Colorless",
+      "type": "Relic - Location",
+      "cost": 3,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Moonbird 2407",
+      "collectorNumber": "190",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "The player with the greatest total vibe in their huddle wins Vibe Check. Whenever another Location enters play, ice this Relic.",
+      "image": "/set3-spoilers/big-ben.webp",
+      "imageFileName": "big ben.webp",
+      "imageFileId": "1CMB7ZX4T6p7g-5FsnigbaP8siKOoL6WW"
     },
     {
       "name": "Art Museum",
