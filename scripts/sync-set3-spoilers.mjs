@@ -7,6 +7,7 @@ const DRIVE_FOLDER_ID = '1uC74-cgd8fkaCTZPeYHd4HJ6wtsuOrKh';
 const DRIVE_EMBED_URL = `https://drive.google.com/embeddedfolderview?id=${DRIVE_FOLDER_ID}#grid`;
 const DRIVE_DOWNLOAD_URL = (fileId) =>
   `https://drive.google.com/uc?export=download&id=${fileId}`;
+const SUPPORTED_IMAGE_EXTENSIONS = new Set(['.png', '.webp']);
 
 const rootDir = process.cwd();
 const publicDir = path.join(rootDir, 'public', 'set3-spoilers');
@@ -31,6 +32,14 @@ function slugify(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+function getFileExtension(fileName) {
+  return path.extname(fileName).toLowerCase();
+}
+
+function getBaseImageName(fileName) {
+  return fileName.slice(0, fileName.length - getFileExtension(fileName).length);
 }
 
 function parseMaybeNumber(value) {
@@ -125,17 +134,31 @@ function parseDriveFiles(html) {
     files.push({
       fileId,
       fileName,
-      normalizedName: normalizeKey(fileName)
+      extension: getFileExtension(fileName),
+      normalizedName: normalizeKey(fileName),
+      normalizedBaseName: normalizeKey(getBaseImageName(fileName))
     });
   }
 
   return files.filter(
     (file) =>
-      file.fileName.toLowerCase().endsWith('.png') &&
-      !/_1x1\.png$/i.test(file.fileName) &&
-      !/_4x5\.png$/i.test(file.fileName) &&
-      !/_16x9\.png$/i.test(file.fileName)
+      SUPPORTED_IMAGE_EXTENSIONS.has(file.extension) &&
+      !/_1x1\.(png|webp)$/i.test(file.fileName) &&
+      !/_4x5\.(png|webp)$/i.test(file.fileName) &&
+      !/_16x9\.(png|webp)$/i.test(file.fileName)
   );
+}
+
+function preferDriveFile(currentFile, nextFile) {
+  if (!currentFile) {
+    return nextFile;
+  }
+
+  if (currentFile.extension !== '.webp' && nextFile.extension === '.webp') {
+    return nextFile;
+  }
+
+  return currentFile;
 }
 
 async function fetchText(url) {
@@ -187,21 +210,27 @@ async function main() {
 
   const rows = parseCsv(csvText);
   const driveFiles = parseDriveFiles(driveHtml);
-  const driveFilesByName = new Map(
-    driveFiles.map((file) => [file.normalizedName, file])
-  );
+  const driveFilesByBaseName = new Map();
+
+  for (const file of driveFiles) {
+    const existing = driveFilesByBaseName.get(file.normalizedBaseName);
+    driveFilesByBaseName.set(
+      file.normalizedBaseName,
+      preferDriveFile(existing, file)
+    );
+  }
 
   const missingImages = [];
 
   const cards = rows.flatMap((row) => {
     const name = normalizeWhitespace(row.Name ?? '');
-    const matchedFile = driveFilesByName.get(normalizeKey(`${name}.png`));
+    const matchedFile = driveFilesByBaseName.get(normalizeKey(name));
     if (!matchedFile) {
       missingImages.push(name);
       return [];
     }
 
-    const outputFileName = `${slugify(name)}.png`;
+    const outputFileName = `${slugify(name)}${matchedFile.extension}`;
 
     return [{
       name,
@@ -246,7 +275,7 @@ async function main() {
 
   await fs.writeFile(dataFile, `${JSON.stringify(output, null, 2)}\n`);
   if (missingImages.length > 0) {
-    console.warn(`Skipped ${missingImages.length} card(s) with no base PNG in Drive: ${missingImages.join(', ')}`);
+    console.warn(`Skipped ${missingImages.length} card(s) with no base image in Drive: ${missingImages.join(', ')}`);
   }
   console.log(`Synced ${output.cards.length} Set 3 spoiler cards.`);
 }
