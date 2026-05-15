@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T18:59:45.008Z",
+  "generatedAt": "2026-05-15T20:37:48.145Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -107,6 +107,21 @@
       "image": "/set3-spoilers/study-all-day.webp",
       "imageFileName": "study all day.webp",
       "imageFileId": "13VAPnTfe15JZgozXgCWytKM5RqkDhq_t"
+    },
+    {
+      "name": "Elegant Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 1,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 1700",
+      "collectorNumber": "33",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "When this Character enters the huddle, choose another Character and put a vibe counter on it.",
+      "image": "/set3-spoilers/elegant-birb.webp",
+      "imageFileName": "elegant birb.webp",
+      "imageFileId": "1xNe6qod_J4gBGBdSQ8FjZgMSOj-tBqqO"
     },
     {
       "name": "Scholar Birb",
