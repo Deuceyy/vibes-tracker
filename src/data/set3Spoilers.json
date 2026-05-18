@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-18T12:50:16.893Z",
+  "generatedAt": "2026-05-18T16:36:46.312Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -32,6 +32,21 @@
       "image": "/set3-spoilers/bachelor-birb.webp",
       "imageFileName": "bachelor birb.webp",
       "imageFileId": "1-R0DH2KgUgfWfNTCSzaxUAF76Km7npuM"
+    },
+    {
+      "name": "E=mc^birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 4,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 5182",
+      "collectorNumber": "12",
+      "illustrator": "bluugu - Lucius",
+      "effect": "When this Character enters the huddle, if you have four or more Red Action cards in your ice, choose a Character and flop it.",
+      "image": "/set3-spoilers/e-mc-birb.webp",
+      "imageFileName": "e=mcbirb.webp",
+      "imageFileId": "1kurwCX4-iP3jbReayUunE6jEnBjStxSf"
     },
     {
       "name": "Birbman",
@@ -152,6 +167,21 @@
       "image": "/set3-spoilers/striker-birb.webp",
       "imageFileName": "striker birb.webp",
       "imageFileId": "1Ulb8DKlMW6S9jnvQm8bM5mju0SprVk3B"
+    },
+    {
+      "name": "Pluma",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 4,
+      "vibe": 3,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Moonbird 2381",
+      "collectorNumber": "45",
+      "illustrator": "aokiss",
+      "effect": "This Character can only [ACT] if two or more other Characters entered your huddle this Cycle. [ACT] _F_: Choose a Character and flop it.",
+      "image": "/set3-spoilers/pluma.webp",
+      "imageFileName": "pluma.webp",
+      "imageFileId": "1uqa-VlCwcNqX_NvOhBsy81-MqVuIC_hj"
     },
     {
       "name": "Lumin Who Sees All",
@@ -319,6 +349,36 @@
       "imageFileId": "1VAu8EXZ8Whq-SXRqcduohYHQbpmYKGHx"
     },
     {
+      "name": "Umbra on Dream's Edge",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 10,
+      "vibe": 10,
+      "rarity": "Mythic",
+      "featuringPudgy": "Pudgy 2934",
+      "collectorNumber": "85",
+      "illustrator": "MUMBOT",
+      "effect": "[ACT] _F_: The next time this Character would be iced this Cycle, it isn't.",
+      "image": "/set3-spoilers/umbra-on-dream-s-edge.webp",
+      "imageFileName": "umbra on dream_s edge.webp",
+      "imageFileId": "1QssW4B-no0SflIJpdiWDOaAe_OC7p5if"
+    },
+    {
+      "name": "But You Didn't Even Win",
+      "color": "Green",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pengu, Pudgy 4261, Pudgy 3062",
+      "collectorNumber": "92",
+      "illustrator": "Jungle",
+      "effect": "Choose any number of Green Characters in your huddle. Return them to their owners' hands. Draw that many cards.",
+      "image": "/set3-spoilers/but-you-didn-t-even-win.webp",
+      "imageFileName": "but you didn_t even win.webp",
+      "imageFileId": "1Wj1hKU5vdcgckrtZB3jISXEXwvH6002e"
+    },
+    {
       "name": "Squad Strike",
       "color": "Green",
       "type": "Action",
@@ -362,6 +422,21 @@
       "image": "/set3-spoilers/birb-who-s-100-feet-tall.png",
       "imageFileName": "birb who_s 100 feet tall.png",
       "imageFileId": "1AzYbLDYC-CXWlG3fdHQST2LdwWguxZNQ"
+    },
+    {
+      "name": "Nimbus the Quick",
+      "color": "Blue",
+      "type": "Character - Silly Penguin",
+      "cost": 9,
+      "vibe": 4,
+      "rarity": "Mythic",
+      "featuringPudgy": "Pudgy 2196",
+      "collectorNumber": "119",
+      "illustrator": "DirtyRobot",
+      "effect": "If an Action or a non-Silly Character's ability would cause you to draw any number of cards, draw a card.",
+      "image": "/set3-spoilers/nimbus-the-quick.webp",
+      "imageFileName": "nimbus the quick.webp",
+      "imageFileId": "1w23ryL10g_grf_sjnQ2Z18iQ0iDzTTEI"
     },
     {
       "name": "Lil Balanced",
@@ -467,6 +542,21 @@
       "image": "/set3-spoilers/myra-of-the-mist.webp",
       "imageFileName": "myra of the mist.webp",
       "imageFileId": "1zKxOGLYvJLFSfbgv2tPocFN4ht1MtjaO"
+    },
+    {
+      "name": "Free Fall",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb, Moonbird 9893, Moonbird 7688, Moonbird 6277, Moonbird 7372",
+      "collectorNumber": "157",
+      "illustrator": "Aephai",
+      "effect": "This Action costs one less _P_ to play for each Purple Character iced this Cycle. Draw two cards.",
+      "image": "/set3-spoilers/free-fall.webp",
+      "imageFileName": "free fall.webp",
+      "imageFileId": "1Y-DTYi2Q5hb2FkxajdeRhXnHl2bIP0e2"
     },
     {
       "name": "Set Sail",
