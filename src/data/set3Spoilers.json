@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-05-18T23:35:08.302Z",
+  "generatedAt": "2026-05-19T04:38:20.855Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
+    {
+      "name": "Toasting Birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 1,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 3105",
+      "collectorNumber": "1",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Whenever you ice any number of cards from your hand, put that many vibe counters on this Character.",
+      "image": "/set3-spoilers/toasting-birb.webp",
+      "imageFileName": "toasting birb.webp",
+      "imageFileId": "1sHphZJgFOj6bDv8L7Ikz0MKnkyOqAN7D"
+    },
     {
       "name": "Birb",
       "color": "Red",
@@ -17,6 +32,21 @@
       "image": "/set3-spoilers/birb.webp",
       "imageFileName": "birb.webp",
       "imageFileId": "17r6XL6flLmGMbWB2ujaemgblor3aE20w"
+    },
+    {
+      "name": "Unidentified Flying Birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 6863",
+      "collectorNumber": "7",
+      "illustrator": "blue boo",
+      "effect": "Whenever you ice any number of cards from your hand, you get a Fishsicle.",
+      "image": "/set3-spoilers/unidentified-flying-birb.webp",
+      "imageFileName": "unidentified flying birb.webp",
+      "imageFileId": "1bIfztnqw9Mu-Uubsv7D0sFAxgmaPXPvy"
     },
     {
       "name": "Bachelor Birb",
@@ -64,6 +94,21 @@
       "imageFileId": "1hr0O1uBQTkadzsC94l4kOIXQKuTrnQVA"
     },
     {
+      "name": "Roasting Birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 4,
+      "vibe": 4,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 1947",
+      "collectorNumber": "15",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Whenever you ice any number of cards from your hand, boost this Character's vibe by 2 for the rest of this Cycle.",
+      "image": "/set3-spoilers/roasting-birb.webp",
+      "imageFileName": "roasting birb.webp",
+      "imageFileId": "10Y7mgnFEoGlJ_iB2AX2VFGaeIe_CNRzN"
+    },
+    {
       "name": "Orrin, Forest Guardian",
       "color": "Red",
       "type": "Character - Birb",
@@ -94,6 +139,21 @@
       "imageFileId": "16smAc7fu6S0lOOdbj4RIkqCIPZS97vCy"
     },
     {
+      "name": "Window-Shopping Birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 9,
+      "vibe": 6,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 2125",
+      "collectorNumber": "20",
+      "illustrator": "aokiss",
+      "effect": "Whenever you ice any number of cards from your hand, put that many vibe counters on each Character in your huddle.",
+      "image": "/set3-spoilers/window-shopping-birb.webp",
+      "imageFileName": "window-shopping birb.webp",
+      "imageFileId": "1e5JM3b31nRbuS0sMNO4DBIZFaMN0ZA6b"
+    },
+    {
       "name": "Vibe Scan",
       "color": "Red",
       "type": "Action",
@@ -107,6 +167,21 @@
       "image": "/set3-spoilers/vibe-scan.webp",
       "imageFileName": "vibe scan.webp",
       "imageFileId": "1DkCeJNViQf4N_Akt6JVvqdsl0KyDmOcs"
+    },
+    {
+      "name": "Good Vibes Only",
+      "color": "Red",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "24",
+      "illustrator": "The Grimmus",
+      "effect": "As an additional cost to play this Action, ice two cards from your hand. Draw three cards.",
+      "image": "/set3-spoilers/good-vibes-only.webp",
+      "imageFileName": "good vibes only.webp",
+      "imageFileId": "1mZ_R7e_BY8PDx4o3Y4sCYr_YBUuuiLHQ"
     },
     {
       "name": "Study All Day",
@@ -182,6 +257,36 @@
       "image": "/set3-spoilers/pluma.webp",
       "imageFileName": "pluma.webp",
       "imageFileId": "1uqa-VlCwcNqX_NvOhBsy81-MqVuIC_hj"
+    },
+    {
+      "name": "Goalie Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 5,
+      "vibe": 4,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 1184",
+      "collectorNumber": "48",
+      "illustrator": "Stoopid Penguin",
+      "effect": "[ACT] _Y__Y__Y_, _F_: Choose a Character in your huddle and ice it. At the start of the next Cycle, return it from ice to its owner's huddle.",
+      "image": "/set3-spoilers/goalie-birb.webp",
+      "imageFileName": "goalie birb.webp",
+      "imageFileId": "1g9s9ILrYZboyOQaC687q_9ecq6a0-bZS"
+    },
+    {
+      "name": "Sudsy Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 7,
+      "vibe": 6,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 919",
+      "collectorNumber": "51",
+      "illustrator": "The Grimmus",
+      "effect": "[ACT] _F_, pick two cards in your opponent's ice and put them on the bottom of their deck: Choose a Character and ice it. At the start of the next Cycle, return it from ice to its owner's huddle.",
+      "image": "/set3-spoilers/sudsy-birb.webp",
+      "imageFileName": "sudsy birb.webp",
+      "imageFileId": "1JGx6ATQjKLgfA6s-y6eng7qWMbrSMANL"
     },
     {
       "name": "Lumin Who Sees All",
@@ -302,6 +407,21 @@
       "image": "/set3-spoilers/lil-persuader.webp",
       "imageFileName": "lil persuader.webp",
       "imageFileId": "1Xec5JF8U0dm0hS23HraC2rt791ohuEzk"
+    },
+    {
+      "name": "Here Come Dat Peng",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 4,
+      "vibe": 2,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 8542",
+      "collectorNumber": "76",
+      "illustrator": "aokiss",
+      "effect": "Whenever you win Vibe Check, put a vibe counter on this Character. This ability is the only way vibe counters can be put on this Character. At the start of your turn, if this Character has 9 vibe counters on it, you win the game.",
+      "image": "/set3-spoilers/here-come-dat-peng.webp",
+      "imageFileName": "here come dat peng.webp",
+      "imageFileId": "1VmcNkzF0V0Fv1Y3P8XmyrjmWykjlpqVi"
     },
     {
       "name": "Victorious Penguin",
@@ -499,6 +619,21 @@
       "imageFileId": "1pOKoYUMfzMv5pOWIVDOi0Pmb_hTO5xRP"
     },
     {
+      "name": "Buffering Birb",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 4,
+      "vibe": 2,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 4026",
+      "collectorNumber": "141",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Whenever you lose Vibe Check, put a vibe counter on this Character. This ability is the only way vibe counters can be put on this Character. At the start of your turn, if this Character has 9 vibe counters on it, you win the game.",
+      "image": "/set3-spoilers/buffering-birb.webp",
+      "imageFileName": "buffering birb.webp",
+      "imageFileId": "1AvinrMs7qs5eXaHqH_EKrzcosj_aAOy4"
+    },
+    {
       "name": "Luckmaking Birb",
       "color": "Purple",
       "type": "Character - Birb",
@@ -604,6 +739,66 @@
       "imageFileId": "1QvOz4Old9KzZUXq2QSv7g9lOgQMwO_Q6"
     },
     {
+      "name": "Cozy Mittens",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 1,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "171",
+      "illustrator": "blue boo",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gets +1 vibe.",
+      "image": "/set3-spoilers/cozy-mittens.webp",
+      "imageFileName": "cozy mittens.webp",
+      "imageFileId": "18WfP1fJttEeTmy7CcBnp7MFYcGIhCFPh"
+    },
+    {
+      "name": "Coastal Surfboard",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 3,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "178",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"[ACT] _F_, remove all vibe counters from this Character: Choose a Character and reduce its vibe by the number of vibe counters removed this way for the rest of this Cycle\".",
+      "image": "/set3-spoilers/coastal-surfboard.webp",
+      "imageFileName": "coastal surfboard.webp",
+      "imageFileId": "1QtJ2-zR9irEEwtABWpJof-C0TvcZEGqr"
+    },
+    {
+      "name": "Enchanted Boots",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 3,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "179",
+      "illustrator": "bluugu - Lucius",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gets +3 vibe.",
+      "image": "/set3-spoilers/enchanted-boots.webp",
+      "imageFileName": "enchanted boots.webp",
+      "imageFileId": "1gv3kRKIKBFdu-WXYI4OVoO4hg79zX_qS"
+    },
+    {
+      "name": "Hero's Sword",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 4,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "182",
+      "illustrator": "chlorophilly",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gets +4 vibe. When that Character leaves the huddle, return this to its owner's hand.",
+      "image": "/set3-spoilers/hero-s-sword.webp",
+      "imageFileName": "hero_s sword.webp",
+      "imageFileId": "1Gn_dqfQromeRUIiWtWOg8d9OmTTCYbYD"
+    },
+    {
       "name": "Big Ben",
       "color": "Colorless",
       "type": "Relic - Location",
@@ -634,6 +829,21 @@
       "imageFileId": "113fKNAJ_BM2Ir8hRfaFEnXBzLpJX5Pw_"
     },
     {
+      "name": "Taj Mahal",
+      "color": "Colorless",
+      "type": "Relic - Location",
+      "cost": 5,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Lil 12566",
+      "collectorNumber": "192",
+      "illustrator": "The Grimmus",
+      "effect": "Prizes are doubled for the Vibe Check. Whenever another Location enters play, ice this Relic.",
+      "image": "/set3-spoilers/taj-mahal.webp",
+      "imageFileName": "taj mahal.webp",
+      "imageFileId": "1eCzQ60w7OSV8y_R5-ryUR9HNosEZ6yt4"
+    },
+    {
       "name": "The Peng",
       "color": "Colorless",
       "type": "Relic - Location",
@@ -647,6 +857,21 @@
       "image": "/set3-spoilers/the-peng.webp",
       "imageFileName": "the peng.webp",
       "imageFileId": "1Aic5IWl8hU6ocZwdSu5lg624PSLk_Axk"
+    },
+    {
+      "name": "Birb Bay",
+      "color": "Colorless",
+      "type": "Relic - Location",
+      "cost": 7,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Moonbird 1895",
+      "collectorNumber": "194",
+      "illustrator": "The Grimmus",
+      "effect": "Whenever a player plays an Action, its controller gets a Fishsicle. Whenever another Location enters play, ice this Relic.",
+      "image": "/set3-spoilers/birb-bay.webp",
+      "imageFileName": "birb bay.webp",
+      "imageFileId": "1ko50C-z-Gc3v7uaMoikM28FiN5iNMSd2"
     }
   ]
 }
