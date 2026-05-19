@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T12:24:09.316Z",
+  "generatedAt": "2026-05-19T16:34:48.516Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -152,6 +152,21 @@
       "image": "/set3-spoilers/window-shopping-birb.webp",
       "imageFileName": "window-shopping birb.webp",
       "imageFileId": "1e5JM3b31nRbuS0sMNO4DBIZFaMN0ZA6b"
+    },
+    {
+      "name": "Healthy Push!",
+      "color": "Red",
+      "type": "Action - Saucy",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 3910",
+      "collectorNumber": "22",
+      "illustrator": "Yosuke Ando",
+      "effect": "You can only play this Action if it's face-down as a Rod. Flip this card over to play it. Each player ices a card from their hand.",
+      "image": "/set3-spoilers/healthy-push.webp",
+      "imageFileName": "healthy push.webp",
+      "imageFileId": "1Yb5GTpWVnUQcayvFtpAOMyt5Ohb6oXUU"
     },
     {
       "name": "Vibe Scan",
@@ -752,6 +767,21 @@
       "image": "/set3-spoilers/cozy-mittens.webp",
       "imageFileName": "cozy mittens.webp",
       "imageFileId": "18WfP1fJttEeTmy7CcBnp7MFYcGIhCFPh"
+    },
+    {
+      "name": "Cloak of Illusions",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 3,
+      "vibe": null,
+      "rarity": "Mythic",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "177",
+      "illustrator": "Vinnie Hager",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"Whenever an Action is played that chooses this Character, copy that Action. (You make new choices for the copy)\".",
+      "image": "/set3-spoilers/cloak-of-illusions.webp",
+      "imageFileName": "cloak of illusions.webp",
+      "imageFileId": "134Si1-0dGwt510axfKch_ykp4aolaG7-"
     },
     {
       "name": "Coastal Surfboard",
