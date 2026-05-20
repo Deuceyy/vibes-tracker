@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T12:06:49.548Z",
+  "generatedAt": "2026-05-20T16:02:15.088Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -107,6 +107,21 @@
       "image": "/set3-spoilers/roasting-birb.webp",
       "imageFileName": "roasting birb.webp",
       "imageFileId": "10Y7mgnFEoGlJ_iB2AX2VFGaeIe_CNRzN"
+    },
+    {
+      "name": "The Rodromancer",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 4,
+      "vibe": 4,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 7339",
+      "collectorNumber": "16",
+      "illustrator": "chlorophilly",
+      "effect": "You can play one Red non-Saucy Action from your Rods each Cycle as if it were Saucy (one per Rodromancer).",
+      "image": "/set3-spoilers/the-rodromancer.webp",
+      "imageFileName": "the rodromancer.webp",
+      "imageFileId": "1NJL6lpOBrjg_0Njx6Yqf12feuEpN1AKI"
     },
     {
       "name": "Orrin, Forest Guardian",
@@ -334,6 +349,21 @@
       "imageFileId": "1FC4mqbLAw3WXZqYgrsxNVgT6QHvqGS-R"
     },
     {
+      "name": "Quiver the Flightful",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 13,
+      "vibe": 13,
+      "rarity": "Mythic",
+      "featuringPudgy": "Moonbird 8391",
+      "collectorNumber": "53",
+      "illustrator": "Grant Yun",
+      "effect": "[ACT] _F_: Choose thirteen other Characters and flop them. (You must choose exactly thirteen Characters).",
+      "image": "/set3-spoilers/quiver-the-flightful.webp",
+      "imageFileName": "quiver the flightful.webp",
+      "imageFileId": "1iLIeWYINJnEI8qtqGf75B--DFTS74aZ9"
+    },
+    {
       "name": "True Form",
       "color": "Yellow",
       "type": "Action",
@@ -514,6 +544,21 @@
       "imageFileId": "1QssW4B-no0SflIJpdiWDOaAe_OC7p5if"
     },
     {
+      "name": "Side Eye",
+      "color": "Green",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu, Pudgy 4494",
+      "collectorNumber": "90",
+      "illustrator": "aokiss",
+      "effect": "Choose a Character. Its controller draws a card. Ice that Character.",
+      "image": "/set3-spoilers/side-eye.webp",
+      "imageFileName": "side eye.webp",
+      "imageFileId": "11qnIW3hC5_GoS9qfn_AyrFuRIz2QyUsO"
+    },
+    {
       "name": "But You Didn't Even Win",
       "color": "Green",
       "type": "Action",
@@ -634,6 +679,21 @@
       "imageFileId": "1bGyRUbwew4F7Fp2-akxiw5NE58nolGH5"
     },
     {
+      "name": "Time Warp Toss",
+      "color": "Blue",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu, Pudgy 6300",
+      "collectorNumber": "125",
+      "illustrator": "Aephai",
+      "effect": "As an additional cost to play this Action, ice a Fit you control. Choose a Character and ice it.",
+      "image": "/set3-spoilers/time-warp-toss.webp",
+      "imageFileName": "time warp toss.webp",
+      "imageFileId": "1j70CkgoYDiTDgwJKigiu4vcg-sjDX4ic"
+    },
+    {
       "name": "Lil Balanced",
       "color": "Purple",
       "type": "Character - Lil Penguin",
@@ -707,6 +767,21 @@
       "image": "/set3-spoilers/buffering-birb.webp",
       "imageFileName": "buffering birb.webp",
       "imageFileId": "1AvinrMs7qs5eXaHqH_EKrzcosj_aAOy4"
+    },
+    {
+      "name": "Iron Penguin",
+      "color": "Purple",
+      "type": "Character - Penguin",
+      "cost": 4,
+      "vibe": 6,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pudgy 4720",
+      "collectorNumber": "144",
+      "illustrator": "Lyle Wallis",
+      "effect": "When this Character is iced, choose a player. That player ices a Character in their huddle.",
+      "image": "/set3-spoilers/iron-penguin.webp",
+      "imageFileName": "iron penguin.webp",
+      "imageFileId": "1hRJyuyup6wqJVtDiAh-3BSQxLmpnaKjv"
     },
     {
       "name": "Luckmaking Birb",
