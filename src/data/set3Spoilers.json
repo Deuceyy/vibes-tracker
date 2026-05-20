@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T18:37:13.970Z",
+  "generatedAt": "2026-05-20T21:18:17.118Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -377,6 +377,21 @@
       "image": "/set3-spoilers/true-form.webp",
       "imageFileName": "true form.webp",
       "imageFileId": "1v-XmCYt9SKp3bY0RvP--Wru07ySa8AZ_"
+    },
+    {
+      "name": "Identity Crisis",
+      "color": "Yellow",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb, Moonbird 4142, Moonbird 7360",
+      "collectorNumber": "61",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Choose a Character. If you have the Baron, ice that Character. Otherwise, boost its vibe by 2 for the rest of this Cycle.",
+      "image": "/set3-spoilers/identity-crisis.webp",
+      "imageFileName": "identity crisis.webp",
+      "imageFileId": "1ABTuBfzTzt0e7UpVI-wZ1ys9sPHQCvoW"
     },
     {
       "name": "Step by Step",
