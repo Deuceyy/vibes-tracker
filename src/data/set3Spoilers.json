@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T23:36:21.493Z",
+  "generatedAt": "2026-05-20T04:42:12.902Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -272,6 +272,21 @@
       "image": "/set3-spoilers/pluma.webp",
       "imageFileName": "pluma.webp",
       "imageFileId": "1uqa-VlCwcNqX_NvOhBsy81-MqVuIC_hj"
+    },
+    {
+      "name": "Uncertain Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 4,
+      "vibe": 6,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 5128",
+      "collectorNumber": "47",
+      "illustrator": "Stoopid Penguin",
+      "effect": "When this Character enters the huddle, if another Character entered your huddle this Cycle, this Character enters with 3 vibe counters.",
+      "image": "/set3-spoilers/uncertain-birb.webp",
+      "imageFileName": "uncertain birb.webp",
+      "imageFileId": "1c_IBAjwFe5mzm-IMwqhMnqgPow0z2hcq"
     },
     {
       "name": "Goalie Birb",
@@ -559,6 +574,21 @@
       "imageFileId": "1AzYbLDYC-CXWlG3fdHQST2LdwWguxZNQ"
     },
     {
+      "name": "This Is Not a Pudgy",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 8,
+      "vibe": 10,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 81",
+      "collectorNumber": "118",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "This Character costs one less _T_ to play for each Fit you control.",
+      "image": "/set3-spoilers/this-is-not-a-pudgy.webp",
+      "imageFileName": "this is not a pudgy.webp",
+      "imageFileId": "1EjSVVz7av2v1e4sCx-J5LBwux7TrEwZ4"
+    },
+    {
       "name": "Nimbus the Quick",
       "color": "Blue",
       "type": "Character - Silly Penguin",
@@ -572,6 +602,36 @@
       "image": "/set3-spoilers/nimbus-the-quick.webp",
       "imageFileName": "nimbus the quick.webp",
       "imageFileId": "1w23ryL10g_grf_sjnQ2Z18iQ0iDzTTEI"
+    },
+    {
+      "name": "Lunaris the Infinite",
+      "color": "Blue",
+      "type": "Character - Lil Penguin",
+      "cost": 10,
+      "vibe": 5,
+      "rarity": "Mythic",
+      "featuringPudgy": "Lil 17520",
+      "collectorNumber": "120",
+      "illustrator": "POST WOOK",
+      "effect": "You can play one Fit from your ice each Cycle.",
+      "image": "/set3-spoilers/lunaris-the-infinite.webp",
+      "imageFileName": "lunaris the infinite.webp",
+      "imageFileId": "1u45DtuCLeK6hDvIg9UE9Y5mQUDywkdle"
+    },
+    {
+      "name": "Turn It Up",
+      "color": "Blue",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "122",
+      "illustrator": "Jungle",
+      "effect": "Choose a Fit you don't control. Return it to its owner's hand. Draw a card.",
+      "image": "/set3-spoilers/turn-it-up.webp",
+      "imageFileName": "turn it up.webp",
+      "imageFileId": "1bGyRUbwew4F7Fp2-akxiw5NE58nolGH5"
     },
     {
       "name": "Lil Balanced",
@@ -767,6 +827,21 @@
       "image": "/set3-spoilers/cozy-mittens.webp",
       "imageFileName": "cozy mittens.webp",
       "imageFileId": "18WfP1fJttEeTmy7CcBnp7MFYcGIhCFPh"
+    },
+    {
+      "name": "Traveler's Lantern",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 2,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "175",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character to wear this Fit and if it's a Blue Character, draw a card.",
+      "image": "/set3-spoilers/traveler-s-lantern.webp",
+      "imageFileName": "traveler_s lantern.webp",
+      "imageFileId": "1h_Q9hgkeaNYY9fUWyrUatGw7jLRc3zM8"
     },
     {
       "name": "Cloak of Illusions",
