@@ -1,6 +1,8 @@
 import { useState, useEffect, createContext, useContext } from 'react';
 import { db } from '../firebase';
 import { collection as firestoreCollection, doc, getDoc, getDocs } from 'firebase/firestore';
+import { allTrackerCards } from '../hooks/useCollection';
+import { getSupportedVariants } from '../lib/cardMetadata.js';
 
 const PricesContext = createContext(null);
 
@@ -71,8 +73,10 @@ export function PricesProvider({ children }) {
     
     Object.entries(userCollection).forEach(([cardId, variants]) => {
       const cardPrices = prices[cardId];
+      const card = allTrackerCards.find((entry) => entry.id === cardId);
       
-      Object.entries(variants).forEach(([variant, count]) => {
+      getSupportedVariants(card).forEach((variant) => {
+        const count = variants[variant] || 0;
         if (count > 0) {
           cardCount += count;
           if (cardPrices && cardPrices[variant]?.price) {

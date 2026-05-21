@@ -3,9 +3,10 @@ import { useParams, Link } from 'react-router-dom';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useCollection, cardData, VARIANTS } from '../hooks/useCollection';
+import { getCanonicalCardType, getCharacterSubtypes } from '../lib/cardMetadata.js';
 import CardModal from './CardModal';
 
-const RARITY_ORDER = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Mythic': 4 };
+const RARITY_ORDER = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Epic': 4 };
 
 export default function ProfilePage() {
   const { username } = useParams();
@@ -67,7 +68,7 @@ export default function ProfilePage() {
     let cards = cardData.filter(card => {
       if (filters.search && !card.name.toLowerCase().includes(filters.search.toLowerCase())) return false;
       if (filters.color !== 'All' && card.color !== filters.color) return false;
-      if (filters.type !== 'All' && !card.type.includes(filters.type)) return false;
+      if (filters.type !== 'All' && getCanonicalCardType(card) !== filters.type) return false;
       if (filters.rarity !== 'All' && card.rarity !== filters.rarity) return false;
       if (filters.set !== 'All' && card.set !== filters.set) return false;
 
@@ -244,7 +245,11 @@ export default function ProfilePage() {
                 <div className="card-info">
                   <div className="card-name">{card.name}</div>
                   <div className="card-details">
-                    <span>{card.type}</span>
+                    <span>{(() => {
+                      const t = getCanonicalCardType(card);
+                      const st = getCharacterSubtypes(card);
+                      return st.length > 0 ? `${t} - ${st.join(', ')}` : t;
+                    })()}</span>
                     <span>
                       {total > 0 && (
                         <span className="owned-badge">

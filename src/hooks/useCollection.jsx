@@ -2,9 +2,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { doc, setDoc, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useAuth } from './useAuth';
-import cardData from '../cardData.json';
-
-const VARIANTS = ['normal', 'foil', 'arctic', 'sketch'];
+import { releasedTrackerCards, allTrackerCards, set3TrackerCards } from '../data/trackerCards.js';
+import { VARIANTS, getSupportedVariants, getVariantTemplate, supportsVariant } from '../lib/cardMetadata.js';
 const LOCAL_STORAGE_KEY = 'vibes_collection_local';
 
 export function useCollection(userId = null) {
@@ -57,19 +56,19 @@ export function useCollection(userId = null) {
   }, [user, isOwnCollection]);
 
   const getCardVariants = useCallback((cardId) => {
-    return collection[cardId] || { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+    return collection[cardId] || getVariantTemplate();
   }, [collection]);
 
   const setVariantCount = useCallback((cardId, variant, count) => {
     const update = (prevCollection) => {
       const newCollection = { ...prevCollection };
       if (!newCollection[cardId]) {
-        newCollection[cardId] = { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+        newCollection[cardId] = getVariantTemplate();
       }
       newCollection[cardId] = { ...newCollection[cardId] };
       newCollection[cardId][variant] = Math.max(0, Math.min(count, 99));
       const variants = newCollection[cardId];
-      if (variants.normal === 0 && variants.foil === 0 && variants.arctic === 0 && variants.sketch === 0) {
+      if (VARIANTS.every((variant) => (variants[variant] || 0) === 0)) {
         delete newCollection[cardId];
       }
       return newCollection;
@@ -98,13 +97,13 @@ export function useCollection(userId = null) {
       
       const newCollection = { ...prev };
       if (!newCollection[cardId]) {
-        newCollection[cardId] = { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+        newCollection[cardId] = getVariantTemplate();
       }
       newCollection[cardId] = { ...newCollection[cardId] };
       newCollection[cardId][variant] = newCount;
       
       const variants = newCollection[cardId];
-      if (variants.normal === 0 && variants.foil === 0 && variants.arctic === 0 && variants.sketch === 0) {
+      if (VARIANTS.every((variant) => (variants[variant] || 0) === 0)) {
         delete newCollection[cardId];
       }
       
@@ -125,25 +124,26 @@ export function useCollection(userId = null) {
 
   const getTotalOwned = useCallback((cardId) => {
     const v = getCardVariants(cardId);
-    return v.normal + v.foil + v.arctic + v.sketch;
+    const card = allTrackerCards.find((entry) => entry.id === cardId);
+    return getSupportedVariants(card).reduce((sum, variant) => sum + (v[variant] || 0), 0);
   }, [getCardVariants]);
 
   const hasPlayset = useCallback((cardId) => {
-    const v = getCardVariants(cardId);
-    return (v.normal + v.foil + v.arctic + v.sketch) >= 4;
-  }, [getCardVariants]);
+    return getTotalOwned(cardId) >= 4;
+  }, [getTotalOwned]);
 
   const hasMasterSet = useCallback((cardId) => {
     const v = getCardVariants(cardId);
-    return v.normal >= 1 && v.foil >= 1 && v.arctic >= 1 && v.sketch >= 1;
+    const card = allTrackerCards.find((entry) => entry.id === cardId);
+    return getSupportedVariants(card).every((variant) => (v[variant] || 0) >= 1);
   }, [getCardVariants]);
 
   const stats = {
-    uniqueCards: cardData.filter(c => getTotalOwned(c.id) > 0).length,
-    totalCards: cardData.reduce((sum, c) => sum + getTotalOwned(c.id), 0),
-    playsetComplete: cardData.filter(c => hasPlayset(c.id)).length,
-    masterComplete: cardData.filter(c => hasMasterSet(c.id)).length,
-    totalInSet: cardData.length
+    uniqueCards: releasedTrackerCards.filter(c => getTotalOwned(c.id) > 0).length,
+    totalCards: releasedTrackerCards.reduce((sum, c) => sum + getTotalOwned(c.id), 0),
+    playsetComplete: releasedTrackerCards.filter(c => hasPlayset(c.id)).length,
+    masterComplete: releasedTrackerCards.filter(c => hasMasterSet(c.id)).length,
+    totalInSet: releasedTrackerCards.length
   };
 
   const importCollection = useCallback((data) => {
@@ -180,6 +180,8 @@ export function useCollection(userId = null) {
     getTotalOwned,
     hasPlayset,
     hasMasterSet,
+    supportsVariant,
+    getSupportedVariants,
     stats,
     importCollection,
     exportCollection,
@@ -187,4 +189,5 @@ export function useCollection(userId = null) {
   };
 }
 
-export { cardData, VARIANTS };
+export const cardData = releasedTrackerCards;
+export { allTrackerCards, set3TrackerCards, VARIANTS, supportsVariant, getSupportedVariants, getVariantTemplate };

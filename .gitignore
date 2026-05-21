@@ -3,3 +3,6 @@ dist
 .env
 .env.local
 *.local
+vite.log
+vite.err.log
+vite.run.log

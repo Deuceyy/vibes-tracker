@@ -5,6 +5,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
 import { cardData } from '../hooks/useCollection';
 import { usePrices } from '../hooks/usePrices';
+import { getCanonicalCardType } from '../lib/cardMetadata.js';
 import Header from './Header';
 import CardModal from './CardModal';
 import SiteDisclaimer from './SiteDisclaimer';
@@ -168,7 +169,7 @@ export default function DeckView() {
       const baseColor = card.color?.split(', ')[0] || 'Colorless';
       colorCounts[baseColor] = (colorCounts[baseColor] || 0) + quantity;
 
-      const type = card.type || 'Unknown';
+      const type = getCanonicalCardType(card);
       typeCounts[type] = (typeCounts[type] || 0) + quantity;
 
       const cost = card.cost?.amount ?? 0;
@@ -199,13 +200,13 @@ export default function DeckView() {
   };
 
   const typeChartPalette = {
-    Penguin: '#38bdf8',
     Character: '#38bdf8',
     Action: '#fb7185',
-    Relic: '#f59e0b',
+    'Saucy Action': '#f472b6',
     Rod: '#34d399',
-    Item: '#f59e0b',
-    Stadium: '#c084fc'
+    Relic: '#f59e0b',
+    'Location Relic': '#c084fc',
+    Fit: '#a78bfa'
   };
 
   useEffect(() => {
@@ -407,7 +408,10 @@ export default function DeckView() {
                 <div className="mulligan-sim-meta">
                   <span><strong>{simMulligans}</strong> mulligan{simMulligans === 1 ? '' : 's'}</span>
                   <span><strong>{simSelected.length}</strong> card{simSelected.length === 1 ? '' : 's'} marked to replace</span>
-                  <span><strong>{simHand.filter((entry) => entry.card.type === 'Action').length}</strong> actions</span>
+                  <span><strong>{simHand.filter((entry) => {
+                    const t = getCanonicalCardType(entry.card);
+                    return t === 'Action' || t === 'Saucy Action';
+                  }).length}</strong> actions</span>
                 </div>
                 <div className="mulligan-hand">
                   {simHand.map((entry) => (

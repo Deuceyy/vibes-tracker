@@ -1,14 +1,22 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Header from './Header.jsx';
 import spoilerData from '../data/set3Spoilers.json';
+import { TRACKER_CARD_TYPES, getCanonicalCardType, getCharacterSubtypes } from '../lib/cardMetadata.js';
 
 const totalSetCards = 195;
-const allColors = Array.from(new Set(spoilerData.cards.map((card) => card.color))).sort();
-const allTypes = Array.from(new Set(spoilerData.cards.map((card) => getCardType(card.type)))).sort();
 const revealedPercentage = Math.round((spoilerData.cards.length / totalSetCards) * 100);
+const allColors = Array.from(new Set(spoilerData.cards.map((card) => card.color))).sort();
 
-function getCardType(type) {
-  return type.startsWith('Action') ? 'Action' : 'Character';
+function getSpoilerCardType(card) {
+  return getCanonicalCardType({ ...card, rawType: card.type, set: 'S3' });
+}
+
+function getSpoilerTypeLine(card) {
+  const baseType = getSpoilerCardType(card);
+  const subtypes = getCharacterSubtypes({ ...card, rawType: card.type, set: 'S3', id: card.name });
+  return baseType === 'Character' && subtypes.length > 0
+    ? `${baseType} - ${subtypes.join(', ')}`
+    : baseType;
 }
 
 export default function Set3SpoilersPage() {
@@ -16,8 +24,12 @@ export default function Set3SpoilersPage() {
   const [activeColor, setActiveColor] = useState('All');
   const [selectedCard, setSelectedCard] = useState(null);
 
+  const availableTypes = useMemo(() => (
+    TRACKER_CARD_TYPES.filter((type) => spoilerData.cards.some((card) => getSpoilerCardType(card) === type))
+  ), []);
+
   const filteredCards = spoilerData.cards.filter((card) => {
-    const matchesType = activeType === 'All' || getCardType(card.type) === activeType;
+    const matchesType = activeType === 'All' || getSpoilerCardType(card) === activeType;
     const matchesColor = activeColor === 'All' || card.color === activeColor;
     return matchesType && matchesColor;
   });
@@ -28,21 +40,16 @@ export default function Set3SpoilersPage() {
       <main className="set3-spoilers-page">
         <section className="set3-hero">
           <div className="set3-hero-copy">
-            <span className="set3-eyebrow">Set 3 Spoilers</span>
+            <span className="set3-eyebrow">Birb and Pengu Spoilers</span>
             <h1>Fresh reveals from the next wave of Vibes cards.</h1>
-            <p>
-              a quick gallery for the latest set 3 previews
-            </p>
+            <p>A quick gallery for the latest Birb and Pengu previews.</p>
           </div>
           <div className="set3-hero-meta">
             <div className="set3-meta-card">
-              <span className="set3-meta-label">Known Set 3 Cards</span>
+              <span className="set3-meta-label">Known Birb and Pengu Cards</span>
               <strong>{spoilerData.cards.length} / {totalSetCards}</strong>
               <div className="set3-progress">
-                <div
-                  className="set3-progress-fill"
-                  style={{ width: `${revealedPercentage}%` }}
-                />
+                <div className="set3-progress-fill" style={{ width: `${revealedPercentage}%` }} />
               </div>
               <span className="set3-progress-label">{revealedPercentage}% revealed</span>
             </div>
@@ -57,7 +64,7 @@ export default function Set3SpoilersPage() {
           <div className="set3-filter-group">
             <span className="set3-filter-label">Type</span>
             <div className="set3-filter-chips">
-              {['All', ...allTypes].map((type) => (
+              {['All', ...availableTypes].map((type) => (
                 <button
                   key={type}
                   type="button"
@@ -117,7 +124,7 @@ export default function Set3SpoilersPage() {
                   <span className="spoiler-collector">{card.collectorNumber}</span>
                 </div>
                 <h2>{card.name}</h2>
-                <p className="spoiler-type">{card.type}</p>
+                <p className="spoiler-type">{getSpoilerTypeLine(card)}</p>
                 <div className="spoiler-stats">
                   <div>
                     <span className="spoiler-stat-label">Cost</span>
@@ -160,20 +167,14 @@ export default function Set3SpoilersPage() {
                     <img src={selectedCard.image} alt={selectedCard.name} />
                   </div>
                   <div className="modal-card-details">
-                    <p><strong>Type:</strong> {selectedCard.type}</p>
+                    <p><strong>Type:</strong> {getSpoilerTypeLine(selectedCard)}</p>
                     <p><strong>Color:</strong> {selectedCard.color}</p>
                     <p><strong>Cost:</strong> {selectedCard.cost ?? '-'}</p>
                     <p><strong>Vibe:</strong> {selectedCard.vibe ?? '-'}</p>
                     {selectedCard.rarity && <p><strong>Rarity:</strong> {selectedCard.rarity}</p>}
-                    {selectedCard.collectorNumber && (
-                      <p><strong>Set Number:</strong> #{selectedCard.collectorNumber}</p>
-                    )}
-                    {selectedCard.featuringPudgy && (
-                      <p><strong>Featuring:</strong> {selectedCard.featuringPudgy}</p>
-                    )}
-                    {selectedCard.illustrator && (
-                      <p><strong>Illustrator:</strong> {selectedCard.illustrator}</p>
-                    )}
+                    {selectedCard.collectorNumber && <p><strong>Set Number:</strong> #{selectedCard.collectorNumber}</p>}
+                    {selectedCard.featuringPudgy && <p><strong>Featuring:</strong> {selectedCard.featuringPudgy}</p>}
+                    {selectedCard.illustrator && <p><strong>Illustrator:</strong> {selectedCard.illustrator}</p>}
                     <div className="card-text-box">
                       {selectedCard.effect || 'No rules text yet.'}
                     </div>

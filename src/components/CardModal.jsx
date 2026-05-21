@@ -1,4 +1,4 @@
-import { VARIANTS } from '../hooks/useCollection';
+import { getSetLabel, getSupportedVariants, getCanonicalCardType, getCharacterSubtypes } from '../lib/cardMetadata.js';
 import { usePrices } from '../hooks/usePrices';
 
 const VARIANT_LABELS = { normal: 'Normal', foil: 'Foil', arctic: 'Arctic', sketch: 'Sketch' };
@@ -10,6 +10,10 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant }) 
 
   const cardText = card.cardText?.replace(/\|/g, '<br>').replace(/_([A-Z])_/g, '[$1]') || 'No card text';
   const prices = getCardPrices(card.id);
+  const supportedVariants = getSupportedVariants(card);
+  const canonicalType = getCanonicalCardType(card);
+  const subtypes = getCharacterSubtypes(card);
+  const typeLine = subtypes.length > 0 ? `${canonicalType} - ${subtypes.join(', ')}` : canonicalType;
 
   return (
     <div className="modal-overlay active" onClick={(e) => {
@@ -33,36 +37,36 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant }) 
               />
             </div>
             <div className="modal-card-details">
-              <p><strong>Type:</strong> {card.type}</p>
+              <p><strong>Type:</strong> {typeLine}</p>
               {card.cost && <p><strong>Cost:</strong> {card.cost.amount} Fish</p>}
               {card.vibe !== null && <p><strong>Vibe:</strong> {card.vibe}</p>}
               <p><strong>Rarity:</strong> {card.rarity}</p>
-              <p><strong>Set:</strong> {card.set === 'Eth' ? 'Enter the Huddle' : 'Legend of the Lils'} #{card.setNumber || '?'}</p>
+              <p><strong>Set:</strong> {getSetLabel(card.set)} #{card.setNumber || '?'}</p>
               <div className="card-text-box" dangerouslySetInnerHTML={{ __html: cardText }} />
               
               {/* SCG Prices */}
               {prices && (
                 <div className="card-prices">
                   <h4>💰 SCG Prices</h4>
-                  {prices.normal?.price && (
+                  {supportedVariants.includes('normal') && prices.normal?.price && (
                     <div className="price-row">
                       <span className="variant-name">Normal:</span>
                       <span className="variant-price">{formatPrice(prices.normal.price)}</span>
                     </div>
                   )}
-                  {prices.foil?.price && (
+                  {supportedVariants.includes('foil') && prices.foil?.price && (
                     <div className="price-row">
                       <span className="variant-name">Foil:</span>
                       <span className="variant-price">{formatPrice(prices.foil.price)}</span>
                     </div>
                   )}
-                  {prices.arctic?.price && (
+                  {supportedVariants.includes('arctic') && prices.arctic?.price && (
                     <div className="price-row">
                       <span className="variant-name">Arctic:</span>
                       <span className="variant-price">{formatPrice(prices.arctic.price)}</span>
                     </div>
                   )}
-                  {prices.sketch?.price && (
+                  {supportedVariants.includes('sketch') && prices.sketch?.price && (
                     <div className="price-row">
                       <span className="variant-name">Sketch:</span>
                       <span className="variant-price">{formatPrice(prices.sketch.price)}</span>
@@ -77,7 +81,7 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant }) 
             <div className="modal-variants">
               <h4>Your Collection</h4>
               <div className="modal-variant-grid">
-                {VARIANTS.map(v => (
+                {supportedVariants.map(v => (
                   <div key={v} className="modal-variant-row">
                     <span className={`modal-variant-label variant-label ${v}`}>{VARIANT_LABELS[v]}</span>
                     <div className="modal-variant-counter">

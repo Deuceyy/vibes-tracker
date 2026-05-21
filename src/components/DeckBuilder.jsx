@@ -4,11 +4,16 @@ import { useAuth } from '../hooks/useAuth';
 import { useDecks, validateDeck } from '../hooks/useDecks';
 import { useCollection, cardData } from '../hooks/useCollection';
 import { usePrices } from '../hooks/usePrices';
+import { TRACKER_CARD_TYPES, CHARACTER_SUBTYPES, ENABLE_SET3, getCanonicalCardType, getCharacterSubtypes } from '../lib/cardMetadata.js';
 import Header from './Header';
 import CardModal from './CardModal';
 
 const COLORS = ['Red', 'Yellow', 'Green', 'Blue', 'Purple', 'Colorless'];
-const TYPES = ['Penguin', 'Action', 'Relic', 'Rod'];
+const TYPES = TRACKER_CARD_TYPES;
+const RARITIES = ['Common', 'Uncommon', 'Rare', 'Epic'];
+const SETS = ENABLE_SET3
+  ? [{ code: 'Eth', label: 'Enter the Huddle' }, { code: 'Lotl', label: 'Legend of the Lils' }, { code: 'S3', label: 'Birb and Pengu' }]
+  : [{ code: 'Eth', label: 'Enter the Huddle' }, { code: 'Lotl', label: 'Legend of the Lils' }];
 
 export default function DeckBuilder() {
   const { deckId } = useParams();
@@ -25,6 +30,9 @@ export default function DeckBuilder() {
   const [search, setSearch] = useState('');
   const [colorFilter, setColorFilter] = useState('All');
   const [typeFilter, setTypeFilter] = useState('All');
+  const [rarityFilter, setRarityFilter] = useState('All');
+  const [setFilter, setSetFilter] = useState('All');
+  const [subtypeFilter, setSubtypeFilter] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
   const [saving, setSaving] = useState(false);
   const [showImportModal, setShowImportModal] = useState(false);
@@ -64,12 +72,29 @@ export default function DeckBuilder() {
 
   const filteredCards = useMemo(() => {
     return cardData.filter(card => {
-      if (search && !card.name.toLowerCase().includes(search.toLowerCase())) return false;
+      if (search) {
+        const q = search.toLowerCase();
+        const haystack = `${card.name || ''} ${card.cardText || ''}`.toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
       if (colorFilter !== 'All' && !card.color?.includes(colorFilter)) return false;
-      if (typeFilter !== 'All' && card.type !== typeFilter) return false;
+      if (typeFilter !== 'All' && getCanonicalCardType(card) !== typeFilter) return false;
+      if (rarityFilter !== 'All' && card.rarity !== rarityFilter) return false;
+      if (setFilter !== 'All' && card.set !== setFilter) return false;
+      if (subtypeFilter.length > 0) {
+        if (getCanonicalCardType(card) !== 'Character') return false;
+        const cardSubs = getCharacterSubtypes(card);
+        if (!subtypeFilter.some(s => cardSubs.includes(s))) return false;
+      }
       return true;
     });
-  }, [search, colorFilter, typeFilter]);
+  }, [search, colorFilter, typeFilter, rarityFilter, setFilter, subtypeFilter]);
+
+  const toggleSubtype = (subtype) => {
+    setSubtypeFilter(prev =>
+      prev.includes(subtype) ? prev.filter(s => s !== subtype) : [...prev, subtype]
+    );
+  };
 
   const validation = useMemo(() => validateDeck(deckCards), [deckCards]);
 
@@ -153,10 +178,11 @@ export default function DeckBuilder() {
           <div className="filters-bar">
             <input
               type="text"
-              placeholder="Search cards..."
+              placeholder="Search name or card text (e.g. 'draw', 'ice')..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="search-input"
+              style={{ flex: '1 1 240px', minWidth: 200 }}
             />
             <select value={colorFilter} onChange={(e) => setColorFilter(e.target.value)}>
               <option value="All">All Colors</option>
@@ -166,6 +192,44 @@ export default function DeckBuilder() {
               <option value="All">All Types</option>
               {TYPES.map(t => <option key={t} value={t}>{t}</option>)}
             </select>
+            <select value={rarityFilter} onChange={(e) => setRarityFilter(e.target.value)}>
+              <option value="All">All Rarities</option>
+              {RARITIES.map(r => <option key={r} value={r}>{r}</option>)}
+            </select>
+            <select value={setFilter} onChange={(e) => setSetFilter(e.target.value)}>
+              <option value="All">All Sets</option>
+              {SETS.map(s => <option key={s.code} value={s.code}>{s.label}</option>)}
+            </select>
+            {(typeFilter === 'All' || typeFilter === 'Character') && (
+              <div className="set3-filter-chips" style={{ display: 'flex', gap: '0.25rem', flexWrap: 'wrap' }}>
+                {CHARACTER_SUBTYPES.map(subtype => (
+                  <button
+                    key={subtype}
+                    type="button"
+                    className={`set3-filter-chip ${subtypeFilter.includes(subtype) ? 'active' : ''}`}
+                    onClick={() => toggleSubtype(subtype)}
+                  >
+                    {subtype}
+                  </button>
+                ))}
+              </div>
+            )}
+            {(search || colorFilter !== 'All' || typeFilter !== 'All' || rarityFilter !== 'All' || setFilter !== 'All' || subtypeFilter.length > 0) && (
+              <button
+                type="button"
+                className="import-code-btn"
+                onClick={() => {
+                  setSearch('');
+                  setColorFilter('All');
+                  setTypeFilter('All');
+                  setRarityFilter('All');
+                  setSetFilter('All');
+                  setSubtypeFilter([]);
+                }}
+              >
+                Clear filters
+              </button>
+            )}
           </div>
           <div className="card-grid deck-builder-grid">
             {filteredCards.map(card => {
