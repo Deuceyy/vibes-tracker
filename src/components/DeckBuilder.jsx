@@ -75,7 +75,7 @@ export default function DeckBuilder() {
     return cardData.filter(card => {
       if (search) {
         const q = search.toLowerCase();
-        const haystack = `${card.name || ''} ${card.cardText || ''}`.toLowerCase();
+        const haystack = `${card.name || ''} ${card.cardText || ''} ${card.illustrator || ''}`.toLowerCase();
         if (!haystack.includes(q)) return false;
       }
       if (colorFilter !== 'All' && !card.color?.includes(colorFilter)) return false;
@@ -189,7 +189,7 @@ export default function DeckBuilder() {
           <div className="filters-bar">
             <input
               type="text"
-              placeholder="Search name or card text (e.g. 'draw', 'ice')..."
+              placeholder="Search name, card text, or artist..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="search-input"

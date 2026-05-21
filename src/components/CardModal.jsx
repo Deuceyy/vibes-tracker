@@ -42,6 +42,7 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant }) 
               {card.vibe !== null && <p><strong>Vibe:</strong> {card.vibe}</p>}
               <p><strong>Rarity:</strong> {card.rarity}</p>
               <p><strong>Set:</strong> {getSetLabel(card.set)} #{card.setNumber || '?'}</p>
+              {card.illustrator && <p><strong>Artist:</strong> {card.illustrator}</p>}
               <div className="card-text-box" dangerouslySetInnerHTML={{ __html: cardText }} />
               
               {/* SCG Prices */}

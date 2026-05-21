@@ -124,7 +124,7 @@ export default function CollectionPage() {
     const cards = cardData.filter((card) => {
       if (filters.search) {
         const q = filters.search.toLowerCase();
-        const haystack = `${card.name || ''} ${card.cardText || ''}`.toLowerCase();
+        const haystack = `${card.name || ''} ${card.cardText || ''} ${card.illustrator || ''}`.toLowerCase();
         if (!haystack.includes(q)) return false;
       }
       if (filters.color !== 'All' && card.color !== filters.color) return false;
@@ -286,7 +286,7 @@ export default function CollectionPage() {
               <input
                 type="text"
                 className="search-input"
-                placeholder="Search name or card text (e.g. 'draw', 'ice')..."
+                placeholder="Search name, card text, or artist..."
                 value={filters.search}
                 onChange={(event) => updateFilter('search', event.target.value)}
               />
