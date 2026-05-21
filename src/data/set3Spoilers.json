@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T17:37:31.406Z",
+  "generatedAt": "2026-05-21T20:15:26.126Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -317,6 +317,21 @@
       "image": "/set3-spoilers/goalie-birb.webp",
       "imageFileName": "goalie birb.webp",
       "imageFileId": "1g9s9ILrYZboyOQaC687q_9ecq6a0-bZS"
+    },
+    {
+      "name": "Sleepy Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 5,
+      "vibe": 6,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 1640",
+      "collectorNumber": "49",
+      "illustrator": "aokiss",
+      "effect": "Whenever this Character produces Pudge, choose another Character in your huddle and return it to its owner's hand.",
+      "image": "/set3-spoilers/sleepy-birb.webp",
+      "imageFileName": "sleepy birb.webp",
+      "imageFileId": "1o_h1XkVH0WHTQucWORd1NEddV7rGeQQG"
     },
     {
       "name": "Sudsy Birb",
