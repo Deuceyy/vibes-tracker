@@ -60,6 +60,7 @@ export default function CollectionPage() {
     subtypes: [],
     rarity: 'All',
     set: 'All',
+    cost: 'All',
     owned: 'All',
     variant: 'All',
     sort: 'set-asc'
@@ -130,6 +131,16 @@ export default function CollectionPage() {
       if (filters.type !== 'All' && getCanonicalCardType(card) !== filters.type) return false;
       if (filters.rarity !== 'All' && card.rarity !== filters.rarity) return false;
       if (filters.set !== 'All' && card.set !== filters.set) return false;
+      if (filters.cost !== 'All') {
+        const amount = card.cost?.amount;
+        if (filters.cost === 'none') {
+          if (amount != null) return false;
+        } else if (filters.cost === '8+') {
+          if (amount == null || amount < 8) return false;
+        } else {
+          if (amount !== Number(filters.cost)) return false;
+        }
+      }
 
       const cardSubtypes = getCharacterSubtypes(card);
       if (filters.subtypes.length > 0) {
@@ -306,6 +317,22 @@ export default function CollectionPage() {
                 <option value="Eth">Enter the Huddle</option>
                 <option value="Lotl">Legend of the Lils</option>
                 {ENABLE_SET3 && <option value="S3">Birb and Pengu</option>}
+              </select>
+            </div>
+            <div className="filter-group small">
+              <label className="filter-label">Cost</label>
+              <select className="search-input" value={filters.cost} onChange={(event) => updateFilter('cost', event.target.value)}>
+                <option value="All">Any Cost</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8+">8+</option>
+                <option value="none">No cost</option>
               </select>
             </div>
           </div>

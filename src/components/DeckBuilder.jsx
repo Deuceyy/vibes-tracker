@@ -32,6 +32,7 @@ export default function DeckBuilder() {
   const [typeFilter, setTypeFilter] = useState('All');
   const [rarityFilter, setRarityFilter] = useState('All');
   const [setFilter, setSetFilter] = useState('All');
+  const [costFilter, setCostFilter] = useState('All');
   const [subtypeFilter, setSubtypeFilter] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
   const [saving, setSaving] = useState(false);
@@ -81,6 +82,16 @@ export default function DeckBuilder() {
       if (typeFilter !== 'All' && getCanonicalCardType(card) !== typeFilter) return false;
       if (rarityFilter !== 'All' && card.rarity !== rarityFilter) return false;
       if (setFilter !== 'All' && card.set !== setFilter) return false;
+      if (costFilter !== 'All') {
+        const amount = card.cost?.amount;
+        if (costFilter === 'none') {
+          if (amount != null) return false;
+        } else if (costFilter === '8+') {
+          if (amount == null || amount < 8) return false;
+        } else {
+          if (amount !== Number(costFilter)) return false;
+        }
+      }
       if (subtypeFilter.length > 0) {
         if (getCanonicalCardType(card) !== 'Character') return false;
         const cardSubs = getCharacterSubtypes(card);
@@ -88,7 +99,7 @@ export default function DeckBuilder() {
       }
       return true;
     });
-  }, [search, colorFilter, typeFilter, rarityFilter, setFilter, subtypeFilter]);
+  }, [search, colorFilter, typeFilter, rarityFilter, setFilter, costFilter, subtypeFilter]);
 
   const toggleSubtype = (subtype) => {
     setSubtypeFilter(prev =>
@@ -200,6 +211,12 @@ export default function DeckBuilder() {
               <option value="All">All Sets</option>
               {SETS.map(s => <option key={s.code} value={s.code}>{s.label}</option>)}
             </select>
+            <select value={costFilter} onChange={(e) => setCostFilter(e.target.value)}>
+              <option value="All">Any Cost</option>
+              {[0,1,2,3,4,5,6,7].map(n => <option key={n} value={String(n)}>Cost {n}</option>)}
+              <option value="8+">Cost 8+</option>
+              <option value="none">No cost</option>
+            </select>
             {(typeFilter === 'All' || typeFilter === 'Character') && (
               <div className="set3-filter-chips" style={{ display: 'flex', gap: '0.25rem', flexWrap: 'wrap' }}>
                 {CHARACTER_SUBTYPES.map(subtype => (
@@ -214,7 +231,7 @@ export default function DeckBuilder() {
                 ))}
               </div>
             )}
-            {(search || colorFilter !== 'All' || typeFilter !== 'All' || rarityFilter !== 'All' || setFilter !== 'All' || subtypeFilter.length > 0) && (
+            {(search || colorFilter !== 'All' || typeFilter !== 'All' || rarityFilter !== 'All' || setFilter !== 'All' || costFilter !== 'All' || subtypeFilter.length > 0) && (
               <button
                 type="button"
                 className="import-code-btn"
@@ -224,6 +241,7 @@ export default function DeckBuilder() {
                   setTypeFilter('All');
                   setRarityFilter('All');
                   setSetFilter('All');
+                  setCostFilter('All');
                   setSubtypeFilter([]);
                 }}
               >
