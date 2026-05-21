@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T14:20:24.386Z",
+  "generatedAt": "2026-05-21T17:37:31.406Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -739,6 +739,21 @@
       "imageFileId": "17OfPMw35HtZd_BzkluATCV3bB_4pbJQ-"
     },
     {
+      "name": "Vesper Who Is the Night",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 1,
+      "rarity": "Mythic",
+      "featuringPudgy": "Moonbird 2110",
+      "collectorNumber": "135",
+      "illustrator": "Bryan Brinkman",
+      "effect": "Whenever any number of Characters in your huddle are iced, put a vibe counter on this Character. At the start of Action Time, choose a Character. Boost its vibe by this Character's vibe for the rest of this Cycle.",
+      "image": "/set3-spoilers/vesper-who-is-the-night.webp",
+      "imageFileName": "vesper who is the night.webp",
+      "imageFileId": "1x3qG0YhO6PtwdSLlqpTPe8Fw7ft5oYvq"
+    },
+    {
       "name": "Prized Birb",
       "color": "Purple",
       "type": "Character - Birb",
@@ -842,6 +857,21 @@
       "image": "/set3-spoilers/myra-of-the-mist.webp",
       "imageFileName": "myra of the mist.webp",
       "imageFileId": "1zKxOGLYvJLFSfbgv2tPocFN4ht1MtjaO"
+    },
+    {
+      "name": "The Prophecy Unfolds",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu, Lil 17736, Lil 16178",
+      "collectorNumber": "156",
+      "illustrator": "bluugu - Lucius",
+      "effect": "Choose a Character. Ice it at the end of this Cycle.",
+      "image": "/set3-spoilers/the-prophecy-unfolds.webp",
+      "imageFileName": "the prophecy unfolds.webp",
+      "imageFileId": "1FUz8TQjH1SVuS1Cqi-mDiH6FVLbooNxm"
     },
     {
       "name": "Free Fall",
