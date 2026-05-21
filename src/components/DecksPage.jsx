@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
@@ -19,6 +19,8 @@ export default function DecksPage() {
   const { publicDecks, myDecks, loading, deleteDeck, toggleUpvote } = useDecks();
   const [tab, setTab] = useState('popular');
   const [colorFilter, setColorFilter] = useState('All');
+  const [sort, setSort] = useState('popular');
+  const [search, setSearch] = useState('');
 
   const handleDelete = async (deckId, deckName) => {
     if (confirm(`Delete "${deckName}"?`)) {
@@ -26,10 +28,33 @@ export default function DecksPage() {
     }
   };
 
-  const filteredDecks = (tab === 'mine' ? myDecks : publicDecks).filter(deck => {
-    if (colorFilter === 'All') return true;
-    return deck.colors?.includes(colorFilter);
-  });
+  const filteredDecks = useMemo(() => {
+    const base = tab === 'mine' ? myDecks : publicDecks;
+    const q = search.trim().toLowerCase();
+    const list = base.filter(deck => {
+      if (colorFilter !== 'All' && !deck.colors?.includes(colorFilter)) return false;
+      if (q) {
+        const hay = `${deck.name || ''} ${deck.username || ''}`.toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+
+    const ts = (deck) => {
+      const value = deck.createdAt || deck.updatedAt;
+      return value ? new Date(value).getTime() : 0;
+    };
+
+    const sorted = [...list];
+    if (sort === 'newest') {
+      sorted.sort((a, b) => ts(b) - ts(a));
+    } else if (sort === 'oldest') {
+      sorted.sort((a, b) => ts(a) - ts(b));
+    } else {
+      sorted.sort((a, b) => (b.upvotes || 0) - (a.upvotes || 0) || ts(b) - ts(a));
+    }
+    return sorted;
+  }, [tab, myDecks, publicDecks, colorFilter, search, sort]);
 
   const DeckCard = ({ deck, showActions }) => (
     <div className="deck-card">
@@ -74,17 +99,35 @@ export default function DecksPage() {
           </button>
         </div>
 
-        <div className="decks-tabs">
-          <button className={tab === 'popular' ? 'active' : ''} onClick={() => setTab('popular')}>
-            Popular
-          </button>
-          {user && (
-            <button className={tab === 'mine' ? 'active' : ''} onClick={() => setTab('mine')}>
-              My Decks ({myDecks.length})
+        <div className="decks-toolbar">
+          <div className="decks-tabs">
+            <button className={tab === 'popular' ? 'active' : ''} onClick={() => setTab('popular')}>
+              Browse
             </button>
-          )}
-          <select 
-            value={colorFilter} 
+            {user && (
+              <button className={tab === 'mine' ? 'active' : ''} onClick={() => setTab('mine')}>
+                My Decks ({myDecks.length})
+              </button>
+            )}
+          </div>
+          <input
+            type="text"
+            className="search-input decks-search"
+            placeholder="Search decks by name or author..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <select
+            value={sort}
+            onChange={(e) => setSort(e.target.value)}
+            className="color-filter-select"
+          >
+            <option value="popular">Most Popular</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+          </select>
+          <select
+            value={colorFilter}
             onChange={(e) => setColorFilter(e.target.value)}
             className="color-filter-select"
           >
@@ -94,7 +137,20 @@ export default function DecksPage() {
             <option value="Green">Green</option>
             <option value="Blue">Blue</option>
             <option value="Purple">Purple</option>
+            <option value="Colorless">Colorless</option>
           </select>
+          {(search || colorFilter !== 'All' || sort !== 'popular') && (
+            <button
+              type="button"
+              className="decks-clear-btn"
+              onClick={() => { setSearch(''); setColorFilter('All'); setSort('popular'); }}
+            >
+              Clear
+            </button>
+          )}
+        </div>
+        <div className="decks-result-count">
+          {filteredDecks.length} deck{filteredDecks.length === 1 ? '' : 's'}
         </div>
 
         {loading ? (
