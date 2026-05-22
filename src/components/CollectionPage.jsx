@@ -124,7 +124,7 @@ export default function CollectionPage() {
     const cards = cardData.filter((card) => {
       if (filters.search) {
         const q = filters.search.toLowerCase();
-        const haystack = `${card.name || ''} ${card.cardText || ''} ${card.illustrator || ''}`.toLowerCase();
+        const haystack = `${card.name || ''} ${card.cardText || ''} ${card.illustrator || ''} ${card.featuringPudgy || ''}`.toLowerCase();
         if (!haystack.includes(q)) return false;
       }
       if (filters.color !== 'All' && card.color !== filters.color) return false;
@@ -286,7 +286,7 @@ export default function CollectionPage() {
               <input
                 type="text"
                 className="search-input"
-                placeholder="Search name, card text, or artist..."
+                placeholder="Search name, card text, artist, or featured NFT #..."
                 value={filters.search}
                 onChange={(event) => updateFilter('search', event.target.value)}
               />
