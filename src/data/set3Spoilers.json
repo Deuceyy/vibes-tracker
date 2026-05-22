@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T15:28:18.825Z",
+  "generatedAt": "2026-05-22T18:11:50.694Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -244,6 +244,36 @@
       "imageFileId": "1xNe6qod_J4gBGBdSQ8FjZgMSOj-tBqqO"
     },
     {
+      "name": "Jolly Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 6590",
+      "collectorNumber": "36",
+      "illustrator": "bluugu - Lucius",
+      "effect": "[ACT] _F_: Pick two cards in your opponent's ice and put them on the bottom of their deck.",
+      "image": "/set3-spoilers/jolly-birb.webp",
+      "imageFileName": "jolly birb.webp",
+      "imageFileId": "1rtMa0ak6W9SuOpClRxcBh8pIAAt5HxcS"
+    },
+    {
+      "name": "Tailor Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 4,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 6113",
+      "collectorNumber": "40",
+      "illustrator": "aokiss",
+      "effect": "",
+      "image": "/set3-spoilers/tailor-birb.webp",
+      "imageFileName": "tailor birb.webp",
+      "imageFileId": "1HzTi0TCo5D-muz7dtWdpaMXFLVIdWXBr"
+    },
+    {
       "name": "Scholar Birb",
       "color": "Yellow",
       "type": "Character - Birb",
@@ -257,6 +287,21 @@
       "image": "/set3-spoilers/scholar-birb.webp",
       "imageFileName": "scholar birb.webp",
       "imageFileId": "1UsGY5WESYqgcgsLXcdiRJhUG2gUxr7qI"
+    },
+    {
+      "name": "Tony Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 4,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 2863",
+      "collectorNumber": "43",
+      "illustrator": "bluugu - Lucius",
+      "effect": "When this Character enters the huddle, choose a Character with vibe 4 or less and flop it.",
+      "image": "/set3-spoilers/tony-birb.webp",
+      "imageFileName": "tony birb.webp",
+      "imageFileId": "1U7ifyY7vfVc7Y86X0dznu85OWzfKwANB"
     },
     {
       "name": "Striker Birb",
@@ -379,6 +424,66 @@
       "imageFileId": "1iLIeWYINJnEI8qtqGf75B--DFTS74aZ9"
     },
     {
+      "name": "Night of the Living Birb",
+      "color": "Yellow",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "55",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character that entered the huddle this Cycle. Return it to its owner's hand.",
+      "image": "/set3-spoilers/night-of-the-living-birb.webp",
+      "imageFileName": "night of the living birb.webp",
+      "imageFileId": "1hh46u-rFxIcNPYANAAZyQV6TcAk9gHQt"
+    },
+    {
+      "name": "Reminisce",
+      "color": "Yellow",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "56",
+      "illustrator": "chlorophilly",
+      "effect": "Choose a Character. For the rest of this Cycle, boost its vibe by 2 and if it wins Vibe Check, draw a card.",
+      "image": "/set3-spoilers/reminisce.webp",
+      "imageFileName": "reminisce.webp",
+      "imageFileId": "1OwTpf0J4ESqNdJuu512bn6OU6qrWMrLj"
+    },
+    {
+      "name": "Lame Story, Sis!",
+      "color": "Yellow",
+      "type": "Action - Saucy",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Lil 9074",
+      "collectorNumber": "57",
+      "illustrator": "Yosuke Ando",
+      "effect": "You can only play this Action if it's face-down as a Rod. Flip this card over to play it. Choose a player. Pick two cards in their ice and put them on top of their deck in any order.",
+      "image": "/set3-spoilers/lame-story-sis.webp",
+      "imageFileName": "lame story sis.webp",
+      "imageFileId": "12UIFt9Mq-2L6neXbP4b2l4UQuEiID68x"
+    },
+    {
+      "name": "Lift Off",
+      "color": "Yellow",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb, Moonbird 9478",
+      "collectorNumber": "58",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Choose a Character with vibe 2 or less. Flip a coin. If heads, put 6 vibe counters on it. If tails, return the Character to its owner's hand and draw a card.",
+      "image": "/set3-spoilers/lift-off.webp",
+      "imageFileName": "lift off.webp",
+      "imageFileId": "1JWTKB1D3Ykxgq4GAo21cjBlwLY8fgMqx"
+    },
+    {
       "name": "True Form",
       "color": "Yellow",
       "type": "Action",
@@ -422,6 +527,21 @@
       "image": "/set3-spoilers/step-by-step.webp",
       "imageFileName": "step by step.webp",
       "imageFileId": "1HmZIdxdvFF1kcHfHVymVDXEH1rXFIi-m"
+    },
+    {
+      "name": "The Birb of Venus",
+      "color": "Yellow",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Birb, Moonbird 6994, Moonbird 7664, Moonbird 596",
+      "collectorNumber": "63",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "Boost the vibe of Characters that entered your huddle this Cycle by 6 for the rest of this Cycle.",
+      "image": "/set3-spoilers/the-birb-of-venus.webp",
+      "imageFileName": "the birb of venus.webp",
+      "imageFileId": "1WZaDEjWlaYkT3DMyo6Xo-s75mtmylZlu"
     },
     {
       "name": "Reflective Penguin",
@@ -644,9 +764,9 @@
       "collectorNumber": "107",
       "illustrator": "Jungle",
       "effect": "",
-      "image": "/set3-spoilers/birb-who-s-100-feet-tall.png",
-      "imageFileName": "birb who_s 100 feet tall.png",
-      "imageFileId": "1AzYbLDYC-CXWlG3fdHQST2LdwWguxZNQ"
+      "image": "/set3-spoilers/birb-who-s-100-feet-tall.webp",
+      "imageFileName": "birb who_s 100 feet tall.webp",
+      "imageFileId": "1UQkmBw1T8Kwf4IuIKAyc6uXMPcwWIqYg"
     },
     {
       "name": "This Is Not a Pudgy",
@@ -769,6 +889,21 @@
       "imageFileId": "1x3qG0YhO6PtwdSLlqpTPe8Fw7ft5oYvq"
     },
     {
+      "name": "Pointing Birb",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 9514",
+      "collectorNumber": "137",
+      "illustrator": "Stoopid Penguin",
+      "effect": "When this Character is iced, pick an Action card in your ice and return it to your hand.",
+      "image": "/set3-spoilers/pointing-birb.webp",
+      "imageFileName": "pointing birb.webp",
+      "imageFileId": "1VPyFAtz5d3E2TfRgvvvvu6o8J0s7aN9r"
+    },
+    {
       "name": "Prized Birb",
       "color": "Purple",
       "type": "Character - Birb",
@@ -874,6 +1009,21 @@
       "imageFileId": "1zKxOGLYvJLFSfbgv2tPocFN4ht1MtjaO"
     },
     {
+      "name": "Afternoon Breeze",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu, Lil 11341",
+      "collectorNumber": "151",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "You can only play this Action if a Character was iced from your huddle this Cycle. Choose a Character and ice it.",
+      "image": "/set3-spoilers/afternoon-breeze.webp",
+      "imageFileName": "afternoon breeze.webp",
+      "imageFileId": "1mIxAXYZkv0i1vDYod0Xyz2efW0ipjz7D"
+    },
+    {
       "name": "The Prophecy Unfolds",
       "color": "Purple",
       "type": "Action",
@@ -932,6 +1082,21 @@
       "image": "/set3-spoilers/stonebreaker-wizbirb.webp",
       "imageFileName": "stonebreaker wizbirb.webp",
       "imageFileId": "17taLA3dyxnFXSxqZ1ds9JcGTid35AJwf"
+    },
+    {
+      "name": "Frostbitten Wizbirb",
+      "color": "Colorless",
+      "type": "Character - Wizard Birb",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 4316",
+      "collectorNumber": "163",
+      "illustrator": "chlorophilly",
+      "effect": "_Y_ or _P_.",
+      "image": "/set3-spoilers/frostbitten-wizbirb.webp",
+      "imageFileName": "frostbitten wizbirb.webp",
+      "imageFileId": "1i-cYkiqjrNYM4OxistVXJIAxGGnIj7fW"
     },
     {
       "name": "Nightveil Wizbirb",
