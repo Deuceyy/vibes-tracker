@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T18:11:50.694Z",
+  "generatedAt": "2026-05-22T20:15:58.247Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -242,6 +242,21 @@
       "image": "/set3-spoilers/elegant-birb.webp",
       "imageFileName": "elegant birb.webp",
       "imageFileId": "1xNe6qod_J4gBGBdSQ8FjZgMSOj-tBqqO"
+    },
+    {
+      "name": "Farmer Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 4846",
+      "collectorNumber": "35",
+      "illustrator": "aokiss",
+      "effect": "When this Character enters the huddle, reveal a face-down Rod you control. If it's a Yellow Character card, put it into your hand.",
+      "image": "/set3-spoilers/farmer-birb.webp",
+      "imageFileName": "farmer birb.webp",
+      "imageFileId": "1MG68OKx68Le_HgASAyN0nZSbTknf4GLg"
     },
     {
       "name": "Jolly Birb",
@@ -737,6 +752,21 @@
       "image": "/set3-spoilers/squad-strike.webp",
       "imageFileName": "squad strike.webp",
       "imageFileId": "1ZVSMT-uBi01xf5ypSnWz05_zrQRDz9a5"
+    },
+    {
+      "name": "Lil Gamer",
+      "color": "Blue",
+      "type": "Character - Lil Penguin",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Lil 13410",
+      "collectorNumber": "97",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Whenever this Character is outfitted, put 2 vibe counters on it.",
+      "image": "/set3-spoilers/lil-gamer.webp",
+      "imageFileName": "lil gamer.webp",
+      "imageFileId": "1HSquZc-1zFPxXNd2ytJm5-CmKai3AT8O"
     },
     {
       "name": "Pengu",
