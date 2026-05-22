@@ -15,6 +15,10 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      # Surface the secret as an env var so we can gate steps with `if:`
+      # without the secret value ever appearing in logs.
+      PROXY_RENDERS_TOKEN: ${{ secrets.PROXY_RENDERS_TOKEN }}
 
     steps:
       - name: Check out repository
@@ -33,15 +37,37 @@ jobs:
       - name: Sync spoiler data
         run: npm run sync:set3-spoilers
 
+      # Check out the *private* renders repo into .proxy-renders/.
+      # Token is a fine-grained PAT with Contents:Read access to ONLY
+      # Deuceyy/vibes-proxy-renders, stored as PROXY_RENDERS_TOKEN.
+      # If the secret isn't set (e.g. fork or first run before setup),
+      # we skip the promote step rather than fail the workflow.
+      - name: Check out private proxy renders
+        if: ${{ env.PROXY_RENDERS_TOKEN != '' }}
+        uses: actions/checkout@v4
+        with:
+          repository: Deuceyy/vibes-proxy-renders
+          token: ${{ secrets.PROXY_RENDERS_TOKEN }}
+          path: .proxy-renders
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Promote proxy renders for revealed cards
+        if: ${{ hashFiles('.proxy-renders/proxies/*.png') != '' }}
+        run: npm run promote:proxies
+
       - name: Commit changes if needed
         run: |
+          # Make sure the private renders checkout is NOT committed to
+          # this public repo.
+          rm -rf .proxy-renders
           if git diff --quiet; then
-            echo "No spoiler changes found."
+            echo "No spoiler or proxy changes found."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/set3Spoilers.json public/set3-spoilers
+          git add src/data/set3Spoilers.json public/set3-spoilers public/proxies
           git commit -m "Sync Set 3 spoilers"
           git fetch origin main
           git pull --rebase origin main

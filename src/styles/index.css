@@ -3248,3 +3248,516 @@ body {
   cursor: pointer;
   accent-color: #ff6b6b;
 }
+
+
+/* ============================================================
+   Proxy Print page
+   ============================================================ */
+
+.proxy-action-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin: 1rem auto;
+  max-width: 1280px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  position: sticky;
+  top: 70px;
+  z-index: 20;
+}
+
+.proxy-action-spacer { flex: 1 1 auto; }
+
+.proxy-action-bar button,
+.proxy-print-controls button {
+  padding: 0.55rem 0.95rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, filter 0.15s;
+}
+
+.proxy-action-bar button:hover:not(:disabled),
+.proxy-print-controls button:hover:not(:disabled) {
+  background: var(--border);
+}
+
+.proxy-action-bar button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.proxy-action-bar button.proxy-print-btn,
+.proxy-print-controls button.proxy-print-btn {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.proxy-action-bar button.proxy-print-btn:hover:not(:disabled),
+.proxy-print-controls button.proxy-print-btn:hover:not(:disabled) {
+  filter: brightness(1.12);
+}
+
+.proxy-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 0 1rem 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.proxy-picker-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.proxy-picker-card.has-qty {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent) inset;
+}
+
+.proxy-picker-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.proxy-picker-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.proxy-picker-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.proxy-picker-info {
+  padding: 0.5rem 0.6rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.proxy-picker-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.proxy-picker-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.proxy-picker-controls {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.proxy-picker-controls button {
+  flex: 0 0 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.proxy-picker-controls button:hover:not(:disabled) {
+  background: var(--border);
+}
+
+.proxy-picker-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.proxy-picker-controls input {
+  flex: 1 1 0;
+  height: 28px;
+  min-width: 0;
+  padding: 0 0.4rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  text-align: center;
+  font-weight: 600;
+}
+
+.proxy-print-root {
+  background: white;
+  color: black;
+  min-height: 100vh;
+}
+
+.proxy-print-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.proxy-print-hint {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.proxy-sheet {
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  padding: 0.5in;
+  box-sizing: border-box;
+  background: white;
+  page-break-after: always;
+  break-after: page;
+}
+
+.proxy-grid {
+  width: 7.5in;
+  height: 10.5in;
+  display: grid;
+  grid-template-columns: repeat(3, 2.5in);
+  grid-template-rows: repeat(3, 3.5in);
+}
+
+.proxy-cell {
+  width: 2.5in;
+  height: 3.5in;
+  outline: 0.5pt dashed #888;
+  outline-offset: -0.25pt;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proxy-cell--empty { outline: 0.5pt dashed #ddd; }
+
+.proxy-cell-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media print {
+  @page { size: letter; margin: 0; }
+
+  html, body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .proxy-print-root,
+  .proxy-print-root * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide everything, then re-show only the print sheets. Using
+     visibility (not display:none) so ancestor elements like #root
+     keep their layout and the sheets actually render. */
+  body * { visibility: hidden; }
+
+  .proxy-print-root,
+  .proxy-print-root * { visibility: visible; }
+
+  .proxy-print-controls,
+  [data-noprint] { display: none !important; }
+
+  /* Pin the print root to the page origin so it doesn't inherit any
+     offset from now-invisible ancestors. */
+  .proxy-print-root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white;
+  }
+
+  .proxy-sheet {
+    margin: 0;
+    padding: 0.5in;
+    width: 8.5in;
+    height: 11in;
+    box-shadow: none !important;
+  }
+
+  .proxy-cell { outline: 0.25pt dashed #999; }
+  .proxy-cell--empty { outline: none; }
+
+  /* Guarantee the proxy images print at full color, full opacity,
+     no filtering. Belt-and-suspenders against any inherited rule. */
+  .proxy-cell-img {
+    opacity: 1 !important;
+    filter: none !important;
+    image-rendering: auto;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+
+/* ============================================================
+   Proxy card art — recreates the Python proxy template in HTML
+   ============================================================ */
+
+/* Card color palette (matches proxy_gen.py) */
+.px-color-red       { --pxc: #C9302C; --pxc-tint: #E96A65; }
+.px-color-blue      { --pxc: #2E6BB8; --pxc-tint: #5A93D9; }
+.px-color-purple    { --pxc: #8A4FBA; --pxc-tint: #A876D1; }
+.px-color-yellow    { --pxc: #D9A92A; --pxc-tint: #EBC55C; }
+.px-color-green     { --pxc: #3F9E5B; --pxc-tint: #67BC81; }
+.px-color-colorless { --pxc: #6b7280; --pxc-tint: #9ca3af; }
+
+.px-card {
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: block;
+  overflow: hidden;
+  border: 1.5pt solid var(--pxc, #6b7280);
+  box-sizing: border-box;
+}
+
+.px-card-inner {
+  width: 100%;
+  height: 100%;
+  padding: 5pt;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.px-top {
+  display: flex;
+  gap: 4pt;
+  align-items: stretch;
+}
+
+.px-cost-block {
+  position: relative;
+  width: 28pt;
+  height: 28pt;
+  flex: 0 0 28pt;
+  background: #3FA5D9;
+  border: 1pt solid #1B6FA0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.px-cost-icon {
+  width: 18pt;
+  height: 18pt;
+  background:
+    radial-gradient(ellipse at 35% 50%, white 0%, white 38%, transparent 39%),
+    #3FA5D9;
+  border-radius: 50%;
+  border: 0.5pt solid #1B6FA0;
+}
+
+.px-cost-num {
+  position: absolute;
+  bottom: -3pt;
+  right: -3pt;
+  background: white;
+  color: #1a1a1a;
+  font-weight: 800;
+  font-size: 10pt;
+  border: 1pt solid #1B6FA0;
+  border-radius: 50%;
+  width: 14pt;
+  height: 14pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.px-name-stack {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.px-name-banner {
+  background: var(--pxc, #6b7280);
+  color: white;
+  font-weight: 700;
+  font-size: 9pt;
+  text-align: center;
+  padding: 3pt 6pt;
+  border-radius: 4pt 4pt 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.05;
+}
+
+.px-subtype-banner {
+  background: var(--pxc-tint, #9ca3af);
+  color: white;
+  font-weight: 600;
+  font-size: 6.5pt;
+  text-align: center;
+  padding: 2pt 6pt;
+  border-radius: 0 0 4pt 4pt;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.05;
+}
+
+.px-art-area {
+  flex: 0 0 90pt;
+  margin: 4pt 0;
+  background: repeating-linear-gradient(
+    45deg,
+    #f7f7f7 0pt,
+    #f7f7f7 6pt,
+    #ececec 6pt,
+    #ececec 12pt
+  );
+  border: 0.5pt solid #d0d0d0;
+  border-radius: 3pt;
+}
+
+.px-text {
+  flex: 1 1 auto;
+  font-size: 7pt;
+  line-height: 1.18;
+  text-align: center;
+  padding: 3pt 3pt 0;
+  color: #1a1a1a;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.px-footer {
+  display: grid;
+  grid-template-columns: 32pt 1fr 32pt;
+  align-items: end;
+  gap: 4pt;
+  padding-top: 3pt;
+  border-top: 0.5pt solid #e0e0e0;
+}
+
+.px-pudge-slot {
+  display: flex;
+  align-items: center;
+  gap: 2pt;
+  min-height: 18pt;
+}
+
+.px-pudge-dot {
+  width: 14pt;
+  height: 14pt;
+  border-radius: 50%;
+  background: var(--pxc, #6b7280);
+  border: 1pt solid rgba(0,0,0,0.4);
+}
+
+.px-pudge-amt {
+  font-size: 8pt;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.px-attribution {
+  font-size: 5.5pt;
+  text-align: center;
+  color: #4a4a4a;
+  line-height: 1.18;
+  min-width: 0;
+}
+
+.px-attribution-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.px-vibe-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 18pt;
+}
+
+.px-vibe-num {
+  font-size: 14pt;
+  font-weight: 800;
+  line-height: 1;
+  color: #1a1a1a;
+}
+
+.px-vibe-label {
+  font-size: 6pt;
+  font-weight: 600;
+  color: #4a4a4a;
+  letter-spacing: 0.5pt;
+  text-transform: uppercase;
+}
+
+/* On screen (print preview view, before user prints), give the cells
+   a light page background so the white cards visually pop. */
+.proxy-print-root .proxy-sheet {
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}

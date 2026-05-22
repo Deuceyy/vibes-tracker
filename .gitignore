@@ -6,3 +6,7 @@ dist
 vite.log
 vite.err.log
 vite.run.log
+
+# Private proxy renders checkout used only inside the CI workflow.
+# Must never be committed to this public repo.
+.proxy-renders/
