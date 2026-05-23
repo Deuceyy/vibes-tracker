@@ -10,6 +10,7 @@
     "promote:proxies": "node scripts/promote-proxy-renders.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "firebase": "^10.7.0",
     "html-to-image": "^1.11.13",
     "react": "^18.2.0",

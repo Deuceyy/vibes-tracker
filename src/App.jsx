@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { AuthProvider } from './hooks/useAuth.jsx';
 import { PricesProvider } from './hooks/usePrices.jsx';
 import LandingPage from './components/LandingPage.jsx';
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/set3-spoilers" element={<Set3SpoilersPage />} />
           <Route path="/proxies" element={<ProxyPrintPage />} />
         </Routes>
+        <Analytics />
       </PricesProvider>
     </AuthProvider>
   );
