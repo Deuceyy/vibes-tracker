@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { track } from '@vercel/analytics';
 import { collection, doc, setDoc, deleteDoc, onSnapshot, query, orderBy, limit, where, updateDoc, arrayUnion, arrayRemove, getDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useAuth } from './useAuth';
@@ -89,6 +90,10 @@ export function useDecks() {
       upvotedBy: hasUpvoted ? arrayRemove(user.uid) : arrayUnion(user.uid),
       upvotes: hasUpvoted ? (deckSnap.data().upvotes || 1) - 1 : (deckSnap.data().upvotes || 0) + 1
     });
+    // Only count upvote-additions; removing an upvote isn't engagement.
+    if (!hasUpvoted) {
+      track('deck_upvoted', { is_own_deck: deckSnap.data().userId === user.uid });
+    }
   }, [user]);
 
   const getDeck = useCallback(async (deckId) => {

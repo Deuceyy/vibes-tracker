@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { track } from '@vercel/analytics';
 import { doc, setDoc, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useAuth } from './useAuth';
@@ -156,9 +157,16 @@ export function useCollection(userId = null) {
       newCollection = data;
     }
     saveCollection(newCollection);
+    track('collection_imported', {
+      card_count: Object.keys(newCollection).length,
+      version: Number(data.version) || 1,
+    });
   }, [saveCollection]);
 
   const exportCollection = useCallback(() => {
+    track('collection_exported', {
+      card_count: Object.keys(collection).length,
+    });
     return {
       version: 2,
       exportDate: new Date().toISOString(),

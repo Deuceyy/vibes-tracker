@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { track } from '@vercel/analytics';
 import Header from './Header.jsx';
 import spoilerData from '../data/set3Spoilers.json';
 import { TRACKER_CARD_TYPES, getCanonicalCardType, getCharacterSubtypes } from '../lib/cardMetadata.js';
@@ -312,7 +313,14 @@ export default function ProxyPrintPage() {
           <button
             className="proxy-print-btn"
             disabled={totalSelected === 0}
-            onClick={() => setPrinting(true)}
+            onClick={() => {
+              track('proxy_print', {
+                card_count: totalSelected,
+                sheet_count: totalSheets,
+                unique_cards: Object.keys(quantities).length,
+              });
+              setPrinting(true);
+            }}
           >
             Print {totalSelected || ''} proxies →
           </button>

@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { track } from '@vercel/analytics';
 import { signInWithPopup, signOut as firebaseSignOut, onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc, setDoc, collection, query, where, getDocs } from 'firebase/firestore';
 import { auth, googleProvider, db } from '../firebase';
@@ -39,7 +40,15 @@ export function AuthProvider({ children }) {
 
   const signInWithGoogle = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      const result = await signInWithPopup(auth, googleProvider);
+      // Detect whether this is a brand-new user vs returning user, so
+      // we can see the funnel from landing → first sign-in.
+      let isNewUser = false;
+      try {
+        const profileSnap = await getDoc(doc(db, 'users', result.user.uid));
+        isNewUser = !profileSnap.exists();
+      } catch {}
+      track('signed_in', { is_new_user: isNewUser });
     } catch (error) {
       console.error('Sign in error:', error);
     }

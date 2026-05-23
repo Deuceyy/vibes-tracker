@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { track } from '@vercel/analytics';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks, validateDeck } from '../hooks/useDecks';
@@ -162,6 +163,12 @@ export default function DeckBuilder() {
         cards: deckCards,
         isPublic
       }, deckId);
+      track('deck_saved', {
+        is_new: !deckId,
+        is_public: !!isPublic,
+        card_count: deckCards.reduce((s, c) => s + c.quantity, 0),
+        unique_cards: deckCards.length,
+      });
       navigate(`/deck/${id}`);
     } catch (err) {
       alert('Error saving deck: ' + err.message);
