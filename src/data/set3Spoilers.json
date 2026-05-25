@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T21:39:20.736Z",
+  "generatedAt": "2026-05-25T23:36:51.618Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -392,6 +392,21 @@
       "image": "/set3-spoilers/sleepy-birb.webp",
       "imageFileName": "sleepy birb.webp",
       "imageFileId": "1o_h1XkVH0WHTQucWORd1NEddV7rGeQQG"
+    },
+    {
+      "name": "Birb Who Always Gets Lost",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 6,
+      "vibe": 4,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 6078",
+      "collectorNumber": "50",
+      "illustrator": "bluugu - Lucius",
+      "effect": "[ACT] _F_: Choose a Character. Boost its vibe by the number of Characters in your huddle for the rest of this Cycle.",
+      "image": "/set3-spoilers/birb-who-always-gets-lost.webp",
+      "imageFileName": "birb who always gets lost.webp",
+      "imageFileId": "1f3epliGz5nwxw77v54P5F70IFUWANLLm"
     },
     {
       "name": "Sudsy Birb",
@@ -799,6 +814,21 @@
       "imageFileId": "1UQkmBw1T8Kwf4IuIKAyc6uXMPcwWIqYg"
     },
     {
+      "name": "Lil Messy",
+      "color": "Blue",
+      "type": "Character - Lil Penguin",
+      "cost": 5,
+      "vibe": 7,
+      "rarity": "Common",
+      "featuringPudgy": "Lil 20469",
+      "collectorNumber": "113",
+      "illustrator": "aokiss",
+      "effect": "As an additional cost to play this Character, return a Fit you control to its owner's hand.",
+      "image": "/set3-spoilers/lil-messy.webp",
+      "imageFileName": "lil messy.webp",
+      "imageFileId": "1MQY9-c8WKFwig3E60nj5EsQHkTK_ipzF"
+    },
+    {
       "name": "This Is Not a Pudgy",
       "color": "Blue",
       "type": "Character - Penguin",
@@ -1142,6 +1172,21 @@
       "image": "/set3-spoilers/nightveil-wizbirb.webp",
       "imageFileName": "nightveil wizbirb.webp",
       "imageFileId": "1QvOz4Old9KzZUXq2QSv7g9lOgQMwO_Q6"
+    },
+    {
+      "name": "Breakaway Balloon",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 1,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "166",
+      "illustrator": "aokiss",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"[ACT] _F_: Put a vibe counter on this Character\".",
+      "image": "/set3-spoilers/breakaway-balloon.webp",
+      "imageFileName": "breakaway balloon.webp",
+      "imageFileId": "1Ane7uSJOtv2wr0MU8ccYbwws2dOre7bp"
     },
     {
       "name": "Cozy Mittens",
