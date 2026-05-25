@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T12:48:30.201Z",
+  "generatedAt": "2026-05-25T16:07:03.194Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -1307,6 +1307,21 @@
       "image": "/set3-spoilers/birb-bay.webp",
       "imageFileName": "birb bay.webp",
       "imageFileId": "1ko50C-z-Gc3v7uaMoikM28FiN5iNMSd2"
+    },
+    {
+      "name": "Hammer Rod",
+      "color": "Colorless",
+      "type": "Rod",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "195",
+      "illustrator": "bluugu - Lucius",
+      "effect": "[ACT] _F_: Choose a Relic and ice it. Ice this Rod. (This Rod doesn't produce Fish).",
+      "image": "/set3-spoilers/hammer-rod.webp",
+      "imageFileName": "hammer rod.webp",
+      "imageFileId": "14uf0bxQWTlSPrGOTQUxhr8L0nB3iWHur"
     }
   ]
 }
