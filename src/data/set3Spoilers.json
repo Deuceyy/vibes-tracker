@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T19:32:42.597Z",
+  "generatedAt": "2026-05-26T22:01:48.775Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -32,6 +32,21 @@
       "image": "/set3-spoilers/birb.webp",
       "imageFileName": "birb.webp",
       "imageFileId": "17r6XL6flLmGMbWB2ujaemgblor3aE20w"
+    },
+    {
+      "name": "Psychic Birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Moonbird 8289",
+      "collectorNumber": "5",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Whenever this Character is chosen by anything, draw a card, then ice a card from your hand.",
+      "image": "/set3-spoilers/psychic-birb.webp",
+      "imageFileName": "psychic birb.webp",
+      "imageFileId": "1LBIeuvPdhehnQd7Eq3i_OiM5WuvVoO9G"
     },
     {
       "name": "Unidentified Flying Birb",
@@ -574,6 +589,21 @@
       "imageFileId": "1WZaDEjWlaYkT3DMyo6Xo-s75mtmylZlu"
     },
     {
+      "name": "Lil Sweet Stack",
+      "color": "Green",
+      "type": "Character - Lil Penguin",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Lil 1355",
+      "collectorNumber": "65",
+      "illustrator": "Stoopid Penguin",
+      "effect": "[ACT] _F_: Choose a Green Character and put a vibe counter on it.",
+      "image": "/set3-spoilers/lil-sweet-stack.webp",
+      "imageFileName": "lil sweet stack.webp",
+      "imageFileId": "1G5Ec-S_JXAYi8kYRCIwp7AT9lCsWscZ3"
+    },
+    {
       "name": "Reflective Penguin",
       "color": "Green",
       "type": "Character - Penguin",
@@ -1114,6 +1144,21 @@
       "imageFileId": "1Y-DTYi2Q5hb2FkxajdeRhXnHl2bIP0e2"
     },
     {
+      "name": "If Only They Knew",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Birb, Moonbird 7348, Moonbird 698, Moonbird 57, Moonbird 3940",
+      "collectorNumber": "158",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character. Ice all Characters with vibe equal to that Character's vibe.",
+      "image": "/set3-spoilers/if-only-they-knew.webp",
+      "imageFileName": "if only they knew.webp",
+      "imageFileId": "1yjgE2luOiGq5k10Dm0KQT4fWTps7ybrQ"
+    },
+    {
       "name": "Set Sail",
       "color": "Purple",
       "type": "Action",
@@ -1187,6 +1232,21 @@
       "image": "/set3-spoilers/breakaway-balloon.webp",
       "imageFileName": "breakaway balloon.webp",
       "imageFileId": "1Ane7uSJOtv2wr0MU8ccYbwws2dOre7bp"
+    },
+    {
+      "name": "Mug Life",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 1,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "169",
+      "illustrator": "blue boo",
+      "effect": "Choose a Character to wear this Fit. Whenever a Character is outfitted with this, boost its vibe by 3 for the rest of this Cycle.",
+      "image": "/set3-spoilers/mug-life.webp",
+      "imageFileName": "mug life.webp",
+      "imageFileId": "1AMv-ADG0mq5NWW4ccItRVBOUhJOYLx_o"
     },
     {
       "name": "Cozy Mittens",
