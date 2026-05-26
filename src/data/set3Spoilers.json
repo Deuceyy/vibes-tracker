@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T22:01:48.775Z",
+  "generatedAt": "2026-05-26T23:37:37.173Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -962,6 +962,21 @@
       "image": "/set3-spoilers/lil-forgotten.webp",
       "imageFileName": "lil forgotten.webp",
       "imageFileId": "17OfPMw35HtZd_BzkluATCV3bB_4pbJQ-"
+    },
+    {
+      "name": "Penguin Who Loves Goodbyes",
+      "color": "Purple",
+      "type": "Character - Penguin",
+      "cost": 2,
+      "vibe": 2,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pudgy 6642",
+      "collectorNumber": "133",
+      "illustrator": "aokiss",
+      "effect": "When this Character is iced, if it didn't have any vibe counters on it, put it into your huddle with a vibe counter on it.",
+      "image": "/set3-spoilers/penguin-who-loves-goodbyes.webp",
+      "imageFileName": "penguin who loves goodbyes.webp",
+      "imageFileId": "1DfFKjETKkSZ2wQNaJlZ7AMJWrLhPYNe5"
     },
     {
       "name": "Vesper Who Is the Night",
