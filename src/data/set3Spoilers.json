@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T23:37:37.173Z",
+  "generatedAt": "2026-05-27T04:54:40.840Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -242,6 +242,21 @@
       "image": "/set3-spoilers/study-all-day.webp",
       "imageFileName": "study all day.webp",
       "imageFileId": "13VAPnTfe15JZgozXgCWytKM5RqkDhq_t"
+    },
+    {
+      "name": "On Thin Ice",
+      "color": "Red",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb, Moonbird 7972, Moonbird 9252",
+      "collectorNumber": "28",
+      "illustrator": "chlorophilly",
+      "effect": "As an additional cost to play this Action, reveal another Red Action card from your hand. Choose a Character and ice it.",
+      "image": "/set3-spoilers/on-thin-ice.webp",
+      "imageFileName": "on thin ice.webp",
+      "imageFileId": "1PWA0kFfK9T81f1PodUGAIeb6UwNBkOEF"
     },
     {
       "name": "Elegant Birb",
@@ -692,6 +707,21 @@
       "image": "/set3-spoilers/here-come-dat-peng.webp",
       "imageFileName": "here come dat peng.webp",
       "imageFileId": "1VmcNkzF0V0Fv1Y3P8XmyrjmWykjlpqVi"
+    },
+    {
+      "name": "Lumberjack Penguin",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 5,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 7062",
+      "collectorNumber": "78",
+      "illustrator": "chlorophilly",
+      "effect": "This Character enters the huddle with 4 vibe counters on it. Whenever another Character enters your huddle, move all vibe counters from this Character onto it.",
+      "image": "/set3-spoilers/lumberjack-penguin.webp",
+      "imageFileName": "lumberjack penguin.webp",
+      "imageFileId": "1FU1YHp_RUWingFoIv8mhwnTwxtQ4t_gV"
     },
     {
       "name": "Victorious Penguin",
@@ -1337,6 +1367,21 @@
       "image": "/set3-spoilers/enchanted-boots.webp",
       "imageFileName": "enchanted boots.webp",
       "imageFileId": "1gv3kRKIKBFdu-WXYI4OVoO4hg79zX_qS"
+    },
+    {
+      "name": "Distracting Handheld",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 0,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "181",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this can't produce Pudge.",
+      "image": "/set3-spoilers/distracting-handheld.webp",
+      "imageFileName": "distracting handheld.webp",
+      "imageFileId": "1YFLWlciGHNMfnu0jLcMY2DJuafqiLU7b"
     },
     {
       "name": "Hero's Sword",
