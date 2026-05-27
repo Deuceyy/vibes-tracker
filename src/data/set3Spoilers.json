@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T16:50:20.282Z",
+  "generatedAt": "2026-05-27T19:37:34.563Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -302,6 +302,21 @@
       "image": "/set3-spoilers/jolly-birb.webp",
       "imageFileName": "jolly birb.webp",
       "imageFileId": "1rtMa0ak6W9SuOpClRxcBh8pIAAt5HxcS"
+    },
+    {
+      "name": "Visionary Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 2,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Moonbird 7722",
+      "collectorNumber": "37",
+      "illustrator": "blue boo",
+      "effect": "When this Character enters the huddle, reveal the top card of your deck. If it's a Character card with Fish cost 2, put it into your huddle and ice this Character.",
+      "image": "/set3-spoilers/visionary-birb.webp",
+      "imageFileName": "visionary birb.webp",
+      "imageFileId": "1b4ksvKpd4mlixyhkRF99ROy_6gzfUy7U"
     },
     {
       "name": "Tailor Birb",
@@ -979,6 +994,21 @@
       "imageFileId": "1j70CkgoYDiTDgwJKigiu4vcg-sjDX4ic"
     },
     {
+      "name": "Downhill Disaster",
+      "color": "Blue",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pengu, Lil 17249, Lil 18698",
+      "collectorNumber": "126",
+      "illustrator": "aokiss",
+      "effect": "Pick any number of Fit cards in your ice. Put them on top of your deck in any order.",
+      "image": "/set3-spoilers/downhill-disaster.webp",
+      "imageFileName": "downhill disaster.webp",
+      "imageFileId": "1VVDyWDacruPkM3YqpCyJwVBB8hFFhqpm"
+    },
+    {
       "name": "Lil Balanced",
       "color": "Purple",
       "type": "Character - Lil Penguin",
@@ -1322,6 +1352,21 @@
       "image": "/set3-spoilers/cozy-mittens.webp",
       "imageFileName": "cozy mittens.webp",
       "imageFileId": "18WfP1fJttEeTmy7CcBnp7MFYcGIhCFPh"
+    },
+    {
+      "name": "Arctic Ring",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 2,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "172",
+      "illustrator": "chlorophilly",
+      "effect": "Choose a Character to wear this Fit. Whenever the Character wearing this produces Pudge, they produce another Pudge of that same color.",
+      "image": "/set3-spoilers/arctic-ring.webp",
+      "imageFileName": "arctic ring.webp",
+      "imageFileId": "1rDWhHD29bH41QOrTHckH1ulxHyjV2Bks"
     },
     {
       "name": "Traveler's Lantern",
