@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T12:35:42.456Z",
+  "generatedAt": "2026-05-27T16:50:20.282Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -872,6 +872,21 @@
       "image": "/set3-spoilers/birb-who-s-100-feet-tall.webp",
       "imageFileName": "birb who_s 100 feet tall.webp",
       "imageFileId": "1UQkmBw1T8Kwf4IuIKAyc6uXMPcwWIqYg"
+    },
+    {
+      "name": "The Pengorcist",
+      "color": "Blue",
+      "type": "Character - Lil Penguin",
+      "cost": 4,
+      "vibe": 3,
+      "rarity": "Rare",
+      "featuringPudgy": "Lil 8158",
+      "collectorNumber": "110",
+      "illustrator": "The Grimmus",
+      "effect": "This Character can only [ACT] if it's wearing three or more Fits. [ACT] _F_: Choose a Character and turn it face-down as a Rod.",
+      "image": "/set3-spoilers/the-pengorcist.webp",
+      "imageFileName": "the pengorcist.webp",
+      "imageFileId": "1jxhQGFylrDqJVF4Ozre_R6Bq1EyNoanN"
     },
     {
       "name": "Lil Messy",
