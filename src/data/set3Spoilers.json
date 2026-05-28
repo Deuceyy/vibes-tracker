@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T23:42:15.498Z",
+  "generatedAt": "2026-05-28T04:47:22.811Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -977,6 +977,21 @@
       "image": "/set3-spoilers/turn-it-up.webp",
       "imageFileName": "turn it up.webp",
       "imageFileId": "1bGyRUbwew4F7Fp2-akxiw5NE58nolGH5"
+    },
+    {
+      "name": "Now a Rod Evermore!",
+      "color": "Blue",
+      "type": "Action - Saucy",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 6567",
+      "collectorNumber": "124",
+      "illustrator": "Yosuke Ando",
+      "effect": "You can only play this Action if it's face-down as a Rod. Flip this card over to play it. Choose a Character. If it has vibe 2 or less, turn it face-down as a Rod. Otherwise, reduce its vibe by 2 for the rest of this Cycle.",
+      "image": "/set3-spoilers/now-a-rod-evermore.webp",
+      "imageFileName": "now a rod evermore.webp",
+      "imageFileId": "1Fz28aRxoNtF_WIIAlDHeaoJwrGSSJ0O_"
     },
     {
       "name": "Time Warp Toss",
