@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T22:10:52.639Z",
+  "generatedAt": "2026-05-29T23:46:25.914Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -259,6 +259,36 @@
       "imageFileId": "1PWA0kFfK9T81f1PodUGAIeb6UwNBkOEF"
     },
     {
+      "name": "Euphoric Leap",
+      "color": "Red",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Birb, Moonbird 1850, Moonbird 6913, Moonbird 7953",
+      "collectorNumber": "29",
+      "illustrator": "bluugu - Lucius",
+      "effect": "Choose a Character. Boost its vibe by 5 for the rest of this Cycle. If it wins Vibe Check this Cycle, ice it.",
+      "image": "/set3-spoilers/euphoric-leap.webp",
+      "imageFileName": "euphoric leap.webp",
+      "imageFileId": "1E5jGZOXj4MVv08aTLnmMa35aww7KYI03"
+    },
+    {
+      "name": "Utter Mayhem",
+      "color": "Red",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Birb, Moonbird 3800, Moonbird 5892, Moonbird 5600, Moonbird 7807, Moonbird 1424",
+      "collectorNumber": "31",
+      "illustrator": "Aephai",
+      "effect": "Choose a Character with the highest vibe in your huddle. Ice all Characters with vibe greater than it.",
+      "image": "/set3-spoilers/utter-mayhem.webp",
+      "imageFileName": "utter mayhem.webp",
+      "imageFileId": "107K7Gb1cu-NC-ceUD4fCPnuj7ozfbQRl"
+    },
+    {
       "name": "Elegant Birb",
       "color": "Yellow",
       "type": "Character - Birb",
@@ -347,6 +377,21 @@
       "image": "/set3-spoilers/scholar-birb.webp",
       "imageFileName": "scholar birb.webp",
       "imageFileId": "1UsGY5WESYqgcgsLXcdiRJhUG2gUxr7qI"
+    },
+    {
+      "name": "Avis",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 3,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 3324",
+      "collectorNumber": "42",
+      "illustrator": "aokiss",
+      "effect": "This Character can only [ACT] if three or more other Characters entered your huddle this Cycle. [ACT] _F_: Choose a Character and ice it.",
+      "image": "/set3-spoilers/avis.webp",
+      "imageFileName": "avis.webp",
+      "imageFileId": "1WfEJKoIMh-xYHQ0V6bXWjv9DnfLuBG3b"
     },
     {
       "name": "Tony Birb",
@@ -874,6 +919,21 @@
       "imageFileId": "1HSquZc-1zFPxXNd2ytJm5-CmKai3AT8O"
     },
     {
+      "name": "Junkyard Penguin",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 2,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 6603",
+      "collectorNumber": "99",
+      "illustrator": "Jungle",
+      "effect": "[ACT] _F_: Choose a Fit you control and ice it. Draw a card.",
+      "image": "/set3-spoilers/junkyard-penguin.webp",
+      "imageFileName": "junkyard penguin.webp",
+      "imageFileId": "17VIWfNNXNAUt-S2yEs9XtJ3u4f8ONB71"
+    },
+    {
       "name": "Alchemist Penguin",
       "color": "Blue",
       "type": "Character - Penguin",
@@ -932,6 +992,21 @@
       "image": "/set3-spoilers/the-pengorcist.webp",
       "imageFileName": "the pengorcist.webp",
       "imageFileId": "1jxhQGFylrDqJVF4Ozre_R6Bq1EyNoanN"
+    },
+    {
+      "name": "Pizza Penguin",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 4,
+      "vibe": 6,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pudgy 4480",
+      "collectorNumber": "112",
+      "illustrator": "chlorophilly",
+      "effect": "[ACT] _F_: Choose a Fit you control and return it to its owner's hand.",
+      "image": "/set3-spoilers/pizza-penguin.webp",
+      "imageFileName": "pizza penguin.webp",
+      "imageFileId": "1Li2Q_1A_qGrwiWD8nFHl36YeBcnUj0Fq"
     },
     {
       "name": "Lil Messy",
@@ -1309,6 +1384,21 @@
       "imageFileId": "1yjgE2luOiGq5k10Dm0KQT4fWTps7ybrQ"
     },
     {
+      "name": "Hold on Tight",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Birb, Moonbird 2952, Moonbird 3760, Moonbird 2701, Moonbird 917, Moonbird 5222",
+      "collectorNumber": "159",
+      "illustrator": "Aephai",
+      "effect": "Ice all Characters with vibe 2 or less.",
+      "image": "/set3-spoilers/hold-on-tight.webp",
+      "imageFileName": "hold on tight.webp",
+      "imageFileId": "171z3BxK-vjsZr3ChpwTA2qBDXCgXXlhL"
+    },
+    {
       "name": "Set Sail",
       "color": "Purple",
       "type": "Action",
@@ -1502,6 +1592,21 @@
       "image": "/set3-spoilers/enchanted-boots.webp",
       "imageFileName": "enchanted boots.webp",
       "imageFileId": "1gv3kRKIKBFdu-WXYI4OVoO4hg79zX_qS"
+    },
+    {
+      "name": "Compass to Nowhere",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 3,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "180",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"At the start of Action Time, if you control more Characters than your opponent, ice a Character in your huddle\".",
+      "image": "/set3-spoilers/compass-to-nowhere.webp",
+      "imageFileName": "compass to nowhere.webp",
+      "imageFileId": "1hEmSiD4GTjZ4SWBJsBbY8JNcyo_-7Cut"
     },
     {
       "name": "Distracting Handheld",
