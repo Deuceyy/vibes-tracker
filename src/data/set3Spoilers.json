@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T21:19:28.324Z",
+  "generatedAt": "2026-05-30T22:32:29.140Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -182,6 +182,21 @@
       "image": "/set3-spoilers/window-shopping-birb.webp",
       "imageFileName": "window-shopping birb.webp",
       "imageFileId": "1e5JM3b31nRbuS0sMNO4DBIZFaMN0ZA6b"
+    },
+    {
+      "name": "Heads I Win, Tails We Win",
+      "color": "Red",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "21",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "Flip a coin. If heads, you draw two cards. If tails, each player draws a card.",
+      "image": "/set3-spoilers/heads-i-win-tails-we-win.webp",
+      "imageFileName": "heads i win, tails we win.webp",
+      "imageFileId": "1oZfry55ZRTnFFZkEdqqrE0x0nPHsA5RR"
     },
     {
       "name": "Healthy Push!",
@@ -1009,6 +1024,21 @@
       "imageFileId": "1jxhQGFylrDqJVF4Ozre_R6Bq1EyNoanN"
     },
     {
+      "name": "Locked-In Penguin",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 4,
+      "vibe": 6,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 7153",
+      "collectorNumber": "111",
+      "illustrator": "Stoopid Penguin",
+      "effect": "When this Character enters the huddle, you may ice a Fit you control. If you do, put 4 vibe counters on this Character.",
+      "image": "/set3-spoilers/locked-in-penguin.webp",
+      "imageFileName": "locked-in penguin.webp",
+      "imageFileId": "1DTOVmH326RNb-LXcmy625JdiaMz1MNLS"
+    },
+    {
       "name": "Pizza Penguin",
       "color": "Blue",
       "type": "Character - Penguin",
@@ -1682,6 +1712,21 @@
       "image": "/set3-spoilers/hero-s-sword.webp",
       "imageFileName": "hero_s sword.webp",
       "imageFileId": "1Gn_dqfQromeRUIiWtWOg8d9OmTTCYbYD"
+    },
+    {
+      "name": "Trusty Boxing Gloves",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 4,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "183",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character to wear this Fit, then you may reveal a card named Trusty Boxing Gloves from your Rods and put it into play outfitting the chosen Character. The Character wearing this gets +4 vibe.",
+      "image": "/set3-spoilers/trusty-boxing-gloves.webp",
+      "imageFileName": "trusty boxing gloves.webp",
+      "imageFileId": "1ETGZRSzBmDqLGjJFYwHXjlY7ITNg-hKQ"
     },
     {
       "name": "Classy Bow Tie",
