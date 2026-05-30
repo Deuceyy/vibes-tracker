@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T23:46:25.914Z",
+  "generatedAt": "2026-05-30T04:32:04.255Z",
   "colorCount": 6,
   "skippedCards": [],
   "cards": [
@@ -964,6 +964,21 @@
       "imageFileId": "1wdGvKUfnoLRJkFVIgS4_hQMtiKIQkg87"
     },
     {
+      "name": "Gaming Penguin",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 3,
+      "vibe": 4,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 555",
+      "collectorNumber": "106",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Whenever a Character in your huddle is outfitted, put a vibe counter on that Character.",
+      "image": "/set3-spoilers/gaming-penguin.webp",
+      "imageFileName": "gaming penguin.webp",
+      "imageFileId": "1_wGTytHo9L5BngsTPUj2QpGqO3D-R4Nk"
+    },
+    {
       "name": "Birb Who's 100 Feet Tall",
       "color": "Blue",
       "type": "Character - Birb",
@@ -1142,6 +1157,21 @@
       "image": "/set3-spoilers/downhill-disaster.webp",
       "imageFileName": "downhill disaster.webp",
       "imageFileId": "1VVDyWDacruPkM3YqpCyJwVBB8hFFhqpm"
+    },
+    {
+      "name": "Lil Stuck",
+      "color": "Purple",
+      "type": "Character - Lil Penguin",
+      "cost": 1,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Lil 5218",
+      "collectorNumber": "130",
+      "illustrator": "blue boo",
+      "effect": "[ACT] _F_: Choose a Character in your huddle and choose another Character. Ice the first and put a vibe counter on the second.",
+      "image": "/set3-spoilers/lil-stuck.webp",
+      "imageFileName": "lil stuck.webp",
+      "imageFileId": "13pvkz1v5qhBFTlCIYUW1RLOy1v_zHghB"
     },
     {
       "name": "Lil Balanced",
@@ -1547,6 +1577,21 @@
       "image": "/set3-spoilers/traveler-s-lantern.webp",
       "imageFileName": "traveler_s lantern.webp",
       "imageFileId": "1h_Q9hgkeaNYY9fUWyrUatGw7jLRc3zM8"
+    },
+    {
+      "name": "Champion's Belt",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 3,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "176",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"[ACT] _F_: The next time this Character is iced this Cycle, choose a Character and ice it\".",
+      "image": "/set3-spoilers/champion-s-belt.webp",
+      "imageFileName": "champion_s belt.webp",
+      "imageFileId": "1ltX2MFE4WlHTncbiSFQvynNx8kCej5Bx"
     },
     {
       "name": "Cloak of Illusions",
