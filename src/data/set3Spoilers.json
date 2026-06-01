@@ -1,7 +1,10 @@
 {
-  "generatedAt": "2026-06-01T21:49:32.343Z",
+  "generatedAt": "2026-06-01T23:49:41.265Z",
   "colorCount": 6,
-  "skippedCards": [],
+  "skippedCards": [
+    "The Crown of House Vibesalot",
+    "Burn It All"
+  ],
   "cards": [
     {
       "name": "Toasting Birb",
@@ -19,6 +22,21 @@
       "imageFileId": "1sHphZJgFOj6bDv8L7Ikz0MKnkyOqAN7D"
     },
     {
+      "name": "Birb With a Mouse",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 1,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 3761",
+      "collectorNumber": "2",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "",
+      "image": "/set3-spoilers/birb-with-a-mouse.webp",
+      "imageFileName": "birb with a mouse.webp",
+      "imageFileId": "1iMt_L6vhNSccIAEkN30dJ8g6JcgD4P7D"
+    },
+    {
       "name": "Birb",
       "color": "Red",
       "type": "Character - Birb",
@@ -32,6 +50,21 @@
       "image": "/set3-spoilers/birb.webp",
       "imageFileName": "birb.webp",
       "imageFileId": "17r6XL6flLmGMbWB2ujaemgblor3aE20w"
+    },
+    {
+      "name": "Burglirb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 6077",
+      "collectorNumber": "4",
+      "illustrator": "bluugu - Lucius",
+      "effect": "As long as you have two or more Action cards in your ice, this Character can produce _R__R_.",
+      "image": "/set3-spoilers/burglirb.webp",
+      "imageFileName": "burglirb.webp",
+      "imageFileId": "1g7f-XOnsKwITcrEkmSFoJG6hdWSlrcjq"
     },
     {
       "name": "Psychic Birb",
@@ -49,6 +82,21 @@
       "imageFileId": "1LBIeuvPdhehnQd7Eq3i_OiM5WuvVoO9G"
     },
     {
+      "name": "Stealth Birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 9755",
+      "collectorNumber": "6",
+      "illustrator": "Stoopid Penguin",
+      "effect": "This Character doesn't participate in Vibe Check unless it has 17 or more vibe counters on it. Whenever you draw any number of cards, put that many vibe counters on this Character.",
+      "image": "/set3-spoilers/stealth-birb.webp",
+      "imageFileName": "stealth birb.webp",
+      "imageFileId": "11qVkw5aSsl06s1QL_2Mi52KX4c0Y9Dpi"
+    },
+    {
       "name": "Unidentified Flying Birb",
       "color": "Red",
       "type": "Character - Birb",
@@ -62,6 +110,36 @@
       "image": "/set3-spoilers/unidentified-flying-birb.webp",
       "imageFileName": "unidentified flying birb.webp",
       "imageFileId": "1bIfztnqw9Mu-Uubsv7D0sFAxgmaPXPvy"
+    },
+    {
+      "name": "Chaos Birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 3,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 6181",
+      "collectorNumber": "8",
+      "illustrator": "Stoopid Penguin",
+      "effect": "[ACT] _F_: Each player draws a card, then ices a card from their hand.",
+      "image": "/set3-spoilers/chaos-birb.webp",
+      "imageFileName": "chaos birb.webp",
+      "imageFileId": "1PC9Ps3FU0lLKtoM6S-LNsu33lZqcILwk"
+    },
+    {
+      "name": "Relaxing Birb",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 3,
+      "vibe": 3,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Moonbird 4240",
+      "collectorNumber": "10",
+      "illustrator": "aokiss",
+      "effect": "When you ice the first card from your hand each Cycle, if this Character is flopped, draw a card. Whenever another Relaxing Birb enters a huddle, ice this Character.",
+      "image": "/set3-spoilers/relaxing-birb.webp",
+      "imageFileName": "relaxing birb.webp",
+      "imageFileId": "1q8PJFUEHQDdsrySzV1PVBYIo8Wz5_nZp"
     },
     {
       "name": "Bachelor Birb",
@@ -167,6 +245,21 @@
       "image": "/set3-spoilers/the-birb-of-music.webp",
       "imageFileName": "the birb of music.webp",
       "imageFileId": "16smAc7fu6S0lOOdbj4RIkqCIPZS97vCy"
+    },
+    {
+      "name": "Leader of the Charge",
+      "color": "Red",
+      "type": "Character - Birb",
+      "cost": 8,
+      "vibe": 3,
+      "rarity": "Mythic",
+      "featuringPudgy": "Moonbird 6949",
+      "collectorNumber": "19",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "[ACT] _F_: You can play Red Actions from your ice this Cycle. If Red Action cards would be put in your ice this Cycle, put them on the bottom of your deck instead. Ice this Character.",
+      "image": "/set3-spoilers/leader-of-the-charge.webp",
+      "imageFileName": "leader of the charge.webp",
+      "imageFileId": "1_oK-S9N2NjFs6ke7KsLIroMgG427VuQP"
     },
     {
       "name": "Window-Shopping Birb",
@@ -304,6 +397,21 @@
       "imageFileId": "107K7Gb1cu-NC-ceUD4fCPnuj7ozfbQRl"
     },
     {
+      "name": "Y?",
+      "color": "Red",
+      "type": "???",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "32",
+      "illustrator": "Jungle",
+      "effect": "When this card is iced from your hand, you get a Fishsicle.",
+      "image": "/set3-spoilers/y.webp",
+      "imageFileName": "y.webp",
+      "imageFileId": "1WVfANreyIQnA-ApQSee0xKZKNUHkOBKW"
+    },
+    {
       "name": "Elegant Birb",
       "color": "Yellow",
       "type": "Character - Birb",
@@ -317,6 +425,21 @@
       "image": "/set3-spoilers/elegant-birb.webp",
       "imageFileName": "elegant birb.webp",
       "imageFileId": "1xNe6qod_J4gBGBdSQ8FjZgMSOj-tBqqO"
+    },
+    {
+      "name": "Influencer Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 1,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 12",
+      "collectorNumber": "34",
+      "illustrator": "aokiss",
+      "effect": "",
+      "image": "/set3-spoilers/influencer-birb.webp",
+      "imageFileName": "influencer birb.webp",
+      "imageFileId": "1UIo0AxdkGxBkaa3AnUIjNhe2GyVfIVGu"
     },
     {
       "name": "Farmer Birb",
@@ -362,6 +485,36 @@
       "image": "/set3-spoilers/visionary-birb.webp",
       "imageFileName": "visionary birb.webp",
       "imageFileId": "1b4ksvKpd4mlixyhkRF99ROy_6gzfUy7U"
+    },
+    {
+      "name": "Noctua",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 3,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 7734",
+      "collectorNumber": "38",
+      "illustrator": "aokiss",
+      "effect": "This Character can only [ACT] if another Character entered your huddle this Cycle. [ACT] _F_: Put a vibe counter on this Character.",
+      "image": "/set3-spoilers/noctua.webp",
+      "imageFileName": "noctua.webp",
+      "imageFileId": "1pmQaN1dhgVsPVRQGq-UInDyAq1jo1JGr"
+    },
+    {
+      "name": "Wall Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 3,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 7874",
+      "collectorNumber": "39",
+      "illustrator": "Stoopid Penguin",
+      "effect": "When this Character enters the huddle, if your huddle has more Characters than your opponent's huddle, put 2 vibe counters on this Character.",
+      "image": "/set3-spoilers/wall-birb.webp",
+      "imageFileName": "wall birb.webp",
+      "imageFileId": "1Znm76cUugpTMj8wbrqSbMqPFbhXHRbkW"
     },
     {
       "name": "Tailor Birb",
@@ -452,6 +605,21 @@
       "image": "/set3-spoilers/pluma.webp",
       "imageFileName": "pluma.webp",
       "imageFileId": "1uqa-VlCwcNqX_NvOhBsy81-MqVuIC_hj"
+    },
+    {
+      "name": "Giga Birb",
+      "color": "Yellow",
+      "type": "Character - Birb",
+      "cost": 4,
+      "vibe": 4,
+      "rarity": "Rare",
+      "featuringPudgy": "Moonbird 7476",
+      "collectorNumber": "46",
+      "illustrator": "Stoopid Penguin",
+      "effect": "When this Character enters the huddle, put a vibe counter on it for each other Character in your huddle.",
+      "image": "/set3-spoilers/giga-birb.webp",
+      "imageFileName": "giga birb.webp",
+      "imageFileId": "1gWzZ4nUMutBqbFBhvx_4hSjuGF2XXKwg"
     },
     {
       "name": "Uncertain Birb",
@@ -679,6 +847,21 @@
       "imageFileId": "1WZaDEjWlaYkT3DMyo6Xo-s75mtmylZlu"
     },
     {
+      "name": "Birbs Night Out",
+      "color": "Yellow",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Birb, Moonbird 6221, Moonbird 2584, Moonbird 294, Moonbird 5188, Moonbird 9844",
+      "collectorNumber": "64",
+      "illustrator": "Aephai",
+      "effect": "Choose two Characters that share a color and ice them.",
+      "image": "/set3-spoilers/birbs-night-out.webp",
+      "imageFileName": "birbs night out.webp",
+      "imageFileId": "1eCUedfXZLAzuU56ktTbyiZZLnfI0nhjh"
+    },
+    {
       "name": "Lil Sweet Stack",
       "color": "Green",
       "type": "Character - Lil Penguin",
@@ -707,6 +890,51 @@
       "image": "/set3-spoilers/reflective-penguin.webp",
       "imageFileName": "reflective penguin.webp",
       "imageFileId": "1dhAOgtjJrAXDLTBqTtrWd0ESeMylguiB"
+    },
+    {
+      "name": "Penguin of the Fallen Cone",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 3,
+      "vibe": 2,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 3123",
+      "collectorNumber": "68",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Whenever this Character produces Pudge, choose a Green Character and put a vibe counter on it.",
+      "image": "/set3-spoilers/penguin-of-the-fallen-cone.webp",
+      "imageFileName": "penguin of the fallen cone.webp",
+      "imageFileId": "1WWzzwiBoDI320v7xHsNwcHQ1_dcZqF8s"
+    },
+    {
+      "name": "Cubist Penguin",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 3,
+      "vibe": 2,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 4779",
+      "collectorNumber": "69",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "[ACT] _F_, remove 3 vibe counters from this Character: Choose an unflopped Character and ice it.",
+      "image": "/set3-spoilers/cubist-penguin.webp",
+      "imageFileName": "cubist penguin.webp",
+      "imageFileId": "1TtVRS46yI3y32HWAUPsEJWHW7dTNwuVy"
+    },
+    {
+      "name": "Impressionist Penguin",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 3,
+      "vibe": 2,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pudgy 4457",
+      "collectorNumber": "70",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "[ACT] _F_, remove 2 vibe counters from this Character: Draw a card.",
+      "image": "/set3-spoilers/impressionist-penguin.webp",
+      "imageFileName": "impressionist penguin.webp",
+      "imageFileId": "1HzfjIotG3RGYDdtWqY32n4_xlC4543xn"
     },
     {
       "name": "Realist Penguin",
@@ -784,6 +1012,21 @@
       "imageFileId": "1VmcNkzF0V0Fv1Y3P8XmyrjmWykjlpqVi"
     },
     {
+      "name": "Honorable Penguin",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 4,
+      "vibe": 4,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pudgy 1796",
+      "collectorNumber": "77",
+      "illustrator": "bluugu - Lucius",
+      "effect": "Whenever another Character enters your huddle, you may pay _T__T__T_. If you do, put 4 vibe counters on it.",
+      "image": "/set3-spoilers/honorable-penguin.webp",
+      "imageFileName": "honorable penguin.webp",
+      "imageFileId": "1Eo2Hehy9IDU-ufWwLDv_0yLGBUPsw7Rh"
+    },
+    {
       "name": "Lumberjack Penguin",
       "color": "Green",
       "type": "Character - Penguin",
@@ -829,6 +1072,21 @@
       "imageFileId": "1LVDFNLoDWercFOdWZTKlLnvJVypQcx5J"
     },
     {
+      "name": "Penguin Who Is What He Eats",
+      "color": "Green",
+      "type": "Character - Penguin",
+      "cost": 8,
+      "vibe": 4,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 2882",
+      "collectorNumber": "82",
+      "illustrator": "bluugu - Lucius",
+      "effect": "[ACT] _F_: Boost the vibe of each Character in your huddle by this Character's vibe for the rest of this Cycle.",
+      "image": "/set3-spoilers/penguin-who-is-what-he-eats.webp",
+      "imageFileName": "penguin who is what he eats.webp",
+      "imageFileId": "1pblL1OxTtPKJ3IPchaf0Olb0i9tsIKUp"
+    },
+    {
       "name": "Jaskel, Imaginator",
       "color": "Green",
       "type": "Character - Penguin",
@@ -857,6 +1115,36 @@
       "image": "/set3-spoilers/umbra-on-dream-s-edge.webp",
       "imageFileName": "umbra on dream_s edge.webp",
       "imageFileId": "1QssW4B-no0SflIJpdiWDOaAe_OC7p5if"
+    },
+    {
+      "name": "Pump",
+      "color": "Green",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu,",
+      "collectorNumber": "87",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character with the lowest vibe in your huddle. Boost its vibe by 6 for the rest of this Cycle.",
+      "image": "/set3-spoilers/pump.webp",
+      "imageFileName": "pump.webp",
+      "imageFileId": "1R6-X4Ba7K31PQ6_coUOnR-Px01Gz8qBq"
+    },
+    {
+      "name": "Brofessional Agreement",
+      "color": "Green",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pengu, Pudgy 7700",
+      "collectorNumber": "88",
+      "illustrator": "Jungle",
+      "effect": "You get the Baron.",
+      "image": "/set3-spoilers/brofessional-agreement.webp",
+      "imageFileName": "brofessional agreement.webp",
+      "imageFileId": "12Ly9D_UMh5QvNo3BT3YumgTrG4ujjynV"
     },
     {
       "name": "Control the Board",
@@ -889,6 +1177,21 @@
       "imageFileId": "11qnIW3hC5_GoS9qfn_AyrFuRIz2QyUsO"
     },
     {
+      "name": "Twist-A-What!",
+      "color": "Green",
+      "type": "Action - Saucy",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Lil 11651",
+      "collectorNumber": "91",
+      "illustrator": "Yosuke Ando",
+      "effect": "You can only play this Action if it's face-down as a Rod. Flip this card over to play it. Choose a Character and flop it.",
+      "image": "/set3-spoilers/twist-a-what.webp",
+      "imageFileName": "twist-a-what.webp",
+      "imageFileId": "1JrTv0ZdckzyPb72s0qjfgrMnRXPu97WA"
+    },
+    {
       "name": "But You Didn't Even Win",
       "color": "Green",
       "type": "Action",
@@ -902,6 +1205,21 @@
       "image": "/set3-spoilers/but-you-didn-t-even-win.webp",
       "imageFileName": "but you didn_t even win.webp",
       "imageFileId": "1Wj1hKU5vdcgckrtZB3jISXEXwvH6002e"
+    },
+    {
+      "name": "Rampant Vibeflation",
+      "color": "Green",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu, Pudgy 5041, Pudgy 5328. Lil 20104",
+      "collectorNumber": "94",
+      "illustrator": "Aephai",
+      "effect": "Choose a Character in your huddle. Put vibe counters on it equal to its vibe.",
+      "image": "/set3-spoilers/rampant-vibeflation.webp",
+      "imageFileName": "rampant vibeflation.webp",
+      "imageFileId": "1d6iyiAVeadj41ajjYaqwPpDtEC8Sosou"
     },
     {
       "name": "Squad Strike",
@@ -919,6 +1237,21 @@
       "imageFileId": "1ZVSMT-uBi01xf5ypSnWz05_zrQRDz9a5"
     },
     {
+      "name": "Final Verdict",
+      "color": "Green",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu, Pudgy 6006, Pudgy 6546, Pudgy 6720, Pudgy 2303",
+      "collectorNumber": "96",
+      "illustrator": "Aephai",
+      "effect": "This Action costs one less _P_ to play for each Green Character in your huddle with any number of vibe counters on it. Draw two cards.",
+      "image": "/set3-spoilers/final-verdict.webp",
+      "imageFileName": "final verdict.webp",
+      "imageFileId": "1Hi2gLkUYnn9Tz74oYji-CQSg73N90dTw"
+    },
+    {
       "name": "Lil Gamer",
       "color": "Blue",
       "type": "Character - Lil Penguin",
@@ -932,6 +1265,21 @@
       "image": "/set3-spoilers/lil-gamer.webp",
       "imageFileName": "lil gamer.webp",
       "imageFileId": "1HSquZc-1zFPxXNd2ytJm5-CmKai3AT8O"
+    },
+    {
+      "name": "Hoodie Penguin",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 2,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 5510",
+      "collectorNumber": "98",
+      "illustrator": "blue boo",
+      "effect": "Whenever this Character wins Vibe Check, look at the top card of your deck. If it's a Fit card, you may reveal it and draw it. Otherwise, put it on the bottom of your deck.",
+      "image": "/set3-spoilers/hoodie-penguin.webp",
+      "imageFileName": "hoodie penguin.webp",
+      "imageFileId": "1Lac84tRC4c305VB8Io8zeACeitPANuUY"
     },
     {
       "name": "Junkyard Penguin",
@@ -949,6 +1297,21 @@
       "imageFileId": "17VIWfNNXNAUt-S2yEs9XtJ3u4f8ONB71"
     },
     {
+      "name": "Penguin in Blue",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 5,
+      "vibe": 2,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 570",
+      "collectorNumber": "101",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "Whenever a Fit you control is iced from play, put it on top of your deck.",
+      "image": "/set3-spoilers/penguin-in-blue.webp",
+      "imageFileName": "penguin in blue.webp",
+      "imageFileId": "1kxpnrvN3mleK_lZ48C5jauDMQOiRERb-"
+    },
+    {
       "name": "Alchemist Penguin",
       "color": "Blue",
       "type": "Character - Penguin",
@@ -962,6 +1325,21 @@
       "image": "/set3-spoilers/alchemist-penguin.webp",
       "imageFileName": "alchemist penguin.webp",
       "imageFileId": "1ybeXZjMhAhGgXkSb-h5DoHtqel_qEgVM"
+    },
+    {
+      "name": "Archaeologist Penguin",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 3,
+      "vibe": 2,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 2898",
+      "collectorNumber": "103",
+      "illustrator": "chlorophilly",
+      "effect": "[ACT] _F_: Reveal a face-down Rod you control. If it's a Fit card, put it into your hand.",
+      "image": "/set3-spoilers/archaeologist-penguin.webp",
+      "imageFileName": "archaeologist penguin.webp",
+      "imageFileId": "116MsyANG7Kf5WHUGbDyPowWUnKhUnWh-"
     },
     {
       "name": "Pengu",
@@ -1007,6 +1385,36 @@
       "image": "/set3-spoilers/birb-who-s-100-feet-tall.webp",
       "imageFileName": "birb who_s 100 feet tall.webp",
       "imageFileId": "1UQkmBw1T8Kwf4IuIKAyc6uXMPcwWIqYg"
+    },
+    {
+      "name": "Merchant Penguin",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 4,
+      "vibe": 2,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pudgy 4385",
+      "collectorNumber": "108",
+      "illustrator": "aokiss",
+      "effect": "[ACT] _F_: Choose a Fit and choose a Character not wearing it. Outfit that Character.",
+      "image": "/set3-spoilers/merchant-penguin.webp",
+      "imageFileName": "merchant penguin.webp",
+      "imageFileId": "1e8HwExRXDxJtzLgxzIHQ0GCA9zhZbmtH"
+    },
+    {
+      "name": "The Great Pengsby",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 4,
+      "vibe": 2,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pudgy 1368",
+      "collectorNumber": "109",
+      "illustrator": "chlorophilly",
+      "effect": "Whenever this Character is outfitted, if it isn't wearing any other Fits, choose a Character and flop it.",
+      "image": "/set3-spoilers/the-great-pengsby.webp",
+      "imageFileName": "the great pengsby.webp",
+      "imageFileId": "146HYR7kRrmDPGaNdtUo1R0mLhcXNQwus"
     },
     {
       "name": "The Pengorcist",
@@ -1069,6 +1477,21 @@
       "imageFileId": "1MQY9-c8WKFwig3E60nj5EsQHkTK_ipzF"
     },
     {
+      "name": "Penguin Who Explores the Jungle",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 6,
+      "vibe": 2,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 1804",
+      "collectorNumber": "114",
+      "illustrator": "bluugu - Lucius",
+      "effect": "Whenever a Character in your opponent's huddle is iced, if it's wearing a Fit you own, return that Fit to your hand.",
+      "image": "/set3-spoilers/penguin-who-explores-the-jungle.webp",
+      "imageFileName": "penguin who explores the jungle.webp",
+      "imageFileId": "1Ha96C4mD67g6jvuSzelHyBI3kJJ2Nb3G"
+    },
+    {
       "name": "Lavish Penguin",
       "color": "Blue",
       "type": "Character - Penguin",
@@ -1082,6 +1505,36 @@
       "image": "/set3-spoilers/lavish-penguin.webp",
       "imageFileName": "lavish penguin.webp",
       "imageFileId": "1QfuK7DuYzQieakCDQxYzasCc0VS8Kvvh"
+    },
+    {
+      "name": "Showtime Penguin",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 6,
+      "vibe": 6,
+      "rarity": "Common",
+      "featuringPudgy": "Pudgy 1827",
+      "collectorNumber": "116",
+      "illustrator": "Jungle",
+      "effect": "When this Character enters the huddle, choose a Fit card in your ice and return it to your hand.",
+      "image": "/set3-spoilers/showtime-penguin.webp",
+      "imageFileName": "showtime penguin.webp",
+      "imageFileId": "1-L_CSHdFPL3Lv0X1QNBynsvZrXQ_2Nwg"
+    },
+    {
+      "name": "Detective Penguin",
+      "color": "Blue",
+      "type": "Character - Penguin",
+      "cost": 7,
+      "vibe": 2,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 4932",
+      "collectorNumber": "117",
+      "illustrator": "Jungle",
+      "effect": "Whenever this Character is outfitted, draw a card.",
+      "image": "/set3-spoilers/detective-penguin.webp",
+      "imageFileName": "detective penguin.webp",
+      "imageFileId": "1SZvXNl0fwALSmyhwBH5jdcl70lk9fxQd"
     },
     {
       "name": "This Is Not a Pudgy",
@@ -1144,6 +1597,21 @@
       "imageFileId": "1bGyRUbwew4F7Fp2-akxiw5NE58nolGH5"
     },
     {
+      "name": "Bullish Sentiment",
+      "color": "Blue",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pengu, Lil 18620",
+      "collectorNumber": "123",
+      "illustrator": "chlorophilly",
+      "effect": "Choose a Character. Reveal a face-down Rod you control. If it's a Fit card with Fish cost 5 or less, put it into play outfitting the chosen Character.",
+      "image": "/set3-spoilers/bullish-sentiment.webp",
+      "imageFileName": "bullish sentiment.webp",
+      "imageFileId": "1mYlaVPpboVMU6Kg3QqYTIrmUWlU2ApB2"
+    },
+    {
       "name": "Now a Rod Evermore!",
       "color": "Blue",
       "type": "Action - Saucy",
@@ -1187,6 +1655,21 @@
       "image": "/set3-spoilers/downhill-disaster.webp",
       "imageFileName": "downhill disaster.webp",
       "imageFileId": "1VVDyWDacruPkM3YqpCyJwVBB8hFFhqpm"
+    },
+    {
+      "name": "Fisherman Birb",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 1,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 94",
+      "collectorNumber": "129",
+      "illustrator": "Stoopid Penguin",
+      "effect": "Whenever any number of Characters in your huddle are iced, put a vibe counter on this Character.",
+      "image": "/set3-spoilers/fisherman-birb.webp",
+      "imageFileName": "fisherman birb.webp",
+      "imageFileId": "1btLw37S_aY2CD_R24QSy04elp1aEzM30"
     },
     {
       "name": "Lil Stuck",
@@ -1247,6 +1730,21 @@
       "image": "/set3-spoilers/penguin-who-loves-goodbyes.webp",
       "imageFileName": "penguin who loves goodbyes.webp",
       "imageFileId": "1DfFKjETKkSZ2wQNaJlZ7AMJWrLhPYNe5"
+    },
+    {
+      "name": "Birb With a Flag",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 2,
+      "vibe": 4,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 356",
+      "collectorNumber": "134",
+      "illustrator": "bluugu - Lucius",
+      "effect": "",
+      "image": "/set3-spoilers/birb-with-a-flag.webp",
+      "imageFileName": "birb with a flag.webp",
+      "imageFileId": "1MbvY40smCVZUa0Lks8nySqPNOGdZUwcc"
     },
     {
       "name": "Vesper Who Is the Night",
@@ -1324,6 +1822,21 @@
       "imageFileId": "1AvinrMs7qs5eXaHqH_EKrzcosj_aAOy4"
     },
     {
+      "name": "Birb Who Finds the Way",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 4,
+      "vibe": 3,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Moonbird 9574",
+      "collectorNumber": "142",
+      "illustrator": "chlorophilly",
+      "effect": "At the start of Action Time, you may choose another Character in your huddle. If you do, boost this Character's vibe by that Character's vibe for the rest of this Cycle, then ice that Character.",
+      "image": "/set3-spoilers/birb-who-finds-the-way.webp",
+      "imageFileName": "birb who finds the way.webp",
+      "imageFileId": "1g4XD3s2N9Qaq6skFmb-Aa29_Kh9N3lNs"
+    },
+    {
       "name": "Iron Penguin",
       "color": "Purple",
       "type": "Character - Penguin",
@@ -1337,6 +1850,21 @@
       "image": "/set3-spoilers/iron-penguin.webp",
       "imageFileName": "iron penguin.webp",
       "imageFileId": "1hRJyuyup6wqJVtDiAh-3BSQxLmpnaKjv"
+    },
+    {
+      "name": "Patient Birb",
+      "color": "Purple",
+      "type": "Character - Birb",
+      "cost": 5,
+      "vibe": 6,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 3446",
+      "collectorNumber": "145",
+      "illustrator": "blue boo",
+      "effect": "[ACT] _F_: Choose a Character in your huddle and ice it. You get two Fishsicles.",
+      "image": "/set3-spoilers/patient-birb.webp",
+      "imageFileName": "patient birb.webp",
+      "imageFileId": "1YWYuSOpYVdSmmrae-sJPEJIa02hW3CGJ"
     },
     {
       "name": "Luckmaking Birb",
@@ -1384,6 +1912,21 @@
       "imageFileId": "1zKxOGLYvJLFSfbgv2tPocFN4ht1MtjaO"
     },
     {
+      "name": "Head on Out",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "150",
+      "illustrator": "blue boo",
+      "effect": "As an additional cost to play this Action, ice any number of Characters in your huddle. If you iced two or more Characters this way, draw two cards.",
+      "image": "/set3-spoilers/head-on-out.webp",
+      "imageFileName": "head on out.webp",
+      "imageFileId": "1-kjfOJC7PALAGR3d22ifzDpdjJNY9-5Q"
+    },
+    {
       "name": "Afternoon Breeze",
       "color": "Purple",
       "type": "Action",
@@ -1397,6 +1940,66 @@
       "image": "/set3-spoilers/afternoon-breeze.webp",
       "imageFileName": "afternoon breeze.webp",
       "imageFileId": "1mIxAXYZkv0i1vDYod0Xyz2efW0ipjz7D"
+    },
+    {
+      "name": "Double the Luck",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb, Moonbird 442",
+      "collectorNumber": "152",
+      "illustrator": "chlorophilly",
+      "effect": "Whenever any number of Characters are iced this Cycle, their controller gets that many Fishsicles.",
+      "image": "/set3-spoilers/double-the-luck.webp",
+      "imageFileName": "double the luck.webp",
+      "imageFileId": "1vHJ6nqgo83oKo5FMCK3pBxcAOjoYt8fD"
+    },
+    {
+      "name": "Double Trouble",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "153",
+      "illustrator": "aokiss",
+      "effect": "Pick a Character card in your ice with Fish cost 2 or less. At the start of the next Cycle, return it from ice to its owner's huddle.",
+      "image": "/set3-spoilers/double-trouble.webp",
+      "imageFileName": "double trouble.webp",
+      "imageFileId": "14VU46PQ99lm3MzqccYzGil51pKLRa8Fm"
+    },
+    {
+      "name": "Give 'Em!",
+      "color": "Purple",
+      "type": "Action - Saucy",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Pudgy 1886",
+      "collectorNumber": "154",
+      "illustrator": "Yosuke Ando",
+      "effect": "You can only play this Action if it's face-down as a Rod. Flip this card over to play it. Choose a Character with vibe 2 or less. The next time it would be iced this Cycle, it isn't.",
+      "image": "/set3-spoilers/give-em.webp",
+      "imageFileName": "give _em.webp",
+      "imageFileId": "1hKZU9JgRJNIr8EML0CgwDwXXNKClf6tC"
+    },
+    {
+      "name": "Next Floor Please",
+      "color": "Purple",
+      "type": "Action",
+      "cost": null,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb, Moonbird 6819, Moonbird 6378",
+      "collectorNumber": "155",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "The next time a Character would be put into ice from play this Cycle, return it from ice to its owner’s huddle. If multiple are put into ice at the same time, you pick.",
+      "image": "/set3-spoilers/next-floor-please.webp",
+      "imageFileName": "next floor please.webp",
+      "imageFileId": "1IKfNAaohZsEVFqZjYoR1vbhA_bYyhKCa"
     },
     {
       "name": "The Prophecy Unfolds",
@@ -1489,6 +2092,21 @@
       "imageFileId": "17taLA3dyxnFXSxqZ1ds9JcGTid35AJwf"
     },
     {
+      "name": "Inferno Wizbirb",
+      "color": "Colorless",
+      "type": "Character - Wizard Birb",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 1750",
+      "collectorNumber": "162",
+      "illustrator": "chlorophilly",
+      "effect": "_R_ or _Y_.",
+      "image": "/set3-spoilers/inferno-wizbirb.webp",
+      "imageFileName": "inferno wizbirb.webp",
+      "imageFileId": "1syIWYBuegbzPbvynAsLBmVJtt7UMvQlf"
+    },
+    {
       "name": "Frostbitten Wizbirb",
       "color": "Colorless",
       "type": "Character - Wizard Birb",
@@ -1502,6 +2120,21 @@
       "image": "/set3-spoilers/frostbitten-wizbirb.webp",
       "imageFileName": "frostbitten wizbirb.webp",
       "imageFileId": "1i-cYkiqjrNYM4OxistVXJIAxGGnIj7fW"
+    },
+    {
+      "name": "Stormreaper Wizbirb",
+      "color": "Colorless",
+      "type": "Character - Wizard Birb",
+      "cost": 2,
+      "vibe": 1,
+      "rarity": "Common",
+      "featuringPudgy": "Moonbird 9463",
+      "collectorNumber": "164",
+      "illustrator": "chlorophilly",
+      "effect": "_P_ or _B_.",
+      "image": "/set3-spoilers/stormreaper-wizbirb.webp",
+      "imageFileName": "stormreaper wizbirb.webp",
+      "imageFileId": "194d_ElkhCLoQo7NicymP6pyYmEaLOj2x"
     },
     {
       "name": "Nightveil Wizbirb",
@@ -1534,6 +2167,36 @@
       "imageFileId": "1Ane7uSJOtv2wr0MU8ccYbwws2dOre7bp"
     },
     {
+      "name": "Chewy Pendant",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 1,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "167",
+      "illustrator": "blue boo",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this can produce _T_.",
+      "image": "/set3-spoilers/chewy-pendant.webp",
+      "imageFileName": "chewy pendant.webp",
+      "imageFileId": "1nM3jSIKGORzfYnGED_3EZaElkt4PwhWJ"
+    },
+    {
+      "name": "Handmade Slingshot",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 1,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "168",
+      "illustrator": "The Grimmus",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"[ACT] _F_: Choose a Character. Move all vibe counters from this Character onto the chosen Character\".",
+      "image": "/set3-spoilers/handmade-slingshot.webp",
+      "imageFileName": "handmade slingshot.webp",
+      "imageFileId": "1ZeRuURuuspd1ivbDMpAC_YhL4ZE930nU"
+    },
+    {
       "name": "Mug Life",
       "color": "Colorless",
       "type": "Fit",
@@ -1547,6 +2210,21 @@
       "image": "/set3-spoilers/mug-life.webp",
       "imageFileName": "mug life.webp",
       "imageFileId": "1AMv-ADG0mq5NWW4ccItRVBOUhJOYLx_o"
+    },
+    {
+      "name": "Mystic Paintbrush",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 1,
+      "vibe": null,
+      "rarity": "Common",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "170",
+      "illustrator": "bluugu - Lucius",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this can produce _P_.",
+      "image": "/set3-spoilers/mystic-paintbrush.webp",
+      "imageFileName": "mystic paintbrush.webp",
+      "imageFileId": "1niPCN6xvUajw8VGNy3VLz2EZMwNwXUv7"
     },
     {
       "name": "Cozy Mittens",
@@ -1592,6 +2270,21 @@
       "image": "/set3-spoilers/glimmering-coins.webp",
       "imageFileName": "glimmering coins.webp",
       "imageFileId": "1rj68fWRe_lOU09TbQZN5mAmimGp_Mprc"
+    },
+    {
+      "name": "Puffy Snowsuit",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 2,
+      "vibe": null,
+      "rarity": "Uncommon",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "174",
+      "illustrator": "blue boo",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"[ACT] _F_: Choose a flopped Character and outfit it with this Character's Fits\".",
+      "image": "/set3-spoilers/puffy-snowsuit.webp",
+      "imageFileName": "puffy snowsuit.webp",
+      "imageFileId": "1aBqmRZilFP91hIV1a_2HJGIfu-_yHpvL"
     },
     {
       "name": "Traveler's Lantern",
@@ -1729,6 +2422,21 @@
       "imageFileId": "1ETGZRSzBmDqLGjJFYwHXjlY7ITNg-hKQ"
     },
     {
+      "name": "Book of Wonders",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 4,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "184",
+      "illustrator": "chlorophilly",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"[ACT] _F_: Double the number of vibe counters on this Character\".",
+      "image": "/set3-spoilers/book-of-wonders.webp",
+      "imageFileName": "book of wonders.webp",
+      "imageFileId": "1-sPHWZ_N1RrN0dZ9ZFlMpL7nEKdFhja-"
+    },
+    {
       "name": "Classy Bow Tie",
       "color": "Colorless",
       "type": "Fit",
@@ -1742,6 +2450,36 @@
       "image": "/set3-spoilers/classy-bow-tie.webp",
       "imageFileName": "classy bow tie.webp",
       "imageFileId": "167Lp75b7OdbGiJ2y-CRWT2EsbAl_cEoJ"
+    },
+    {
+      "name": "Whimsical Backpack",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 6,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "187",
+      "illustrator": "aokiss",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"Whenever you play an Action, flop all Characters in your huddle with vibe 10 or greater\".",
+      "image": "/set3-spoilers/whimsical-backpack.webp",
+      "imageFileName": "whimsical backpack.webp",
+      "imageFileId": "1TJzW-vCn7cl05LWrtEA6VxNDXZiK08Jh"
+    },
+    {
+      "name": "The Comeback Staff",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 6,
+      "vibe": null,
+      "rarity": "Rare",
+      "featuringPudgy": "Birb",
+      "collectorNumber": "188",
+      "illustrator": "Jungle",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gains the ability \"[ACT] _F_: Choose another Character in your huddle. The next time that Character would be iced this Cycle, turn it face-down as a Rod instead\".",
+      "image": "/set3-spoilers/the-comeback-staff.webp",
+      "imageFileName": "the comeback staff.webp",
+      "imageFileId": "1L_heN7jzgXcxQgxZQ5dhJuCeP7DWGRQv"
     },
     {
       "name": "Big Ben",
