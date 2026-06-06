@@ -34,6 +34,7 @@ export default function DeckBuilder() {
   const [rarityFilter, setRarityFilter] = useState('All');
   const [setFilter, setSetFilter] = useState('All');
   const [costFilter, setCostFilter] = useState('All');
+  const [vibeFilter, setVibeFilter] = useState([]); // multi-select; '?' = null
   const [subtypeFilter, setSubtypeFilter] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
   const [saving, setSaving] = useState(false);
@@ -93,6 +94,17 @@ export default function DeckBuilder() {
           if (amount !== Number(costFilter)) return false;
         }
       }
+      if (vibeFilter.length > 0) {
+        // Vibe only applies to Characters; non-characters never match.
+        if (getCanonicalCardType(card) !== 'Character') return false;
+        const v = card.vibe;
+        const matches = vibeFilter.some((choice) => {
+          if (choice === '?') return v == null;
+          if (choice === '7+') return typeof v === 'number' && v >= 7;
+          return v === Number(choice);
+        });
+        if (!matches) return false;
+      }
       if (subtypeFilter.length > 0) {
         if (getCanonicalCardType(card) !== 'Character') return false;
         const cardSubs = getCharacterSubtypes(card);
@@ -100,11 +112,17 @@ export default function DeckBuilder() {
       }
       return true;
     });
-  }, [search, colorFilter, typeFilter, rarityFilter, setFilter, costFilter, subtypeFilter]);
+  }, [search, colorFilter, typeFilter, rarityFilter, setFilter, costFilter, vibeFilter, subtypeFilter]);
 
   const toggleSubtype = (subtype) => {
     setSubtypeFilter(prev =>
       prev.includes(subtype) ? prev.filter(s => s !== subtype) : [...prev, subtype]
+    );
+  };
+
+  const toggleVibe = (choice) => {
+    setVibeFilter(prev =>
+      prev.includes(choice) ? prev.filter(v => v !== choice) : [...prev, choice]
     );
   };
 
@@ -238,7 +256,28 @@ export default function DeckBuilder() {
                 ))}
               </div>
             )}
-            {(search || colorFilter !== 'All' || typeFilter !== 'All' || rarityFilter !== 'All' || setFilter !== 'All' || costFilter !== 'All' || subtypeFilter.length > 0) && (
+            {(typeFilter === 'All' || typeFilter === 'Character') && (
+              <div
+                className="set3-filter-chips"
+                style={{ display: 'flex', gap: '0.25rem', flexWrap: 'wrap' }}
+                title="Filter by character vibe — multi-select"
+              >
+                <span style={{ alignSelf: 'center', fontSize: '0.75rem', opacity: 0.7, marginRight: 4 }}>
+                  Vibe:
+                </span>
+                {['0','1','2','3','4','5','6','7+','?'].map(choice => (
+                  <button
+                    key={choice}
+                    type="button"
+                    className={`set3-filter-chip ${vibeFilter.includes(choice) ? 'active' : ''}`}
+                    onClick={() => toggleVibe(choice)}
+                  >
+                    {choice}
+                  </button>
+                ))}
+              </div>
+            )}
+            {(search || colorFilter !== 'All' || typeFilter !== 'All' || rarityFilter !== 'All' || setFilter !== 'All' || costFilter !== 'All' || vibeFilter.length > 0 || subtypeFilter.length > 0) && (
               <button
                 type="button"
                 className="import-code-btn"
@@ -249,6 +288,7 @@ export default function DeckBuilder() {
                   setRarityFilter('All');
                   setSetFilter('All');
                   setCostFilter('All');
+                  setVibeFilter([]);
                   setSubtypeFilter([]);
                 }}
               >
