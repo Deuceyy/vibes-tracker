@@ -224,7 +224,15 @@ async function main() {
 
   const cards = rows.flatMap((row) => {
     const name = normalizeWhitespace(row.Name ?? '');
-    const matchedFile = driveFilesByBaseName.get(normalizeKey(name));
+    // Try direct match first, then a leading-"the " fallback for cases
+    // where the spoiler sheet writes "The X" but the Drive file is "X".
+    let matchedFile = driveFilesByBaseName.get(normalizeKey(name));
+    if (!matchedFile) {
+      const stripped = name.replace(/^the\s+/i, '');
+      if (stripped !== name) {
+        matchedFile = driveFilesByBaseName.get(normalizeKey(stripped));
+      }
+    }
     if (!matchedFile) {
       missingImages.push(name);
       return [];

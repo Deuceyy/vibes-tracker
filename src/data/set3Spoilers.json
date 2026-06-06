@@ -1,9 +1,7 @@
 {
-  "generatedAt": "2026-06-06T01:28:51.872Z",
+  "generatedAt": "2026-06-06T01:44:49.813Z",
   "colorCount": 6,
-  "skippedCards": [
-    "The Crown of House Vibesalot"
-  ],
+  "skippedCards": [],
   "cards": [
     {
       "name": "Toasting Birb",
@@ -2824,6 +2822,21 @@
       "image": "/set3-spoilers/the-comeback-staff.webp",
       "imageFileName": "the comeback staff.webp",
       "imageFileId": "1L_heN7jzgXcxQgxZQ5dhJuCeP7DWGRQv"
+    },
+    {
+      "name": "The Crown of House Vibesalot",
+      "color": "Colorless",
+      "type": "Fit",
+      "cost": 8,
+      "vibe": null,
+      "rarity": "Mythic",
+      "featuringPudgy": "Pengu",
+      "collectorNumber": "189",
+      "illustrator": "Clare Altman & CAH",
+      "effect": "Choose a Character to wear this Fit. The Character wearing this gets +20 vibe.",
+      "image": "/set3-spoilers/the-crown-of-house-vibesalot.webp",
+      "imageFileName": "crown of house vibesalot.webp",
+      "imageFileId": "1Y9KNFOLcoZ3TO9ykOa84Y02VlyFpLhuD"
     },
     {
       "name": "Big Ben",
