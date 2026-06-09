@@ -1,9 +1,10 @@
 name: Sync Set 3 Spoilers
 
 on:
+  # Hourly cron disabled now that Set 3 is fully released. Keeping
+  # workflow_dispatch so this can still be triggered manually if
+  # errata or post-release card edits happen.
   workflow_dispatch:
-  schedule:
-    - cron: '17 * * * *'
 
 concurrency:
   group: sync-set3-spoilers

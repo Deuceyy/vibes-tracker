@@ -19,7 +19,6 @@ export default function LandingPage() {
         <nav className="landing-nav">
           <Link to="/collection">Collection</Link>
           <Link to="/decks">Decks</Link>
-          <Link to="/set3-spoilers">Birb and Pengu Spoilers</Link>
           {user ? (
             <Link to="/collection" className="nav-cta">My Collection</Link>
           ) : (
@@ -138,8 +137,7 @@ export default function LandingPage() {
           <div className="footer-links">
             <Link to="/collection">Collection</Link>
             <Link to="/decks">Decks</Link>
-            <Link to="/set3-spoilers">Birb and Pengu Spoilers</Link>
-            <Link to="/builder">Deck Builder</Link>
+              <Link to="/builder">Deck Builder</Link>
           </div>
           <div className="footer-credit">
             <p>Fan-made tool for <a href="https://vibes.game" target="_blank" rel="noopener noreferrer">Pudgy Penguins TCG</a></p>
