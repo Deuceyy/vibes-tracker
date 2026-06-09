@@ -1,5 +1,14 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import sharp from 'sharp';
+
+// Target width for thumbnails served to the website. Originals from
+// Drive are print-resolution (3284x4472 / ~500KB each), which is way
+// more than the collection grid needs and dominates page-load time.
+// 600px wide is plenty for retina at ~280px card cells; bigger views
+// (CardModal) still look crisp.
+const THUMB_MAX_WIDTH = 600;
+const WEBP_QUALITY = 82;
 
 const SHEET_CSV_URL =
   'https://docs.google.com/spreadsheets/d/1LVYRCIdFS85w6seDyraO57GtbaCOQdskN8TnS-wtfdM/export?format=csv';
@@ -180,7 +189,22 @@ async function downloadImage(fileId, destination) {
       }
 
       const bytes = Buffer.from(await response.arrayBuffer());
-      await fs.writeFile(destination, bytes);
+
+      // Resize down to thumbnail width before saving. Originals come
+      // through at 3284px wide which makes the collection grid sluggish.
+      const ext = path.extname(destination).toLowerCase();
+      let pipeline = sharp(bytes).resize({
+        width: THUMB_MAX_WIDTH,
+        withoutEnlargement: true,
+        fit: 'inside',
+      });
+      if (ext === '.webp') {
+        pipeline = pipeline.webp({ quality: WEBP_QUALITY });
+      } else if (ext === '.png') {
+        pipeline = pipeline.png({ compressionLevel: 9 });
+      }
+      const resized = await pipeline.toBuffer();
+      await fs.writeFile(destination, resized);
       return;
     } catch (error) {
       lastError = error;
