@@ -2604,6 +2604,30 @@ body {
   font-weight: 600;
 }
 
+.variant-price .buy-link {
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+  vertical-align: 1px;
+}
+
+.variant-price .buy-link:hover {
+  filter: brightness(1.15);
+}
+
+.card-prices--secondary h4 {
+  color: var(--text-secondary);
+}
+
+.card-prices--secondary .variant-price {
+  color: var(--text-secondary);
+}
+
 /* Price on card grid items */
 .card-price-badge {
   position: absolute;

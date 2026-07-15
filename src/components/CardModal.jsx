@@ -1,15 +1,25 @@
 import { getSetLabel, getSupportedVariants, getCanonicalCardType, getCharacterSubtypes } from '../lib/cardMetadata.js';
 import { usePrices } from '../hooks/usePrices';
 
-const VARIANT_LABELS = { normal: 'Normal', foil: 'Foil', arctic: 'Arctic', sketch: 'Sketch' };
+const VARIANT_LABELS = {
+  normal: 'Normal',
+  foil: 'Foil',
+  arctic: 'Arctic',
+  sketch: 'Sketch',
+  birbFoil: 'Birb Foil',
+  fishFoil: 'Fish Foil',
+  penguFoil: 'Pengu Foil'
+};
+const DYLI_VARIANT_ORDER = ['normal', 'foil', 'arctic', 'sketch', 'birbFoil', 'fishFoil', 'penguFoil'];
 
 export default function CardModal({ card, variants, onClose, onAdjustVariant }) {
-  const { getCardPrices, formatPrice } = usePrices();
-  
+  const { getCardPrices, getDyliVariants, formatPrice } = usePrices();
+
   if (!card) return null;
 
   const cardText = card.cardText?.replace(/\|/g, '<br>').replace(/_([A-Z])_/g, '[$1]') || 'No card text';
   const prices = getCardPrices(card.id);
+  const dyli = getDyliVariants(card.id);
   const supportedVariants = getSupportedVariants(card);
   const canonicalType = getCanonicalCardType(card);
   const subtypes = getCharacterSubtypes(card);
@@ -45,34 +55,49 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant }) 
               {card.illustrator && <p><strong>Artist:</strong> {card.illustrator}</p>}
               <div className="card-text-box" dangerouslySetInnerHTML={{ __html: cardText }} />
               
-              {/* SCG Prices */}
-              {prices && (
+              {/* DYLI live marketplace prices */}
+              {dyli && (
                 <div className="card-prices">
-                  <h4>💰 SCG Prices</h4>
-                  {supportedVariants.includes('normal') && prices.normal?.price && (
-                    <div className="price-row">
-                      <span className="variant-name">Normal:</span>
-                      <span className="variant-price">{formatPrice(prices.normal.price)}</span>
-                    </div>
-                  )}
-                  {supportedVariants.includes('foil') && prices.foil?.price && (
-                    <div className="price-row">
-                      <span className="variant-name">Foil:</span>
-                      <span className="variant-price">{formatPrice(prices.foil.price)}</span>
-                    </div>
-                  )}
-                  {supportedVariants.includes('arctic') && prices.arctic?.price && (
-                    <div className="price-row">
-                      <span className="variant-name">Arctic:</span>
-                      <span className="variant-price">{formatPrice(prices.arctic.price)}</span>
-                    </div>
-                  )}
-                  {supportedVariants.includes('sketch') && prices.sketch?.price && (
-                    <div className="price-row">
-                      <span className="variant-name">Sketch:</span>
-                      <span className="variant-price">{formatPrice(prices.sketch.price)}</span>
-                    </div>
-                  )}
+                  <h4>💰 DYLI Market</h4>
+                  {DYLI_VARIANT_ORDER.filter((v) => dyli[v]).map((v) => {
+                    const entry = dyli[v];
+                    const shown = entry.floor ?? entry.primary;
+                    if (shown == null) return null;
+                    return (
+                      <div key={v} className="price-row">
+                        <span className="variant-name">{VARIANT_LABELS[v] || v}:</span>
+                        <span className="variant-price">
+                          {formatPrice(shown)}
+                          {entry.url && (
+                            <a
+                              className="buy-link"
+                              href={entry.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              Buy →
+                            </a>
+                          )}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* SCG list prices (fallback reference) */}
+              {prices && (
+                <div className="card-prices card-prices--secondary">
+                  <h4>SCG</h4>
+                  {['normal', 'foil', 'arctic', 'sketch']
+                    .filter((v) => supportedVariants.includes(v) && prices[v]?.price)
+                    .map((v) => (
+                      <div key={v} className="price-row">
+                        <span className="variant-name">{VARIANT_LABELS[v]}:</span>
+                        <span className="variant-price">{formatPrice(prices[v].price)}</span>
+                      </div>
+                    ))}
                 </div>
               )}
             </div>

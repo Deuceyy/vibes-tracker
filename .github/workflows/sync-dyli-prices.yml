@@ -1,0 +1,52 @@
+name: Sync DYLI Prices
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Twice daily — DYLI is a live marketplace, so prices move, but two
+    # refreshes a day keeps CI load and API traffic polite.
+    - cron: '43 5,17 * * *'
+
+concurrency:
+  group: sync-dyli-prices
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync DYLI prices
+        run: npm run sync:dyli-prices
+
+      - name: Commit changes if needed
+        run: |
+          # Only commit when actual prices changed, not just the timestamp.
+          if git diff --numstat src/data/dyliPrices.json | awk '{exit !($1<=1 && $2<=1)}'; then
+            echo "Only the generatedAt timestamp changed - skipping commit."
+            git checkout -- src/data/dyliPrices.json
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/dyliPrices.json
+          git commit -m "Sync DYLI prices"
+          git fetch origin main
+          git pull --rebase origin main
+          git push

@@ -50,7 +50,7 @@ export default function CollectionPage() {
     getPrice,
     formatPrice,
     loading: pricesLoading,
-    lastUpdated
+    dyliUpdated
   } = usePrices();
 
   const [filters, setFilters] = useState({
@@ -251,9 +251,9 @@ export default function CollectionPage() {
           <section className="collection-value">
             <div className="collection-value-header">
               <h3>Collection Value</h3>
-              {lastUpdated && (
+              {dyliUpdated && (
                 <span className="price-updated">
-                  SCG prices from {lastUpdated.toLocaleDateString()}
+                  DYLI market prices from {dyliUpdated.toLocaleDateString()}
                 </span>
               )}
             </div>

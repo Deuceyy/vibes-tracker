@@ -3,8 +3,21 @@ import { db } from '../firebase';
 import { collection as firestoreCollection, doc, getDoc, getDocs } from 'firebase/firestore';
 import { allTrackerCards } from '../hooks/useCollection';
 import { getSupportedVariants } from '../lib/cardMetadata.js';
+import dyliData from '../data/dyliPrices.json';
 
 const PricesContext = createContext(null);
+
+// DYLI marketplace prices, bundled at build time and refreshed by the
+// scheduled sync workflow. floor = live marketplace low; primary = DYLI
+// drop price (fallback when nothing is listed).
+const DYLI_PRICES = dyliData.prices || {};
+const DYLI_UPDATED = dyliData._meta?.generatedAt ? new Date(dyliData._meta.generatedAt) : null;
+
+function dyliPrice(cardId, variant) {
+  const entry = DYLI_PRICES[cardId]?.[variant];
+  if (!entry) return null;
+  return entry.floor ?? entry.primary ?? null;
+}
 
 export function PricesProvider({ children }) {
   const [prices, setPrices] = useState({});
@@ -45,16 +58,29 @@ export function PricesProvider({ children }) {
     }
   };
 
-  // Get price for a specific card and variant
+  // Get price for a specific card and variant.
+  // DYLI (live marketplace) wins; SCG (Firestore) is the fallback.
   const getPrice = (cardId, variant = 'normal') => {
+    const dyli = dyliPrice(cardId, variant);
+    if (dyli !== null) return dyli;
     const cardPrices = prices[cardId];
     if (!cardPrices || !cardPrices[variant]) return null;
     return cardPrices[variant].price;
   };
 
-  // Get all prices for a card
+  // Get all SCG prices for a card (legacy shape from Firestore)
   const getCardPrices = (cardId) => {
     return prices[cardId] || null;
+  };
+
+  // Get the DYLI entry for a card+variant: {floor, primary, dyliId, url}
+  const getDyliEntry = (cardId, variant = 'normal') => {
+    return DYLI_PRICES[cardId]?.[variant] || null;
+  };
+
+  // All DYLI variants recorded for a card (includes S3 birbFoil/fishFoil)
+  const getDyliVariants = (cardId) => {
+    return DYLI_PRICES[cardId] || null;
   };
 
   // Format price for display
@@ -72,15 +98,15 @@ export function PricesProvider({ children }) {
     let pricedCount = 0;
     
     Object.entries(userCollection).forEach(([cardId, variants]) => {
-      const cardPrices = prices[cardId];
       const card = allTrackerCards.find((entry) => entry.id === cardId);
-      
+
       getSupportedVariants(card).forEach((variant) => {
         const count = variants[variant] || 0;
         if (count > 0) {
           cardCount += count;
-          if (cardPrices && cardPrices[variant]?.price) {
-            const value = cardPrices[variant].price * count;
+          const price = getPrice(cardId, variant);
+          if (price !== null) {
+            const value = price * count;
             total += value;
             breakdown[variant] = (breakdown[variant] || 0) + value;
             pricedCount += count;
@@ -125,8 +151,11 @@ export function PricesProvider({ children }) {
     prices,
     loading,
     lastUpdated,
+    dyliUpdated: DYLI_UPDATED,
     getPrice,
     getCardPrices,
+    getDyliEntry,
+    getDyliVariants,
     formatPrice,
     calculateCollectionValue,
     calculateDeckCost,
