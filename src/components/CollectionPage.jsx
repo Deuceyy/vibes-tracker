@@ -14,14 +14,18 @@ import CardModal from './CardModal';
 
 const RARITY_ORDER = { Common: 1, Uncommon: 2, Rare: 3, Epic: 4 };
 const SET_ORDER = { Eth: 1, Lotl: 2, S3: 3 };
-const VARIANT_LABELS = { normal: 'N', foil: 'F', arctic: 'A', sketch: 'S' };
+const VARIANT_LABELS = { normal: 'N', foil: 'F', arctic: 'A', sketch: 'S', birbFoil: 'BF', fishFoil: 'FF' };
 const VARIANT_FILTERS = {
   normal: { variant: 'normal', mode: 'has' },
   arctic: { variant: 'arctic', mode: 'has' },
   sketch: { variant: 'sketch', mode: 'has' },
+  birbFoil: { variant: 'birbFoil', mode: 'has' },
+  fishFoil: { variant: 'fishFoil', mode: 'has' },
   'missing-normal': { variant: 'normal', mode: 'missing' },
   'missing-arctic': { variant: 'arctic', mode: 'missing' },
-  'missing-sketch': { variant: 'sketch', mode: 'missing' }
+  'missing-sketch': { variant: 'sketch', mode: 'missing' },
+  'missing-birbFoil': { variant: 'birbFoil', mode: 'missing' },
+  'missing-fishFoil': { variant: 'fishFoil', mode: 'missing' }
 };
 
 function getCardTypeLine(card) {
@@ -85,7 +89,7 @@ export default function CollectionPage() {
     if (pricesLoading) return null;
 
     let total = 0;
-    const breakdown = { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+    const breakdown = { normal: 0, foil: 0, arctic: 0, sketch: 0, birbFoil: 0, fishFoil: 0 };
     let cardCount = 0;
     let pricedCount = 0;
 
@@ -375,9 +379,13 @@ export default function CollectionPage() {
                 <option value="normal">Has Normal</option>
                 <option value="arctic">Has Arctic (Set 2 only)</option>
                 <option value="sketch">Has Sketch (Sets 1 & 2)</option>
+                <option value="birbFoil">Has Birb Foil (Set 3)</option>
+                <option value="fishFoil">Has Fish Foil (Set 3)</option>
                 <option value="missing-normal">Missing Normal</option>
                 <option value="missing-arctic">Missing Arctic (Set 2 only)</option>
                 <option value="missing-sketch">Missing Sketch (Sets 1 & 2)</option>
+                <option value="missing-birbFoil">Missing Birb Foil (Set 3)</option>
+                <option value="missing-fishFoil">Missing Fish Foil (Set 3)</option>
               </select>
             </div>
             <div className="filter-group small">

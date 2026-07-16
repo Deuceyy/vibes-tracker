@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
+import { usePrices } from '../hooks/usePrices';
 import Header from './Header';
 
 const COLOR_CLASSES = {
@@ -17,6 +18,7 @@ export default function DecksPage() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { publicDecks, myDecks, loading, deleteDeck, toggleUpvote } = useDecks();
+  const { calculateDeckCost, formatPrice } = usePrices();
   const [tab, setTab] = useState('popular');
   const [colorFilter, setColorFilter] = useState('All');
   const [sort, setSort] = useState('popular');
@@ -50,6 +52,8 @@ export default function DecksPage() {
       sorted.sort((a, b) => ts(b) - ts(a));
     } else if (sort === 'oldest') {
       sorted.sort((a, b) => ts(a) - ts(b));
+    } else if (sort === 'views') {
+      sorted.sort((a, b) => (b.views || 0) - (a.views || 0) || ts(b) - ts(a));
     } else {
       sorted.sort((a, b) => (b.upvotes || 0) - (a.upvotes || 0) || ts(b) - ts(a));
     }
@@ -68,6 +72,10 @@ export default function DecksPage() {
         <div className="deck-card-meta">
           <span>by {deck.username}</span>
           <span>{deck.cards?.reduce((s, c) => s + c.quantity, 0) || 0} cards</span>
+          {(() => {
+            const { total } = calculateDeckCost(deck);
+            return total > 0 ? <span className="deck-price-tag">~{formatPrice(total)}</span> : null;
+          })()}
         </div>
       </Link>
       <div className="deck-card-footer">
@@ -77,6 +85,9 @@ export default function DecksPage() {
           disabled={!user}
         >
           ▲ {deck.upvotes || 0}
+        </button>
+        <button className="upvote-btn" disabled title="Views">
+          👁 {deck.views || 0}
         </button>
         {showActions && (
           <div className="deck-card-actions">
@@ -123,6 +134,7 @@ export default function DecksPage() {
             className="color-filter-select"
           >
             <option value="popular">Most Popular</option>
+            <option value="views">Most Viewed</option>
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
           </select>

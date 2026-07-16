@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { track } from '@vercel/analytics';
-import { collection, doc, setDoc, deleteDoc, onSnapshot, query, orderBy, limit, where, updateDoc, arrayUnion, arrayRemove, getDoc } from 'firebase/firestore';
+import { collection, doc, setDoc, deleteDoc, onSnapshot, query, orderBy, limit, where, updateDoc, arrayUnion, arrayRemove, getDoc, increment } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useAuth } from './useAuth';
 import cardData from '../cardData.json';
@@ -104,6 +104,16 @@ export function useDecks() {
     return null;
   }, []);
 
+  // Best-effort view counter. Soft-fails if Firestore rules don't allow
+  // non-owner writes — the page must never break over analytics.
+  const recordView = useCallback(async (deckId) => {
+    try {
+      await updateDoc(doc(db, 'decks', deckId), { views: increment(1) });
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
   return {
     publicDecks,
     myDecks,
@@ -111,7 +121,8 @@ export function useDecks() {
     saveDeck,
     deleteDeck,
     toggleUpvote,
-    getDeck
+    getDeck,
+    recordView
   };
 }
 

@@ -1,6 +1,10 @@
+import set3FoilKinds from '../data/set3FoilKinds.js';
+
 export const ENABLE_SET3 = true;
 
-export const VARIANTS = ['normal', 'foil', 'arctic', 'sketch'];
+// birbFoil / fishFoil are Set 3's special foils — each S3 card comes in
+// exactly one of the two (see set3FoilKinds.js, generated from DYLI).
+export const VARIANTS = ['normal', 'foil', 'arctic', 'sketch', 'birbFoil', 'fishFoil'];
 export const TRACKER_CARD_TYPES = [
   'Character',
   'Action',
@@ -15,7 +19,7 @@ export const CHARACTER_SUBTYPES = ['Penguin', 'Lil', 'Birb'];
 const SKETCHLESS_IDS = new Set(['NyanCat']);
 
 export function getVariantTemplate() {
-  return { normal: 0, foil: 0, arctic: 0, sketch: 0 };
+  return { normal: 0, foil: 0, arctic: 0, sketch: 0, birbFoil: 0, fishFoil: 0 };
 }
 
 export function normalizeSubtypeToken(token) {
@@ -104,6 +108,9 @@ export function supportsVariant(card, variant) {
   if (variant === 'sketch') {
     if (card.set !== 'Eth' && card.set !== 'Lotl') return false;
     return !SKETCHLESS_IDS.has(card.id);
+  }
+  if (variant === 'birbFoil' || variant === 'fishFoil') {
+    return card.set === 'S3' && set3FoilKinds[card.id] === variant;
   }
   return false;
 }

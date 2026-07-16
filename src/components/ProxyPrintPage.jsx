@@ -17,8 +17,13 @@ function proxySlug(name) {
     .replace(/^-+|-+$/g, '');
 }
 
+// Cache-buster tied to the spoiler dataset generation time: whenever
+// proxies get re-rendered (which always accompanies a data refresh),
+// the URL changes and browsers/CDNs refetch instead of serving stale PNGs.
+const PROXY_VERSION = encodeURIComponent(spoilerData.generatedAt || '1');
+
 function proxyImageUrl(card) {
-  return `/proxies/${proxySlug(card.name)}.png`;
+  return `/proxies/${proxySlug(card.name)}.png?v=${PROXY_VERSION}`;
 }
 
 function getSpoilerCardType(card) {

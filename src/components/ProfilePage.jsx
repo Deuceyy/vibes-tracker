@@ -256,7 +256,9 @@ export default function ProfilePage() {
                           {variants.normal > 0 && `${variants.normal}N `}
                           {variants.foil > 0 && `${variants.foil}F `}
                           {variants.arctic > 0 && `${variants.arctic}A `}
-                          {variants.sketch > 0 && `${variants.sketch}S`}
+                          {variants.sketch > 0 && `${variants.sketch}S `}
+                          {variants.birbFoil > 0 && `${variants.birbFoil}BF `}
+                          {variants.fishFoil > 0 && `${variants.fishFoil}FF`}
                         </span>
                       )}
                     </span>

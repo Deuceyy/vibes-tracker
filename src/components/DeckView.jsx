@@ -85,7 +85,7 @@ export default function DeckView() {
   const { deckId } = useParams();
   const navigate = useNavigate();
   const { user } = useAuth();
-  const { getDeck, toggleUpvote, saveDeck } = useDecks();
+  const { getDeck, toggleUpvote, saveDeck, recordView } = useDecks();
   const { getPrice, formatPrice } = usePrices();
 
   const [deck, setDeck] = useState(null);
@@ -105,8 +105,9 @@ export default function DeckView() {
     getDeck(deckId).then((result) => {
       setDeck(result);
       setLoading(false);
+      if (result) recordView(deckId);
     });
-  }, [deckId, getDeck]);
+  }, [deckId, getDeck, recordView]);
 
   const deckByColor = useMemo(() => {
     if (!deck?.cards) return {};
@@ -298,6 +299,46 @@ export default function DeckView() {
     setDeck(await getDeck(deckId));
   };
 
+  // Print a clean registration-style decklist (name, counts grouped by
+  // type) via a dedicated print window.
+  const handlePrintList = () => {
+    const groups = {};
+    deckImageCards.forEach(({ card, quantity }) => {
+      const type = getCanonicalCardType(card);
+      if (!groups[type]) groups[type] = [];
+      groups[type].push({ name: card.name, quantity });
+    });
+    const totalCount = deckImageCards.reduce((s, e) => s + e.quantity, 0);
+    const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+    const sections = Object.entries(groups)
+      .map(([type, rows]) => {
+        const count = rows.reduce((s, r) => s + r.quantity, 0);
+        const lis = rows
+          .map((r) => `<li><span class="q">${r.quantity}×</span> ${esc(r.name)}</li>`)
+          .join('');
+        return `<h2>${esc(type)} <small>(${count})</small></h2><ul>${lis}</ul>`;
+      })
+      .join('');
+    const win = window.open('', '_blank', 'width=700,height=900');
+    if (!win) return;
+    win.document.write(`<!DOCTYPE html><html><head><title>${esc(deck.name)} — Decklist</title>
+      <style>
+        body { font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; color: #111; padding: 32px; }
+        h1 { margin: 0 0 2px; font-size: 22px; }
+        .meta { color: #666; font-size: 13px; margin-bottom: 18px; }
+        h2 { font-size: 15px; border-bottom: 1px solid #ccc; padding-bottom: 3px; margin: 16px 0 6px; }
+        h2 small { color: #888; font-weight: 400; }
+        ul { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 32px; }
+        li { font-size: 13px; padding: 1.5px 0; break-inside: avoid; }
+        .q { display: inline-block; width: 26px; color: #555; }
+      </style></head><body>
+      <h1>${esc(deck.name)}</h1>
+      <div class="meta">by ${esc(deck.username || 'unknown')} · ${totalCount} cards · vibes-tracker.vercel.app</div>
+      ${sections}
+      <script>window.onload = () => window.print();</` + `script></body></html>`);
+    win.document.close();
+  };
+
   const deckUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   const downloadShareImage = async () => {
@@ -362,6 +403,7 @@ export default function DeckView() {
             </button>
             <button onClick={() => setShareOpen(true)}>Share</button>
             <button onClick={() => setExportOpen(true)}>Export</button>
+            <button onClick={handlePrintList}>Print List</button>
             <button
               className={`upvote-btn big ${hasUpvoted ? 'upvoted' : ''}`}
               onClick={handleUpvote}
