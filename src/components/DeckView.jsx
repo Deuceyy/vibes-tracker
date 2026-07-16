@@ -342,7 +342,7 @@ export default function DeckView() {
               <span>by <Link to={`/u/${deck.username}`}>{deck.username}</Link></span>
               <span>{totalCards} cards</span>
               <span className="deck-cost-display">
-                ${formatPrice(deckCost.total)}
+                {formatPrice(deckCost.total)}
                 {deckCost.missing > 0 && <small> ({deckCost.missing} unpriced)</small>}
               </span>
               <span className="deck-colors">

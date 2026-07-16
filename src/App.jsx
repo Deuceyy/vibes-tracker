@@ -11,6 +11,7 @@ import DeckBuilder from './components/DeckBuilder.jsx';
 import DeckView from './components/DeckView.jsx';
 import PriceListBuilder from './components/PriceListBuilder.jsx';
 import ProxyPrintPage from './components/ProxyPrintPage.jsx';
+import CardPeek from './components/CardPeek.jsx';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/prices" element={<PriceListBuilder />} />
           <Route path="/proxies" element={<ProxyPrintPage />} />
         </Routes>
+        <CardPeek />
         <Analytics />
         <SpeedInsights />
       </PricesProvider>
