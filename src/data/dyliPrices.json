@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-17T07:41:11.208Z",
+  "generatedAt": "2026-07-17T18:44:42.351Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -239,7 +239,7 @@
   },
   "RunItBackPenguin": {
    "normal": {
-    "floor": 3,
+    "floor": 2.5,
     "primary": 0.63,
     "dyliId": 3516,
     "url": "https://www.dyli.io/drop/3516-run-it-back-penguin-enter-the-huddle"
@@ -253,13 +253,13 @@
   },
   "ScreamingPenguin": {
    "normal": {
-    "floor": 10,
+    "floor": 2,
     "primary": 0.63,
     "dyliId": 3456,
     "url": "https://www.dyli.io/drop/3456-screaming-penguin-enter-the-huddle"
    },
    "foil": {
-    "floor": 9.62,
+    "floor": 8,
     "primary": 9.62,
     "dyliId": 7474,
     "url": "https://www.dyli.io/drop/7474-screaming-penguin-holo-enter-the-huddle"
@@ -817,7 +817,7 @@
     "url": "https://www.dyli.io/drop/3184-shy-penguin-enter-the-huddle"
    },
    "foil": {
-    "floor": 9.08,
+    "floor": 8,
     "primary": 9.08,
     "dyliId": 5413,
     "url": "https://www.dyli.io/drop/5413-shy-penguin-holo-enter-the-huddle"
@@ -971,7 +971,7 @@
     "url": "https://www.dyli.io/drop/4667-yum-yum-enter-the-huddle"
    },
    "foil": {
-    "floor": 116,
+    "floor": 105,
     "primary": 128.39,
     "dyliId": 3453,
     "url": "https://www.dyli.io/drop/3453-yum-yum-holo-enter-the-huddle"
@@ -1609,7 +1609,7 @@
   },
   "FactFindingPenguin": {
    "normal": {
-    "floor": 0.63,
+    "floor": 2,
     "primary": 0.63,
     "dyliId": 2922,
     "url": "https://www.dyli.io/drop/2922-fact-finding-penguin-enter-the-huddle"
@@ -1721,13 +1721,13 @@
   },
   "PenguinWhosOK": {
    "normal": {
-    "floor": 1.06,
+    "floor": 2,
     "primary": 1.06,
     "dyliId": 2864,
     "url": "https://www.dyli.io/drop/2864-penguin-who-s-ok-enter-the-huddle"
    },
    "foil": {
-    "floor": 9,
+    "floor": 8,
     "primary": 10.69,
     "dyliId": 4670,
     "url": "https://www.dyli.io/drop/4670-penguin-who-s-ok-holo-enter-the-huddle"
@@ -2035,7 +2035,7 @@
     "url": "https://www.dyli.io/drop/3559-bizmo-phd-candidate-enter-the-huddle"
    },
    "foil": {
-    "floor": 9.62,
+    "floor": 15,
     "primary": 9.62,
     "dyliId": 3485,
     "url": "https://www.dyli.io/drop/3485-bizmo-phd-candidate-holo-enter-the-huddle"
@@ -2133,13 +2133,13 @@
   },
   "GalaxyPenguin": {
    "normal": {
-    "floor": 12,
+    "floor": 3,
     "primary": 0.63,
     "dyliId": 3486,
     "url": "https://www.dyli.io/drop/3486-galaxy-penguin-enter-the-huddle"
    },
    "foil": {
-    "floor": 9.08,
+    "floor": 15,
     "primary": 9.08,
     "dyliId": 5461,
     "url": "https://www.dyli.io/drop/5461-galaxy-penguin-holo-enter-the-huddle"
@@ -2361,7 +2361,7 @@
     "url": "https://www.dyli.io/drop/3567-gather-together-enter-the-huddle"
    },
    "foil": {
-    "floor": 9.08,
+    "floor": 8,
     "primary": 9.08,
     "dyliId": 5421,
     "url": "https://www.dyli.io/drop/5421-gather-together-holo-enter-the-huddle"
@@ -2445,7 +2445,7 @@
   },
   "StudyAllNight": {
    "normal": {
-    "floor": 0.63,
+    "floor": 2,
     "primary": 0.63,
     "dyliId": 2917,
     "url": "https://www.dyli.io/drop/2917-study-all-night-enter-the-huddle"
@@ -2458,17 +2458,17 @@
    }
   },
   "Wut": {
+   "normal": {
+    "floor": 25,
+    "primary": 6.94,
+    "dyliId": 5422,
+    "url": "https://www.dyli.io/drop/5422-wut-enter-the-huddle"
+   },
    "sketch": {
     "floor": 500,
     "primary": 500,
     "dyliId": 18595,
     "url": "https://www.dyli.io/drop/18595-wut-sketch-enter-the-huddle"
-   },
-   "normal": {
-    "floor": 6.94,
-    "primary": 6.94,
-    "dyliId": 5422,
-    "url": "https://www.dyli.io/drop/5422-wut-enter-the-huddle"
    },
    "foil": {
     "floor": 59.91,
@@ -4055,7 +4055,7 @@
     "url": "https://www.dyli.io/drop/17481-the-savior-of-skies-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 37.44,
+    "floor": 50,
     "primary": 37.44,
     "dyliId": 19987,
     "url": "https://www.dyli.io/drop/19987-the-savior-of-skies-arctic-foil-legend-of-the-lils"
@@ -4501,7 +4501,7 @@
     "url": "https://www.dyli.io/drop/17140-the-herald-of-horizons-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 37.44,
+    "floor": 50,
     "primary": 37.44,
     "dyliId": 29800,
     "url": "https://www.dyli.io/drop/29800-the-herald-of-horizons-arctic-foil-legend-of-the-lils"
@@ -4575,7 +4575,7 @@
     "url": "https://www.dyli.io/drop/17053-lil-mocker-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 89,
+    "floor": 69,
     "primary": 48.14,
     "dyliId": 17394,
     "url": "https://www.dyli.io/drop/17394-lil-mocker-arctic-foil-legend-of-the-lils"
@@ -4819,7 +4819,7 @@
     "url": "https://www.dyli.io/drop/16968-four-of-a-kind-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 75,
+    "floor": 70,
     "primary": 48.14,
     "dyliId": 17491,
     "url": "https://www.dyli.io/drop/17491-four-of-a-kind-arctic-foil-legend-of-the-lils"
@@ -5184,17 +5184,17 @@
     "dyliId": 17054,
     "url": "https://www.dyli.io/drop/17054-lil-drippy-legend-of-the-lils"
    },
+   "foil": {
+    "floor": 50,
+    "primary": 48.14,
+    "dyliId": 17160,
+    "url": "https://www.dyli.io/drop/17160-lil-drippy-holo-legend-of-the-lils"
+   },
    "arctic": {
     "floor": 400,
     "primary": 400,
     "dyliId": 30120,
     "url": "https://www.dyli.io/drop/30120-lil-drippy-arctic-foil-legend-of-the-lils"
-   },
-   "foil": {
-    "floor": 48.14,
-    "primary": 48.14,
-    "dyliId": 17160,
-    "url": "https://www.dyli.io/drop/17160-lil-drippy-holo-legend-of-the-lils"
    }
   },
   "PetitePourer": {
@@ -5291,7 +5291,7 @@
     "url": "https://www.dyli.io/drop/17016-distract-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 48.14,
+    "floor": 69,
     "primary": 48.14,
     "dyliId": 17492,
     "url": "https://www.dyli.io/drop/17492-distract-arctic-foil-legend-of-the-lils"
@@ -5975,7 +5975,7 @@
   },
   "Arches": {
    "normal": {
-    "floor": 4.99,
+    "floor": 5,
     "primary": 8.55,
     "dyliId": 16911,
     "url": "https://www.dyli.io/drop/16911-arches-legend-of-the-lils"
@@ -6307,7 +6307,7 @@
     "url": "https://www.dyli.io/drop/31065-roasting-birb-birb-pengu"
    },
    "birbFoil": {
-    "floor": 10,
+    "floor": 12,
     "primary": 10,
     "dyliId": 31066,
     "url": "https://www.dyli.io/drop/31066-roasting-birb-birb-foil-birb-pengu"
@@ -6335,7 +6335,7 @@
   },
   "S3017OrrinForestGuardian": {
    "normal": {
-    "floor": 19.99,
+    "floor": 15,
     "primary": 20,
     "dyliId": 30990,
     "url": "https://www.dyli.io/drop/30990-orrin-forest-guardian-birb-pengu"
@@ -6375,7 +6375,7 @@
   },
   "S3019LeaderOfTheCharge": {
    "normal": {
-    "floor": 9,
+    "floor": 4.5,
     "primary": 20,
     "dyliId": 30903,
     "url": "https://www.dyli.io/drop/30903-leader-of-the-charge-birb-pengu"
@@ -6435,7 +6435,7 @@
   },
   "S3022HealthyPush": {
    "normal": {
-    "floor": 6,
+    "floor": 5,
     "primary": 5,
     "dyliId": 30843,
     "url": "https://www.dyli.io/drop/30843-healthy-push-birb-pengu"
@@ -6460,17 +6460,17 @@
     "dyliId": 31191,
     "url": "https://www.dyli.io/drop/31191-vibe-scan-birb-pengu"
    },
-   "foil": {
-    "floor": 1,
-    "primary": 1,
-    "dyliId": 31193,
-    "url": "https://www.dyli.io/drop/31193-vibe-scan-holo-birb-pengu"
-   },
    "birbFoil": {
     "floor": 10,
     "primary": 10,
     "dyliId": 31192,
     "url": "https://www.dyli.io/drop/31192-vibe-scan-birb-foil-birb-pengu"
+   },
+   "foil": {
+    "floor": 1,
+    "primary": 1,
+    "dyliId": 31193,
+    "url": "https://www.dyli.io/drop/31193-vibe-scan-holo-birb-pengu"
    }
   },
   "S3024GoodVibesOnly": {
@@ -6494,17 +6494,17 @@
    }
   },
   "S3025RomanticGesture": {
-   "foil": {
-    "floor": 2,
-    "primary": 2,
-    "dyliId": 31070,
-    "url": "https://www.dyli.io/drop/31070-romantic-gesture-holo-birb-pengu"
-   },
    "normal": {
     "floor": 0.5,
     "primary": 1,
     "dyliId": 31068,
     "url": "https://www.dyli.io/drop/31068-romantic-gesture-birb-pengu"
+   },
+   "foil": {
+    "floor": 2,
+    "primary": 2,
+    "dyliId": 31070,
+    "url": "https://www.dyli.io/drop/31070-romantic-gesture-holo-birb-pengu"
    },
    "birbFoil": {
     "floor": 19,
@@ -6520,17 +6520,17 @@
     "dyliId": 31107,
     "url": "https://www.dyli.io/drop/31107-study-all-day-birb-pengu"
    },
-   "foil": {
-    "floor": 1,
-    "primary": 1,
-    "dyliId": 31109,
-    "url": "https://www.dyli.io/drop/31109-study-all-day-holo-birb-pengu"
-   },
    "birbFoil": {
     "floor": 10,
     "primary": 10,
     "dyliId": 31108,
     "url": "https://www.dyli.io/drop/31108-study-all-day-birb-foil-birb-pengu"
+   },
+   "foil": {
+    "floor": 1,
+    "primary": 1,
+    "dyliId": 31109,
+    "url": "https://www.dyli.io/drop/31109-study-all-day-holo-birb-pengu"
    }
   },
   "S3027HuntForTheHolySauce": {
@@ -6760,17 +6760,17 @@
    }
   },
   "S3038Noctua": {
-   "sketch": {
-    "floor": 330,
-    "primary": 100,
-    "dyliId": 32345,
-    "url": "https://www.dyli.io/drop/32345-noctua-sketch-1-10-birb-pengu"
-   },
    "normal": {
     "floor": 0.5,
     "primary": 0.5,
     "dyliId": 30981,
     "url": "https://www.dyli.io/drop/30981-noctua-birb-pengu"
+   },
+   "sketch": {
+    "floor": 330,
+    "primary": 100,
+    "dyliId": 32345,
+    "url": "https://www.dyli.io/drop/32345-noctua-sketch-1-10-birb-pengu"
    },
    "birbFoil": {
     "floor": 10,
@@ -6907,7 +6907,7 @@
   },
   "S3045Pluma": {
    "normal": {
-    "floor": 1,
+    "floor": 0.75,
     "primary": 1,
     "dyliId": 31020,
     "url": "https://www.dyli.io/drop/31020-pluma-birb-pengu"
@@ -7630,17 +7630,17 @@
    }
   },
   "S3080HypnotizedPenguin": {
+   "normal": {
+    "floor": 4,
+    "primary": 5,
+    "dyliId": 30867,
+    "url": "https://www.dyli.io/drop/30867-hypnotized-penguin-birb-pengu"
+   },
    "foil": {
     "floor": 25,
     "primary": 10,
     "dyliId": 30869,
     "url": "https://www.dyli.io/drop/30869-hypnotized-penguin-holo-birb-pengu"
-   },
-   "normal": {
-    "floor": 5,
-    "primary": 5,
-    "dyliId": 30867,
-    "url": "https://www.dyli.io/drop/30867-hypnotized-penguin-birb-pengu"
    },
    "fishFoil": {
     "floor": 60,
@@ -7656,22 +7656,22 @@
     "dyliId": 31206,
     "url": "https://www.dyli.io/drop/31206-whistler-s-penguin-birb-pengu"
    },
-   "foil": {
-    "floor": 2,
-    "primary": 2,
-    "dyliId": 31208,
-    "url": "https://www.dyli.io/drop/31208-whistler-s-penguin-holo-birb-pengu"
-   },
    "fishFoil": {
     "floor": 20,
     "primary": 20,
     "dyliId": 31207,
     "url": "https://www.dyli.io/drop/31207-whistler-s-penguin-fish-foil-birb-pengu"
+   },
+   "foil": {
+    "floor": 2,
+    "primary": 2,
+    "dyliId": 31208,
+    "url": "https://www.dyli.io/drop/31208-whistler-s-penguin-holo-birb-pengu"
    }
   },
   "S3082PenguinWhoIsWhatHeEats": {
    "normal": {
-    "floor": 4,
+    "floor": 3,
     "primary": 5,
     "dyliId": 31008,
     "url": "https://www.dyli.io/drop/31008-penguin-who-is-what-he-eats-birb-pengu"
@@ -7711,7 +7711,7 @@
   },
   "S3084JaskelImaginator": {
    "normal": {
-    "floor": 45,
+    "floor": 40,
     "primary": 20,
     "dyliId": 30888,
     "url": "https://www.dyli.io/drop/30888-jaskel-imaginator-birb-pengu"
@@ -7797,7 +7797,7 @@
     "url": "https://www.dyli.io/drop/30693-brofessional-agreement-birb-pengu"
    },
    "foil": {
-    "floor": 2,
+    "floor": 1.5,
     "primary": 2,
     "dyliId": 30695,
     "url": "https://www.dyli.io/drop/30695-brofessional-agreement-holo-birb-pengu"
@@ -7816,17 +7816,17 @@
     "dyliId": 30741,
     "url": "https://www.dyli.io/drop/30741-control-the-board-birb-pengu"
    },
-   "fishFoil": {
-    "floor": 10,
-    "primary": 10,
-    "dyliId": 30742,
-    "url": "https://www.dyli.io/drop/30742-control-the-board-fish-foil-birb-pengu"
-   },
    "foil": {
     "floor": 1,
     "primary": 1,
     "dyliId": 30743,
     "url": "https://www.dyli.io/drop/30743-control-the-board-holo-birb-pengu"
+   },
+   "fishFoil": {
+    "floor": 10,
+    "primary": 10,
+    "dyliId": 30742,
+    "url": "https://www.dyli.io/drop/30742-control-the-board-fish-foil-birb-pengu"
    }
   },
   "S3090SideEye": {
@@ -8136,17 +8136,17 @@
     "dyliId": 30912,
     "url": "https://www.dyli.io/drop/30912-lil-cool-guy-birb-pengu"
    },
-   "fishFoil": {
-    "floor": 20,
-    "primary": 20,
-    "dyliId": 30913,
-    "url": "https://www.dyli.io/drop/30913-lil-cool-guy-fish-foil-birb-pengu"
-   },
    "foil": {
     "floor": 2,
     "primary": 2,
     "dyliId": 30914,
     "url": "https://www.dyli.io/drop/30914-lil-cool-guy-holo-birb-pengu"
+   },
+   "fishFoil": {
+    "floor": 20,
+    "primary": 20,
+    "dyliId": 30913,
+    "url": "https://www.dyli.io/drop/30913-lil-cool-guy-fish-foil-birb-pengu"
    }
   },
   "S3106GamingPenguin": {
@@ -8211,7 +8211,7 @@
   },
   "S3109TheGreatPengsby": {
    "foil": {
-    "floor": 2,
+    "floor": 1.5,
     "primary": 2,
     "dyliId": 31136,
     "url": "https://www.dyli.io/drop/31136-the-great-pengsby-holo-birb-pengu"
@@ -8456,17 +8456,17 @@
     "dyliId": 30789,
     "url": "https://www.dyli.io/drop/30789-finders-keepers-birb-pengu"
    },
-   "fishFoil": {
-    "floor": 20,
-    "primary": 20,
-    "dyliId": 30790,
-    "url": "https://www.dyli.io/drop/30790-finders-keepers-fish-foil-birb-pengu"
-   },
    "foil": {
     "floor": 2,
     "primary": 2,
     "dyliId": 30791,
     "url": "https://www.dyli.io/drop/30791-finders-keepers-holo-birb-pengu"
+   },
+   "fishFoil": {
+    "floor": 20,
+    "primary": 20,
+    "dyliId": 30790,
+    "url": "https://www.dyli.io/drop/30790-finders-keepers-fish-foil-birb-pengu"
    }
   },
   "S3122TurnItUp": {
@@ -8630,12 +8630,6 @@
    }
   },
   "S3130LilStuck": {
-   "normal": {
-    "floor": 0.5,
-    "primary": 0.5,
-    "dyliId": 30930,
-    "url": "https://www.dyli.io/drop/30930-lil-stuck-birb-pengu"
-   },
    "foil": {
     "floor": 1,
     "primary": 1,
@@ -8647,6 +8641,12 @@
     "primary": 10,
     "dyliId": 30931,
     "url": "https://www.dyli.io/drop/30931-lil-stuck-fish-foil-birb-pengu"
+   },
+   "normal": {
+    "floor": 0.5,
+    "primary": 0.5,
+    "dyliId": 30930,
+    "url": "https://www.dyli.io/drop/30930-lil-stuck-birb-pengu"
    }
   },
   "S3131LilBalanced": {
@@ -8683,7 +8683,7 @@
     "url": "https://www.dyli.io/drop/30915-lil-forgotten-birb-pengu"
    },
    "fishFoil": {
-    "floor": 10,
+    "floor": 12,
     "primary": 10,
     "dyliId": 30916,
     "url": "https://www.dyli.io/drop/30916-lil-forgotten-fish-foil-birb-pengu"
@@ -8963,7 +8963,7 @@
   },
   "S3146LuckmakingBirb": {
    "normal": {
-    "floor": 5,
+    "floor": 3.5,
     "primary": 5,
     "dyliId": 30942,
     "url": "https://www.dyli.io/drop/30942-luckmaking-birb-birb-pengu"
@@ -9009,7 +9009,7 @@
     "url": "https://www.dyli.io/drop/30963-myra-of-the-mist-birb-pengu"
    },
    "foil": {
-    "floor": 120,
+    "floor": 50,
     "primary": 50,
     "dyliId": 30965,
     "url": "https://www.dyli.io/drop/30965-myra-of-the-mist-holo-birb-pengu"
@@ -9115,7 +9115,7 @@
     "url": "https://www.dyli.io/drop/30763-double-trouble-fish-foil-birb-pengu"
    },
    "normal": {
-    "floor": 1,
+    "floor": 0.75,
     "primary": 1,
     "dyliId": 30762,
     "url": "https://www.dyli.io/drop/30762-double-trouble-birb-pengu"
@@ -9303,7 +9303,7 @@
   },
   "S3163FrostbittenWizbirb": {
    "birbFoil": {
-    "floor": 12,
+    "floor": 11.99,
     "primary": 10,
     "dyliId": 30808,
     "url": "https://www.dyli.io/drop/30808-frostbitten-wizbirb-birb-foil-birb-pengu"
@@ -9683,7 +9683,7 @@
   },
   "S3182HerosSword": {
    "normal": {
-    "floor": 5,
+    "floor": 3.5,
     "primary": 5,
     "dyliId": 30852,
     "url": "https://www.dyli.io/drop/30852-hero-s-sword-birb-pengu"
@@ -9703,7 +9703,7 @@
   },
   "S3183TrustyBoxingGloves": {
    "normal": {
-    "floor": 0.5,
+    "floor": 0.45,
     "primary": 1,
     "dyliId": 31167,
     "url": "https://www.dyli.io/drop/31167-trusty-boxing-gloves-birb-pengu"
@@ -9749,7 +9749,7 @@
     "url": "https://www.dyli.io/drop/30849-hero-s-shield-birb-pengu"
    },
    "foil": {
-    "floor": 10,
+    "floor": 8,
     "primary": 10,
     "dyliId": 30851,
     "url": "https://www.dyli.io/drop/30851-hero-s-shield-holo-birb-pengu"
@@ -9783,7 +9783,7 @@
   },
   "S3187WhimsicalBackpack": {
    "normal": {
-    "floor": 5,
+    "floor": 4.5,
     "primary": 5,
     "dyliId": 31203,
     "url": "https://www.dyli.io/drop/31203-whimsical-backpack-birb-pengu"
@@ -9883,7 +9883,7 @@
   },
   "S3192TajMahal": {
    "normal": {
-    "floor": 5,
+    "floor": 4,
     "primary": 5,
     "dyliId": 31119,
     "url": "https://www.dyli.io/drop/31119-taj-mahal-birb-pengu"
@@ -9922,6 +9922,12 @@
    }
   },
   "S3194BirbBay": {
+   "normal": {
+    "floor": 1,
+    "primary": 1,
+    "dyliId": 30661,
+    "url": "https://www.dyli.io/drop/30661-birb-bay-birb-pengu"
+   },
    "foil": {
     "floor": 2,
     "primary": 2,
@@ -9933,12 +9939,6 @@
     "primary": 20,
     "dyliId": 30662,
     "url": "https://www.dyli.io/drop/30662-birb-bay-birb-foil-birb-pengu"
-   },
-   "normal": {
-    "floor": 1,
-    "primary": 1,
-    "dyliId": 30661,
-    "url": "https://www.dyli.io/drop/30661-birb-bay-birb-pengu"
    }
   },
   "S3195HammerRod": {
