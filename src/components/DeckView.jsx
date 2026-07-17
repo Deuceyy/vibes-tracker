@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { toPng } from 'html-to-image';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
-import { cardData } from '../hooks/useCollection';
+import { cardData, useCollection } from '../hooks/useCollection';
 import { usePrices } from '../hooks/usePrices';
 import { getCanonicalCardType } from '../lib/cardMetadata.js';
 import Header from './Header';
@@ -160,6 +160,29 @@ export default function DeckView() {
     });
     return { total, missing };
   }, [deck, getPrice]);
+
+  // "Can I build this?" — compare the viewer's collection against the
+  // decklist. Any variant counts toward ownership.
+  const { getTotalOwned, loading: collectionLoading } = useCollection();
+  const buildability = useMemo(() => {
+    if (!deck?.cards || collectionLoading) return null;
+    let ownedCopies = 0;
+    let neededCopies = 0;
+    let missingCost = 0;
+    let unpricedMissing = 0;
+    deck.cards.forEach(({ cardId, quantity }) => {
+      neededCopies += quantity;
+      const owned = Math.min(getTotalOwned(cardId), quantity);
+      ownedCopies += owned;
+      const missing = quantity - owned;
+      if (missing > 0) {
+        const price = getPrice(cardId, 'normal');
+        if (price !== null) missingCost += missing * price;
+        else unpricedMissing += missing;
+      }
+    });
+    return { ownedCopies, neededCopies, missingCost, unpricedMissing };
+  }, [deck, collectionLoading, getTotalOwned, getPrice]);
 
   const deckMetrics = useMemo(() => {
     const colorCounts = {};
@@ -386,6 +409,16 @@ export default function DeckView() {
                 {formatPrice(deckCost.total)}
                 {deckCost.missing > 0 && <small> ({deckCost.missing} unpriced)</small>}
               </span>
+              {buildability && buildability.neededCopies > 0 && (
+                <span
+                  className={`deck-buildability ${buildability.ownedCopies === buildability.neededCopies ? 'buildable' : ''}`}
+                  title="Copies you own (any variant) vs the decklist; cost of the rest at live DYLI floors"
+                >
+                  {buildability.ownedCopies === buildability.neededCopies
+                    ? 'You can build this ✓'
+                    : `You own ${buildability.ownedCopies}/${buildability.neededCopies} · missing ~${formatPrice(buildability.missingCost)}`}
+                </span>
+              )}
               <span className="deck-colors">
                 {deck.colors?.map((color) => (
                   <span key={color} className={`color-badge color-${color.toLowerCase()}`}>{color}</span>

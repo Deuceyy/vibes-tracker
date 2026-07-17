@@ -3818,3 +3818,109 @@ body {
   color: #4ade80;
   font-weight: 700;
 }
+
+/* ============================================================
+   Collection insights + deck buildability
+   ============================================================ */
+
+.collection-insights {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.insights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.insights-header h3 { margin: 0; }
+
+.csv-export-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.csv-export-btn:hover { background: var(--border); }
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.insights-block h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.insights-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.insights-table th {
+  text-align: left;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 4px 8px 4px 0;
+}
+
+.insights-table td {
+  padding: 5px 8px 5px 0;
+  border-top: 1px solid var(--border);
+}
+
+.insights-table small { color: var(--text-secondary); }
+
+.insights-done { color: #4ade80; font-weight: 600; }
+
+.cheapest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.cheapest-chip {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.cheapest-chip span { color: #4ade80; font-weight: 700; margin-left: 4px; }
+
+.cheapest-chip:hover { border-color: var(--accent); }
+
+.deck-buildability {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(233, 69, 96, 0.15);
+  border: 1px solid rgba(233, 69, 96, 0.4);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.deck-buildability.buildable {
+  background: rgba(74, 222, 128, 0.15);
+  border-color: rgba(74, 222, 128, 0.4);
+  color: #4ade80;
+}

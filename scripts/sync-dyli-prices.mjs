@@ -167,9 +167,18 @@ async function main() {
 
   const ourCards = await loadOurCards();
 
+  // Previous snapshot (for day-over-day price movement). Each variant
+  // entry carries prevFloor/prevAt from the last time the floor CHANGED,
+  // so movement survives syncs where nothing moved.
+  let previous = null;
+  try {
+    previous = JSON.parse(await fs.readFile(outFile, 'utf8'));
+  } catch { /* first run */ }
+
   const out = {};
   let matched = 0;
   const unmatched = [];
+  const nowIso = new Date().toISOString();
   for (const card of ourCards) {
     let key = `${card.set}|${norm(card.name)}`;
     if (NORM_ALIASES.has(key)) key = NORM_ALIASES.get(key);
@@ -179,6 +188,22 @@ async function main() {
       continue;
     }
     matched += 1;
+
+    // Carry forward price-movement history per variant.
+    const prevCard = previous?.prices?.[card.id];
+    for (const [variant, entry] of Object.entries(hit)) {
+      const prevEntry = prevCard?.[variant];
+      if (!prevEntry) continue;
+      const prevEffective = prevEntry.floor ?? prevEntry.primary ?? null;
+      const nowEffective = entry.floor ?? entry.primary ?? null;
+      if (prevEffective !== null && nowEffective !== null && prevEffective !== nowEffective) {
+        entry.prevFloor = prevEffective;
+        entry.prevAt = previous?._meta?.generatedAt ?? nowIso;
+      } else if (prevEntry.prevFloor !== undefined) {
+        entry.prevFloor = prevEntry.prevFloor;
+        entry.prevAt = prevEntry.prevAt;
+      }
+    }
     out[card.id] = hit;
   }
 

@@ -7,6 +7,7 @@ import {
   TRACKER_CARD_TYPES,
   getCanonicalCardType,
   getCharacterSubtypes,
+  getSetLabel,
   getSupportedVariants
 } from '../lib/cardMetadata.js';
 import Header from './Header';
@@ -123,6 +124,88 @@ export default function CollectionPage() {
     if (pricesLoading) return 0;
     return cardData.filter((card) => getPrice(card.id, 'normal') === null).length;
   }, [pricesLoading, getPrice]);
+
+  // Collection insights: what finishing each set costs at live floors,
+  // plus the cheapest cards you don't own at all.
+  const insights = useMemo(() => {
+    if (pricesLoading) return null;
+    const sets = {};
+    const missingList = [];
+
+    cardData.forEach((card) => {
+      const total = getTotalOwned(card.id);
+      const variants = getCardVariants(card.id);
+      if (!sets[card.set]) {
+        sets[card.set] = { playsetCost: 0, playsetMissing: 0, masterCost: 0, masterMissing: 0 };
+      }
+      const bucket = sets[card.set];
+
+      if (total < 4) {
+        const p = getPrice(card.id, 'normal');
+        bucket.playsetMissing += 4 - total;
+        if (p !== null) bucket.playsetCost += (4 - total) * p;
+      }
+
+      getSupportedVariants(card).forEach((variant) => {
+        if ((variants[variant] || 0) === 0) {
+          bucket.masterMissing += 1;
+          const p = getPrice(card.id, variant);
+          if (p !== null) bucket.masterCost += p;
+        }
+      });
+
+      if (total === 0) {
+        const p = getPrice(card.id, 'normal');
+        if (p !== null) missingList.push({ card, price: p });
+      }
+    });
+
+    missingList.sort((a, b) => a.price - b.price);
+    return { sets, cheapest: missingList.slice(0, 10) };
+  }, [pricesLoading, getTotalOwned, getCardVariants, getPrice]);
+
+  // Full collection spreadsheet: one row per card, per-variant counts,
+  // unit floors and line values.
+  const exportCsv = () => {
+    const variantCols = ['normal', 'foil', 'arctic', 'sketch', 'birbFoil', 'fishFoil'];
+    const header = [
+      'id', 'name', 'set', 'setNumber', 'rarity',
+      ...variantCols.flatMap((v) => [`${v}_owned`, `${v}_price`]),
+      'total_owned', 'total_value'
+    ];
+    const rows = [header];
+    cardData.forEach((card) => {
+      const variants = getCardVariants(card.id);
+      const supported = getSupportedVariants(card);
+      let totalOwned = 0;
+      let totalValue = 0;
+      const cols = variantCols.flatMap((v) => {
+        if (!supported.includes(v)) return ['', ''];
+        const count = variants[v] || 0;
+        const price = getPrice(card.id, v);
+        totalOwned += count;
+        if (price !== null) totalValue += count * price;
+        return [count, price ?? ''];
+      });
+      rows.push([
+        card.id,
+        `"${(card.name || '').replace(/"/g, '""')}"`,
+        card.set,
+        card.setNumber ?? '',
+        card.rarity ?? '',
+        ...cols,
+        totalOwned,
+        totalValue ? totalValue.toFixed(2) : '0'
+      ]);
+    });
+    const csv = rows.map((r) => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `vibes-collection-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+  };
 
   const filteredCards = useMemo(() => {
     const cards = cardData.filter((card) => {
@@ -280,6 +363,61 @@ export default function CollectionPage() {
                 {collectionValue.missingPrices} card{collectionValue.missingPrices !== 1 ? 's' : ''} missing price data
               </div>
             )}
+          </section>
+        )}
+
+        {isOwnCollection && insights && (
+          <section className="collection-insights">
+            <div className="insights-header">
+              <h3>Collection Insights</h3>
+              <button className="csv-export-btn" onClick={exportCsv}>Export CSV</button>
+            </div>
+
+            <div className="insights-grid">
+              <div className="insights-block">
+                <h4>Cost to complete (live DYLI floors)</h4>
+                <table className="insights-table">
+                  <thead>
+                    <tr><th>Set</th><th>Playsets</th><th>Master set</th></tr>
+                  </thead>
+                  <tbody>
+                    {Object.entries(insights.sets).map(([setCode, s]) => (
+                      <tr key={setCode}>
+                        <td>{getSetLabel(setCode)}</td>
+                        <td>
+                          {s.playsetMissing === 0
+                            ? <span className="insights-done">Complete ✓</span>
+                            : <>~{formatPrice(s.playsetCost)} <small>({s.playsetMissing} cards)</small></>}
+                        </td>
+                        <td>
+                          {s.masterMissing === 0
+                            ? <span className="insights-done">Complete ✓</span>
+                            : <>~{formatPrice(s.masterCost)} <small>({s.masterMissing} variants)</small></>}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {insights.cheapest.length > 0 && (
+                <div className="insights-block">
+                  <h4>Cheapest cards you don't own</h4>
+                  <div className="cheapest-list">
+                    {insights.cheapest.map(({ card, price }) => (
+                      <button
+                        key={card.id}
+                        type="button"
+                        className="cheapest-chip"
+                        onClick={() => setSelectedCard(card)}
+                      >
+                        {card.name} <span>{formatPrice(price)}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </section>
         )}
 
