@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-18T07:22:50.945Z",
+  "generatedAt": "2026-07-18T18:40:08.768Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -261,10 +261,12 @@
     "url": "https://www.dyli.io/drop/3456-screaming-penguin-enter-the-huddle"
    },
    "foil": {
-    "floor": 8,
+    "floor": 20,
     "primary": 9.62,
     "dyliId": 7474,
-    "url": "https://www.dyli.io/drop/7474-screaming-penguin-holo-enter-the-huddle"
+    "url": "https://www.dyli.io/drop/7474-screaming-penguin-holo-enter-the-huddle",
+    "prevFloor": 8,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    }
   },
   "SerenePenguin": {
@@ -1731,10 +1733,12 @@
     "url": "https://www.dyli.io/drop/2864-penguin-who-s-ok-enter-the-huddle"
    },
    "foil": {
-    "floor": 8,
+    "floor": 9,
     "primary": 10.69,
     "dyliId": 4670,
-    "url": "https://www.dyli.io/drop/4670-penguin-who-s-ok-holo-enter-the-huddle"
+    "url": "https://www.dyli.io/drop/4670-penguin-who-s-ok-holo-enter-the-huddle",
+    "prevFloor": 8,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    }
   },
   "PenguinWithHoops": {
@@ -2468,17 +2472,19 @@
     "dyliId": 5422,
     "url": "https://www.dyli.io/drop/5422-wut-enter-the-huddle"
    },
+   "foil": {
+    "floor": 70,
+    "primary": 59.91,
+    "dyliId": 4285,
+    "url": "https://www.dyli.io/drop/4285-wut-holo-enter-the-huddle",
+    "prevFloor": 59.91,
+    "prevAt": "2026-07-18T07:22:50.945Z"
+   },
    "sketch": {
     "floor": 500,
     "primary": 500,
     "dyliId": 18595,
     "url": "https://www.dyli.io/drop/18595-wut-sketch-enter-the-huddle"
-   },
-   "foil": {
-    "floor": 59.91,
-    "primary": 59.91,
-    "dyliId": 4285,
-    "url": "https://www.dyli.io/drop/4285-wut-holo-enter-the-huddle"
    }
   },
   "AhaPenguin": {
@@ -3174,17 +3180,19 @@
     "dyliId": 17142,
     "url": "https://www.dyli.io/drop/17142-lil-insomniac-holo-legend-of-the-lils"
    },
+   "arctic": {
+    "floor": 50,
+    "primary": 48.14,
+    "dyliId": 17485,
+    "url": "https://www.dyli.io/drop/17485-lil-insomniac-arctic-foil-legend-of-the-lils",
+    "prevFloor": 48.14,
+    "prevAt": "2026-07-18T07:22:50.945Z"
+   },
    "sketch": {
     "floor": 100,
     "primary": 100,
     "dyliId": 27815,
     "url": "https://www.dyli.io/drop/27815-lil-insomniac-sketch-1-10-legend-of-the-lils"
-   },
-   "arctic": {
-    "floor": 48.14,
-    "primary": 48.14,
-    "dyliId": 17485,
-    "url": "https://www.dyli.io/drop/17485-lil-insomniac-arctic-foil-legend-of-the-lils"
    }
   },
   "PackAttack": {
@@ -3201,10 +3209,12 @@
     "url": "https://www.dyli.io/drop/17120-pack-attack-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 48.14,
+    "floor": 50,
     "primary": 48.14,
     "dyliId": 17215,
-    "url": "https://www.dyli.io/drop/17215-pack-attack-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/17215-pack-attack-arctic-foil-legend-of-the-lils",
+    "prevFloor": 48.14,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    }
   },
   "TossUp": {
@@ -3509,10 +3519,12 @@
     "url": "https://www.dyli.io/drop/17124-lil-lifeguard-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 37.44,
+    "floor": 30,
     "primary": 37.44,
     "dyliId": 29358,
-    "url": "https://www.dyli.io/drop/29358-lil-lifeguard-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/29358-lil-lifeguard-arctic-foil-legend-of-the-lils",
+    "prevFloor": 37.44,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    }
   },
   "LilStargazer": {
@@ -4079,10 +4091,12 @@
     "url": "https://www.dyli.io/drop/17482-lil-who-can-t-stop-eating-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 37.44,
+    "floor": 30,
     "primary": 37.44,
     "dyliId": 19989,
-    "url": "https://www.dyli.io/drop/19989-lil-who-can-t-stop-eating-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/19989-lil-who-can-t-stop-eating-arctic-foil-legend-of-the-lils",
+    "prevFloor": 37.44,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    },
    "sketch": {
     "floor": 500,
@@ -4105,10 +4119,12 @@
     "url": "https://www.dyli.io/drop/17129-son-of-lil-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 37.44,
+    "floor": 35,
     "primary": 37.44,
     "dyliId": 18433,
-    "url": "https://www.dyli.io/drop/18433-son-of-lil-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/18433-son-of-lil-arctic-foil-legend-of-the-lils",
+    "prevFloor": 37.44,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    }
   },
   "DimaTheDestroyer": {
@@ -4133,10 +4149,12 @@
     "url": "https://www.dyli.io/drop/17046-lil-lodger-legend-of-the-lils"
    },
    "foil": {
-    "floor": 5.87,
+    "floor": 8,
     "primary": 5.87,
     "dyliId": 17158,
-    "url": "https://www.dyli.io/drop/17158-lil-lodger-holo-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/17158-lil-lodger-holo-legend-of-the-lils",
+    "prevFloor": 5.87,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    },
    "arctic": {
     "floor": 50,
@@ -4565,10 +4583,12 @@
     "url": "https://www.dyli.io/drop/17198-penguin-who-wakes-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 37.44,
+    "floor": 30,
     "primary": 37.44,
     "dyliId": 29797,
-    "url": "https://www.dyli.io/drop/29797-penguin-who-wakes-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/29797-penguin-who-wakes-arctic-foil-legend-of-the-lils",
+    "prevFloor": 37.44,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    }
   },
   "LilMocker": {
@@ -5077,10 +5097,12 @@
     "url": "https://www.dyli.io/drop/17172-lil-detective-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 37.44,
+    "floor": 28,
     "primary": 37.44,
     "dyliId": 21551,
-    "url": "https://www.dyli.io/drop/21551-lil-detective-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/21551-lil-detective-arctic-foil-legend-of-the-lils",
+    "prevFloor": 37.44,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    }
   },
   "LilLookout": {
@@ -5096,17 +5118,19 @@
     "dyliId": 17086,
     "url": "https://www.dyli.io/drop/17086-lil-lookout-holo-legend-of-the-lils"
    },
+   "arctic": {
+    "floor": 33,
+    "primary": 37.44,
+    "dyliId": 17528,
+    "url": "https://www.dyli.io/drop/17528-lil-lookout-arctic-foil-legend-of-the-lils",
+    "prevFloor": 37.44,
+    "prevAt": "2026-07-18T07:22:50.945Z"
+   },
    "sketch": {
     "floor": 100,
     "primary": 100,
     "dyliId": 27499,
     "url": "https://www.dyli.io/drop/27499-lil-lookout-sketch-3-10-legend-of-the-lils"
-   },
-   "arctic": {
-    "floor": 37.44,
-    "primary": 37.44,
-    "dyliId": 17528,
-    "url": "https://www.dyli.io/drop/17528-lil-lookout-arctic-foil-legend-of-the-lils"
    }
   },
   "TheWardenOfWind": {
@@ -5385,10 +5409,12 @@
     "url": "https://www.dyli.io/drop/17096-wizard-of-feathers-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 48.14,
+    "floor": 35,
     "primary": 48.14,
     "dyliId": 31577,
-    "url": "https://www.dyli.io/drop/31577-wizard-of-feathers-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/31577-wizard-of-feathers-arctic-foil-legend-of-the-lils",
+    "prevFloor": 48.14,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    }
   },
   "WizardOfDreams": {
@@ -5685,10 +5711,12 @@
     "prevAt": "2026-07-17T18:44:42.351Z"
    },
    "arctic": {
-    "floor": 139.09,
+    "floor": 150,
     "primary": 139.09,
     "dyliId": 17494,
-    "url": "https://www.dyli.io/drop/17494-mount-fuji-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/17494-mount-fuji-arctic-foil-legend-of-the-lils",
+    "prevFloor": 139.09,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    }
   },
   "HalfPastChill": {
@@ -5891,10 +5919,12 @@
     "url": "https://www.dyli.io/drop/16954-pongo-legend-of-the-lils"
    },
    "foil": {
-    "floor": 2,
+    "floor": 6.99,
     "primary": 3.73,
     "dyliId": 17084,
-    "url": "https://www.dyli.io/drop/17084-pongo-holo-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/17084-pongo-holo-legend-of-the-lils",
+    "prevFloor": 2,
+    "prevAt": "2026-07-18T07:22:50.945Z"
    },
    "arctic": {
     "floor": 40,
@@ -6478,17 +6508,17 @@
     "dyliId": 31191,
     "url": "https://www.dyli.io/drop/31191-vibe-scan-birb-pengu"
    },
-   "birbFoil": {
-    "floor": 10,
-    "primary": 10,
-    "dyliId": 31192,
-    "url": "https://www.dyli.io/drop/31192-vibe-scan-birb-foil-birb-pengu"
-   },
    "foil": {
     "floor": 1,
     "primary": 1,
     "dyliId": 31193,
     "url": "https://www.dyli.io/drop/31193-vibe-scan-holo-birb-pengu"
+   },
+   "birbFoil": {
+    "floor": 10,
+    "primary": 10,
+    "dyliId": 31192,
+    "url": "https://www.dyli.io/drop/31192-vibe-scan-birb-foil-birb-pengu"
    }
   },
   "S3024GoodVibesOnly": {
@@ -7378,17 +7408,17 @@
     "dyliId": 31056,
     "url": "https://www.dyli.io/drop/31056-reflective-penguin-birb-pengu"
    },
-   "fishFoil": {
-    "floor": 10,
-    "primary": 10,
-    "dyliId": 31057,
-    "url": "https://www.dyli.io/drop/31057-reflective-penguin-fish-foil-birb-pengu"
-   },
    "foil": {
     "floor": 1,
     "primary": 1,
     "dyliId": 31058,
     "url": "https://www.dyli.io/drop/31058-reflective-penguin-holo-birb-pengu"
+   },
+   "fishFoil": {
+    "floor": 10,
+    "primary": 10,
+    "dyliId": 31057,
+    "url": "https://www.dyli.io/drop/31057-reflective-penguin-fish-foil-birb-pengu"
    }
   },
   "S3067BusinessBirb": {
@@ -9872,17 +9902,17 @@
     "dyliId": 30657,
     "url": "https://www.dyli.io/drop/30657-big-ben-birb-pengu"
    },
-   "birbFoil": {
-    "floor": 20,
-    "primary": 20,
-    "dyliId": 30658,
-    "url": "https://www.dyli.io/drop/30658-big-ben-birb-foil-birb-pengu"
-   },
    "foil": {
     "floor": 2,
     "primary": 2,
     "dyliId": 30659,
     "url": "https://www.dyli.io/drop/30659-big-ben-holo-birb-pengu"
+   },
+   "birbFoil": {
+    "floor": 20,
+    "primary": 20,
+    "dyliId": 30658,
+    "url": "https://www.dyli.io/drop/30658-big-ben-birb-foil-birb-pengu"
    }
   },
   "S3191ArtMuseum": {
