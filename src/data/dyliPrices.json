@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-19T07:53:13.205Z",
+  "generatedAt": "2026-07-19T18:41:30.212Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -9664,17 +9664,17 @@
    }
   },
   "S3178CoastalSurfboard": {
-   "fishFoil": {
-    "floor": 60,
-    "primary": 60,
-    "dyliId": 30736,
-    "url": "https://www.dyli.io/drop/30736-coastal-surfboard-fish-foil-birb-pengu"
-   },
    "normal": {
     "floor": 5,
     "primary": 5,
     "dyliId": 30735,
     "url": "https://www.dyli.io/drop/30735-coastal-surfboard-birb-pengu"
+   },
+   "fishFoil": {
+    "floor": 60,
+    "primary": 60,
+    "dyliId": 30736,
+    "url": "https://www.dyli.io/drop/30736-coastal-surfboard-fish-foil-birb-pengu"
    },
    "foil": {
     "floor": 10,
