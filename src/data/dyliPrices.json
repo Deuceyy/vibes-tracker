@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-18T18:40:08.768Z",
+  "generatedAt": "2026-07-19T07:53:13.205Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -5689,10 +5689,12 @@
     "url": "https://www.dyli.io/drop/17146-opera-house-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 10,
+    "floor": 7.99,
     "primary": 16.04,
     "dyliId": 17196,
-    "url": "https://www.dyli.io/drop/17196-opera-house-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/17196-opera-house-arctic-foil-legend-of-the-lils",
+    "prevFloor": 10,
+    "prevAt": "2026-07-18T18:40:08.768Z"
    }
   },
   "MountFuji": {
@@ -6423,10 +6425,12 @@
   },
   "S3019LeaderOfTheCharge": {
    "normal": {
-    "floor": 4.5,
+    "floor": 9,
     "primary": 20,
     "dyliId": 30903,
-    "url": "https://www.dyli.io/drop/30903-leader-of-the-charge-birb-pengu"
+    "url": "https://www.dyli.io/drop/30903-leader-of-the-charge-birb-pengu",
+    "prevFloor": 4.5,
+    "prevAt": "2026-07-18T18:40:08.768Z"
    },
    "foil": {
     "floor": 49,
@@ -7216,17 +7220,17 @@
     "dyliId": 30897,
     "url": "https://www.dyli.io/drop/30897-lame-story-sis-birb-pengu"
    },
-   "fishFoil": {
-    "floor": 60,
-    "primary": 60,
-    "dyliId": 30898,
-    "url": "https://www.dyli.io/drop/30898-lame-story-sis-fish-foil-birb-pengu"
-   },
    "foil": {
     "floor": 10,
     "primary": 10,
     "dyliId": 30899,
     "url": "https://www.dyli.io/drop/30899-lame-story-sis-holo-birb-pengu"
+   },
+   "fishFoil": {
+    "floor": 60,
+    "primary": 60,
+    "dyliId": 30898,
+    "url": "https://www.dyli.io/drop/30898-lame-story-sis-fish-foil-birb-pengu"
    }
   },
   "S3058LiftOff": {
@@ -7322,17 +7326,17 @@
    }
   },
   "S3062StepByStep": {
-   "foil": {
-    "floor": 5,
-    "primary": 2,
-    "dyliId": 31097,
-    "url": "https://www.dyli.io/drop/31097-step-by-step-holo-birb-pengu"
-   },
    "normal": {
     "floor": 0.5,
     "primary": 1,
     "dyliId": 31095,
     "url": "https://www.dyli.io/drop/31095-step-by-step-birb-pengu"
+   },
+   "foil": {
+    "floor": 5,
+    "primary": 2,
+    "dyliId": 31097,
+    "url": "https://www.dyli.io/drop/31097-step-by-step-holo-birb-pengu"
    },
    "birbFoil": {
     "floor": 20,
@@ -8584,23 +8588,25 @@
    }
   },
   "S3125TimeWarpToss": {
-   "normal": {
-    "floor": 0.5,
-    "primary": 0.5,
-    "dyliId": 31152,
-    "url": "https://www.dyli.io/drop/31152-time-warp-toss-birb-pengu"
-   },
-   "fishFoil": {
-    "floor": 12,
-    "primary": 10,
-    "dyliId": 31153,
-    "url": "https://www.dyli.io/drop/31153-time-warp-toss-fish-foil-birb-pengu"
-   },
    "foil": {
     "floor": 1,
     "primary": 1,
     "dyliId": 31154,
     "url": "https://www.dyli.io/drop/31154-time-warp-toss-holo-birb-pengu"
+   },
+   "fishFoil": {
+    "floor": 10,
+    "primary": 10,
+    "dyliId": 31153,
+    "url": "https://www.dyli.io/drop/31153-time-warp-toss-fish-foil-birb-pengu",
+    "prevFloor": 12,
+    "prevAt": "2026-07-18T18:40:08.768Z"
+   },
+   "normal": {
+    "floor": 0.5,
+    "primary": 0.5,
+    "dyliId": 31152,
+    "url": "https://www.dyli.io/drop/31152-time-warp-toss-birb-pengu"
    }
   },
   "S3126DownhillDisaster": {
@@ -8685,10 +8691,12 @@
   },
   "S3130LilStuck": {
    "normal": {
-    "floor": 0.5,
+    "floor": 0.49,
     "primary": 0.5,
     "dyliId": 30930,
-    "url": "https://www.dyli.io/drop/30930-lil-stuck-birb-pengu"
+    "url": "https://www.dyli.io/drop/30930-lil-stuck-birb-pengu",
+    "prevFloor": 0.5,
+    "prevAt": "2026-07-18T18:40:08.768Z"
    },
    "foil": {
     "floor": 1,
@@ -8850,17 +8858,17 @@
    }
   },
   "S3138PrizedBirb": {
-   "normal": {
-    "floor": 0.5,
-    "primary": 1,
-    "dyliId": 31029,
-    "url": "https://www.dyli.io/drop/31029-prized-birb-birb-pengu"
-   },
    "birbFoil": {
     "floor": 10,
     "primary": 20,
     "dyliId": 31030,
     "url": "https://www.dyli.io/drop/31030-prized-birb-birb-foil-birb-pengu"
+   },
+   "normal": {
+    "floor": 0.5,
+    "primary": 1,
+    "dyliId": 31029,
+    "url": "https://www.dyli.io/drop/31029-prized-birb-birb-pengu"
    },
    "foil": {
     "floor": 2,
@@ -9036,17 +9044,17 @@
    }
   },
   "S3147FishermanPenguin": {
-   "foil": {
-    "floor": 1,
-    "primary": 1,
-    "dyliId": 30797,
-    "url": "https://www.dyli.io/drop/30797-fisherman-penguin-holo-birb-pengu"
-   },
    "normal": {
     "floor": 0.49,
     "primary": 0.5,
     "dyliId": 30795,
     "url": "https://www.dyli.io/drop/30795-fisherman-penguin-birb-pengu"
+   },
+   "foil": {
+    "floor": 1,
+    "primary": 1,
+    "dyliId": 30797,
+    "url": "https://www.dyli.io/drop/30797-fisherman-penguin-holo-birb-pengu"
    },
    "fishFoil": {
     "floor": 10,
@@ -9422,17 +9430,17 @@
     "dyliId": 30690,
     "url": "https://www.dyli.io/drop/30690-breakaway-balloon-birb-pengu"
    },
-   "fishFoil": {
-    "floor": 10,
-    "primary": 10,
-    "dyliId": 30691,
-    "url": "https://www.dyli.io/drop/30691-breakaway-balloon-fish-foil-birb-pengu"
-   },
    "foil": {
     "floor": 1,
     "primary": 1,
     "dyliId": 30692,
     "url": "https://www.dyli.io/drop/30692-breakaway-balloon-holo-birb-pengu"
+   },
+   "fishFoil": {
+    "floor": 10,
+    "primary": 10,
+    "dyliId": 30691,
+    "url": "https://www.dyli.io/drop/30691-breakaway-balloon-fish-foil-birb-pengu"
    }
   },
   "S3167ChewyPendant": {
