@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
 import { usePrices } from '../hooks/usePrices';
+import { deckGradient } from '../lib/deckColors';
 import Header from './Header';
 
 const COLOR_CLASSES = {
@@ -62,7 +63,11 @@ export default function DecksPage() {
 
   const DeckCard = ({ deck, showActions }) => (
     <div className="deck-card">
-      <Link to={`/deck/${deck.id}`} className="deck-card-link">
+      <Link
+        to={`/deck/${deck.id}`}
+        className="deck-card-link deck-card-link--gradient"
+        style={{ '--deck-gradient': deckGradient(deck.colors) }}
+      >
         <div className="deck-card-colors">
           {deck.colors?.map(c => (
             <span key={c} className={`color-dot ${COLOR_CLASSES[c] || ''}`} title={c} />

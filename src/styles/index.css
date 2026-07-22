@@ -3924,3 +3924,97 @@ body {
   border-color: rgba(74, 222, 128, 0.4);
   color: #4ade80;
 }
+
+/* ============================================================
+   Gradient deck tiles + deck stat tiles + highlight-owned
+   ============================================================ */
+
+/* #1 — color gradient wash on deck tiles */
+.deck-card-link--gradient {
+  position: relative;
+  background-image: var(--deck-gradient);
+  background-size: cover;
+}
+
+.deck-card-link--gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 15, 0.15) 0%, rgba(10, 10, 15, 0.82) 100%);
+  z-index: 0;
+}
+
+.deck-card-link--gradient > * {
+  position: relative;
+  z-index: 1;
+}
+
+.deck-card-link--gradient .deck-card-name {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* #3 — deck stat tiles (Total / Owned% / Missing$) */
+.deck-stat-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.deck-stat-tile {
+  min-width: 120px;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.deck-stat-tile .deck-stat-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.deck-stat-tile strong { font-size: 1.15rem; }
+.deck-stat-tile small { font-size: 0.72rem; color: var(--text-secondary); }
+
+.deck-stat-tile.tile-complete {
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.4);
+}
+.deck-stat-tile.tile-complete strong { color: #4ade80; }
+
+.deck-stat-tile.tile-missing {
+  background: rgba(233, 69, 96, 0.1);
+  border-color: rgba(233, 69, 96, 0.35);
+}
+
+/* toolbar toggle active state */
+.deck-view-actions button.toggle-on {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* #2 — highlight owned: dim what you don't own */
+.deck-view-card.own-unowned,
+.deck-image-card.own-unowned {
+  opacity: 0.32;
+  filter: grayscale(0.6);
+}
+
+.deck-view-card.own-partial,
+.deck-image-card.own-partial {
+  opacity: 0.66;
+}
+
+.deck-view-card.own-owned,
+.deck-image-card.own-owned {
+  outline: 2px solid #4ade80;
+  outline-offset: -2px;
+  border-radius: 8px;
+}

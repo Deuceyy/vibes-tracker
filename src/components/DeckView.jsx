@@ -164,6 +164,15 @@ export default function DeckView() {
   // "Can I build this?" — compare the viewer's collection against the
   // decklist. Any variant counts toward ownership.
   const { getTotalOwned, loading: collectionLoading } = useCollection();
+  const [highlightOwned, setHighlightOwned] = useState(false);
+
+  // How many copies of a card the viewer owns vs the deck needs.
+  const ownState = (cardId, quantity) => {
+    const owned = Math.min(getTotalOwned(cardId), quantity);
+    if (owned >= quantity) return 'owned';
+    if (owned > 0) return 'partial';
+    return 'unowned';
+  };
   const buildability = useMemo(() => {
     if (!deck?.cards || collectionLoading) return null;
     let ownedCopies = 0;
@@ -405,26 +414,41 @@ export default function DeckView() {
             <div className="deck-view-meta">
               <span>by <Link to={`/u/${deck.username}`}>{deck.username}</Link></span>
               <span>{totalCards} cards</span>
-              <span className="deck-cost-display">
-                {formatPrice(deckCost.total)}
-                {deckCost.missing > 0 && <small> ({deckCost.missing} unpriced)</small>}
-              </span>
-              {buildability && buildability.neededCopies > 0 && (
-                <span
-                  className={`deck-buildability ${buildability.ownedCopies === buildability.neededCopies ? 'buildable' : ''}`}
-                  title="Copies you own (any variant) vs the decklist; cost of the rest at live DYLI floors"
-                >
-                  {buildability.ownedCopies === buildability.neededCopies
-                    ? 'You can build this ✓'
-                    : `You own ${buildability.ownedCopies}/${buildability.neededCopies} · missing ~${formatPrice(buildability.missingCost)}`}
-                </span>
-              )}
               <span className="deck-colors">
                 {deck.colors?.map((color) => (
                   <span key={color} className={`color-badge color-${color.toLowerCase()}`}>{color}</span>
                 ))}
               </span>
             </div>
+
+            <div className="deck-stat-tiles">
+              <div className="deck-stat-tile">
+                <span className="deck-stat-label">Total value</span>
+                <strong>{formatPrice(deckCost.total)}</strong>
+                {deckCost.missing > 0 && <small>{deckCost.missing} unpriced</small>}
+              </div>
+              {buildability && buildability.neededCopies > 0 && (
+                <>
+                  <div className="deck-stat-tile">
+                    <span className="deck-stat-label">You own</span>
+                    <strong>
+                      {Math.round((buildability.ownedCopies / buildability.neededCopies) * 100)}%
+                    </strong>
+                    <small>{buildability.ownedCopies}/{buildability.neededCopies} copies</small>
+                  </div>
+                  <div className={`deck-stat-tile ${buildability.ownedCopies === buildability.neededCopies ? 'tile-complete' : 'tile-missing'}`}>
+                    <span className="deck-stat-label">Missing</span>
+                    <strong>
+                      {buildability.ownedCopies === buildability.neededCopies
+                        ? 'Complete ✓'
+                        : `~${formatPrice(buildability.missingCost)}`}
+                    </strong>
+                    {buildability.unpricedMissing > 0 && <small>+{buildability.unpricedMissing} unpriced</small>}
+                  </div>
+                </>
+              )}
+            </div>
+
             {deck.description && <p className="deck-description">{deck.description}</p>}
           </div>
           <div className="deck-view-actions">
@@ -437,6 +461,13 @@ export default function DeckView() {
             <button onClick={() => setShareOpen(true)}>Share</button>
             <button onClick={() => setExportOpen(true)}>Export</button>
             <button onClick={handlePrintList}>Print List</button>
+            <button
+              className={highlightOwned ? 'toggle-on' : ''}
+              onClick={() => setHighlightOwned((v) => !v)}
+              title="Dim cards you don't own; highlight the ones you do"
+            >
+              {highlightOwned ? 'Highlight: On' : 'Highlight Owned'}
+            </button>
             <button
               className={`upvote-btn big ${hasUpvoted ? 'upvoted' : ''}`}
               onClick={handleUpvote}
@@ -579,7 +610,7 @@ export default function DeckView() {
                   {cards.sort((left, right) => left.card.name.localeCompare(right.card.name)).map(({ card, quantity }) => (
                     <div
                       key={card.id}
-                      className="deck-view-card"
+                      className={`deck-view-card ${highlightOwned ? `own-${ownState(card.id, quantity)}` : ''}`}
                       onClick={() => setSelectedCard(card)}
                     >
                       {card.imageUrl ? (
@@ -607,7 +638,7 @@ export default function DeckView() {
                   <button
                     key={card.id}
                     type="button"
-                    className="deck-image-card"
+                    className={`deck-image-card ${highlightOwned ? `own-${ownState(card.id, quantity)}` : ''}`}
                     onClick={() => setSelectedCard(card)}
                   >
                     {card.imageUrl ? (
