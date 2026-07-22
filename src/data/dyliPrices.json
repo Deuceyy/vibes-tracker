@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-22T08:03:01.895Z",
+  "generatedAt": "2026-07-22T18:51:48.384Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -1418,17 +1418,19 @@
    }
   },
   "LucaSavesthePenguins": {
-   "normal": {
-    "floor": 65,
-    "primary": 74.89,
-    "dyliId": 4284,
-    "url": "https://www.dyli.io/drop/4284-luca-saves-the-penguins-enter-the-huddle"
-   },
    "foil": {
     "floor": 349.99,
     "primary": 349.99,
     "dyliId": 31602,
     "url": "https://www.dyli.io/drop/31602-luca-saves-the-penguins-holo-enter-the-huddle"
+   },
+   "normal": {
+    "floor": 74.89,
+    "primary": 74.89,
+    "dyliId": 4284,
+    "url": "https://www.dyli.io/drop/4284-luca-saves-the-penguins-enter-the-huddle",
+    "prevFloor": 65,
+    "prevAt": "2026-07-22T08:03:01.895Z"
    }
   },
   "SendOff": {
@@ -2992,6 +2994,12 @@
     "dyliId": 16951,
     "url": "https://www.dyli.io/drop/16951-the-lord-of-lightning-legend-of-the-lils"
    },
+   "foil": {
+    "floor": 3.52,
+    "primary": 3.52,
+    "dyliId": 17115,
+    "url": "https://www.dyli.io/drop/17115-the-lord-of-lightning-holo-legend-of-the-lils"
+   },
    "arctic": {
     "floor": 75,
     "primary": 75,
@@ -3005,6 +3013,12 @@
     "primary": 1.38,
     "dyliId": 16959,
     "url": "https://www.dyli.io/drop/16959-lil-singer-legend-of-the-lils"
+   },
+   "foil": {
+    "floor": 9.62,
+    "primary": 9.62,
+    "dyliId": 17189,
+    "url": "https://www.dyli.io/drop/17189-lil-singer-holo-legend-of-the-lils"
    },
    "arctic": {
     "floor": 58.84,
@@ -3261,6 +3275,12 @@
     "primary": 0.52,
     "dyliId": 16918,
     "url": "https://www.dyli.io/drop/16918-ride-the-train-legend-of-the-lils"
+   },
+   "foil": {
+    "floor": 3.52,
+    "primary": 3.52,
+    "dyliId": 17188,
+    "url": "https://www.dyli.io/drop/17188-ride-the-train-holo-legend-of-the-lils"
    },
    "arctic": {
     "floor": 37.44,
@@ -3767,6 +3787,12 @@
     "primary": 0.52,
     "dyliId": 17006,
     "url": "https://www.dyli.io/drop/17006-be-merry-and-go-legend-of-the-lils"
+   },
+   "foil": {
+    "floor": 2.45,
+    "primary": 2.45,
+    "dyliId": 17134,
+    "url": "https://www.dyli.io/drop/17134-be-merry-and-go-holo-legend-of-the-lils"
    },
    "sketch": {
     "floor": 100,
@@ -6764,6 +6790,14 @@
    }
   },
   "S3034InfluencerBirb": {
+   "birbFoil": {
+    "floor": 5,
+    "primary": 10,
+    "dyliId": 30883,
+    "url": "https://www.dyli.io/drop/30883-influencer-birb-birb-foil-birb-pengu",
+    "prevFloor": 10,
+    "prevAt": "2026-07-22T08:03:01.895Z"
+   },
    "normal": {
     "floor": 0.49,
     "primary": 0.5,
@@ -6777,12 +6811,6 @@
     "primary": 1,
     "dyliId": 30884,
     "url": "https://www.dyli.io/drop/30884-influencer-birb-holo-birb-pengu"
-   },
-   "birbFoil": {
-    "floor": 10,
-    "primary": 10,
-    "dyliId": 30883,
-    "url": "https://www.dyli.io/drop/30883-influencer-birb-birb-foil-birb-pengu"
    }
   },
   "S3035FarmerBirb": {
@@ -6934,27 +6962,27 @@
     "dyliId": 31071,
     "url": "https://www.dyli.io/drop/31071-scholar-birb-birb-pengu"
    },
-   "foil": {
-    "floor": 1,
-    "primary": 1,
-    "dyliId": 31073,
-    "url": "https://www.dyli.io/drop/31073-scholar-birb-holo-birb-pengu"
-   },
    "birbFoil": {
     "floor": 10,
     "primary": 10,
     "dyliId": 31072,
     "url": "https://www.dyli.io/drop/31072-scholar-birb-birb-foil-birb-pengu"
+   },
+   "foil": {
+    "floor": 1,
+    "primary": 1,
+    "dyliId": 31073,
+    "url": "https://www.dyli.io/drop/31073-scholar-birb-holo-birb-pengu"
    }
   },
   "S3042Avis": {
    "normal": {
-    "floor": 2.75,
+    "floor": 3,
     "primary": 5,
     "dyliId": 30648,
     "url": "https://www.dyli.io/drop/30648-avis-birb-pengu",
-    "prevFloor": 3,
-    "prevAt": "2026-07-19T18:41:30.212Z"
+    "prevFloor": 2.75,
+    "prevAt": "2026-07-22T08:03:01.895Z"
    },
    "foil": {
     "floor": 10,
@@ -8210,17 +8238,17 @@
     "prevFloor": 0.25,
     "prevAt": "2026-07-21T18:58:39.484Z"
    },
-   "foil": {
-    "floor": 1,
-    "primary": 1,
-    "dyliId": 31214,
-    "url": "https://www.dyli.io/drop/31214-wonder-weaver-holo-birb-pengu"
-   },
    "birbFoil": {
     "floor": 10,
     "primary": 10,
     "dyliId": 31213,
     "url": "https://www.dyli.io/drop/31213-wonder-weaver-birb-foil-birb-pengu"
+   },
+   "foil": {
+    "floor": 1,
+    "primary": 1,
+    "dyliId": 31214,
+    "url": "https://www.dyli.io/drop/31214-wonder-weaver-holo-birb-pengu"
    }
   },
   "S3101PenguinInBlue": {
@@ -9015,12 +9043,12 @@
   },
   "S3138PrizedBirb": {
    "normal": {
-    "floor": 0.49,
+    "floor": 0.5,
     "primary": 1,
     "dyliId": 31029,
     "url": "https://www.dyli.io/drop/31029-prized-birb-birb-pengu",
-    "prevFloor": 0.5,
-    "prevAt": "2026-07-20T08:33:15.525Z"
+    "prevFloor": 0.49,
+    "prevAt": "2026-07-22T08:03:01.895Z"
    },
    "foil": {
     "floor": 1.5,
@@ -9265,12 +9293,12 @@
     "prevAt": "2026-07-20T19:21:04.299Z"
    },
    "normal": {
-    "floor": 0.49,
+    "floor": 1,
     "primary": 1,
     "dyliId": 30813,
     "url": "https://www.dyli.io/drop/30813-get-rekt-birb-pengu",
-    "prevFloor": 0.5,
-    "prevAt": "2026-07-20T08:33:15.525Z"
+    "prevFloor": 0.49,
+    "prevAt": "2026-07-22T08:03:01.895Z"
    },
    "birbFoil": {
     "floor": 20,
@@ -9528,17 +9556,19 @@
    }
   },
   "S3162InfernoWizbirb": {
+   "normal": {
+    "floor": 0.5,
+    "primary": 0.5,
+    "dyliId": 30879,
+    "url": "https://www.dyli.io/drop/30879-inferno-wizbirb-birb-pengu",
+    "prevFloor": 0.49,
+    "prevAt": "2026-07-22T08:03:01.895Z"
+   },
    "foil": {
     "floor": 1,
     "primary": 1,
     "dyliId": 30881,
     "url": "https://www.dyli.io/drop/30881-inferno-wizbirb-holo-birb-pengu"
-   },
-   "normal": {
-    "floor": 0.49,
-    "primary": 0.5,
-    "dyliId": 30879,
-    "url": "https://www.dyli.io/drop/30879-inferno-wizbirb-birb-pengu"
    },
    "birbFoil": {
     "floor": 200,
@@ -10041,6 +10071,12 @@
     "url": "https://www.dyli.io/drop/30729-classy-bow-tie-birb-pengu",
     "prevFloor": 0.49,
     "prevAt": "2026-07-20T08:33:15.525Z"
+   },
+   "foil": {
+    "floor": 1,
+    "primary": 1,
+    "dyliId": 30731,
+    "url": "https://www.dyli.io/drop/30731-classy-bow-tie-holo-birb-pengu"
    },
    "birbFoil": {
     "floor": 10,
