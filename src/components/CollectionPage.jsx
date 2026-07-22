@@ -125,36 +125,59 @@ export default function CollectionPage() {
     return cardData.filter((card) => getPrice(card.id, 'normal') === null).length;
   }, [pricesLoading, getPrice]);
 
-  // Collection insights: what finishing each set costs at live floors,
-  // plus the cheapest cards you don't own at all.
+  // What completion goal the insights table is priced against.
+  const [insightGoal, setInsightGoal] = useState('playset');
+
+  // Collection insights: cost to reach the selected completion goal per
+  // set (at live DYLI floors), plus the cheapest unowned cards.
   const insights = useMemo(() => {
     if (pricesLoading) return null;
     const sets = {};
     const missingList = [];
 
+    const ensure = (setCode) => {
+      if (!sets[setCode]) sets[setCode] = { cost: 0, missing: 0, applicable: 0 };
+      return sets[setCode];
+    };
+
     cardData.forEach((card) => {
-      const total = getTotalOwned(card.id);
       const variants = getCardVariants(card.id);
-      if (!sets[card.set]) {
-        sets[card.set] = { playsetCost: 0, playsetMissing: 0, masterCost: 0, masterMissing: 0 };
-      }
-      const bucket = sets[card.set];
+      const supported = getSupportedVariants(card);
+      const bucket = ensure(card.set);
 
-      if (total < 4) {
-        const p = getPrice(card.id, 'normal');
-        bucket.playsetMissing += 4 - total;
-        if (p !== null) bucket.playsetCost += (4 - total) * p;
-      }
-
-      getSupportedVariants(card).forEach((variant) => {
-        if ((variants[variant] || 0) === 0) {
-          bucket.masterMissing += 1;
-          const p = getPrice(card.id, variant);
-          if (p !== null) bucket.masterCost += p;
+      if (insightGoal === 'playset') {
+        // 4 playable copies (any variant), priced at the normal floor.
+        bucket.applicable += 1;
+        const owned = getTotalOwned(card.id);
+        if (owned < 4) {
+          const p = getPrice(card.id, 'normal');
+          bucket.missing += 4 - owned;
+          if (p !== null) bucket.cost += (4 - owned) * p;
         }
-      });
+      } else if (insightGoal === 'master') {
+        // 1 of every variant this card supports.
+        bucket.applicable += 1;
+        supported.forEach((variant) => {
+          if ((variants[variant] || 0) === 0) {
+            bucket.missing += 1;
+            const p = getPrice(card.id, variant);
+            if (p !== null) bucket.cost += p;
+          }
+        });
+      } else {
+        // A single-variant goal (normal/foil/arctic/sketch/birbFoil/fishFoil):
+        // 1 of that variant for every card that supports it.
+        if (supported.includes(insightGoal)) {
+          bucket.applicable += 1;
+          if ((variants[insightGoal] || 0) === 0) {
+            bucket.missing += 1;
+            const p = getPrice(card.id, insightGoal);
+            if (p !== null) bucket.cost += p;
+          }
+        }
+      }
 
-      if (total === 0) {
+      if (getTotalOwned(card.id) === 0) {
         const p = getPrice(card.id, 'normal');
         if (p !== null) missingList.push({ card, price: p });
       }
@@ -162,7 +185,18 @@ export default function CollectionPage() {
 
     missingList.sort((a, b) => a.price - b.price);
     return { sets, cheapest: missingList.slice(0, 10) };
-  }, [pricesLoading, getTotalOwned, getCardVariants, getPrice]);
+  }, [pricesLoading, insightGoal, getTotalOwned, getCardVariants, getPrice]);
+
+  const INSIGHT_GOALS = [
+    { value: 'playset', label: 'Playsets (4× each)' },
+    { value: 'master', label: 'Full master set' },
+    { value: 'normal', label: 'Normal set (1× each)' },
+    { value: 'foil', label: 'Foil master' },
+    { value: 'arctic', label: 'Arctic master (Set 2)' },
+    { value: 'sketch', label: 'Sketch master (Sets 1 & 2)' },
+    { value: 'birbFoil', label: 'Birb Foil master (Set 3)' },
+    { value: 'fishFoil', label: 'Fish Foil master (Set 3)' }
+  ];
 
   // Full collection spreadsheet: one row per card, per-variant counts,
   // unit floors and line values.
@@ -375,27 +409,45 @@ export default function CollectionPage() {
 
             <div className="insights-grid">
               <div className="insights-block">
-                <h4>Cost to complete (live DYLI floors)</h4>
+                <div className="insights-block-head">
+                  <h4>Cost to complete (live DYLI floors)</h4>
+                  <select
+                    className="insights-goal-select"
+                    value={insightGoal}
+                    onChange={(e) => setInsightGoal(e.target.value)}
+                  >
+                    {INSIGHT_GOALS.map((g) => (
+                      <option key={g.value} value={g.value}>{g.label}</option>
+                    ))}
+                  </select>
+                </div>
                 <table className="insights-table">
                   <thead>
-                    <tr><th>Set</th><th>Playsets</th><th>Master set</th></tr>
+                    <tr><th>Set</th><th>Remaining</th></tr>
                   </thead>
                   <tbody>
                     {Object.entries(insights.sets).map(([setCode, s]) => (
                       <tr key={setCode}>
                         <td>{getSetLabel(setCode)}</td>
                         <td>
-                          {s.playsetMissing === 0
-                            ? <span className="insights-done">Complete ✓</span>
-                            : <>~{formatPrice(s.playsetCost)} <small>({s.playsetMissing} cards)</small></>}
-                        </td>
-                        <td>
-                          {s.masterMissing === 0
-                            ? <span className="insights-done">Complete ✓</span>
-                            : <>~{formatPrice(s.masterCost)} <small>({s.masterMissing} variants)</small></>}
+                          {s.applicable === 0
+                            ? <span className="insights-na">n/a</span>
+                            : s.missing === 0
+                              ? <span className="insights-done">Complete ✓</span>
+                              : <>~{formatPrice(s.cost)} <small>({s.missing} {insightGoal === 'playset' ? 'copies' : insightGoal === 'master' ? 'variants' : 'cards'})</small></>}
                         </td>
                       </tr>
                     ))}
+                    {(() => {
+                      const totalCost = Object.values(insights.sets).reduce((sum, s) => sum + s.cost, 0);
+                      const totalMissing = Object.values(insights.sets).reduce((sum, s) => sum + s.missing, 0);
+                      return totalMissing > 0 ? (
+                        <tr className="insights-total-row">
+                          <td>All sets</td>
+                          <td>~{formatPrice(totalCost)} <small>({totalMissing})</small></td>
+                        </tr>
+                      ) : null;
+                    })()}
                   </tbody>
                 </table>
               </div>

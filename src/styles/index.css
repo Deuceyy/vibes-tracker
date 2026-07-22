@@ -4018,3 +4018,32 @@ body {
   outline-offset: -2px;
   border-radius: 8px;
 }
+
+/* insights goal selector + n/a + total row */
+.insights-block-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.insights-block-head h4 { margin: 0; }
+
+.insights-goal-select {
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.insights-na { color: var(--text-secondary); opacity: 0.6; }
+
+.insights-total-row td {
+  border-top: 2px solid var(--border);
+  font-weight: 700;
+}
