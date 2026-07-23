@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-22T18:51:48.384Z",
+  "generatedAt": "2026-07-23T08:05:16.750Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -5907,10 +5907,12 @@
     "url": "https://www.dyli.io/drop/17102-easter-island-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 14,
+    "floor": 13.99,
     "primary": 16.04,
     "dyliId": 17077,
-    "url": "https://www.dyli.io/drop/17077-easter-island-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/17077-easter-island-arctic-foil-legend-of-the-lils",
+    "prevFloor": 14,
+    "prevAt": "2026-07-22T18:51:48.384Z"
    }
   },
   "LeaningTower": {
@@ -7762,12 +7764,6 @@
    }
   },
   "S3078LumberjackPenguin": {
-   "normal": {
-    "floor": 0.5,
-    "primary": 0.5,
-    "dyliId": 30945,
-    "url": "https://www.dyli.io/drop/30945-lumberjack-penguin-birb-pengu"
-   },
    "foil": {
     "floor": 1,
     "primary": 1,
@@ -9748,12 +9744,6 @@
    }
   },
   "S3171CozyMittens": {
-   "normal": {
-    "floor": 0.25,
-    "primary": 0.5,
-    "dyliId": 30744,
-    "url": "https://www.dyli.io/drop/30744-cozy-mittens-birb-pengu"
-   },
    "foil": {
     "floor": 1,
     "primary": 1,
