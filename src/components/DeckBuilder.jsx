@@ -6,6 +6,7 @@ import { useDecks, validateDeck } from '../hooks/useDecks';
 import { useCollection, cardData } from '../hooks/useCollection';
 import { usePrices } from '../hooks/usePrices';
 import { TRACKER_CARD_TYPES, CHARACTER_SUBTYPES, ENABLE_SET3, getCanonicalCardType, getCharacterSubtypes } from '../lib/cardMetadata.js';
+import { toast } from '../lib/toast';
 import Header from './Header';
 import CardModal from './CardModal';
 
@@ -55,7 +56,7 @@ export default function DeckBuilder() {
       setShowImportModal(false);
       setImportCode('');
     } catch (err) {
-      alert('Invalid deck code');
+      toast.error('Invalid deck code');
     }
   };
 
@@ -166,11 +167,11 @@ export default function DeckBuilder() {
 
   const handleSave = async () => {
     if (!user) {
-      alert('Please sign in to save decks');
+      toast.error('Please sign in to save decks');
       return;
     }
     if (!deckName.trim()) {
-      alert('Please enter a deck name');
+      toast.error('Please enter a deck name');
       return;
     }
     setSaving(true);
@@ -189,7 +190,7 @@ export default function DeckBuilder() {
       });
       navigate(`/deck/${id}`);
     } catch (err) {
-      alert('Error saving deck: ' + err.message);
+      toast.error('Error saving deck: ' + err.message);
     }
     setSaving(false);
   };

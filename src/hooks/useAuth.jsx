@@ -3,6 +3,7 @@ import { track } from '@vercel/analytics';
 import { signInWithPopup, signOut as firebaseSignOut, onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc, setDoc, collection, query, where, getDocs } from 'firebase/firestore';
 import { auth, googleProvider, db } from '../firebase';
+import { toast } from '../lib/toast';
 
 const AuthContext = createContext(null);
 
@@ -66,14 +67,14 @@ export function AuthProvider({ children }) {
     if (!user) return;
     const clean = newUsername.toLowerCase().replace(/[^a-z0-9]/g, '');
     if (clean.length < 3) {
-      alert('Username must be at least 3 characters');
+      toast.error('Username must be at least 3 characters');
       return;
     }
     const usersRef = collection(db, 'users');
     const q = query(usersRef, where('username', '==', clean));
     const snapshot = await getDocs(q);
     if (!snapshot.empty && snapshot.docs[0].id !== user.uid) {
-      alert('Username already taken');
+      toast.error('Username already taken');
       return;
     }
     const profileRef = doc(db, 'users', user.uid);

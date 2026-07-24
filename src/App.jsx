@@ -12,6 +12,7 @@ import DeckView from './components/DeckView.jsx';
 import PriceListBuilder from './components/PriceListBuilder.jsx';
 import ProxyPrintPage from './components/ProxyPrintPage.jsx';
 import CardPeek from './components/CardPeek.jsx';
+import Toaster from './components/Toaster.jsx';
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/proxies" element={<ProxyPrintPage />} />
         </Routes>
         <CardPeek />
+        <Toaster />
         <Analytics />
         <SpeedInsights />
       </PricesProvider>

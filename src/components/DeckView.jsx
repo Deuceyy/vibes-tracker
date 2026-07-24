@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { toPng } from 'html-to-image';
+import { toast } from '../lib/toast';
 import { useAuth } from '../hooks/useAuth';
 import { useDecks } from '../hooks/useDecks';
 import { cardData, useCollection } from '../hooks/useCollection';
@@ -296,7 +297,7 @@ export default function DeckView() {
 
   const handleCopy = async () => {
     if (!user) {
-      alert('Please sign in to copy decks');
+      toast.error('Please sign in to copy decks');
       return;
     }
     const newId = await saveDeck({
@@ -315,14 +316,14 @@ export default function DeckView() {
     });
     const deckCode = JSON.stringify({ deckName: deck.name, counts });
     await navigator.clipboard.writeText(deckCode);
-    alert('Vibes client deck code copied to clipboard!');
+    toast.success('Deck code copied to clipboard');
     setExportOpen(false);
   };
 
   const exportRegistrationText = async () => {
     const text = getRegistrationText(deck.name, deckImageCards);
     await navigator.clipboard.writeText(text);
-    alert('Registration sheet text copied to clipboard!');
+    toast.success('Registration sheet copied');
     setExportOpen(false);
   };
 
@@ -386,7 +387,7 @@ export default function DeckView() {
       link.download = `${deck.name.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}-deck-image.png`;
       link.click();
     } catch (error) {
-      alert('Could not download deck image.');
+      toast.error('Could not download deck image');
     } finally {
       setShareBusy(false);
     }
@@ -394,7 +395,7 @@ export default function DeckView() {
 
   const copyDeckLink = async () => {
     await navigator.clipboard.writeText(deckUrl);
-    alert('Deck link copied!');
+    toast.success('Deck link copied');
   };
 
   if (loading) return <div className="app"><Header /><div className="loading">Loading deck...</div></div>;

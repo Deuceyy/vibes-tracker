@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { getSetLabel, getSupportedVariants, getCanonicalCardType, getCharacterSubtypes } from '../lib/cardMetadata.js';
 import { usePrices } from '../hooks/usePrices';
 
@@ -12,8 +13,19 @@ const VARIANT_LABELS = {
 };
 const DYLI_VARIANT_ORDER = ['normal', 'foil', 'arctic', 'sketch', 'birbFoil', 'fishFoil', 'penguFoil'];
 
-export default function CardModal({ card, variants, onClose, onAdjustVariant }) {
+export default function CardModal({ card, variants, onClose, onAdjustVariant, onNavigate, hasPrev, hasNext }) {
   const { getCardPrices, getDyliVariants, formatPrice } = usePrices();
+
+  // Keyboard: Esc to close, ←/→ to page through the filtered list.
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+      else if (e.key === 'ArrowLeft' && onNavigate && hasPrev) onNavigate(-1);
+      else if (e.key === 'ArrowRight' && onNavigate && hasNext) onNavigate(1);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose, onNavigate, hasPrev, hasNext]);
 
   if (!card) return null;
 
@@ -29,6 +41,20 @@ export default function CardModal({ card, variants, onClose, onAdjustVariant }) 
     <div className="modal-overlay active" onClick={(e) => {
       if (e.target.classList.contains('modal-overlay')) onClose();
     }}>
+      {onNavigate && hasPrev && (
+        <button
+          className="modal-nav modal-nav--prev"
+          onClick={(e) => { e.stopPropagation(); onNavigate(-1); }}
+          aria-label="Previous card"
+        >‹</button>
+      )}
+      {onNavigate && hasNext && (
+        <button
+          className="modal-nav modal-nav--next"
+          onClick={(e) => { e.stopPropagation(); onNavigate(1); }}
+          aria-label="Next card"
+        >›</button>
+      )}
       <div className="modal">
         <div className="modal-header">
           <h2 className="modal-title">{card.name}</h2>

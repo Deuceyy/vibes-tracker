@@ -391,6 +391,10 @@ body {
   overflow: hidden;
   border: 2px solid transparent;
   transition: all 0.2s;
+  /* Skip layout/paint for off-screen cards; the reserved size keeps the
+     scrollbar honest without rendering cost. */
+  content-visibility: auto;
+  contain-intrinsic-size: 360px;
 }
 
 .card-item:hover {
@@ -4046,4 +4050,97 @@ body {
 .insights-total-row td {
   border-top: 2px solid var(--border);
   font-weight: 700;
+}
+
+/* ============================================================
+   Toasts, card-grid sentinel, modal nav arrows
+   ============================================================ */
+
+.card-grid-sentinel {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding: 1.5rem 0 2rem;
+}
+
+/* Card modal prev/next arrows */
+.modal-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(20, 20, 30, 0.85);
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.modal-nav:hover { background: var(--accent); }
+.modal-nav--prev { left: 24px; }
+.modal-nav--next { right: 24px; }
+
+@media (max-width: 640px) {
+  .modal-nav { width: 40px; height: 40px; font-size: 1.5rem; }
+  .modal-nav--prev { left: 6px; }
+  .modal-nav--next { right: 6px; }
+}
+
+/* Toaster */
+.toaster {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: min(360px, calc(100vw - 32px));
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  animation: toast-in 0.18s ease-out;
+}
+
+.toast-icon {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: white;
+}
+
+.toast--success { border-color: rgba(74, 222, 128, 0.5); }
+.toast--success .toast-icon { background: #22c55e; }
+.toast--error { border-color: rgba(239, 68, 68, 0.5); }
+.toast--error .toast-icon { background: #ef4444; }
+.toast--info .toast-icon { background: var(--accent); }
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import { useCollection, cardData } from '../hooks/useCollection';
 import { usePrices } from '../hooks/usePrices';
 import {
@@ -71,6 +71,12 @@ export default function CollectionPage() {
     sort: 'set-asc'
   });
   const [selectedCard, setSelectedCard] = useState(null);
+  // Incremental rendering: only mount a window of cards and grow it as
+  // the user scrolls, so the collection page doesn't create ~19k DOM
+  // nodes (546 cards x variant counters) up front.
+  const CARD_BATCH = 60;
+  const [visibleCount, setVisibleCount] = useState(CARD_BATCH);
+  const sentinelRef = useRef(null);
   const [highlightMissingPrices, setHighlightMissingPrices] = useState(false);
 
   const updateFilter = (key, value) => {
@@ -339,6 +345,29 @@ export default function CollectionPage() {
 
     return cards;
   }, [filters, getCardVariants, getTotalOwned, hasPlayset, hasMasterSet]);
+
+  // Reset the render window whenever the filtered set changes.
+  useEffect(() => {
+    setVisibleCount(CARD_BATCH);
+  }, [filteredCards]);
+
+  // Grow the window when the sentinel scrolls into view.
+  useEffect(() => {
+    const node = sentinelRef.current;
+    if (!node) return undefined;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((c) => Math.min(c + CARD_BATCH, filteredCards.length));
+        }
+      },
+      { rootMargin: '600px' }
+    );
+    io.observe(node);
+    return () => io.disconnect();
+  }, [filteredCards.length]);
+
+  const visibleCards = filteredCards.slice(0, visibleCount);
 
   const colorProgress = useMemo(() => {
     const colors = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Colorless'];
@@ -661,7 +690,7 @@ export default function CollectionPage() {
           </div>
         ) : (
           <section className="card-grid">
-            {filteredCards.map((card) => {
+            {visibleCards.map((card) => {
               const variants = getCardVariants(card.id);
               const supportedVariants = getSupportedVariants(card);
               const total = getTotalOwned(card.id);
@@ -734,6 +763,11 @@ export default function CollectionPage() {
             })}
           </section>
         )}
+        {visibleCount < filteredCards.length && (
+          <div ref={sentinelRef} className="card-grid-sentinel">
+            Loading more… ({visibleCount} of {filteredCards.length})
+          </div>
+        )}
       </div>
 
       {selectedCard && (
@@ -742,6 +776,19 @@ export default function CollectionPage() {
           variants={getCardVariants(selectedCard.id)}
           onClose={() => setSelectedCard(null)}
           onAdjustVariant={isOwnCollection ? adjustVariant : null}
+          onNavigate={(delta) => {
+            const idx = filteredCards.findIndex((c) => c.id === selectedCard.id);
+            if (idx === -1) return;
+            const next = filteredCards[idx + delta];
+            if (next) {
+              // Make sure the target is within the rendered window.
+              const nextIdx = idx + delta;
+              if (nextIdx >= visibleCount) setVisibleCount(nextIdx + 1);
+              setSelectedCard(next);
+            }
+          }}
+          hasPrev={filteredCards.findIndex((c) => c.id === selectedCard.id) > 0}
+          hasNext={filteredCards.findIndex((c) => c.id === selectedCard.id) < filteredCards.length - 1}
         />
       )}
     </>

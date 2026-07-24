@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+import { toast } from '../lib/toast';
 
 export default function Header({ stats, onExport, onImport, onReset, isOwnCollection = false }) {
   const { user, userProfile, loading, signInWithGoogle, signOut, updateUsername } = useAuth();
@@ -29,7 +30,7 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
             const data = JSON.parse(event.target.result);
             onImport?.(data);
           } catch (err) {
-            alert('Error importing collection');
+            toast.error('Error importing collection');
           }
         };
         reader.readAsText(file);
@@ -55,7 +56,7 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
   const copyShareLink = () => {
     if (shareUrl) {
       navigator.clipboard.writeText(shareUrl);
-      alert('Profile link copied!');
+      toast.success('Profile link copied');
     }
   };
 
