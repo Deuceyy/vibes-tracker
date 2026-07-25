@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-25T07:41:26.656Z",
+  "generatedAt": "2026-07-25T18:43:12.891Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -7291,10 +7291,12 @@
   },
   "S3055NightOfTheLivingBirb": {
    "foil": {
-    "floor": 2,
+    "floor": 1.89,
     "primary": 2,
     "dyliId": 30974,
-    "url": "https://www.dyli.io/drop/30974-night-of-the-living-birb-holo-birb-pengu"
+    "url": "https://www.dyli.io/drop/30974-night-of-the-living-birb-holo-birb-pengu",
+    "prevFloor": 2,
+    "prevAt": "2026-07-25T07:41:26.656Z"
    },
    "normal": {
     "floor": 0.5,
@@ -9074,6 +9076,14 @@
     "prevFloor": 0.49,
     "prevAt": "2026-07-22T08:03:01.895Z"
    },
+   "birbFoil": {
+    "floor": 9.49,
+    "primary": 20,
+    "dyliId": 31030,
+    "url": "https://www.dyli.io/drop/31030-prized-birb-birb-foil-birb-pengu",
+    "prevFloor": 10,
+    "prevAt": "2026-07-25T07:41:26.656Z"
+   },
    "foil": {
     "floor": 1.5,
     "primary": 2,
@@ -9081,14 +9091,6 @@
     "url": "https://www.dyli.io/drop/31031-prized-birb-holo-birb-pengu",
     "prevFloor": 2,
     "prevAt": "2026-07-20T08:33:15.525Z"
-   },
-   "birbFoil": {
-    "floor": 10,
-    "primary": 20,
-    "dyliId": 31030,
-    "url": "https://www.dyli.io/drop/31030-prized-birb-birb-foil-birb-pengu",
-    "prevFloor": 8.5,
-    "prevAt": "2026-07-21T18:58:39.484Z"
    }
   },
   "S3139ProtectorPenguin": {
