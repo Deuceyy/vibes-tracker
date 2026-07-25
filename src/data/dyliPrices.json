@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-24T19:09:01.173Z",
+  "generatedAt": "2026-07-25T07:41:26.656Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -5575,12 +5575,12 @@
   },
   "LayerALasagna": {
    "normal": {
-    "floor": 0.49,
+    "floor": 0.45,
     "primary": 0.52,
     "dyliId": 16972,
     "url": "https://www.dyli.io/drop/16972-layer-a-lasagna-legend-of-the-lils",
-    "prevFloor": 0.15,
-    "prevAt": "2026-07-23T18:53:34.512Z"
+    "prevFloor": 0.49,
+    "prevAt": "2026-07-24T19:09:01.173Z"
    },
    "arctic": {
     "floor": 13.5,
@@ -5589,12 +5589,12 @@
     "url": "https://www.dyli.io/drop/17211-layer-a-lasagna-arctic-foil-legend-of-the-lils"
    },
    "foil": {
-    "floor": 2.2,
+    "floor": 2,
     "primary": 2.45,
     "dyliId": 17163,
     "url": "https://www.dyli.io/drop/17163-layer-a-lasagna-holo-legend-of-the-lils",
-    "prevFloor": 2.25,
-    "prevAt": "2026-07-23T18:53:34.512Z"
+    "prevFloor": 2.2,
+    "prevAt": "2026-07-24T19:09:01.173Z"
    }
   },
   "FlipAFlapjack": {
@@ -6063,12 +6063,12 @@
     "url": "https://www.dyli.io/drop/17165-colosseum-holo-legend-of-the-lils"
    },
    "normal": {
-    "floor": 15,
+    "floor": 21,
     "primary": 32.09,
     "dyliId": 17012,
     "url": "https://www.dyli.io/drop/17012-colosseum-legend-of-the-lils",
-    "prevFloor": 21,
-    "prevAt": "2026-07-17T18:44:42.351Z"
+    "prevFloor": 15,
+    "prevAt": "2026-07-24T19:09:01.173Z"
    },
    "arctic": {
     "floor": 588.49,
@@ -9564,12 +9564,6 @@
     "dyliId": 31098,
     "url": "https://www.dyli.io/drop/31098-stonebreaker-wizbirb-birb-pengu"
    },
-   "foil": {
-    "floor": 1,
-    "primary": 1,
-    "dyliId": 31100,
-    "url": "https://www.dyli.io/drop/31100-stonebreaker-wizbirb-holo-birb-pengu"
-   },
    "birbFoil": {
     "floor": 200,
     "primary": 10,
@@ -9577,6 +9571,12 @@
     "url": "https://www.dyli.io/drop/31099-stonebreaker-wizbirb-birb-foil-birb-pengu",
     "prevFloor": 199,
     "prevAt": "2026-07-20T08:33:15.525Z"
+   },
+   "foil": {
+    "floor": 1,
+    "primary": 1,
+    "dyliId": 31100,
+    "url": "https://www.dyli.io/drop/31100-stonebreaker-wizbirb-holo-birb-pengu"
    }
   },
   "S3162InfernoWizbirb": {
@@ -10160,17 +10160,17 @@
     "prevFloor": 20,
     "prevAt": "2026-07-20T19:21:04.299Z"
    },
-   "fishFoil": {
-    "floor": 100,
-    "primary": 100,
-    "dyliId": 30748,
-    "url": "https://www.dyli.io/drop/30748-crown-of-house-vibesalot-fish-foil-birb-pengu"
-   },
    "foil": {
     "floor": 50,
     "primary": 50,
     "dyliId": 30749,
     "url": "https://www.dyli.io/drop/30749-crown-of-house-vibesalot-holo-birb-pengu"
+   },
+   "fishFoil": {
+    "floor": 100,
+    "primary": 100,
+    "dyliId": 30748,
+    "url": "https://www.dyli.io/drop/30748-crown-of-house-vibesalot-fish-foil-birb-pengu"
    }
   },
   "S3190BigBen": {
