@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-25T18:43:12.891Z",
+  "generatedAt": "2026-07-26T08:01:37.165Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -1377,10 +1377,12 @@
   },
   "GotEm": {
    "normal": {
-    "floor": 29,
+    "floor": 30,
     "primary": 40.65,
     "dyliId": 5442,
-    "url": "https://www.dyli.io/drop/5442-got-em-enter-the-huddle"
+    "url": "https://www.dyli.io/drop/5442-got-em-enter-the-huddle",
+    "prevFloor": 29,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    },
    "foil": {
     "floor": 139.09,
@@ -4403,10 +4405,12 @@
     "url": "https://www.dyli.io/drop/17150-no-way-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 79,
+    "floor": 85,
     "primary": 48.14,
     "dyliId": 17064,
-    "url": "https://www.dyli.io/drop/17064-no-way-arctic-foil-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/17064-no-way-arctic-foil-legend-of-the-lils",
+    "prevFloor": 79,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    }
   },
   "LilGardenkeeper": {
@@ -4677,10 +4681,12 @@
   },
   "BinkusWhoEatsTheStars": {
    "normal": {
-    "floor": 19,
+    "floor": 20,
     "primary": 29.95,
     "dyliId": 17061,
-    "url": "https://www.dyli.io/drop/17061-binkus-who-eats-the-stars-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/17061-binkus-who-eats-the-stars-legend-of-the-lils",
+    "prevFloor": 19,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    },
    "foil": {
     "floor": 55,
@@ -5739,22 +5745,22 @@
     "url": "https://www.dyli.io/drop/17146-opera-house-holo-legend-of-the-lils"
    },
    "arctic": {
-    "floor": 7.99,
+    "floor": 5.99,
     "primary": 16.04,
     "dyliId": 17196,
     "url": "https://www.dyli.io/drop/17196-opera-house-arctic-foil-legend-of-the-lils",
-    "prevFloor": 10,
-    "prevAt": "2026-07-18T18:40:08.768Z"
+    "prevFloor": 7.99,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    }
   },
   "MountFuji": {
    "normal": {
-    "floor": 13,
+    "floor": 14,
     "primary": 37.44,
     "dyliId": 16929,
     "url": "https://www.dyli.io/drop/16929-mount-fuji-legend-of-the-lils",
-    "prevFloor": 12,
-    "prevAt": "2026-07-19T18:41:30.212Z"
+    "prevFloor": 13,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    },
    "foil": {
     "floor": 50,
@@ -6063,12 +6069,12 @@
     "url": "https://www.dyli.io/drop/17165-colosseum-holo-legend-of-the-lils"
    },
    "normal": {
-    "floor": 21,
+    "floor": 22,
     "primary": 32.09,
     "dyliId": 17012,
     "url": "https://www.dyli.io/drop/17012-colosseum-legend-of-the-lils",
-    "prevFloor": 15,
-    "prevAt": "2026-07-24T19:09:01.173Z"
+    "prevFloor": 21,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    },
    "arctic": {
     "floor": 588.49,
@@ -6169,12 +6175,12 @@
     "url": "https://www.dyli.io/drop/30665-birb-holo-birb-pengu"
    },
    "normal": {
-    "floor": 3,
+    "floor": 4.5,
     "primary": 5,
     "dyliId": 30660,
     "url": "https://www.dyli.io/drop/30660-birb-birb-pengu",
-    "prevFloor": 4,
-    "prevAt": "2026-07-21T18:58:39.484Z"
+    "prevFloor": 3,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    },
    "birbFoil": {
     "floor": 60,
@@ -6442,12 +6448,6 @@
    }
   },
   "S3016TheRodromancer": {
-   "normal": {
-    "floor": 12,
-    "primary": 5,
-    "dyliId": 31146,
-    "url": "https://www.dyli.io/drop/31146-the-rodromancer-birb-pengu"
-   },
    "foil": {
     "floor": 20,
     "primary": 10,
@@ -6459,14 +6459,22 @@
     "primary": 60,
     "dyliId": 31147,
     "url": "https://www.dyli.io/drop/31147-the-rodromancer-birb-foil-birb-pengu"
+   },
+   "normal": {
+    "floor": 12,
+    "primary": 5,
+    "dyliId": 31146,
+    "url": "https://www.dyli.io/drop/31146-the-rodromancer-birb-pengu"
    }
   },
   "S3017OrrinForestGuardian": {
    "normal": {
-    "floor": 15,
+    "floor": 19.99,
     "primary": 20,
     "dyliId": 30990,
-    "url": "https://www.dyli.io/drop/30990-orrin-forest-guardian-birb-pengu"
+    "url": "https://www.dyli.io/drop/30990-orrin-forest-guardian-birb-pengu",
+    "prevFloor": 15,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    },
    "foil": {
     "floor": 50,
@@ -6698,17 +6706,19 @@
     "dyliId": 30987,
     "url": "https://www.dyli.io/drop/30987-on-thin-ice-birb-pengu"
    },
+   "birbFoil": {
+    "floor": 16.88,
+    "primary": 10,
+    "dyliId": 30988,
+    "url": "https://www.dyli.io/drop/30988-on-thin-ice-birb-foil-birb-pengu",
+    "prevFloor": 10,
+    "prevAt": "2026-07-25T18:43:12.891Z"
+   },
    "foil": {
     "floor": 1,
     "primary": 1,
     "dyliId": 30989,
     "url": "https://www.dyli.io/drop/30989-on-thin-ice-holo-birb-pengu"
-   },
-   "birbFoil": {
-    "floor": 10,
-    "primary": 10,
-    "dyliId": 30988,
-    "url": "https://www.dyli.io/drop/30988-on-thin-ice-birb-foil-birb-pengu"
    }
   },
   "S3029EuphoricLeap": {
@@ -7088,14 +7098,6 @@
    }
   },
   "S3046GigaBirb": {
-   "normal": {
-    "floor": 4.8,
-    "primary": 5,
-    "dyliId": 30816,
-    "url": "https://www.dyli.io/drop/30816-giga-birb-birb-pengu",
-    "prevFloor": 5,
-    "prevAt": "2026-07-17T18:44:42.351Z"
-   },
    "foil": {
     "floor": 10,
     "primary": 10,
@@ -7107,6 +7109,14 @@
     "primary": 60,
     "dyliId": 30817,
     "url": "https://www.dyli.io/drop/30817-giga-birb-birb-foil-birb-pengu"
+   },
+   "normal": {
+    "floor": 5,
+    "primary": 5,
+    "dyliId": 30816,
+    "url": "https://www.dyli.io/drop/30816-giga-birb-birb-pengu",
+    "prevFloor": 4.8,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    }
   },
   "S3047UncertainBirb": {
@@ -8651,12 +8661,12 @@
   },
   "S3119NimbusTheQuick": {
    "normal": {
-    "floor": 18,
+    "floor": 19,
     "primary": 20,
     "dyliId": 30978,
     "url": "https://www.dyli.io/drop/30978-nimbus-the-quick-birb-pengu",
-    "prevFloor": 19,
-    "prevAt": "2026-07-20T19:21:04.299Z"
+    "prevFloor": 18,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    },
    "foil": {
     "floor": 50,
@@ -9612,12 +9622,6 @@
     "prevFloor": 0.5,
     "prevAt": "2026-07-20T08:33:15.525Z"
    },
-   "foil": {
-    "floor": 1,
-    "primary": 1,
-    "dyliId": 30809,
-    "url": "https://www.dyli.io/drop/30809-frostbitten-wizbirb-holo-birb-pengu"
-   },
    "birbFoil": {
     "floor": 12,
     "primary": 10,
@@ -9625,6 +9629,12 @@
     "url": "https://www.dyli.io/drop/30808-frostbitten-wizbirb-birb-foil-birb-pengu",
     "prevFloor": 9,
     "prevAt": "2026-07-21T18:58:39.484Z"
+   },
+   "foil": {
+    "floor": 1,
+    "primary": 1,
+    "dyliId": 30809,
+    "url": "https://www.dyli.io/drop/30809-frostbitten-wizbirb-holo-birb-pengu"
    }
   },
   "S3164StormreaperWizbirb": {
@@ -10007,12 +10017,12 @@
   },
   "S3182HerosSword": {
    "normal": {
-    "floor": 3,
+    "floor": 3.5,
     "primary": 5,
     "dyliId": 30852,
     "url": "https://www.dyli.io/drop/30852-hero-s-sword-birb-pengu",
-    "prevFloor": 3.5,
-    "prevAt": "2026-07-19T18:41:30.212Z"
+    "prevFloor": 3,
+    "prevAt": "2026-07-25T18:43:12.891Z"
    },
    "foil": {
     "floor": 10,
