@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-26T18:45:38.803Z",
+  "generatedAt": "2026-07-27T09:04:05.525Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -5697,10 +5697,12 @@
   },
   "LilBellyacher": {
    "normal": {
-    "floor": 10,
+    "floor": 8,
     "primary": 37.44,
     "dyliId": 16939,
-    "url": "https://www.dyli.io/drop/16939-lil-bellyacher-legend-of-the-lils"
+    "url": "https://www.dyli.io/drop/16939-lil-bellyacher-legend-of-the-lils",
+    "prevFloor": 10,
+    "prevAt": "2026-07-26T18:45:38.803Z"
    },
    "foil": {
     "floor": 40,
@@ -6521,10 +6523,12 @@
     "prevAt": "2026-07-21T08:02:36.902Z"
    },
    "foil": {
-    "floor": 49,
+    "floor": 35,
     "primary": 50,
     "dyliId": 30905,
-    "url": "https://www.dyli.io/drop/30905-leader-of-the-charge-holo-birb-pengu"
+    "url": "https://www.dyli.io/drop/30905-leader-of-the-charge-holo-birb-pengu",
+    "prevFloor": 49,
+    "prevAt": "2026-07-26T18:45:38.803Z"
    },
    "birbFoil": {
     "floor": 100,
