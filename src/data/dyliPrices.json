@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-27T09:04:05.525Z",
+  "generatedAt": "2026-07-27T19:05:57.810Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -2099,12 +2099,12 @@
   },
   "BunkusWhoIstheStars": {
    "normal": {
-    "floor": 124,
+    "floor": 120,
     "primary": 160.49,
     "dyliId": 3464,
     "url": "https://www.dyli.io/drop/3464-bunkus-who-is-the-stars-enter-the-huddle",
-    "prevFloor": 125,
-    "prevAt": "2026-07-20T19:21:04.299Z"
+    "prevFloor": 124,
+    "prevAt": "2026-07-27T09:04:05.525Z"
    },
    "foil": {
     "floor": 695.49,
@@ -7106,6 +7106,14 @@
    }
   },
   "S3046GigaBirb": {
+   "normal": {
+    "floor": 3.5,
+    "primary": 5,
+    "dyliId": 30816,
+    "url": "https://www.dyli.io/drop/30816-giga-birb-birb-pengu",
+    "prevFloor": 5,
+    "prevAt": "2026-07-27T09:04:05.525Z"
+   },
    "foil": {
     "floor": 10,
     "primary": 10,
@@ -7117,14 +7125,6 @@
     "primary": 60,
     "dyliId": 30817,
     "url": "https://www.dyli.io/drop/30817-giga-birb-birb-foil-birb-pengu"
-   },
-   "normal": {
-    "floor": 5,
-    "primary": 5,
-    "dyliId": 30816,
-    "url": "https://www.dyli.io/drop/30816-giga-birb-birb-pengu",
-    "prevFloor": 4.8,
-    "prevAt": "2026-07-25T18:43:12.891Z"
    }
   },
   "S3047UncertainBirb": {
