@@ -11,6 +11,7 @@ import DeckBuilder from './components/DeckBuilder.jsx';
 import DeckView from './components/DeckView.jsx';
 import PriceListBuilder from './components/PriceListBuilder.jsx';
 import ProxyPrintPage from './components/ProxyPrintPage.jsx';
+import TradePage from './components/TradePage.jsx';
 import CardPeek from './components/CardPeek.jsx';
 import Toaster from './components/Toaster.jsx';
 
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/deck/:deckId" element={<DeckView />} />
           <Route path="/prices" element={<PriceListBuilder />} />
           <Route path="/proxies" element={<ProxyPrintPage />} />
+          <Route path="/trade" element={<TradePage />} />
         </Routes>
         <CardPeek />
         <Toaster />
