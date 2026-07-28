@@ -76,6 +76,7 @@ export default function DeckBuilder() {
 
   const filteredCards = useMemo(() => {
     return cardData.filter(card => {
+      if (card.set === 'Promo') return false; // promos play as their base card
       if (search) {
         const q = search.toLowerCase();
         const haystack = `${card.name || ''} ${card.cardText || ''} ${card.illustrator || ''} ${card.featuringPudgy || ''}`.toLowerCase();

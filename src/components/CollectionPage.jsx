@@ -14,7 +14,7 @@ import Header from './Header';
 import CardModal from './CardModal';
 
 const RARITY_ORDER = { Common: 1, Uncommon: 2, Rare: 3, Epic: 4 };
-const SET_ORDER = { Eth: 1, Lotl: 2, S3: 3 };
+const SET_ORDER = { Eth: 1, Lotl: 2, S3: 3, Promo: 4 };
 const VARIANT_LABELS = { normal: 'N', foil: 'F', arctic: 'A', sketch: 'S', birbFoil: 'BF', fishFoil: 'FF' };
 const VARIANT_FILTERS = {
   normal: { variant: 'normal', mode: 'has' },
@@ -540,6 +540,7 @@ export default function CollectionPage() {
                 <option value="Eth">Enter the Huddle</option>
                 <option value="Lotl">Legend of the Lils</option>
                 {ENABLE_SET3 && <option value="S3">Birb and Pengu</option>}
+                <option value="Promo">Promos</option>
               </select>
             </div>
             <div className="filter-group small">

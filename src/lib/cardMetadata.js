@@ -72,6 +72,10 @@ export function getCharacterSubtypes(card) {
 export function getCanonicalCardType(card) {
   if (!card) return 'Character';
 
+  // Promo cards carry no game stats; keep them out of the real type
+  // filters by giving them their own bucket.
+  if (card.set === 'Promo') return 'Promo';
+
   const rawType = String(card.rawType || card.type || '').trim();
 
   if (/^fit$/i.test(rawType)) return 'Fit';
@@ -101,6 +105,8 @@ export function getCanonicalCardType(card) {
 
 export function supportsVariant(card, variant) {
   if (!card) return true;
+  // Promos are single-printing products — only the base copy is tracked.
+  if (card.set === 'Promo') return variant === 'normal';
   if (variant === 'normal' || variant === 'foil') return true;
   if (variant === 'arctic') {
     return card.set === 'Lotl';
@@ -127,6 +133,8 @@ export function getSetLabel(setCode) {
       return 'Legend of the Lils';
     case 'S3':
       return 'Birb and Pengu';
+    case 'Promo':
+      return 'Promos';
     default:
       return setCode || 'Unknown Set';
   }

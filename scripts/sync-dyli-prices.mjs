@@ -18,6 +18,7 @@
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import sharp from 'sharp';
 
 const EXPLORE_URL = (page) =>
   `https://www.dyli.io/api/explore?page=${page}&limit=50&brandsSelected=${encodeURIComponent('["Vibes"]')}`;
@@ -29,6 +30,16 @@ const rootDir = process.cwd();
 const outFile = path.join(rootDir, 'src', 'data', 'dyliPrices.json');
 const cardDataFile = path.join(rootDir, 'src', 'cardData.json');
 const spoilerFile = path.join(rootDir, 'src', 'data', 'set3Spoilers.json');
+const promoDataFile = path.join(rootDir, 'src', 'data', 'promoCards.js');
+const promoImageDir = path.join(rootDir, 'public', 'promos');
+
+// Which set each promo descends from (for display).
+const SET_OF_ORIGIN = {
+  'legend of the lils': 'Lotl',
+  'enter the huddle': 'Eth',
+  'birb & pengu': 'S3',
+  'season 1': 'Eth',
+};
 
 // DYLI set suffix -> our set code
 const SET_TAGS = {
@@ -241,6 +252,132 @@ async function main() {
     'export default {\n' + kindLines.join('\n') + '\n};\n';
   await fs.writeFile(path.join(rootDir, 'src', 'data', 'set3FoilKinds.js'), foilSrc);
   console.log(`Set 3 foil kinds: ${Object.keys(foilKinds).length} entries`);
+
+  // ---- Promo cards -----------------------------------------------------
+  // Promos are standalone DYLI products (no game stats). Each becomes a
+  // trackable card in the "Promo" set with a mirrored image + its floor.
+  await syncPromos(products, out, previous);
+
+  // Re-write dyliPrices.json now that promo prices were merged into `out`.
+  payload._meta.generatedAt = new Date().toISOString();
+  await fs.writeFile(outFile, JSON.stringify(payload, null, 1) + '\n');
+}
+
+function promoImageUrl(product) {
+  const v = product.overwriteImages || product.images;
+  if (Array.isArray(v) && v.length) return v[0];
+  if (typeof v === 'string' && v) return v;
+  return null;
+}
+
+function isPromoProduct(p) {
+  if (p.category !== 'TCG' || p.subcategory !== 'Ungraded Card') return false;
+  const n = p.name || '';
+  if (/sketch baron/i.test(n)) return false; // 1/1 tournament trophies
+  if (/\bpromo\b/i.test(n)) return true;
+  return /-\s*season 1\s*\$?$/i.test(n.trim());
+}
+
+function cleanPromoName(name) {
+  // Drop a leading "Vibes - " and the trailing " - <Set>" suffix.
+  let n = name.replace(/^vibes\s*-\s*/i, '').trim();
+  n = n.replace(/\s*-\s*(Legend of the Lils|Enter [Tt]he Huddle|Birb & Pengu|Season 1)\s*\$?$/i, '').trim();
+  return n;
+}
+
+function promoSetOrigin(name) {
+  const m = name.match(/-\s*(Legend of the Lils|Enter [Tt]he Huddle|Birb & Pengu|Season 1)\s*\$?$/i);
+  return m ? SET_OF_ORIGIN[m[1].toLowerCase()] || null : null;
+}
+
+async function syncPromos(products, priceOut, previous) {
+  const promos = products.filter(isPromoProduct);
+  console.log(`Promos found: ${promos.length}`);
+  await fs.mkdir(promoImageDir, { recursive: true });
+
+  const cards = [];
+  const seen = new Set();
+  const nowIso = new Date().toISOString();
+
+  for (const p of promos) {
+    const id = `promo-${p.id}`;
+    if (seen.has(id)) continue; // DYLI lists some products twice
+    seen.add(id);
+    const src = promoImageUrl(p);
+    const dest = path.join(promoImageDir, `${id}.webp`);
+
+    // Mirror the image once (resize to thumbnail webp like everything else).
+    let haveImage = false;
+    try {
+      await fs.access(dest);
+      haveImage = true;
+    } catch { /* not mirrored */ }
+    if (!haveImage && src) {
+      try {
+        const res = await fetch(src, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+        if (res.ok) {
+          const buf = Buffer.from(await res.arrayBuffer());
+          const webp = await sharp(buf)
+            .resize({ width: 600, withoutEnlargement: true, fit: 'inside' })
+            .webp({ quality: 82 })
+            .toBuffer();
+          await fs.writeFile(dest, webp);
+          haveImage = true;
+        }
+      } catch (err) {
+        console.warn(`  promo image failed for ${p.name}: ${err.message}`);
+      }
+      await sleep(120);
+    }
+
+    const floor = typeof p.lowest_price === 'number' && p.lowest_price > 0 ? p.lowest_price : null;
+    const primary = typeof p.price === 'number' && p.price > 0 ? p.price : null;
+
+    // Price movement carry-forward.
+    const prevEntry = previous?.prices?.[id]?.normal;
+    const entry = {
+      floor,
+      primary,
+      dyliId: p.id,
+      url: `https://www.dyli.io/drop/${p.id}-${slugifyForUrl(p.name)}`,
+    };
+    if (prevEntry) {
+      const pe = prevEntry.floor ?? prevEntry.primary ?? null;
+      const ne = floor ?? primary ?? null;
+      if (pe !== null && ne !== null && pe !== ne) {
+        entry.prevFloor = pe;
+        entry.prevAt = previous?._meta?.generatedAt ?? nowIso;
+      } else if (prevEntry.prevFloor !== undefined) {
+        entry.prevFloor = prevEntry.prevFloor;
+        entry.prevAt = prevEntry.prevAt;
+      }
+    }
+    priceOut[id] = { normal: entry };
+
+    cards.push({
+      id,
+      name: cleanPromoName(p.name),
+      set: 'Promo',
+      setOfOrigin: promoSetOrigin(p.name),
+      rarity: 'Promo',
+      color: null,
+      type: null,
+      cost: null,
+      vibe: null,
+      imageUrl: haveImage ? `/promos/${id}.webp` : (src || ''),
+      dyliId: p.id,
+      released: true,
+    });
+  }
+
+  cards.sort((a, b) => a.name.localeCompare(b.name));
+  const src =
+    '// Generated by scripts/sync-dyli-prices.mjs — promo cards pulled from\n' +
+    '// the DYLI catalog (name contains "Promo" or ends with "Season 1").\n' +
+    '// Standalone cards in the "Promo" set; prices live in dyliPrices.json.\n' +
+    'export default ' + JSON.stringify(cards, null, 1) + ';\n';
+  await fs.writeFile(promoDataFile, src);
+  console.log(`Wrote ${cards.length} promo cards -> ${promoDataFile}`);
 }
 
 main().catch((err) => {

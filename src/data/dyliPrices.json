@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-27T19:05:57.810Z",
+  "generatedAt": "2026-07-28T00:29:01.546Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -2104,7 +2104,7 @@
     "dyliId": 3464,
     "url": "https://www.dyli.io/drop/3464-bunkus-who-is-the-stars-enter-the-huddle",
     "prevFloor": 124,
-    "prevAt": "2026-07-27T09:04:05.525Z"
+    "prevAt": "2026-07-26T18:45:38.803Z"
    },
    "foil": {
     "floor": 695.49,
@@ -7112,7 +7112,7 @@
     "dyliId": 30816,
     "url": "https://www.dyli.io/drop/30816-giga-birb-birb-pengu",
     "prevFloor": 5,
-    "prevAt": "2026-07-27T09:04:05.525Z"
+    "prevAt": "2026-07-26T18:45:38.803Z"
    },
    "foil": {
     "floor": 10,
@@ -10165,10 +10165,12 @@
     "url": "https://www.dyli.io/drop/31128-the-comeback-staff-birb-pengu"
    },
    "foil": {
-    "floor": 15,
+    "floor": 14.5,
     "primary": 10,
     "dyliId": 31130,
-    "url": "https://www.dyli.io/drop/31130-the-comeback-staff-holo-birb-pengu"
+    "url": "https://www.dyli.io/drop/31130-the-comeback-staff-holo-birb-pengu",
+    "prevFloor": 15,
+    "prevAt": "2026-07-26T18:45:38.803Z"
    },
    "birbFoil": {
     "floor": 60,
@@ -10321,6 +10323,398 @@
     "primary": 20,
     "dyliId": 30832,
     "url": "https://www.dyli.io/drop/30832-hammer-rod-birb-foil-birb-pengu"
+   }
+  },
+  "promo-16241": {
+   "normal": {
+    "floor": 16.9,
+    "primary": 100,
+    "dyliId": 16241,
+    "url": "https://www.dyli.io/drop/16241-be-weird-and-silly-ttm-promo-legend-of-the-lils"
+   }
+  },
+  "promo-17244": {
+   "normal": {
+    "floor": 9.08,
+    "primary": 9.08,
+    "dyliId": 17244,
+    "url": "https://www.dyli.io/drop/17244-penguin-with-a-flag-holo-season-1"
+   }
+  },
+  "promo-15410": {
+   "normal": {
+    "floor": 3.73,
+    "primary": 3.73,
+    "dyliId": 15410,
+    "url": "https://www.dyli.io/drop/15410-introvert-penguin-holo-season-1"
+   }
+  },
+  "promo-15407": {
+   "normal": {
+    "floor": 9.08,
+    "primary": 9.08,
+    "dyliId": 15407,
+    "url": "https://www.dyli.io/drop/15407-mukbang-penguin-holo-season-1"
+   }
+  },
+  "promo-15409": {
+   "normal": {
+    "floor": 10,
+    "primary": 29.95,
+    "dyliId": 15409,
+    "url": "https://www.dyli.io/drop/15409-dashing-swordsman-penguin-holo-season-1"
+   }
+  },
+  "promo-17246": {
+   "normal": {
+    "floor": 3.73,
+    "primary": 3.73,
+    "dyliId": 17246,
+    "url": "https://www.dyli.io/drop/17246-waterfall-penguin-holo-season-1"
+   }
+  },
+  "promo-17242": {
+   "normal": {
+    "floor": 192.59,
+    "primary": 192.59,
+    "dyliId": 17242,
+    "url": "https://www.dyli.io/drop/17242-popcorn-penguin-holo-season-1"
+   }
+  },
+  "promo-15411": {
+   "normal": {
+    "floor": 9.08,
+    "primary": 9.08,
+    "dyliId": 15411,
+    "url": "https://www.dyli.io/drop/15411-layer-two-technology-holo-season-1"
+   }
+  },
+  "promo-15408": {
+   "normal": {
+    "floor": 139.09,
+    "primary": 139.09,
+    "dyliId": 15408,
+    "url": "https://www.dyli.io/drop/15408-rad-chill-who-s-super-cool-holo-season-1"
+   }
+  },
+  "promo-17243": {
+   "normal": {
+    "floor": 4.8,
+    "primary": 4.8,
+    "dyliId": 17243,
+    "url": "https://www.dyli.io/drop/17243-pot-stirring-penguin-holo-season-1"
+   }
+  },
+  "promo-32008": {
+   "normal": {
+    "floor": 8,
+    "primary": 3,
+    "dyliId": 32008,
+    "url": "https://www.dyli.io/drop/32008-pengu-promo-birb-pengu"
+   }
+  },
+  "promo-32005": {
+   "normal": {
+    "floor": 20,
+    "primary": 5,
+    "dyliId": 32005,
+    "url": "https://www.dyli.io/drop/32005-pengu-foil-promo-birb-pengu"
+   }
+  },
+  "promo-16237": {
+   "normal": {
+    "floor": 20,
+    "primary": 100,
+    "dyliId": 16237,
+    "url": "https://www.dyli.io/drop/16237-son-of-lil-dyli-promo-legend-of-the-lils"
+   }
+  },
+  "promo-33791": {
+   "normal": {
+    "floor": 15.79,
+    "primary": 100,
+    "dyliId": 33791,
+    "url": "https://www.dyli.io/drop/33791-influencer-birb-gemini-promo-birb-pengu"
+   }
+  },
+  "promo-32480": {
+   "normal": {
+    "floor": 50,
+    "primary": 25,
+    "dyliId": 32480,
+    "url": "https://www.dyli.io/drop/32480-get-rekt-promo-birb-pengu"
+   }
+  },
+  "promo-19538": {
+   "normal": {
+    "floor": 20,
+    "primary": 100,
+    "dyliId": 19538,
+    "url": "https://www.dyli.io/drop/19538-is-this-a-rod-pfootballpete-promo-legend-of-the-lils"
+   }
+  },
+  "promo-33792": {
+   "normal": {
+    "floor": 148,
+    "primary": 150,
+    "dyliId": 33792,
+    "url": "https://www.dyli.io/drop/33792-influencer-birb-gemini-promo-artist-signature-birb-pengu"
+   }
+  },
+  "promo-17794": {
+   "normal": {
+    "floor": 35,
+    "primary": 100,
+    "dyliId": 17794,
+    "url": "https://www.dyli.io/drop/17794-lil-moonlight-scg-promo-legend-of-the-lils"
+   }
+  },
+  "promo-30152": {
+   "normal": {
+    "floor": 65,
+    "primary": 50,
+    "dyliId": 30152,
+    "url": "https://www.dyli.io/drop/30152-lil-bamboo-promo-legend-of-the-lils"
+   }
+  },
+  "promo-22506": {
+   "normal": {
+    "floor": 50,
+    "primary": 53.5,
+    "dyliId": 22506,
+    "url": "https://www.dyli.io/drop/22506-blossoming-penguin-beezie-promo-enter-the-huddle"
+   }
+  },
+  "promo-21970": {
+   "normal": {
+    "floor": 19.99,
+    "primary": 107,
+    "dyliId": 21970,
+    "url": "https://www.dyli.io/drop/21970-vibes-the-lord-of-lightning-scgcon-promo-legend-of-the-lils"
+   }
+  },
+  "promo-18429": {
+   "normal": {
+    "floor": 45,
+    "primary": 50,
+    "dyliId": 18429,
+    "url": "https://www.dyli.io/drop/18429-lil-dragonrider-scd-promo-legend-of-the-lils"
+   }
+  },
+  "promo-32482": {
+   "normal": {
+    "floor": 75,
+    "primary": 30,
+    "dyliId": 32482,
+    "url": "https://www.dyli.io/drop/32482-get-rekt-holo-promo-birb-pengu"
+   }
+  },
+  "promo-32006": {
+   "normal": {
+    "floor": 75,
+    "primary": 20,
+    "dyliId": 32006,
+    "url": "https://www.dyli.io/drop/32006-pengu-arctic-foil-promo-birb-pengu"
+   }
+  },
+  "promo-30599": {
+   "normal": {
+    "floor": 100,
+    "primary": 50,
+    "dyliId": 30599,
+    "url": "https://www.dyli.io/drop/30599-overwhelm-with-knowledge-promo-enter-the-huddle"
+   }
+  },
+  "promo-29995": {
+   "normal": {
+    "floor": 55,
+    "primary": 50,
+    "dyliId": 29995,
+    "url": "https://www.dyli.io/drop/29995-unlikely-friends-boxed-promo-enter-the-huddle"
+   }
+  },
+  "promo-21972": {
+   "normal": {
+    "floor": 369.69,
+    "primary": 107,
+    "dyliId": 21972,
+    "url": "https://www.dyli.io/drop/21972-vibes-popcorn-penguin-2026-world-championship-promo-enter-the-huddle"
+   }
+  },
+  "promo-21967": {
+   "normal": {
+    "floor": 500,
+    "primary": 267.5,
+    "dyliId": 21967,
+    "url": "https://www.dyli.io/drop/21967-vibes-colosseum-european-championship-promo-legend-of-the-lils"
+   }
+  },
+  "promo-19990": {
+   "normal": {
+    "floor": 35,
+    "primary": 50,
+    "dyliId": 19990,
+    "url": "https://www.dyli.io/drop/19990-buddy-up-scg-promo-enter-the-huddle"
+   }
+  },
+  "promo-32484": {
+   "normal": {
+    "floor": 50,
+    "primary": 50,
+    "dyliId": 32484,
+    "url": "https://www.dyli.io/drop/32484-get-rekt-birb-foil-promo-birb-pengu"
+   }
+  },
+  "promo-32058": {
+   "normal": {
+    "floor": 100,
+    "primary": 100,
+    "dyliId": 32058,
+    "url": "https://www.dyli.io/drop/32058-one-with-history-promo-enter-the-huddle"
+   }
+  },
+  "promo-32057": {
+   "normal": {
+    "floor": 100,
+    "primary": 100,
+    "dyliId": 32057,
+    "url": "https://www.dyli.io/drop/32057-chase-your-dreams-promo-enter-the-huddle"
+   }
+  },
+  "promo-32056": {
+   "normal": {
+    "floor": 100,
+    "primary": 100,
+    "dyliId": 32056,
+    "url": "https://www.dyli.io/drop/32056-miss-chief-keeper-of-keys-cota-promo-enter-the-huddle"
+   }
+  },
+  "promo-32055": {
+   "normal": {
+    "floor": 100,
+    "primary": 100,
+    "dyliId": 32055,
+    "url": "https://www.dyli.io/drop/32055-striking-swordsman-penguin-promo-enter-the-huddle"
+   }
+  },
+  "promo-32007": {
+   "normal": {
+    "floor": 50,
+    "primary": 50,
+    "dyliId": 32007,
+    "url": "https://www.dyli.io/drop/32007-pengu-gold-foil-promo-birb-pengu"
+   }
+  },
+  "promo-31426": {
+   "normal": {
+    "floor": 50,
+    "primary": 50,
+    "dyliId": 31426,
+    "url": "https://www.dyli.io/drop/31426-risk-taking-penguin-promo-enter-the-huddle"
+   }
+  },
+  "promo-30598": {
+   "normal": {
+    "floor": 50,
+    "primary": 50,
+    "dyliId": 30598,
+    "url": "https://www.dyli.io/drop/30598-blue-wizard-penguin-promo-enter-the-huddle"
+   }
+  },
+  "promo-29996": {
+   "normal": {
+    "floor": 50,
+    "primary": 50,
+    "dyliId": 29996,
+    "url": "https://www.dyli.io/drop/29996-petite-pourer-canada-promo-legend-of-the-lils"
+   }
+  },
+  "promo-29243": {
+   "normal": {
+    "floor": 100,
+    "primary": 100,
+    "dyliId": 29243,
+    "url": "https://www.dyli.io/drop/29243-vibes-have-a-philosophical-debate-promo-enter-the-huddle"
+   }
+  },
+  "promo-29224": {
+   "normal": {
+    "floor": 100,
+    "primary": 100,
+    "dyliId": 29224,
+    "url": "https://www.dyli.io/drop/29224-vibes-singapore-year-2-promo-legend-of-the-lils"
+   }
+  },
+  "promo-29223": {
+   "normal": {
+    "floor": 100,
+    "primary": 100,
+    "dyliId": 29223,
+    "url": "https://www.dyli.io/drop/29223-vibes-spring-break-promo-legend-of-the-lils"
+   }
+  },
+  "promo-29047": {
+   "normal": {
+    "floor": 250,
+    "primary": 250,
+    "dyliId": 29047,
+    "url": "https://www.dyli.io/drop/29047-singapore-lil-with-balloon-promo-legend-of-the-lils"
+   }
+  },
+  "promo-27833": {
+   "normal": {
+    "floor": 21.4,
+    "primary": 21.4,
+    "dyliId": 27833,
+    "url": "https://www.dyli.io/drop/27833-vibes-arches-nycc-promo-legend-of-the-lils"
+   }
+  },
+  "promo-27196": {
+   "normal": {
+    "floor": 32.1,
+    "primary": 32.1,
+    "dyliId": 27196,
+    "url": "https://www.dyli.io/drop/27196-success-penguin-vaneck-promo-enter-the-huddle"
+   }
+  },
+  "promo-26832": {
+   "normal": {
+    "floor": 21.4,
+    "primary": 21.4,
+    "dyliId": 26832,
+    "url": "https://www.dyli.io/drop/26832-lil-waker-promo-cc-promo-legend-of-the-lils"
+   }
+  },
+  "promo-21819": {
+   "normal": {
+    "floor": 400,
+    "primary": 400,
+    "dyliId": 21819,
+    "url": "https://www.dyli.io/drop/21819-overwhelm-with-knowledge-social-media-promo-bluugu-signature-enter-the-huddle"
+   }
+  },
+  "promo-17245": {
+   "normal": {
+    "floor": 149.79,
+    "primary": 149.79,
+    "dyliId": 17245,
+    "url": "https://www.dyli.io/drop/17245-sir-vibesalot-holo-season-1"
+   }
+  },
+  "promo-14838": {
+   "normal": {
+    "floor": 750,
+    "primary": 750,
+    "dyliId": 14838,
+    "url": "https://www.dyli.io/drop/14838-purple-wizard-penguin-sketch-season-1"
+   }
+  },
+  "promo-32483": {
+   "normal": {
+    "floor": 50,
+    "primary": 50,
+    "dyliId": 32483,
+    "url": "https://www.dyli.io/drop/32483-get-rekt-arctic-foil-promo-birb-pengu"
    }
   }
  }
