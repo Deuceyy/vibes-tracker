@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "generatedAt": "2026-07-28T00:29:01.546Z",
+  "generatedAt": "2026-07-28T04:19:44.930Z",
   "source": "dyli.io",
   "matchedCards": 546,
   "totalCards": 546,
@@ -5757,12 +5757,12 @@
   },
   "MountFuji": {
    "normal": {
-    "floor": 14,
+    "floor": 13,
     "primary": 37.44,
     "dyliId": 16929,
     "url": "https://www.dyli.io/drop/16929-mount-fuji-legend-of-the-lils",
-    "prevFloor": 13,
-    "prevAt": "2026-07-25T18:43:12.891Z"
+    "prevFloor": 14,
+    "prevAt": "2026-07-28T00:29:01.546Z"
    },
    "foil": {
     "floor": 50,
@@ -6071,12 +6071,12 @@
     "url": "https://www.dyli.io/drop/17165-colosseum-holo-legend-of-the-lils"
    },
    "normal": {
-    "floor": 22,
+    "floor": 20,
     "primary": 32.09,
     "dyliId": 17012,
     "url": "https://www.dyli.io/drop/17012-colosseum-legend-of-the-lils",
-    "prevFloor": 21,
-    "prevAt": "2026-07-25T18:43:12.891Z"
+    "prevFloor": 22,
+    "prevAt": "2026-07-28T00:29:01.546Z"
    },
    "arctic": {
     "floor": 588.49,
@@ -10333,78 +10333,6 @@
     "url": "https://www.dyli.io/drop/16241-be-weird-and-silly-ttm-promo-legend-of-the-lils"
    }
   },
-  "promo-17244": {
-   "normal": {
-    "floor": 9.08,
-    "primary": 9.08,
-    "dyliId": 17244,
-    "url": "https://www.dyli.io/drop/17244-penguin-with-a-flag-holo-season-1"
-   }
-  },
-  "promo-15410": {
-   "normal": {
-    "floor": 3.73,
-    "primary": 3.73,
-    "dyliId": 15410,
-    "url": "https://www.dyli.io/drop/15410-introvert-penguin-holo-season-1"
-   }
-  },
-  "promo-15407": {
-   "normal": {
-    "floor": 9.08,
-    "primary": 9.08,
-    "dyliId": 15407,
-    "url": "https://www.dyli.io/drop/15407-mukbang-penguin-holo-season-1"
-   }
-  },
-  "promo-15409": {
-   "normal": {
-    "floor": 10,
-    "primary": 29.95,
-    "dyliId": 15409,
-    "url": "https://www.dyli.io/drop/15409-dashing-swordsman-penguin-holo-season-1"
-   }
-  },
-  "promo-17246": {
-   "normal": {
-    "floor": 3.73,
-    "primary": 3.73,
-    "dyliId": 17246,
-    "url": "https://www.dyli.io/drop/17246-waterfall-penguin-holo-season-1"
-   }
-  },
-  "promo-17242": {
-   "normal": {
-    "floor": 192.59,
-    "primary": 192.59,
-    "dyliId": 17242,
-    "url": "https://www.dyli.io/drop/17242-popcorn-penguin-holo-season-1"
-   }
-  },
-  "promo-15411": {
-   "normal": {
-    "floor": 9.08,
-    "primary": 9.08,
-    "dyliId": 15411,
-    "url": "https://www.dyli.io/drop/15411-layer-two-technology-holo-season-1"
-   }
-  },
-  "promo-15408": {
-   "normal": {
-    "floor": 139.09,
-    "primary": 139.09,
-    "dyliId": 15408,
-    "url": "https://www.dyli.io/drop/15408-rad-chill-who-s-super-cool-holo-season-1"
-   }
-  },
-  "promo-17243": {
-   "normal": {
-    "floor": 4.8,
-    "primary": 4.8,
-    "dyliId": 17243,
-    "url": "https://www.dyli.io/drop/17243-pot-stirring-penguin-holo-season-1"
-   }
-  },
   "promo-32008": {
    "normal": {
     "floor": 8,
@@ -10431,10 +10359,12 @@
   },
   "promo-33791": {
    "normal": {
-    "floor": 15.79,
+    "floor": 20,
     "primary": 100,
     "dyliId": 33791,
-    "url": "https://www.dyli.io/drop/33791-influencer-birb-gemini-promo-birb-pengu"
+    "url": "https://www.dyli.io/drop/33791-influencer-birb-gemini-promo-birb-pengu",
+    "prevFloor": 15.79,
+    "prevAt": "2026-07-28T00:29:01.546Z"
    }
   },
   "promo-32480": {
@@ -10691,22 +10621,6 @@
     "primary": 400,
     "dyliId": 21819,
     "url": "https://www.dyli.io/drop/21819-overwhelm-with-knowledge-social-media-promo-bluugu-signature-enter-the-huddle"
-   }
-  },
-  "promo-17245": {
-   "normal": {
-    "floor": 149.79,
-    "primary": 149.79,
-    "dyliId": 17245,
-    "url": "https://www.dyli.io/drop/17245-sir-vibesalot-holo-season-1"
-   }
-  },
-  "promo-14838": {
-   "normal": {
-    "floor": 750,
-    "primary": 750,
-    "dyliId": 14838,
-    "url": "https://www.dyli.io/drop/14838-purple-wizard-penguin-sketch-season-1"
    }
   },
   "promo-32483": {

@@ -101,20 +101,6 @@ export default [
   "released": true
  },
  {
-  "id": "promo-15409",
-  "name": "Dashing Swordsman Penguin Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-15409.webp",
-  "dyliId": 15409,
-  "released": true
- },
- {
   "id": "promo-32483",
   "name": "Get Rekt Arctic Foil Promo",
   "set": "Promo",
@@ -213,20 +199,6 @@ export default [
   "released": true
  },
  {
-  "id": "promo-15410",
-  "name": "Introvert Penguin Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-15410.webp",
-  "dyliId": 15410,
-  "released": true
- },
- {
   "id": "promo-19538",
   "name": "Is This a Rod Pfootballpete Promo",
   "set": "Promo",
@@ -238,20 +210,6 @@ export default [
   "vibe": null,
   "imageUrl": "/promos/promo-19538.webp",
   "dyliId": 19538,
-  "released": true
- },
- {
-  "id": "promo-15411",
-  "name": "Layer Two Technology Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-15411.webp",
-  "dyliId": 15411,
   "released": true
  },
  {
@@ -322,20 +280,6 @@ export default [
   "vibe": null,
   "imageUrl": "/promos/promo-32056.webp",
   "dyliId": 32056,
-  "released": true
- },
- {
-  "id": "promo-15407",
-  "name": "Mukbang Penguin Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-15407.webp",
-  "dyliId": 15407,
   "released": true
  },
  {
@@ -437,20 +381,6 @@ export default [
   "released": true
  },
  {
-  "id": "promo-17244",
-  "name": "Penguin With a Flag Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-17244.webp",
-  "dyliId": 17244,
-  "released": true
- },
- {
   "id": "promo-29996",
   "name": "Petite Pourer Canada Promo",
   "set": "Promo",
@@ -476,62 +406,6 @@ export default [
   "vibe": null,
   "imageUrl": "/promos/promo-21972.webp",
   "dyliId": 21972,
-  "released": true
- },
- {
-  "id": "promo-17242",
-  "name": "Popcorn Penguin Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-17242.webp",
-  "dyliId": 17242,
-  "released": true
- },
- {
-  "id": "promo-17243",
-  "name": "Pot-Stirring Penguin Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-17243.webp",
-  "dyliId": 17243,
-  "released": true
- },
- {
-  "id": "promo-14838",
-  "name": "Purple Wizard Penguin Sketch",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-14838.webp",
-  "dyliId": 14838,
-  "released": true
- },
- {
-  "id": "promo-15408",
-  "name": "Rad Chill, Who's Super Cool Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-15408.webp",
-  "dyliId": 15408,
   "released": true
  },
  {
@@ -574,20 +448,6 @@ export default [
   "vibe": null,
   "imageUrl": "/promos/promo-29224.webp",
   "dyliId": 29224,
-  "released": true
- },
- {
-  "id": "promo-17245",
-  "name": "Sir Vibesalot Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-17245.webp",
-  "dyliId": 17245,
   "released": true
  },
  {
@@ -672,20 +532,6 @@ export default [
   "vibe": null,
   "imageUrl": "/promos/promo-29995.webp",
   "dyliId": 29995,
-  "released": true
- },
- {
-  "id": "promo-17246",
-  "name": "Waterfall Penguin Holo",
-  "set": "Promo",
-  "setOfOrigin": "Eth",
-  "rarity": "Promo",
-  "color": null,
-  "type": null,
-  "cost": null,
-  "vibe": null,
-  "imageUrl": "/promos/promo-17246.webp",
-  "dyliId": 17246,
   "released": true
  }
 ];
