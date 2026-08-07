@@ -32,7 +32,9 @@ const VARIANT_FILTERS = {
 function getCardTypeLine(card) {
   const baseType = getCanonicalCardType(card);
   const subtypes = getCharacterSubtypes(card);
-  return subtypes.length > 0 ? `${baseType} - ${subtypes.join(', ')}` : baseType;
+  const typePart = subtypes.length > 0 ? `${baseType} - ${subtypes.join(', ')}` : baseType;
+  // Prefix the collector / set number when present (e.g. "42 - Character - Penguin").
+  return card.setNumber != null ? `${card.setNumber} - ${typePart}` : typePart;
 }
 
 export default function CollectionPage() {
