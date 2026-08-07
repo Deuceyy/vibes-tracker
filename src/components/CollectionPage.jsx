@@ -355,23 +355,27 @@ export default function CollectionPage() {
     setVisibleCount(CARD_BATCH);
   }, [filters]);
 
-  // Grow the window when the sentinel is in view. Re-arming on
-  // visibleCount means that after each batch, if the sentinel is still
-  // within range it fires again immediately (IntersectionObserver only
-  // reports transitions, so without this it would stall after one batch).
+  // Grow the render window as the user nears the bottom. A plain scroll
+  // listener is more reliable than IntersectionObserver here (no
+  // transition-timing edge cases, works regardless of content-visibility
+  // height estimates). Re-checks on scroll, resize, and after each grow.
   useEffect(() => {
-    const node = sentinelRef.current;
-    if (!node) return undefined;
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisibleCount((c) => Math.min(c + CARD_BATCH, filteredCards.length));
-        }
-      },
-      { rootMargin: '800px' }
-    );
-    io.observe(node);
-    return () => io.disconnect();
+    if (visibleCount >= filteredCards.length) return undefined;
+    const check = () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 1400;
+      if (nearBottom) {
+        setVisibleCount((c) => Math.min(c + CARD_BATCH, filteredCards.length));
+      }
+    };
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check);
+    check(); // fill immediately if the page isn't tall enough to scroll
+    return () => {
+      window.removeEventListener('scroll', check);
+      window.removeEventListener('resize', check);
+    };
   }, [filteredCards.length, visibleCount]);
 
   const visibleCards = filteredCards.slice(0, visibleCount);
