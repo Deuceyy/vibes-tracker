@@ -346,12 +346,17 @@ export default function CollectionPage() {
     return cards;
   }, [filters, getCardVariants, getTotalOwned, hasPlayset, hasMasterSet]);
 
-  // Reset the render window whenever the filtered set changes.
+  // Reset the render window only when the FILTER/SORT actually changes —
+  // not when collection data updates (editing a count gives filteredCards
+  // a new reference but must not reset how many rows are shown).
   useEffect(() => {
     setVisibleCount(CARD_BATCH);
-  }, [filteredCards]);
+  }, [filters]);
 
-  // Grow the window when the sentinel scrolls into view.
+  // Grow the window when the sentinel is in view. Re-arming on
+  // visibleCount means that after each batch, if the sentinel is still
+  // within range it fires again immediately (IntersectionObserver only
+  // reports transitions, so without this it would stall after one batch).
   useEffect(() => {
     const node = sentinelRef.current;
     if (!node) return undefined;
@@ -361,11 +366,11 @@ export default function CollectionPage() {
           setVisibleCount((c) => Math.min(c + CARD_BATCH, filteredCards.length));
         }
       },
-      { rootMargin: '600px' }
+      { rootMargin: '800px' }
     );
     io.observe(node);
     return () => io.disconnect();
-  }, [filteredCards.length]);
+  }, [filteredCards.length, visibleCount]);
 
   const visibleCards = filteredCards.slice(0, visibleCount);
 
