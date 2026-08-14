@@ -9,7 +9,6 @@ const PEEK_SELECTOR = [
   'img.deck-image-thumb',
   'img.mulligan-card-image',
   '.proxy-picker-image img',
-  '.pt-card img',
 ].join(', ');
 
 const PEEK_WIDTH = 320;

@@ -4439,11 +4439,12 @@ body {
 .pt-zone-cards { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
 .pt-zone-empty { color: var(--text-secondary); font-size: 0.82rem; padding: 0.75rem 0.25rem; }
 
-.pt-card { position: relative; width: 108px; border-radius: 7px; cursor: pointer; transition: transform 0.12s; }
-.pt-card img { width: 100%; border-radius: 7px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+.pt-card { position: relative; width: 108px; border-radius: 7px; cursor: grab; }
+.pt-card:active { cursor: grabbing; }
+.pt-card img { width: 100%; border-radius: 7px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.4); transition: box-shadow 0.12s, outline-color 0.12s; outline: 2px solid transparent; outline-offset: 1px; }
 .pt-card.flopped { width: 130px; }
 .pt-card.flopped img { transform: rotate(90deg) scale(0.72); filter: brightness(0.72); }
-.pt-card:hover { transform: translateY(-3px); }
+.pt-card:hover img { box-shadow: 0 4px 14px rgba(0,0,0,0.55); outline-color: var(--accent); }
 
 /* sticky hand tray at the bottom */
 .pt-hand-bar {
