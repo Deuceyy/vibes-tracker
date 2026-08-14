@@ -45,6 +45,8 @@ export default function PlaytestPage() {
   const [turn, setTurn] = useState(0);
   const [counters, setCounters] = useState({ pudge: 0, fish: 0, vibe: 0 });
   const [menu, setMenu] = useState(null); // { uid, zone }
+  const [dragUid, setDragUid] = useState(null);
+  const [dragOver, setDragOver] = useState(null); // zone id being hovered
 
   const zones = { deck, hand, huddle, rods, ice };
   const setters = { deck: setDeck, hand: setHand, huddle: setHuddle, rods: setRods, ice: setIce };
@@ -177,17 +179,40 @@ export default function PlaytestPage() {
 
   const menuInst = menu ? zones[findZone(menu.uid)]?.find((x) => x.uid === menu.uid) : null;
 
+  // Drop the currently-dragged card onto a target zone.
+  const handleDrop = (target) => (e) => {
+    e.preventDefault();
+    const raw = e.dataTransfer.getData('text/plain');
+    const uid = Number(raw) || dragUid;
+    if (uid) move(uid, target);
+    setDragUid(null);
+    setDragOver(null);
+  };
+
+  const allowDrop = (id) => (e) => {
+    e.preventDefault();
+    if (dragOver !== id) setDragOver(id);
+  };
+
   const CardTile = ({ inst, zone }) => (
     <div
-      className={`pt-card ${inst.flopped ? 'flopped' : ''}`}
+      className={`pt-card ${inst.flopped ? 'flopped' : ''} ${dragUid === inst.uid ? 'dragging' : ''}`}
+      draggable
+      onDragStart={(e) => { e.dataTransfer.setData('text/plain', String(inst.uid)); e.dataTransfer.effectAllowed = 'move'; setDragUid(inst.uid); }}
+      onDragEnd={() => { setDragUid(null); setDragOver(null); }}
       onClick={() => setMenu({ uid: inst.uid, zone })}
     >
-      <img src={inst.card.imageUrl} alt={inst.card.name} loading="lazy" />
+      <img src={inst.card.imageUrl} alt={inst.card.name} loading="lazy" draggable={false} />
     </div>
   );
 
   const Zone = ({ id, label, hint }) => (
-    <div className="pt-zone">
+    <div
+      className={`pt-zone ${dragOver === id ? 'drag-over' : ''}`}
+      onDragOver={allowDrop(id)}
+      onDragLeave={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setDragOver((z) => (z === id ? null : z)); }}
+      onDrop={handleDrop(id)}
+    >
       <div className="pt-zone-head">{label} <span>{zones[id].length}</span></div>
       <div className="pt-zone-cards">
         {zones[id].map((inst) => <CardTile key={inst.uid} inst={inst} zone={id} />)}
@@ -230,12 +255,17 @@ export default function PlaytestPage() {
         </div>
 
         <section className="pt-board">
-          <Zone id="huddle" label="Huddle" hint="Play characters here — click a hand card, then choose Huddle" />
-          <Zone id="rods" label="Rods / Relics / Fits" hint="Face-down Rods and support cards" />
-          <Zone id="ice" label="Ice" hint="Iced cards go here" />
+          <Zone id="huddle" label="Huddle" hint="Drag a hand card here to play it (or click a card for options)" />
+          <Zone id="rods" label="Rods / Relics / Fits" hint="Drag Rods and support cards here" />
+          <Zone id="ice" label="Ice" hint="Drag iced cards here" />
         </section>
 
-        <div className="pt-hand-bar">
+        <div
+          className={`pt-hand-bar ${dragOver === 'hand' ? 'drag-over' : ''}`}
+          onDragOver={allowDrop('hand')}
+          onDragLeave={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setDragOver((z) => (z === 'hand' ? null : z)); }}
+          onDrop={handleDrop('hand')}
+        >
           <button className="pt-deckpile" onClick={() => draw(1)} title="Draw a card">
             <span className="pt-deckpile-count">{deck.length}</span>
             <span className="pt-deckpile-label">Draw</span>

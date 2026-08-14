@@ -4485,3 +4485,9 @@ body {
   .pt-menu-card > img { width: 130px; flex-basis: auto; }
   .pt-card, .pt-hand .pt-card { width: 84px; }
 }
+
+/* playtest drag-and-drop states */
+.pt-card { -webkit-user-drag: element; }
+.pt-card.dragging { opacity: 0.4; }
+.pt-zone.drag-over { border-color: var(--accent); background: rgba(99,102,241,0.10); box-shadow: inset 0 0 0 2px var(--accent); }
+.pt-hand-bar.drag-over { box-shadow: inset 0 0 0 2px var(--accent); }
