@@ -45,7 +45,6 @@ export default function PlaytestPage() {
   const [turn, setTurn] = useState(0);
   const [counters, setCounters] = useState({ pudge: 0, fish: 0, vibe: 0 });
   const [menu, setMenu] = useState(null); // { uid, zone }
-  const [preview, setPreview] = useState(null); // card
 
   const zones = { deck, hand, huddle, rods, ice };
   const setters = { deck: setDeck, hand: setHand, huddle: setHuddle, rods: setRods, ice: setIce };
@@ -176,23 +175,24 @@ export default function PlaytestPage() {
     );
   }
 
-  const CardTile = ({ inst, zone, small }) => (
+  const menuInst = menu ? zones[findZone(menu.uid)]?.find((x) => x.uid === menu.uid) : null;
+
+  const CardTile = ({ inst, zone }) => (
     <div
-      className={`pt-card ${inst.flopped ? 'flopped' : ''} ${small ? 'small' : ''}`}
-      onMouseEnter={() => setPreview(inst.card)}
-      onClick={() => setMenu(menu?.uid === inst.uid ? null : { uid: inst.uid, zone })}
+      className={`pt-card ${inst.flopped ? 'flopped' : ''}`}
+      onClick={() => setMenu({ uid: inst.uid, zone })}
     >
       <img src={inst.card.imageUrl} alt={inst.card.name} loading="lazy" />
-      {menu?.uid === inst.uid && (
-        <div className="pt-menu" onClick={(e) => e.stopPropagation()}>
-          {(zone === 'huddle' || zone === 'rods') && (
-            <button onClick={() => toggleFlop(inst.uid)}>{inst.flopped ? 'Unflop' : 'Flop'}</button>
-          )}
-          {menuActions(inst.uid, zone).map((z) => (
-            <button key={z} onClick={() => move(inst.uid, z)}>{ZONE_LABEL[z]}</button>
-          ))}
-        </div>
-      )}
+    </div>
+  );
+
+  const Zone = ({ id, label, hint }) => (
+    <div className="pt-zone">
+      <div className="pt-zone-head">{label} <span>{zones[id].length}</span></div>
+      <div className="pt-zone-cards">
+        {zones[id].map((inst) => <CardTile key={inst.uid} inst={inst} zone={id} />)}
+        {zones[id].length === 0 && <div className="pt-zone-empty">{hint}</div>}
+      </div>
     </div>
   );
 
@@ -215,65 +215,59 @@ export default function PlaytestPage() {
           </div>
         </div>
 
-        <div className="pt-layout">
-          <aside className="pt-side">
-            <div className="pt-counts">
-              <div><span>Deck</span><strong>{deck.length}</strong></div>
-              <div><span>Hand</span><strong>{hand.length}</strong></div>
-              <div><span>Ice</span><strong>{ice.length}</strong></div>
+        <div className="pt-counterbar">
+          <div className="pt-count"><span>Deck</span><strong>{deck.length}</strong></div>
+          <div className="pt-count"><span>Hand</span><strong>{hand.length}</strong></div>
+          <div className="pt-count"><span>Ice</span><strong>{ice.length}</strong></div>
+          {['pudge', 'fish', 'vibe'].map((k) => (
+            <div key={k} className="pt-counter">
+              <span>{k[0].toUpperCase() + k.slice(1)}</span>
+              <button onClick={() => bump(k, -1)}>−</button>
+              <strong>{counters[k]}</strong>
+              <button onClick={() => bump(k, 1)}>+</button>
             </div>
-            {['pudge', 'fish', 'vibe'].map((k) => (
-              <div key={k} className="pt-counter">
-                <span>{k[0].toUpperCase() + k.slice(1)}</span>
-                <div className="pt-counter-ctl">
-                  <button onClick={() => bump(k, -1)}>−</button>
-                  <strong>{counters[k]}</strong>
-                  <button onClick={() => bump(k, 1)}>+</button>
-                </div>
-              </div>
-            ))}
-            <div className="pt-preview">
-              {preview ? <img src={preview.imageUrl} alt={preview.name} /> : <span>Hover a card to preview</span>}
-            </div>
-          </aside>
-
-          <section className="pt-board">
-            <div className="pt-zone">
-              <div className="pt-zone-head">Huddle <span>{huddle.length}</span></div>
-              <div className="pt-zone-cards">
-                {huddle.map((inst) => <CardTile key={inst.uid} inst={inst} zone="huddle" />)}
-                {huddle.length === 0 && <div className="pt-zone-empty">Play characters here (click a hand card → Huddle)</div>}
-              </div>
-            </div>
-
-            <div className="pt-zone">
-              <div className="pt-zone-head">Rods / Relics / Fits <span>{rods.length}</span></div>
-              <div className="pt-zone-cards">
-                {rods.map((inst) => <CardTile key={inst.uid} inst={inst} zone="rods" />)}
-                {rods.length === 0 && <div className="pt-zone-empty">Face-down Rods and support cards</div>}
-              </div>
-            </div>
-
-            <div className="pt-zone pt-zone-ice">
-              <div className="pt-zone-head">Ice <span>{ice.length}</span></div>
-              <div className="pt-zone-cards">
-                {ice.map((inst) => <CardTile key={inst.uid} inst={inst} zone="ice" small />)}
-                {ice.length === 0 && <div className="pt-zone-empty">Iced cards go here</div>}
-              </div>
-            </div>
-          </section>
+          ))}
         </div>
 
+        <section className="pt-board">
+          <Zone id="huddle" label="Huddle" hint="Play characters here — click a hand card, then choose Huddle" />
+          <Zone id="rods" label="Rods / Relics / Fits" hint="Face-down Rods and support cards" />
+          <Zone id="ice" label="Ice" hint="Iced cards go here" />
+        </section>
+
         <div className="pt-hand-bar">
-          <button className="pt-deckpile" onClick={() => draw(1)}>
+          <button className="pt-deckpile" onClick={() => draw(1)} title="Draw a card">
             <span className="pt-deckpile-count">{deck.length}</span>
-            <span className="pt-deckpile-label">Deck · click to draw</span>
+            <span className="pt-deckpile-label">Draw</span>
           </button>
           <div className="pt-hand">
             {hand.map((inst) => <CardTile key={inst.uid} inst={inst} zone="hand" />)}
-            {hand.length === 0 && <div className="pt-hand-empty">Empty hand — draw or mulligan</div>}
+            {hand.length === 0 && <div className="pt-hand-empty">Empty hand — Draw or Mulligan</div>}
           </div>
         </div>
+
+        {menu && menuInst && (
+          <div className="pt-menu-overlay" onClick={() => setMenu(null)}>
+            <div className="pt-menu-card" onClick={(e) => e.stopPropagation()}>
+              <img src={menuInst.card.imageUrl} alt={menuInst.card.name} />
+              <div className="pt-menu-actions">
+                <div className="pt-menu-name">{menuInst.card.name}</div>
+                {(menu.zone === 'huddle' || menu.zone === 'rods') && (
+                  <button className="pt-menu-flop" onClick={() => toggleFlop(menu.uid)}>
+                    {menuInst.flopped ? 'Unflop' : 'Flop'}
+                  </button>
+                )}
+                <div className="pt-menu-move-label">Move to…</div>
+                <div className="pt-menu-grid">
+                  {menuActions(menu.uid, menu.zone).map((z) => (
+                    <button key={z} onClick={() => move(menu.uid, z)}>{ZONE_LABEL[z]}</button>
+                  ))}
+                </div>
+                <button className="pt-menu-close" onClick={() => setMenu(null)}>Cancel</button>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </>
   );
