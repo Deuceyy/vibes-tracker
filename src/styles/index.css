@@ -4492,3 +4492,21 @@ body {
 .pt-card.dragging { opacity: 0.4; }
 .pt-zone.drag-over { border-color: var(--accent); background: rgba(99,102,241,0.10); box-shadow: inset 0 0 0 2px var(--accent); }
 .pt-hand-bar.drag-over { box-shadow: inset 0 0 0 2px var(--accent); }
+
+/* vibe-check end-of-turn buttons */
+.pt-vibe-group { display: inline-flex; align-items: center; gap: 0.35rem; padding-left: 0.55rem; margin-left: 0.25rem; border-left: 1px solid var(--border); }
+.pt-vibe-label { font-size: 0.72rem; color: var(--text-secondary); }
+.pt-vibe { padding: 0.45rem 0.85rem; border-radius: 6px; border: 1px solid transparent; font-weight: 700; cursor: pointer; color: #fff; font-size: 0.85rem; }
+.pt-vibe-win { background: #16a34a; }
+.pt-vibe-tie { background: #64748b; }
+.pt-vibe-lose { background: #dc2626; }
+.pt-vibe:hover { filter: brightness(1.1); }
+
+/* per-card options button for in-play cards */
+.pt-card-more {
+  position: absolute; top: 3px; right: 3px; width: 22px; height: 22px;
+  border-radius: 50%; border: none; background: rgba(0,0,0,0.62); color: #fff;
+  font-size: 0.95rem; line-height: 1; cursor: pointer; z-index: 2;
+  display: flex; align-items: center; justify-content: center; padding: 0;
+}
+.pt-card-more:hover { background: rgba(0,0,0,0.88); }

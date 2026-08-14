@@ -127,12 +127,37 @@ export default function PlaytestPage() {
 
   const shuffleDeck = () => { setDeck((p) => shuffle(p)); toast.success('Deck shuffled'); };
 
-  const nextTurn = () => {
-    setTurn((t) => t + 1);
-    // Unflop everything (new cycle), draw for the turn.
+  const untapAll = () => {
     setHuddle((p) => p.map((x) => ({ ...x, flopped: false })));
     setRods((p) => p.map((x) => ({ ...x, flopped: false })));
-    draw(1);
+    setIce((p) => p.map((x) => ({ ...x, flopped: false })));
+  };
+
+  // End of turn resolved by a vibe check. All three untap the board and
+  // advance the turn; they differ in what they draw:
+  //   win  → rod the top card of the deck, then draw for the turn
+  //   lose → draw for losing, then draw for the turn (2 total)
+  //   tie  → draw 1 for the turn
+  const endTurn = (kind) => {
+    setTurn((t) => t + 1);
+    untapAll();
+    if (kind === 'win') {
+      setDeck((prev) => {
+        const rodCard = prev[0];
+        const drawCard = prev[1];
+        if (!rodCard) { toast.error('Deck is empty'); return prev; }
+        setRods((r) => [...r, { ...rodCard, flopped: false }]);
+        if (drawCard) setHand((h) => [...h, drawCard]);
+        return prev.slice(drawCard ? 2 : 1);
+      });
+      toast.success('Won vibe check — rodded top card + drew for turn');
+    } else if (kind === 'lose') {
+      draw(2);
+      toast.success('Lost vibe check — drew 2');
+    } else {
+      draw(1);
+      toast.success('Tie — drew 1 for the turn');
+    }
   };
 
   const bump = (key, delta) =>
@@ -194,15 +219,27 @@ export default function PlaytestPage() {
     if (dragOver !== id) setDragOver(id);
   };
 
+  // Cards in the Huddle / Rods are "in play" — a plain click taps them.
+  const inPlay = (zone) => zone === 'huddle' || zone === 'rods';
+
   const CardTile = ({ inst, zone }) => (
     <div
       className={`pt-card ${inst.flopped ? 'flopped' : ''} ${dragUid === inst.uid ? 'dragging' : ''}`}
       draggable
       onDragStart={(e) => { e.dataTransfer.setData('text/plain', String(inst.uid)); e.dataTransfer.effectAllowed = 'move'; setDragUid(inst.uid); }}
       onDragEnd={() => { setDragUid(null); setDragOver(null); }}
-      onClick={() => setMenu({ uid: inst.uid, zone })}
+      onClick={() => (inPlay(zone) ? toggleFlop(inst.uid) : setMenu({ uid: inst.uid, zone }))}
+      onContextMenu={(e) => { e.preventDefault(); setMenu({ uid: inst.uid, zone }); }}
+      title={inPlay(zone) ? 'Click to tap · drag to move · ⋯ for options' : 'Click for options · drag to move'}
     >
       <img src={inst.card.imageUrl} alt={inst.card.name} loading="lazy" draggable={false} />
+      {inPlay(zone) && (
+        <button
+          className="pt-card-more"
+          onClick={(e) => { e.stopPropagation(); setMenu({ uid: inst.uid, zone }); }}
+          title="Options"
+        >⋯</button>
+      )}
     </div>
   );
 
@@ -235,8 +272,13 @@ export default function PlaytestPage() {
             <button onClick={() => draw(1)}>Draw</button>
             <button onClick={mulligan}>Mulligan</button>
             <button onClick={shuffleDeck}>Shuffle</button>
-            <button className="pt-next" onClick={nextTurn}>Next Turn →</button>
             <button onClick={() => startWithDeck(deckMeta)}>Reset</button>
+            <div className="pt-vibe-group">
+              <span className="pt-vibe-label">End turn — Vibe Check</span>
+              <button className="pt-vibe pt-vibe-win" onClick={() => endTurn('win')}>Win</button>
+              <button className="pt-vibe pt-vibe-tie" onClick={() => endTurn('tie')}>Tie</button>
+              <button className="pt-vibe pt-vibe-lose" onClick={() => endTurn('lose')}>Lose</button>
+            </div>
           </div>
         </div>
 
@@ -255,9 +297,9 @@ export default function PlaytestPage() {
         </div>
 
         <section className="pt-board">
-          <Zone id="huddle" label="Huddle" hint="Drag a hand card here to play it (or click a card for options)" />
-          <Zone id="rods" label="Rods / Relics / Fits" hint="Drag Rods and support cards here" />
           <Zone id="ice" label="Ice" hint="Drag iced cards here" />
+          <Zone id="huddle" label="Huddle" hint="Drag a hand card here to play it — click a card to tap it" />
+          <Zone id="rods" label="Rods / Relics / Fits" hint="Drag Rods here — click a card to tap it" />
         </section>
 
         <div
@@ -284,7 +326,7 @@ export default function PlaytestPage() {
                 <div className="pt-menu-name">{menuInst.card.name}</div>
                 {(menu.zone === 'huddle' || menu.zone === 'rods') && (
                   <button className="pt-menu-flop" onClick={() => toggleFlop(menu.uid)}>
-                    {menuInst.flopped ? 'Unflop' : 'Flop'}
+                    {menuInst.flopped ? 'Untap' : 'Tap'}
                   </button>
                 )}
                 <div className="pt-menu-move-label">Move to…</div>
