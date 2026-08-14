@@ -459,6 +459,7 @@ export default function DeckView() {
             <button onClick={() => setShowSimulator((previous) => !previous)}>
               {showSimulator ? 'Hide Mulligan Trainer' : 'Mulligan Trainer'}
             </button>
+            <button onClick={() => navigate(`/playtest/${deckId}`)}>Goldfish</button>
             <button onClick={() => setShareOpen(true)}>Share</button>
             <button onClick={() => setExportOpen(true)}>Export</button>
             <button onClick={handlePrintList}>Print List</button>

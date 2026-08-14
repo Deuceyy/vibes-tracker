@@ -74,6 +74,7 @@ export default function Header({ stats, onExport, onImport, onReset, isOwnCollec
         <nav className="header-nav">
           <Link to="/collection" className="nav-link">Collection</Link>
           <Link to="/decks" className="nav-link">Decks</Link>
+          <Link to="/playtest" className="nav-link">Playtest</Link>
           <Link to="/sketches" className="nav-link">Sketches</Link>
           <Link to="/trade" className="nav-link">Trade</Link>
           <Link to="/proxies" className="nav-link">Print Proxies</Link>
